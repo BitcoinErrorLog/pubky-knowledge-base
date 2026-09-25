@@ -1,7 +1,8 @@
 # Pubky World
 
-**Status:** public experiment, version 0.1.0, production stack.
+**Author:** [@its-gaib](https://github.com/its-gaib)
+**Added to Vibes:** 8 September 2026
 
-[Pubky World](https://pubky-world.vercel.app) renders the social graph as a walkable 3D world: people become a neighborhood, tags become a forest, and posts appear in themed spaces. Guests can explore; signed-in users can follow people and publish in-world snapshots as Pubky posts.
+[Pubky World](https://pubky-world.vercel.app) is a walkable 3D world over the Pubky social graph.
 
 Sources: [Vibes board](https://vibes.pubky.app), [repository](https://github.com/its-gaib/pubky-3d).

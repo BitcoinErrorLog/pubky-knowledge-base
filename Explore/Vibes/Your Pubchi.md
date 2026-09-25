@@ -1,7 +1,7 @@
 # Your Pubchi
 
-**Status:** public experiment, version 0.1.0, production stack.
+**Author:** [@BitcoinErrorLog](https://github.com/BitcoinErrorLog)
 
-[Your Pubchi](https://bots.pubky.app) creates a personal bot with its own Pubky key. The bot can use private context before answering, suggest tags for posts and users, and build feeds.
+[Your Pubchi](https://bots.pubky.app) is a personal Pubky bot with its own key, private context, tag suggestions, and feed building.
 
 Sources: [Vibes board](https://vibes.pubky.app), [repository](https://github.com/BitcoinErrorLog/pubky-app/tree/pubchi/v1).

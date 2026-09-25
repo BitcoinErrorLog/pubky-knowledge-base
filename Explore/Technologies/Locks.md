@@ -1,9 +1,7 @@
 # Pubky Locks
 
-**Status on 25 September 2026:** Locks is public, active commerce infrastructure used by the pre-production Marketplace stack. Its in-app surfaces support password and payment-based unlocking, receipt submission, grant handling, and locked-content state. That does not make the whole stack production-ready for real funds.
+**Status on 25 September 2026:** Locks published release candidates rc1 through rc5 during this window. Pubky App's public Locks work includes locking a post by paying ([#2488](https://github.com/pubky/pubky-app/pull/2488)), paying with Bitkit to unlock ([#2481](https://github.com/pubky/pubky-app/pull/2481)), connecting a Bitkit payout account ([#2413](https://github.com/pubky/pubky-app/pull/2413)), and a Paykit handshake QR in the unlock modal ([#2616](https://github.com/pubky/pubky-app/pull/2616)).
 
-Locks is an authorization layer for content, subscriptions, memberships, and digital goods. A compatible app presents a lock, obtains proof such as a password or Paykit receipt, sends a proof bundle for verification, and receives an unlock grant. In Pubky App work this enables locked content and collections and connects payment receipts to access decisions.
+These are in-app Locks features and public release-candidate progress. They do not establish that the broader Marketplace stack is ready for real funds.
 
-Marketplace composes Locks with Paykit for its staged purchase journey. Bitcoin is regtest, fiat processors are test/sandbox, and the Marketplace status explicitly requires independent security review before real funds.
-
-Sources: [Locks repository](https://github.com/pubky/locks), [public Locks README and design](https://github.com/pubky/locks), [Marketplace project status](https://github.com/BitcoinErrorLog/pubky-marketplace), [Pubky App collections issue](https://github.com/pubky/pubky-app/issues/1466).
+Sources: [Locks repository](https://github.com/pubky/locks), [Pubky App repository](https://github.com/pubky/pubky-app), [Marketplace project status](https://github.com/BitcoinErrorLog/pubky-marketplace).

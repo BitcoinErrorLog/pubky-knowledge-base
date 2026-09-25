@@ -1,7 +1,8 @@
 # Light mode
 
-**Status:** public experiment, version 0.1.0, staging stack.
+**Author:** [@catch-21](https://github.com/catch-21)
+**Added to Vibes:** 2 September 2026
 
-[Light mode](https://pubky-app-light.vercel.app) is a Pubky App fork with a sun/moon toggle. Dark remains the default, and the browser stores the selected theme locally as `pubky-theme`.
+[Light mode](https://pubky-app-light.vercel.app) adds a sun/moon theme toggle to a Pubky App fork.
 
 Sources: [Vibes board](https://vibes.pubky.app), [repository](https://github.com/catch-21/pubky-app/tree/vibe/light-mode).

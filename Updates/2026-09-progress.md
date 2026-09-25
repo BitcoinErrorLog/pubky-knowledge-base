@@ -8,7 +8,7 @@ This window shipped four Pubky App releases, two Homeserver releases, new Pkarr 
 - **4 September:** Pubky Ring 1.19 shipped with migration-QR and session-authorization improvements.
 - **4–8 September:** eleven experiments were listed on the public [[Vibes Portal]].
 - **14–15 September:** Homeserver 0.12.0, App Specs 0.8.0, and Paykit rc55 shipped.
-- **17–18 September:** Pubky App 1.9.0 and 1.10.0 shipped. The Vibes discovery UI had already been reverted before 1.9.0, so the board remained public but was not promoted inside that release.
+- **16–18 September:** Pubky App 1.9.0 and 1.10.0 shipped. The in-app Vibes discovery entry point shipped in 1.9.0 and was reverted on 14 September, so it is not in the app today.
 - **23–24 September:** Homeserver 0.13.0, Pkarr 8.0.2, Pubky App 1.11.0, and App Specs 0.8.1 shipped.
 - **25 September status:** [[Pubky Passport]] is integrated in App 1.11.0 but only appears where `PUBKY_RUNTIME_PASSPORT_URL` is configured; Marketplace remains pre-production at `shop.pubky.app`; Paykit and Locks are public release-candidate and in-app commerce work, not a declaration that real-funds production is ready.
 

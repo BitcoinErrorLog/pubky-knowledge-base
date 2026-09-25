@@ -1,8 +1,8 @@
-# Pubky App Specs 0.8.0 and 0.8.1
+# Pubky App Specs status
 
-**Date:** 2026-09-15 and 2026-09-24  
-**Status:** shipped
+**Date:** 24 September 2026
+**Status:** main is 0.8.1; the v1 line is 1.0.0-alpha.3
 
-0.8.0 refreshed dependencies. 0.8.1 added the `cards` feed-layout value while preserving existing values and JavaScript enum numbers; on npm, 0.8.1 is the first release after 0.7.0.
+The v1 line adds the `social/v1` path epoch, a frozen 0.x reader for data that has not migrated, `stable_id` and `resolve_deref` deduplication keys, a closed URI grammar, and the v1 limits table. Main remains 0.8.1.
 
-Source: [Pubky App Specs 0.8.0 and 0.8.1 public release](https://github.com/pubky/pubky-app-specs/releases).
+Source: [Pubky App Specs releases](https://github.com/pubky/pubky-app-specs/releases).
