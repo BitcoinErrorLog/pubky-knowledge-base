@@ -7,6 +7,10 @@ aliases:
 
 The Pubky SDK provides client libraries for building applications on [[Introduction|Pubky Core]]. Available in multiple languages with consistent APIs across platforms.
 
+## September 2026 release status
+
+The SDK changes released with [Homeserver 0.12.0](https://github.com/pubky/pubky-homeserver/releases/tag/v0.12.0) include path-addressed requests and a publicly available two-stage authentication flow. [Homeserver 0.13.0](https://github.com/pubky/pubky-homeserver/releases/tag/v0.13.0) added configurable error-response limits and guards against oversized payloads. These are shipped public changes; draft cryptographic proposals are not part of this status.
+
 ## Supported Platforms
 
 | Platform | Language | Status | Package |

@@ -20,6 +20,12 @@ The data models and validation rules are formally specified in the [pubky-app-sp
 - **Repository**: [github.com/pubky/pubky-app](https://github.com/pubky/pubky-app) — Reference implementation and source code
 - **Build Compatible Clients**: Use [pubky-app-specs](https://www.npmjs.com/package/pubky-app-specs) as the authoritative specification
 
+### August–September 2026 releases
+
+Pubky App shipped versions [1.8.0](https://github.com/pubky/pubky-app/releases/tag/v1.8.0), [1.9.0](https://github.com/pubky/pubky-app/releases/tag/v1.9.0), [1.10.0](https://github.com/pubky/pubky-app/releases/tag/v1.10.0), and [1.11.0](https://github.com/pubky/pubky-app/releases/tag/v1.11.0) between 31 August and 23 September 2026. The releases added search, onboarding, article, feed, PWA, sharing, tag, and reliability improvements.
+
+Version 1.11.0 includes [[Explore/Technologies/Pubky Passport|Pubky Passport]] sign-in and sign-up, but deployments expose it only when `PUBKY_RUNTIME_PASSPORT_URL` is configured. The release notes require operators to verify the intended Passport and Homegate journey before enabling it.
+
 ## Key aspects
 
 - **Data Ownership**: Users have full autonomy over their data, hosting it on **independent [[Homeserver|Homeservers]]** that are decentralized and distributed across the network. This approach enables users to maintain **control** and **ownership** of their data, while also ensuring **data sovereignty** and **privacy**. 

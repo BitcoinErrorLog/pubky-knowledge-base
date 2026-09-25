@@ -12,6 +12,8 @@ aliases:
 
 Pubky Ring is the key manager and identity application for the Pubky ecosystem. It's a native mobile app (iOS and Android) that lets you securely manage your pubkys—the [[KeyPair|public keys]] that power your presence across decentralized applications.
 
+**Current public release:** [1.19](https://github.com/pubky/pubky-ring/releases/tag/v1.19), published 4 September 2026. It added a confirmation screen before authorizing a session from a link, migration-QR scanning from Add Pubky, screenshot-protected migration-QR reveal, and Android bottom-sheet fixes. [[Explore/Technologies/Pubky Passport|Pubky Passport]] users can move an identity to Ring when they want mobile self-custody.
+
 **Core Philosophy:**
 - **Self-custodial**: You control your keys, no one else
 - **No accounts**: No usernames, no passwords, no registration
