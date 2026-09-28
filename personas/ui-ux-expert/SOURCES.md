@@ -15,6 +15,8 @@ Document License used for W3C software repositories.
 
 Merge record: fast-forwarded to `main` at
 `95f9ac9f01c97aac829ec1eb99a44f5cd8a450b2` on 2026-09-28.
+The reviewed Pubky/web.dev delta was fast-forwarded to `main` at
+`3928e9a47085dbb3dcb781b53363f8e154aa8b0b` on 2026-09-28.
 
 | ID | Stored payload | Work and edition | Rights and use | Canonical URL | Retrieved | SHA-256 |
 | --- | --- | --- | --- | --- | --- | --- |
