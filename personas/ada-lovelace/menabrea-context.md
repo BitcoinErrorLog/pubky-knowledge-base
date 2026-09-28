@@ -1,0 +1,1132 @@
+---
+title: "Sketch of the Analytical Engine — Menabrea translation"
+author: "Luigi Menabrea; translated by Ada Lovelace"
+date: "1843"
+original_url: "https://www.gutenberg.org/cache/epub/75107/pg75107-images.html"
+archive_url: "https://www.gutenberg.org/ebooks/75107"
+source_collection: "Project Gutenberg ebook 75107, Scientific Memoirs volume 3 (1843)"
+rights_status: "Menabrea died in 1896 and Lovelace in 1852; this 1843 translation is public domain worldwide under ordinary life-plus-70 terms"
+retrieval_date: "2026-09-28"
+checksum: "sha256:b5c7426080e762f0163b937a235c6076ba2c4c03312b54778fdc1951c6358108"
+role: "context-only; never mount as Ada voice"
+---
+
+THOSE labours which belong to the various branches of the mathematical
+sciences, although on first consideration they seem to be the exclusive
+province of intellect, may, nevertheless, be divided into two distinct
+sections; one of which may be called the mechanical, because it is
+subjected to precise and invariable laws, that are capable of being
+expressed by means of the operations of matter; while the other,
+demanding the intervention of reasoning, belongs more specially to
+the domain of the understanding. This admitted, we may propose to
+execute, by means of machinery, the mechanical branch of these labours,
+reserving for pure intellect that which depends on the reasoning
+faculties. Thus the rigid exactness of those laws which regulate
+numerical calculations must frequently have suggested the employment
+of material instruments, either for executing the whole of such
+[Pg 5]
+calculations or for abridging them; and thence have arisen several
+inventions having this object in view, but which have in general but
+partially attained it. For instance, the much-admired machine of Pascal
+is now simply an object of curiosity, which, whilst it displays the
+powerful intellect of its inventor, is yet of little utility in itself.
+Its powers extended no further than the execution of the four[1]
+first operations of arithmetic, and indeed were in reality confined
+to that of the two first, since multiplication and division were the
+result of a series of additions and subtractions. The chief drawback
+hitherto on most of such machines is, that they require the continual
+intervention of a human agent to regulate their movements, and thence
+arises a source of errors; so that, if their use has not become general
+for large numerical calculations, it is because they have not in fact
+resolved the double problem which the question presents, that of
+correctness in the results, united with economy of time.
+
+Struck with similar reflections, Mr. Babbage has devoted some years
+to the realization of a gigantic idea. He proposed to himself nothing
+less than the construction of a machine capable of executing not merely
+arithmetical calculations, but even all those of analysis, if their
+laws are known. The imagination is at first astounded at the idea of
+such an undertaking; but the more calm reflection we bestow on it,
+the less impossible does success appear, and it is felt that it may
+depend on the discovery of some principle so general, that if applied
+to machinery, the latter may be capable of mechanically translating the
+operations which may be indicated to it by algebraical notation. The
+illustrious inventor having been kind enough to communicate to me some
+[Pg 6]
+of his views on this subject during a visit he made at Turin, I have,
+with his approbation, thrown together the impressions they have left on
+my mind. But the reader must not expect to find a description of Mr.
+Babbage’s engine; the comprehension of this would entail studies of
+much length; and I shall endeavour merely to give an insight into the
+end proposed, and to develope the principles on which its attainment
+depends.
+
+I must first premise that this engine is entirely different from that
+of which there is a notice in the ‘Treatise on the Economy of Machinery’
+by the same author. But as the latter gave rise[2] to the idea of
+the engine in question, I consider it will be a useful preliminary
+briefly to recall what were Mr. Babbage’s first essays, and also the
+circumstances in which they originated.
+
+It is well known that the French government, wishing to promote the
+extension of the decimal system, had ordered the construction of
+logarithmical and trigonometrical tables of enormous extent. M. de
+Prony, who had been entrusted with the direction of this undertaking,
+divided it into three sections, to each of which were appointed a
+special class of persons. In the first section the formulæ were so
+combined as to render them subservient to the purposes of numerical
+calculation; in the second, these same formulæ were calculated for
+values of the variable, selected at certain successive distances; and
+under the third section, comprising about eighty individuals, who were
+most of them only acquainted with the two first rules of arithmetic,
+the values which were intermediate to those calculated by the second
+section were interpolated by means of simple additions and subtractions.
+
+An undertaking similar to that just mentioned having been entered upon
+in England, Mr. Babbage conceived that the operations performed under
+the third section might be executed by a machine; and this idea he
+realized by means of mechanism, which has been in part put together,
+[Pg 7]
+and to which the name Difference Engine is applicable, on account of
+the principle upon which its construction is founded. To give some
+notion of this, it will suffice to consider the series of whole square
+numbers, 1, 4, 9, 16, 25, 36, 49, 64, &c. By subtracting each of these
+from the succeeding one, we obtain a new series, which we will name the
+Series of First Differences, consisting of the numbers 3, 5, 7, 9, 11,
+13, 15, &c. On subtracting from each of these the preceding one, we
+obtain the Second Differences, which are all constant and equal to 2.
+We may represent this succession of operations, and their results, in
+the following table:—
+
+   A. Column of
+
+   Square Numbers.
+   B. First
+
+    Differences.
+   C. Second
+
+    Differences.
+
+   1
+
+   3
+
+   4
+
+   2
+
+   5
+
+   9
+
+   2
+
+   7
+
+   16
+
+   2
+
+   9
+
+   25
+
+   2
+
+   11
+
+   36
+
+From the mode in which the two last columns B and C have been formed,
+it is easy to see that if, for instance, we desire to pass from the
+number 5 to the succeeding one 7, we must add to the former the
+constant difference 2; similarly, if from the square number 9 we would
+pass to the following one 16, we must add to the former the difference
+7, which difference is in other words the preceding difference 5, plus
+the constant difference 2; or again, which comes to the same thing,
+to obtain 16 we have only to add together the three numbers 2, 5,
+9, placed obliquely in the direction . Similarly, we obtain
+the number 25 by summing up the three numbers placed in the oblique
+direction : commencing by the addition 2 + 7, we have the
+first difference 9 consecutively to 7; adding 16 to the 9 we have the
+square 25. We see then that the three numbers 2, 5, 9 being given, the
+whole series of successive square numbers, and that of their first
+differences likewise, may be obtained by means of simple additions.
+
+Now, to conceive how these operations may be reproduced by a machine,
+suppose the latter to have three dials, designated as , ,
+, on each of which are traced, say a thousand divisions, by way of
+example, over which a needle shall pass. The two dials, , ,
+shall have in addition a registering hammer, which is to give a number
+of strokes equal to that of the divisions indicated by the needle. For
+each stroke of the registering hammer of the dial , the needle
+ shall advance one division; similarly, the needle  shall
+[Pg 8]
+advance one division for every stroke of the registering hammer of the
+dial . Such is the general disposition of the mechanism.
+
+This being understood, let us at the beginning of the series of
+operations we wish to execute, place the needle  on the division
+2, the needle  on the division 5, and the needle  on the
+division 9. Let us allow the hammer of the dial  to strike; it
+will strike twice, and at the same time the needle  will pass
+over two divisions. The latter will then indicate the number 7, which
+succeeds the number 5 in the column of first differences. If we now
+permit the hammer of the dial  to strike in its turn, it will
+strike seven times, during which the needle  will advance seven
+divisions; these added to the nine already marked by it, will give
+the number 16, which is the square number consecutive to 9. If we now
+recommence these operations, beginning with the needle , which
+is always to be left on the division 2, we shall perceive that by
+repeating them indefinitely, we may successively reproduce the series
+of whole square numbers by means of a very simple mechanism.
+
+The theorem on which is based the construction of the machine we have
+just been describing, is a particular case of the following more
+general theorem: that if in any polynomial whatever, the highest power
+of whose variable is , this same variable be increased by equal
+degrees; the corresponding values of the polynomial then calculated,
+and the first, second, third, differences of these be taken (as for the
+preceding series of squares); the th differences will all be equal
+to each other. So that, in order to reproduce the series of values
+of the polynomial by means of a machine analogous to the one above
+described, it is sufficient that there be () dials, having the
+mutual relations we have indicated. As the differences may be either
+positive or negative, the machine will have a contrivance for either
+advancing or retrograding each needle, according as the number to be
+algebraically added may have the sign plus or minus.
+
+If from a polynomial we pass to a series having an infinite number of
+terms, arranged according to the ascending powers of the variable,
+it would at first appear, that in order to apply the machine to the
+calculation of the function represented by such a series, the mechanism
+must include an infinite number of dials, which would in fact render
+the thing impossible. But in many cases the difficulty will disappear,
+[Pg 9]
+if we observe that for a great number of functions the series which
+represent them may be rendered convergent; so that, according to
+the degree of approximation desired, we may limit ourselves to the
+calculation of a certain number of terms of the series, neglecting the
+rest. By this method the question is reduced to the primitive case of
+a finite polynomial. It is thus that we can calculate the succession
+of the logarithms of numbers. But since, in this particular instance,
+the terms which had been originally neglected receive increments in a
+ratio so continually increasing for equal increments of the variable,
+that the degree of approximation required would ultimately be affected,
+it is necessary, at certain intervals, to calculate the value of the
+function by different methods, and then respectively to use the results
+thus obtained, as data whence to deduce, by means of the machine, the
+other intermediate values. We see that the machine here performs the
+office of the third section of calculators mentioned in describing the
+tables computed by order of the French government, and that the end
+originally proposed is thus fulfilled by it.
+
+Such is the nature of the first machine which Mr. Babbage conceived. We
+see that its use is confined to cases where the numbers required are
+such as can be obtained by means of simple additions or subtractions;
+that the machine is, so to speak, merely the expression of one[3]
+particular theorem of analysis; and that, in short, its operations
+cannot be extended so as to embrace the solution of an infinity of
+other questions included within the domain of mathematical analysis.
+It was while contemplating the vast field which yet remained to be
+traversed, that Mr. Babbage, renouncing his original essays, conceived
+the plan of another system of mechanism whose operations should
+themselves possess all the generality of algebraical notation, and
+which, on this account, he denominates the Analytical Engine.
+
+Having now explained the state of the question, it is time for me to
+develope the principle on which is based the construction of this
+latter machine. When analysis is employed for the solution of any
+problem, there are usually two classes of operations to execute:
+firstly, the numerical calculation of the various coefficients; and
+secondly, their distribution in relation to the quantities affected by
+them. If, for example, we have to obtain the product of two binomials
+[Pg 10]
+(), the result will be represented by
+ in which expression we must first calculate ,
+, , ; then take the sum of ; and lastly,
+respectively distribute the coefficients thus obtained, amongst the
+powers of the variable. In order to reproduce these operations by means
+of a machine, the latter must therefore possess two distinct sets of
+powers: first, that of executing numerical calculations; secondly, that
+of rightly distributing the values so obtained.
+
+But if human intervention were necessary for directing each of
+these partial operations, nothing would be gained under the heads
+of correctness and economy of time; the machine must therefore have
+the additional requisite of executing by itself all the successive
+operations required for the solution of a problem proposed to it, when
+once the primitive numerical data for this same problem have
+been introduced. Therefore, since from the moment that the nature of
+the calculation to be executed or of the problem to be resolved have
+been indicated to it, the machine is, by its own intrinsic power, of
+itself to go through all the intermediate operations which lead to the
+proposed result, it must exclude all methods of trial and guess-work,
+and can only admit the direct processes of calculation[4].
+
+It is necessarily thus; for the machine is not a thinking being, but
+simply an automaton which acts according to the laws imposed upon it.
+This being fundamental, one of the earliest researches its author had
+to undertake, was that of finding means for effecting the division of
+one number by another without using the method of guessing indicated
+by the usual rules of arithmetic. The difficulties of effecting
+this combination were far from being among the least; but upon it
+depended the success of every other. Under the impossibility of my
+here explaining the process through which this end is attained, we
+must limit ourselves to admitting that the four first operations of
+arithmetic, that is addition, subtraction, multiplication and division,
+can be performed in a direct manner through the intervention of the
+machine. This granted, the machine is thence capable of performing
+every species of numerical calculation, for all such calculations
+ultimately resolve themselves into the four operations we have just
+[Pg 11]
+named. To conceive how the machine can now go through its functions
+according to the laws laid down, we will begin by giving an idea of the
+manner in which it materially represents numbers.
+
+Let us conceive a pile or vertical column consisting of an indefinite
+number of circular discs, all pierced through their centres by a common
+axis, around which each of them can take an independent rotatory
+movement. If round the edge of each of these discs are written the
+ten figures which constitute our numerical alphabet, we may then,
+by arranging a series of these figures in the same vertical line,
+express in this manner any number whatever. It is sufficient for this
+purpose that the first disc represent units, the second tens, the third
+hundreds, and so on. When two numbers have been thus written on two
+distinct columns, we may propose to combine them arithmetically with
+each other, and to obtain the result on a third column. In general, if
+we have a series of columns[5] consisting of discs, which columns w e
+will designate as , , ,
+, , &c., we may require, for instance,
+to divide the number written on the column  by that on
+the column , and to obtain the result on the column
+. To effect this operation, must impart to the machine
+two distinct arrangements; through the first it is prepared for
+executing a division, and through the second the columns it is
+to operate on are indicated to it, and also the column on which the
+result is to be represented. If this division is to be followed, for
+example, by the addition of two numbers taken on other columns, the two
+original arrangements of the machine must be simultaneously altered.
+If, on the contrary, a series of operations of the same nature is to be
+gone through, then the first of the original arrangements will remain,
+and the second alone must be altered. Therefore, the arrangements
+that may be communicated to the various parts of the machine, may be
+distinguished into two principal classes:
+
+First, that relative to the Operations.
+
+Secondly, that relative to the Variables.
+
+By this latter we mean that which indicates the columns to be operated
+on. As for the operations themselves, they are executed by a special
+apparatus, which is designated by the name of mill, and which
+itself contains a certain number of columns, similar to those of
+the Variables. When two numbers are to be combined together, the
+[Pg 12]
+machine commences by effacing them from the columns where they are
+written, that is it places zero[6] on every disc of the two
+vertical lines on which the numbers were represented; and it transfers
+the numbers to the mill. There, the apparatus having been disposed
+suitably for the required operation, this latter is effected, and, when
+completed, the result itself is transferred to the column of Variables
+which shall have been indicated. Thus the mill is that portion of the
+machine which works, and the columns of Variables constitute that
+where the results are represented and arranged. After the preceding
+explanations, we may perceive that all fractional and irrational
+results will be represented in decimal fractions. Supposing each column
+to have forty discs, this extension will be sufficient for all degrees
+of approximation generally required.
+
+It will now be inquired how the machine can of itself, and without
+having recourse to the hand of man, assume the successive dispositions
+suited to the operations. The solution of this problem has been taken
+from Jacquard’s apparatus[7], used for the manufacture of brocaded
+stuffs, in the following manner:—
+
+Two species of threads are usually distinguished in woven stuffs; one
+is the warp or longitudinal thread, the other the woof
+or transverse thread, which is conveyed by the instrument called the
+shuttle, and which crosses the longitudinal thread or warp. When a
+brocaded stuff is required, it is necessary in turn to prevent certain
+threads from crossing the woof, and this according to a succession
+which is determined by the nature of the design that is to be
+reproduced. Formerly this process was lengthy and difficult, and it
+was requisite that the workman, by attending to the design which he
+was to copy, should himself regulate the movements the threads were
+to take. Thence arose the high price of this description of stuffs,
+especially if threads of various colours entered into the fabric. To
+simplify this manufacture, Jacquard devised the plan of connecting
+each group of threads that were to act together, with a distinct lever
+belonging exclusively to that group. All these levers terminate in
+rods, which are united together in one bundle, having usually the form
+of a parallelopiped with a rectangular base. The rods are cylindrical,
+and are separated from each other by small intervals. The process of
+[Pg 13]
+raising the threads is thus resolved into that of moving these various
+lever-arms in the requisite order. To effect this, a rectangular
+sheet of pasteboard is taken, somewhat larger in size than a section
+of the bundle of lever-arms. If this sheet be applied to the base
+of the bundle, and an advancing motion be then communicated to the
+pasteboard, this latter will move with it all the rods of the bundle,
+and consequently the threads that are connected with each of them. But
+if the pasteboard, instead of being plain, were pierced with holes
+corresponding to the extremities of the levers which meet it, then,
+since each of the levers would pass through the pasteboard during the
+motion of the latter, they would all remain in their places. We thus
+see that it is easy so to determine the position of the holes in the
+pasteboard, that, at any given moment, there shall be a certain number
+of levers, and consequently of parcels of threads, raised, while the
+rest remain where they were. Supposing this process is successively
+repeated according to a law indicated by the pattern to be executed,
+we perceive that this pattern may be reproduced on the stuff. For this
+purpose we need merely compose a series of cards according to the law
+required, and arrange them in suitable order one after the other; then,
+by causing them to pass over a polygonal beam which is so connected as
+to turn a new face for every stroke of the shuttle, which face shall
+then be impelled parallelly to itself against the bundle of lever-arms,
+the operation of raising the threads will be regularly performed. Thus
+we see that brocaded tissues may be manufactured with a precision and
+rapidity formerly difficult to obtain.
+
+Arrangements analogous to those just described have been introduced
+into the Analytical Engine. It contains two principal species of cards:
+first, Operation cards, by means of which the parts of the machine are
+so disposed as to execute any determinate series of operations, such
+as additions, subtractions, multiplications, and divisions; secondly,
+cards of the Variables, which indicate to the machine the columns on
+which the results are to be represented. The cards, when put in motion,
+successively arrange the various portions of the machine according to
+the nature of the processes that are to be effected, and the machine at
+the same time executes these processes by means of the various pieces
+of mechanism of which it is constituted.
+
+In order more perfectly to conceive the thing, let us select as an
+[Pg 14]
+example the resolution of two equations of the first degree with two
+unknown quantities. Let the following be the two equations, in which
+ and  are the unknown quantities:—
+
+We deduce , and for  an
+analogous expression. Let us continue to represent by ,
+, , &c. the different columns which
+contain the numbers, and let us suppose that the first eight columns
+have been chosen for expressing on them the numbers represented by
+, , , , , ,  and , which
+implies that , , ,
+, , ,
+, .
+
+The series of operations commanded by the cards, and the results
+obtained, may be represented in the following table:—
+
+Number
+
+of the
+
+operations.
+Operation-cards
+Cards of the variables.
+Progress of the
+
+operations.
+
+Symbols indicating the
+
+nature of operations.
+Columns on which
+
+operations are to be
+
+performed.
+Columns which receive
+
+results of operations.
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+Since the cards do nothing but indicate in what manner and on what
+columns the machine shall act, it is clear that we must still, in every
+particular case, introduce the numerical data for the calculation.
+Thus, in the example we have selected, we must previously inscribe the
+numerical values of , , , , , , in the
+order and on the columns indicated, after which the machine when put
+in action will give the value of the unknown quantity  for this
+particular case. To obtain the value of another series of operations
+analogous to the preceding must be performed. But we see that they
+will be only four in number, since the denominator of the expression
+for , excepting the sign, is the same as that for  and equal
+to . In the preceding table it will be remarked that the
+column for operations indicates four successive multiplications,
+two subtractions, and one division. Therefore, if
+[Pg 15]
+desired, we need only use three operation cards; to manage which, it
+is sufficient to introduce into the machine an apparatus which shall,
+after the first multiplication, for instance, retain the card which
+relates to this operation, and not allow it to advance so as to be
+replaced by another one, until after this same operation shall have
+been four times repeated. In the preceding example we have seen, that
+to find the value of  we must begin by writing the coefficients
+, , , , ,  upon eight columns, thus
+repeating  and  twice. According to the same method, if it
+were required to calculate  likewise, these coefficients must be
+written on twelve different columns. But it is possible to simplify
+this process, and thus to diminish the chances of errors, which chances
+are greater, the larger the number of the quantities that have to be
+inscribed previous to setting the machine in action. To understand this
+simplification, we must remember that every number written on a column
+must, in order to be arithmetically combined with another number,
+be effaced from the column on which it is, and transferred to the
+mill. Thus, in the example we have discussed, we will take the
+two coefficients  and , which are each of them to enter into
+two different products, that is  into  and ,
+into  and . These coefficients will be inscribed on the
+columns  and . If we commence the
+series of operations by the product of  into , these numbers
+will be effaced from the columns  and ,
+that they may be transferred to the mill, which will multiply them into
+each other, and will then command the machine to represent the result,
+say on the column . But as these numbers are each
+to be used again in another operation, they must again be inscribed
+somewhere; therefore, while the mill is working out their product,
+the machine will inscribe them anew on any two columns that may be
+indicated to it through the cards; and, as in the actual case, there
+is no reason why they should not resume their former places, we will
+suppose them again inscribed on  and ,
+whence in short they would not finally disappear, to be reproduced no
+more, until they should have gone through all the combinations in which
+they might have to be used.
+
+[Pg 16]
+
+We see, then, that the whole assemblage of operations requisite for
+resolving the two[8] above equations of the first degree, may be
+definitively represented in the following table:—
+
+Columns in which
+
+are inscribed the
+
+primitive data.
+Number of the
+
+operations.
+Cards of the operations.
+Variable cards.
+Statement of results.
+
+Number of
+
+the operation
+
+cards.
+Nature
+
+of each
+
+operation.
+Columns acted on by
+
+each operation.
+Columns that receive the
+
+result of each operation.
+Indication of change
+
+of value on any column.
+
+1
+1
+
+2
+"
+
+3
+"
+
+4
+"
+
+5
+"
+
+6
+"
+
+7
+2
+
+8
+"
+
+9
+"
+
+10
+3
+
+11
+"
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+In order to diminish to the utmost the chances of error in inscribing
+the numerical data of the problem, they are successively placed on one
+of the columns of the mill; then, by means of cards arranged for this
+purpose, these same numbers are caused to arrange themselves on the
+requisite columns, without the operator having to give his attention to
+it; so that his undivided mind may be applied to the simple inscription
+of these same numbers.
+
+According to what has now been explained, we see that the collection
+of columns of Variables may be regarded as a store of numbers,
+accumulated there by the mill, and which, obeying the orders
+transmitted to the machine by means of the cards, pass alternately from
+the mill to the store, and from the store to the mill, that they may
+undergo the transformations demanded by the nature of the calculation
+to be performed.
+
+Hitherto no mention has been made of the signs in the results,
+and the machine would be far from perfect were it incapable of
+[Pg 17]
+expressing and combining amongst each other positive and negative
+quantities. To accomplish this end, there is, above every column, both
+of the mill and of the store, a disc, similar to the discs of which
+the columns themselves consist. According as the digit on this disc is
+even or uneven, the number inscribed on the corresponding column below
+it will be considered as positive or negative. This granted, we may,
+in the following manner, conceive how the signs can be algebraically
+combined in the machine. When a number is to be transferred from the
+store to the mill, and vice versâ, it will always be transferred
+with its sign, which will be effected by means of the cards, as has
+been explained in what precedes. Let any two numbers then, on which
+we are to operate arithmetically, be placed in the mill with their
+respective signs. Suppose that we are first to add them together; the
+operation-cards will command the addition: if the two numbers be of
+the same sign, one of the two will be entirely effaced from w here it
+was inscribed, and will go to add itself on the column which contains
+the other number; the machine will, during this operation, be able, by
+means of a certain apparatus, to prevent any movement in the disc of
+signs which belongs to the column on which the addition is made, and
+thus the result will remain with the sign which the two given numbers
+originally had. When two numbers have two different signs, the addition
+commanded by the card will be changed into a subtraction through the
+intervention of mechanisms which are brought into play by this very
+difference of sign. Since the subtraction can only be effected on
+the larger of the two numbers, it must be arranged that the disc of
+signs of the larger number shall not move while the smaller of the two
+numbers is being effaced from its column and subtracted from the other,
+whence the result will have the sign of this latter, just as in fact
+it ought to be. The combinations to which algebraical subtraction give
+rise, are analogous to the preceding. Let us pass on to multiplication.
+When two numbers to be multiplied are of the same sign, the result is
+positive; if the signs are different, the product must be negative.
+In order that the machine may act conformably to this law, we have
+but to conceive that, on the column containing the product of the two
+given numbers, the digit which indicates the sign of that product, has
+been formed by the mutual addition of the two digits that respectively
+indicated the signs of the two given numbers; it is then obvious that
+[Pg 18]
+if the digits of the signs are both even, or both odd, their sum will
+be an even number, and consequently will express a positive number; but
+that if, on the contrary, the two digits of the signs are one even and
+the other odd, their sum will be an odd number, and will consequently
+express a negative number. In the case of division, instead of adding
+the digits of the discs, they must be subtracted one from the other,
+which will produce results analogous to the preceding; that is to say,
+that if these figures are both even or both uneven, the remainder of
+this subtraction will be even; and it will be uneven in the contrary
+case. When I speak of mutually adding or subtracting the numbers
+expressed by the digits of the signs, I merely mean that one of the
+sign-discs is made to advance or retrograde a number of divisions equal
+to that which is expressed by the digit on the other sign-disc. We see,
+then, from the preceding explanation, that it is possible mechanically
+to combine the signs of quantities so as to obtain results conformable
+to those indicated by algebra[9].
+
+The machine is not only capable of executing those numerical
+calculations which depend on a given algebraical formula, but it
+is also fitted for analytical calculations in which there are one
+or several variables to be considered. It must be assumed that the
+analytical expression to be operated on can be developed according
+to powers of the variable, or according to determinate functions of
+this same variable, such as circular functions, for instance; and
+similarly for the result that is to be attained. If we then suppose
+that above the columns of the store, we have inscribed the powers
+or the functions of the variable, arranged according to whatever
+is the prescribed law of development, the coefficients of these
+several terms may be respectively placed on the corresponding column
+below each. In this manner we shall have a representation of an
+analytical development; and, supposing the position of the several
+terms composing it to be invariable, the problem will be reduced to
+that of calculating their coefficients according to the laws demanded
+by the nature of the question. In order to make this more clear, we
+shall take the following:[10] very simple example, in which we are
+[Pg 19]
+to multiply () by (). We shall begin by
+writing , , , , above the columns
+, , , ;
+then, since from the form of the two functions to be combined, the
+terms which are to compose the products will be of the following
+nature, , ,
+, ; these will be
+inscribed above the columns , ,
+, . The coefficients of ,
+, ,  being given, they will, by means of
+the mill, be passed to the columns , ,
+ and . Such are the primitive data of
+the problem. It is now the business of the machine to work out its
+solution, that is to find the coefficients which are to be inscribed on
+, , , .
+To attain this object, the law of formation of these same coefficients
+being known, the machine will act through the intervention of the
+cards, in the manner indicated by the following table:—
+
+[11]
+
+Columns above which are
+
+written the functions of
+
+the variables.
+Coefficients.
+Cards of the
+
+operations
+Cards of the variables.
+
+Given.
+To be formed.
+Number of the
+
+operations.
+Nature of the
+
+operation.
+Columns on which
+
+operations are to be
+
+performed.
+Columns on which
+
+are to be inscribed the
+
+results of the operations.
+Indication of change of
+
+value on any column
+
+submitted to an
+
+operation.
+Results of the
+
+operations.
+
+"
+"
+"
+"
+"
+"
+     "     "
+
+"
+"
+"
+"
+"
+"
+     "     "
+
+"
+"
+"
+"
+"
+"
+     "     "
+
+"
+"
+"
+"
+"
+"
+     "     "
+
+1
+
+2
+
+3
+
+4
+
+It will now be perceived that a general application may be made of
+the principle developed in the preceding example, to every species
+of process which it may be proposed to effect on series submitted
+to calculation. It is sufficient that the law of formation of the
+coefficients be known, and that this law be inscribed on the cards of
+the machine, which will then of itself execute all the calculations
+[Pg 20]
+requisite for arriving at the proposed result. If, for instance,
+a recurring series were proposed, the law of formation of the
+coefficients being here uniform, the same operations which must be
+performed for one of them will be repeated for all the others; there
+will merely be a change in the locality of the operation, that is
+it will be performed with different columns. Generally, since every
+analytical expression is susceptible of being expressed in a series
+ordered according to certain functions of the variable, we perceive
+that the machine will include all analytical calculations which can
+be definitively reduced to the formation of coefficients according to
+certain laws, and to the distribution of these with respect to the
+variables.
+
+We may deduce the following important consequence from these
+explanations, viz. that since the cards only indicate the nature of the
+operations to be performed, and the columns of Variables with which
+they are to be executed, these cards will themselves possess all the
+generality of analysis, of which they are in fact merely a translation.
+We shall now further examine some of the difficulties which the machine
+must surmount, if its assimilation to analysis is to be complete. There
+are certain functions which necessarily change in nature when they pass
+through zero or infinity, or whose values cannot be admitted when they
+pass these limits. When such cases present themselves, the machine is
+able, by means of a bell, to give notice that the passage through zero
+or infinity is taking place, and it then stops until the attendant has
+again set it in action for whatever process it may next be desired that
+it shall perform. If this process has been foreseen, then the machine,
+instead of ringing, will so dispose itself as to present the new cards
+which have relation to the operation that is to succeed the passage
+through zero and infinity. These new cards may follow the first, but
+may only come into play contingently upon one or other of the two
+circumstances just mentioned taking place.
+
+Let us consider a term of the form ; since the cards are
+but a translation of the analytical formula, their number in this
+particular case must be the same, whatever be the value of ; that
+is to say, whatever be the number of multiplications required for
+elevating  to the th power (we are supposing for the moment
+that  is a whole number). Now, since the exponent  indicates
+that  is to be multiplied  times by itself, and all these
+operations are of the same nature, it will be sufficient to employ one
+[Pg 21]
+single operation-card, viz. that which orders the multiplication.
+
+But when  is given for the particular case to be calculated,
+it will be further requisite that the machine limit the number of
+its multiplications according to the given values. The process may
+be thus arranged. The three numbers ,  and  will be
+written on as many distinct columns of the store; we shall designate
+them , , ; the result
+ will place itself on the column . When the
+number  has been introduced into the machine, a card will order
+a certain registering-apparatus to mark (), and will at the
+same time execute the multiplication of  by . When this is
+completed, it will be found that the registering-apparatus has effaced
+a unit, and that it only marks (); while the machine will now
+again order the number  written on the column
+to multiply itself with the product  written on the column
+, which will give . Another unit is then effaced
+from the registering-apparatus, and the same processes are continually
+repeated until it only marks zero. Thus the number  will be
+found inscribed on , when the machine, pursuing its
+course of operations, will order the product of  by ; and
+the required calculation will have been completed without there being
+any necessity that the number of operation-cards used should vary
+with the value of . If  were negative, the cards, instead
+of ordering the multiplication of  by , would order its
+division; this we can easily conceive, since every number, being
+inscribed with its respective sign, is consequently capable of reacting
+on the nature of the operations to be executed. Finally, if  were
+fractional, of the form , an additional column would
+be used for the inscription of , and the machine would bring into
+action two sets of processes, one for raising  to the power ,
+the other for extracting the th root of the number so obtained.
+
+Again, it may be required, for example, to multiply an expression of
+the form  by another ,
+and then to reduce the product to the least number of terms,
+if any of the indices are equal. The two factors being ordered with
+respect to , the general result of the multiplication would be
+.
+Up to this point the process presents no difficulties; but suppose
+that we have  and , and that we wish to reduce the two middle terms to a single one (.
+[Pg 22]
+For this purpose, the cards may order  and
+to be transferred into the mill, and there subtracted one from
+the other; if the remainder is nothing, as would be the case on the
+present hypothesis, the mill will order other cards to bring to it the
+coefficients  and , that it may add them
+together and give them in this state as a coefficient for the single
+term .
+
+This example illustrates how the cards are able to reproduce all the
+operations which intellect performs in order to attain a determinate
+result, if these operations are themselves capable of being precisely
+defined.
+
+Let us now examine the following expression:—
+
+which we know becomes equal to the ratio of the circumference to the
+diameter, when  is infinite. We may require the machine not only
+to perform the calculation of this fractional expression, but further
+to give indication as soon as the value becomes identical with that of
+the ratio of the circumference to the diameter when  is infinite,
+a case in which the computation would be impossible. Observe that we
+should thus require of the machine to interpret a result not of itself
+evident, and that this is not amongst its attributes, since it is no
+thinking being. Nevertheless, when the  of  has
+been foreseen, a card may immediately order the substitution of the
+value of , ( being the ratio of the circumference to the
+diameter), without going through the series of calculations indicated.
+This would merely require that the machine contain a special card,
+whose office it should be to place the number  in a direct
+and independent manner on the column indicated to it. And here we
+should introduce the mention of a third species of cards, which may
+be called cards of numbers. There are certain numbers, such
+as those expressing the ratio of the circumference to the diameter,
+the Numbers of Bernoulli, &c., which frequently present themselves in
+calculations. To avoid the necessity for computing them every time they
+have to be used, certain cards may be combined specially in order to
+give these numbers ready made into the mill, whence they afterwards go
+and place themselves on those columns of the store that are destined
+for them. Through this means the machine will be susceptible of
+those simplifications afforded by the use of numerical tables. It
+[Pg 23]
+would be equally possible to introduce, by means of these cards, the
+logarithms of numbers; but perhaps it might not be in this case either
+the shortest or the most appropriate method; for the machine might
+be able to perform the same calculations by other more expeditious
+combinations, founded on the rapidity with which it executes the four
+first operations of arithmetic. To give an idea of this rapidity, we
+need only mention that Mr. Babbage believes he can, by his engine, form
+the product of two numbers, each containing twenty figures, in three
+minutes.
+
+Perhaps the immense number of cards required for the solution of any
+rather complicated problem may appear to be an obstacle; but this does
+not seem to be the case. There is no limit to the number of cards that
+can be used. Certain stuffs require for their fabrication not less than
+twenty thousand cards, and we may unquestionably far exceed even
+this quantity[12].
+
+Resuming what we have explained concerning the Analytical Engine, we
+may conclude that it is based on two principles: the first, consisting
+in the fact that every arithmetical calculation ultimately depends on
+four principal operations—addition, subtraction, multiplication, and
+division; the second, in the possibility of reducing every analytical
+calculation to that of the coefficients for the several terms of a
+series. If this last principle be true, all the operations of analysis
+come within the domain of the engine. To take another point of view:
+the use of the cards offers a generality equal to that of algebraical
+formulæ, since such a formula simply indicates the nature and order of
+the operations requisite for arriving at a certain definite result, and
+similarly the cards merely command the engine to perform these same
+operations; but in order that the mechanisms may be able to act to any
+purpose, the numerical data of the problem must in every particular
+case be introduced. Thus the same series of cards will serve for all
+questions whose sameness of nature is such as to require nothing
+altered excepting the numerical data. In this light the cards are
+merely a translation of algebraical formulæ, or, to express it better,
+another form of analytical notation.
+
+Since the engine has a mode of acting peculiar to itself, it will
+in every particular case be necessary to arrange the series of
+calculations conformably to the means which the machine possesses; for
+[Pg 24]
+such or such a process which might be very easy for a calculator, may
+be long and complicated for the engine, and vice versâ.
+
+Considered under the most general point of view, the essential object
+of the machine being to calculate, according to the laws dictated
+to it, the values of numerical coefficients which it is then to
+distribute appropriately on the columns which represent the variables,
+it follows that the interpretation of formulæ and of results is
+beyond its province, unless indeed this very interpretation be itself
+susceptible of expression by means of the symbols which the machine
+employs. Thus, although it is not itself the being that reflects, it
+may yet be considered as the being which executes the conceptions of
+intelligence[13]. The cards receive the impress of these conceptions,
+and transmit to the various trains of mechanism composing the engine
+the orders necessary for their action. When once the engine shall have
+been constructed, the difficulty will be reduced to the making out
+of the cards; but as these are merely the translation of algebraical
+formulæ, it will, by means of some simple notations, be easy to consign
+the execution of them to a workman. Thus the whole intellectual labour
+will be limited to the preparation of the formulæ, which must be
+adapted for calculation by the engine.
+
+Now, admitting that such an engine can be constructed, it may be
+inquired: what will be its utility? To recapitulate; it will afford the
+following advantages:—First, rigid accuracy. We know that numerical
+calculations are generally the stumbling-block to the solution of
+problems, since errors easily creep into them, and it is by no means
+always easy to detect these errors. Now the engine, by the very nature
+of its mode of acting, which requires no human intervention during the
+course of its operations, presents every species of security under the
+head of correctness; besides, it carries with it its own check; for
+at the end of every operation it prints off, not only the results,
+but likewise the numerical data of the question; so that it is easy
+to verify whether the question has been correctly proposed. Secondly,
+economy of time: to convince ourselves of this, we need only recollect
+that the multiplication of two numbers, consisting each of twenty
+figures, requires at the very utmost three minutes. Likewise, when
+a long series of identical computations is to be performed, such as
+those required for the formation of numerical tables, the machine can
+[Pg 25]
+be brought into play so as to give several results at the same time,
+which will greatly abridge the whole amount of the processes. Thirdly,
+economy of intelligence: a simple arithmetical computation requires to
+be performed by a person possessing some capacity; and when we pass
+to more complicated calculations, and wish to use algebraical formulæ
+in particular cases, knowledge must be possessed which pre-supposes
+preliminary mathematical studies of some extent. Now the engine, from
+its capability of performing by itself all these purely material
+operations, spares intellectual labour, which may be more profitably
+employed. Thus the engine may be considered as a real manufactory of
+figures, which will lend its aid to those many useful sciences and
+arts that depend on numbers. Again, who can foresee the consequences
+of such an invention? In truth, how many precious observations
+remain practically barren for the progress of the sciences, because
+there are not powers sufficient for computing the results! And what
+discouragement does the perspective of a long and arid computation
+cast into the mind of a man of genius, who demands time exclusively
+for meditation, and who beholds it snatched from him by the material
+routine of operations! Yet it is by the laborious route of analysis
+that he must reach truth; but he cannot pursue this unless guided by
+numbers; for without numbers it is not given us to raise the veil
+which envelopes the mysteries of nature. Thus the idea of constructing
+an apparatus capable of aiding human weakness in such researches, is
+a conception which, being realized, would mark a glorious epoch in
+the history of the sciences. The plans have been arranged for all the
+various parts, and for all the wheel-work, which compose this immense
+apparatus, and their action studied; but these have not yet been fully
+combined together in the drawings[14] and mechanical notation[15].
+The confidence which the genius of Mr. Babbage must inspire, affords
+legitimate ground for hope that this enterprise will be crowned with
+success; and while we render homage to the intelligence which directs
+it, let us breathe aspirations for the accomplishment of such an
+undertaking.
+
+[Pg 26]
+
+FOOTNOTES:
+
+[1]
+This remark seems to require further comment, since it
+is in some degree calculated to strike the mind as being at variance
+with the subsequent passage (page 10), where it is explained that
+an engine which can effect these four operations can in fact
+effect every species of calculation. The apparent discrepancy
+is stronger too in the translation than in the original, owing to its
+being impossible to render precisely into the English tongue all the
+niceties of distinction which the French idiom happens to admit of in
+the phrases used for the two passages we refer to. The explanation lies
+in this: that in the one case the execution of these four operations
+is the fundamental starting-point, and the object proposed for
+attainment by the machine is the subsequent combination of these
+in every possible variety; whereas in the other case the execution
+of some one of these four operations, selected at pleasure, is the
+ultimatum, the sole and utmost result that can be proposed for
+attainment by the machine referred to, and which result it cannot
+any further combine or work upon. The one begins where the other
+ends. Should this distinction not now appear perfectly clear, it
+will become soon perusing the rest of the Memoir, and the Notes that
+are appended to it.—NOTE BY TRANSLATOR.
+
+[2]
+The idea that the one engine is the offspring and has
+grown out of the other, is an exceedingly natural and plausible
+supposition, until reflection reminds us that no necessary
+sequence and connexion need exist between two such inventions, and that
+they may be wholly independent, M. Menabrea has shared this idea
+in common with persons who have not his profound and accurate insight
+into the nature of either engine. In Note A. (see the Notes at the
+end of the Memoir) it will be found sufficiently explained, however,
+that this supposition is unfounded. M. Menabrea’s opportunities were
+by no means such as could be adequate to afford him information on a
+point like this, which would be naturally and almost unconsciously
+assumed, and would scarcely suggest any inquiry with reference
+to it.—NOTE BY TRANSLATOR.
+
+[3]
+See Note A.
+
+[4]
+This must not be understood in too unqualified a manner.
+The engine is capable, under certain circumstances, of feeling about
+to discover which of two or more possible contingencies has occurred,
+and of then shaping its future course accordingly.—NOTE BY
+TRANSLATOR.
+
+[5]
+See Note B.
+
+[6]
+Zero is not always substituted when a number is
+transferred to the mill. This is explained further on in the memoir,
+and still more fully in Note D.—NOTE BY TRANSLATOR.
+
+[7]
+See Note C.
+
+[8]
+See Note D.
+
+[9]
+Not having had leisure to discuss with Mr. Babbage the
+manner of introducing into his machine the combination of algebraical
+signs, I do not pretend here to expose the method he uses fur this
+purpose; but I considered that I ought myself to supply the deficiency,
+conceiving that this paper would have been imperfect if I had omitted
+to point out one means that might be employed for resolving this
+essential part of the problem in question.
+
+[10]
+See Note E.
+
+[11]
+For an explanation of the upper left-hand indices
+attached to the s in this and in the preceding table,
+we must refer the reader to Note D., amongst those appended to the
+memoir.—NOTE BY TRANSLATOR.
+
+[12]
+See Note F.
+
+[13]
+See Note G.
+
+[14]
+This sentence has been slightly altered in the
+translation in order to express more exactly the present state of the
+engine.—NOTE BY TRANSLATOR.
+
+[15]
+The notation here alluded to is a most interesting and
+important subject, and would have well deserved a separate and detailed
+Note upon it, amongst those appended to the Memoir. It has, however,
+been impossible, within the space allotted, even to touch upon so wide
+a field.—NOTE BY TRANSLATOR.
