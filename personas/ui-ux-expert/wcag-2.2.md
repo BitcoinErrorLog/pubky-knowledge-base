@@ -1,7 +1,7 @@
 ---
 title: "Web Content Accessibility Guidelines (WCAG) 2.2"
 author: "W3C Accessibility Guidelines Working Group"
-date: "2023-10-05"
+date: "2024-12-12"
 original_url: "https://www.w3.org/TR/WCAG22/"
 archive_url: null
 source_collection: "W3C Technical Recommendation"

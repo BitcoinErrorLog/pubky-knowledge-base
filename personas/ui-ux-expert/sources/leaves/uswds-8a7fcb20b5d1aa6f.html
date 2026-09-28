@@ -1,0 +1,5252 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+  <head>
+    <!-- ANALYTICS
+================================================== -->
+
+<!-- Google Analytics - GA4 -->
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KH01P8TN5V"></script>
+	<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-KH01P8TN5V'); </script>
+
+<!-- Digital Analytics Program roll-up, see https://analytics.usa.gov for data -->
+	<script async type="text/javascript" id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA&subagency=TTS"></script>
+
+
+<!-- Basic Page Needs
+================================================== -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+  
+
+  
+
+<!-- Mobile Specific Metas
+================================================== -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Title and meta description
+================================================== -->
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Link | U.S. Web Design System (USWDS)</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Link" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Links are navigational elements that direct visitors to other locations, either on the same page or to a different page or site. They can be inline or separate from the text flow. Since every link is a potential user interaction, too many links can be overwhelming. Be judicious with links to better identify necessary calls to action." />
+<meta property="og:description" content="Links are navigational elements that direct visitors to other locations, either on the same page or to a different page or site. They can be inline or separate from the text flow. Since every link is a potential user interaction, too many links can be overwhelming. Be judicious with links to better identify necessary calls to action." />
+<link rel="canonical" href="https://designsystem.digital.gov/components/link/" />
+<meta property="og:url" content="https://designsystem.digital.gov/components/link/" />
+<meta property="og:site_name" content="U.S. Web Design System (USWDS)" />
+<meta property="og:image" content="https://designsystem.digital.gov/img/uswds-logo/lg-black.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-28T03:12:17+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://designsystem.digital.gov/img/uswds-logo/lg-black.png" />
+<meta property="twitter:title" content="Link" />
+<meta name="twitter:site" content="@USWDS" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-09-28T03:12:17+00:00","datePublished":"2026-09-28T03:12:17+00:00","description":"Links are navigational elements that direct visitors to other locations, either on the same page or to a different page or site. They can be inline or separate from the text flow. Since every link is a potential user interaction, too many links can be overwhelming. Be judicious with links to better identify necessary calls to action.","headline":"Link","image":"https://designsystem.digital.gov/img/uswds-logo/lg-black.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://designsystem.digital.gov/components/link/"},"url":"https://designsystem.digital.gov/components/link/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Favicons
+================================================== -->
+  <!-- 128x128 -->
+  <link rel="shortcut icon" type="image/ico" href="/assets/img/favicons/favicon.ico">
+  <link rel="icon" type="image/png" href="/assets/img/favicons/favicon.png">
+
+  <!-- 192x192, as recommended for Android
+  http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
+  -->
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicons/favicon-192.png">
+
+  <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+  <link rel="apple-touch-icon-precomposed" href="/assets/img/favicons/favicon-57.png">
+  <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/img/favicons/favicon-72.png">
+  <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/img/favicons/favicon-114.png">
+  <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/img/favicons/favicon-144.png">
+
+<!-- CSS
+================================================== -->
+<!-- env: production -->
+
+
+  
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  
+
+
+<!-- USWDS INIT
+================================================== -->
+<script>
+  /**
+   * This script block contains the contents of the uswds-init.js script.
+   * It's inlined because it's necessary for the first paint of the banner,
+   * and we want to avoid a round-trip to the server.
+   */
+  (function uswdsInit() {
+    "use strict";
+
+    const loadingClass = "usa-js-loading";
+    let fallback;
+
+    document.documentElement.classList.add(loadingClass);
+    function revertClass() {
+      document.documentElement.classList.remove(loadingClass);
+    }
+
+    fallback = setTimeout(revertClass, 8000);
+
+    function verifyLoaded() {
+      if (window.uswdsPresent) {
+        clearTimeout(fallback);
+        revertClass();
+        window.removeEventListener("load", verifyLoaded, true);
+      }
+    }
+
+    window.addEventListener("load", verifyLoaded, true);
+  })();
+</script>
+<script src="/assets/uswds/components/usa-banner.js.mjs" type="module"></script>
+<link rel="preload" href="/assets/js/vendor/uswds.min.js" as="script">
+  </head>
+  <body class="page-link layout-component ">
+    <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+<section
+  class="usa-banner site-banner"
+  aria-label="Official website of the United States government,,,,,,"
+>
+  <div class="usa-accordion">
+    <header class="usa-banner__header">
+      <div class="usa-banner__inner">
+        <div class="grid-col-auto">
+          <img
+            aria-hidden="true"
+            class="usa-banner__header-flag"
+            src="/assets/img/us_flag_small.png"
+            alt=""
+          />
+        </div>
+        <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+          <p class="usa-banner__header-text">
+            An official website of the United States government
+          </p>
+          <p class="usa-banner__header-action">Here’s how you know</p>
+        </div>
+        <button
+          type="button"
+          class="usa-accordion__button usa-banner__button"
+          aria-expanded="false"
+          aria-controls="gov-banner"
+        >
+          <span class="usa-banner__button-text">Here’s how you know</span>
+        </button>
+      </div>
+    </header>
+    <div
+      class="usa-banner__content usa-accordion__content"
+      id="gov-banner"
+    >
+      <div class="grid-row grid-gap-lg">
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img
+            class="usa-banner__icon usa-media-block__img"
+            src="/assets/img/icon-dot-gov.svg"
+            role="img"
+            alt=""
+            aria-hidden="true"
+          />
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Official websites use .gov</strong><br />A
+              <strong>.gov</strong> website belongs to an official government
+              organization in the United States.
+            </p>
+          </div>
+        </div>
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img
+            class="usa-banner__icon usa-media-block__img"
+            src="/assets/img/icon-https.svg"
+            role="img"
+            alt=""
+            aria-hidden="true"
+          />
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Secure .gov websites use HTTPS</strong><br />A
+              <strong>lock</strong> (
+              <span class="icon-lock"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="52"
+                  height="64"
+                  viewBox="0 0 52 64"
+                  class="usa-banner__lock-image"
+                  role="img"
+                  aria-labelledby="banner-lock-description"
+                  focusable="false"
+                >
+                  <title id="banner-lock-title">Lock</title>
+                  <desc id="banner-lock-description">Locked padlock icon</desc>
+                  <path
+                    fill="#000000"
+                    fill-rule="evenodd"
+                    d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z"
+                  />
+                </svg> </span
+              >) or <strong>https://</strong> means you’ve safely connected to
+              the .gov website. Share sensitive information only on official,
+              secure websites.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<header class="usa-header usa-header--extended site-header site-header--dark" role="banner">
+  <div class="usa-navbar site-header__navbar">
+    <div class="usa-logo site-logo" id="logo">
+      <em class="usa-logo__text site-logo__text">
+        <a href="/" title="U.S. Web Design System (USWDS) Home">
+          <span aria-hidden="true" class="site-title--short">USWDS</span>
+          <span class="site-title--long">U.S. Web Design System (USWDS)</span>
+        </a>
+      </em>
+    </div>
+    <button type="button" class="usa-menu-btn">Menu</button>
+  </div>
+</header>
+<nav aria-label="Primary navigation" class="usa-nav site-nav sticky">
+  <div class="usa-nav__inner site-nav__inner">
+    <button type="button" class="usa-nav__close">
+      <img src="/assets/img/usa-icons/close.svg" role="img" alt="Close">
+    </button>
+    <!-- Mobile nav -->
+    <ul class="usa-nav__primary usa-nav__primary--mobile usa-accordion">
+      
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<button type="button" class="usa-accordion__button usa-nav__link" aria-controls="nav-how-to-use-uswds"
+  aria-expanded="false"
+  >
+  <span>
+    How to use USWDS
+  </span>
+</button>
+<ul id="nav-how-to-use-uswds" class="usa-nav__submenu">
+  
+  
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/how-to-use-uswds/">
+  <span>
+    How to use USWDS
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/getting-started-for-developers/">
+  <span>
+    Getting started for developers
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/getting-started-for-designers/">
+  <span>
+    Getting started for designers
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/developers/">
+  <span>
+    Documentation
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/settings/">
+  <span>
+    Settings
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/maturity-model/">
+  <span>
+    USWDS maturity model
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/accessibility/">
+  <span>
+    Accessibility
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/performance/">
+  <span>
+    Performance guidelines
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/code-guidelines/">
+  <span>
+    Code guidelines
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/migration/">
+  <span>
+    Migrating to USWDS 3.0
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/migration-v2/">
+  <span>
+    Migrating to USWDS 2.0
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/implementations/">
+  <span>
+    Implementations
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/showcase/">
+  <span>
+    Showcase
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/sample-contract-language/">
+  <span>
+    Sample contract language for 21st Century IDEA
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/website-standards/">
+  <span>
+    Website standards
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+</ul>
+
+  
+  </li>
+
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<a href="/design-principles/">
+  <span>
+    Design principles
+  </span>
+</a>
+
+
+  
+  </li>
+
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<button type="button" class="usa-accordion__button usa-nav__link" aria-controls="nav-components"
+  
+  class="usa-current"
+  aria-expanded="true"
+  >
+  <span>
+    Components
+  </span>
+</button>
+<ul id="nav-components" class="usa-nav__submenu">
+  
+  
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/">
+  <span>
+    Components
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/accordion/">
+  <span>
+    Accordion
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/alert/">
+  <span>
+    Alert
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/banner/">
+  <span>
+    Banner
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/breadcrumb/">
+  <span>
+    Breadcrumb
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/button/">
+  <span>
+    Button
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/button-group/">
+  <span>
+    Button group
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/card/">
+  <span>
+    Card
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/character-count/">
+  <span>
+    Character count
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/checkbox/">
+  <span>
+    Checkbox
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/collection/">
+  <span>
+    Collection
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/combo-box/">
+  <span>
+    Combo box
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/data-visualizations/">
+  <span>
+    Data visualizations
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/date-picker/">
+  <span>
+    Date picker
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/date-range-picker/">
+  <span>
+    Date range picker
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/file-input/">
+  <span>
+    File input
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/footer/">
+  <span>
+    Footer
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/form/">
+  <span>
+    Form
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/layout-grid/">
+  <span>
+    Grid
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/header/">
+  <span>
+    Header
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/icon/">
+  <span>
+    Icon
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/icon-list/">
+  <span>
+    Icon list
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/identifier/">
+  <span>
+    Identifier
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/in-page-navigation/">
+  <span>
+    In-page navigation
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/input-mask/">
+  <span>
+    Input mask
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/input-prefix-suffix/">
+  <span>
+    Input prefix/suffix
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/language-selector/">
+  <span>
+    Language selector
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item is-current">
+    
+
+<a href="/components/link/"class="usa-current">
+  <span>
+    Link
+  </span>
+</a>
+
+    
+    
+    
+    <ul class="usa-nav__submenu">
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/link/accessibility-tests/">
+  <span>
+    Link accessibility tests
+  </span>
+</a>
+
+
+    
+  </li>
+
+</ul>
+    
+  
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/list/">
+  <span>
+    List
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/memorable-date/">
+  <span>
+    Memorable date
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/modal/">
+  <span>
+    Modal
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/pagination/">
+  <span>
+    Pagination
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/process-list/">
+  <span>
+    Process list
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/prose/">
+  <span>
+    Prose
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/radio-buttons/">
+  <span>
+    Radio buttons
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/range-slider/">
+  <span>
+    Range slider
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/search/">
+  <span>
+    Search
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/select/">
+  <span>
+    Select
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/side-navigation/">
+  <span>
+    Side navigation
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/site-alert/">
+  <span>
+    Site alert
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/step-indicator/">
+  <span>
+    Step indicator
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/summary-box/">
+  <span>
+    Summary box
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/table/">
+  <span>
+    Table
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/tag/">
+  <span>
+    Tag
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/text-input/">
+  <span>
+    Text input
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/time-picker/">
+  <span>
+    Time picker
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/tooltip/">
+  <span>
+    Tooltip
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/typography/">
+  <span>
+    Typography
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/validation/">
+  <span>
+    Validation
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+</ul>
+
+  
+  </li>
+
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<button type="button" class="usa-accordion__button usa-nav__link" aria-controls="nav-patterns"
+  aria-expanded="false"
+  >
+  <span>
+    Patterns
+  </span>
+</button>
+<ul id="nav-patterns" class="usa-nav__submenu">
+  
+  
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/patterns/">
+  <span>
+    Patterns
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/patterns/intro/">
+  <span>
+    Introducing patterns
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/patterns/create-a-user-profile/">
+  <span>
+    Create a user profile
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/patterns/complete-a-complex-form/">
+  <span>
+    Complete a complex form
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/patterns/select-a-language/">
+  <span>
+    Select a language
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+</ul>
+
+  
+  </li>
+
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<button type="button" class="usa-accordion__button usa-nav__link" aria-controls="nav-design-tokens"
+  aria-expanded="false"
+  >
+  <span>
+    Design tokens
+  </span>
+</button>
+<ul id="nav-design-tokens" class="usa-nav__submenu">
+  
+  
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/">
+  <span>
+    Design tokens
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/color/">
+  <span>
+    Color
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/typesetting/">
+  <span>
+    Typesetting
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/flex/">
+  <span>
+    Flex
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/opacity/">
+  <span>
+    Opacity
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/order/">
+  <span>
+    Order
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/shadow/">
+  <span>
+    Shadow
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/spacing-units/">
+  <span>
+    Spacing units
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/z-index/">
+  <span>
+    Z-index
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+</ul>
+
+  
+  </li>
+
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<button type="button" class="usa-accordion__button usa-nav__link" aria-controls="nav-utilities"
+  aria-expanded="false"
+  >
+  <span>
+    Utilities
+  </span>
+</button>
+<ul id="nav-utilities" class="usa-nav__submenu">
+  
+  
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/">
+  <span>
+    Utilities
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/layout-grid/">
+  <span>
+    Layout grid
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/color/">
+  <span>
+    Color
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/height-and-width/">
+  <span>
+    Height and width
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/margin-and-padding/">
+  <span>
+    Margin and padding
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/border/">
+  <span>
+    Border
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/outline/">
+  <span>
+    Outline
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/font-size-and-family/">
+  <span>
+    Font size and family
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/text-styles/">
+  <span>
+    Text styles
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/paragraph-styles/">
+  <span>
+    Paragraph styles
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/display/">
+  <span>
+    Display
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/flex/">
+  <span>
+    Flex
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/shadow/">
+  <span>
+    Shadow
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/float/">
+  <span>
+    Float
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/clearfix/">
+  <span>
+    Clearfix
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/list-reset/">
+  <span>
+    List reset
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+</ul>
+
+  
+  </li>
+
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<button type="button" class="usa-accordion__button usa-nav__link" aria-controls="nav-templates"
+  aria-expanded="false"
+  >
+  <span>
+    Templates
+  </span>
+</button>
+<ul id="nav-templates" class="usa-nav__submenu">
+  
+  
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/templates/">
+  <span>
+    Templates
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/templates/404-page/">
+  <span>
+    404 page
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/templates/documentation-page/">
+  <span>
+    Documentation page
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/templates/landing-page/">
+  <span>
+    Landing page
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/templates/authentication-pages/">
+  <span>
+    Authentication pages
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/templates/form-templates/">
+  <span>
+    Form templates
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+</ul>
+
+  
+  </li>
+
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<button type="button" class="usa-accordion__button usa-nav__link" aria-controls="nav-about"
+  aria-expanded="false"
+  >
+  <span>
+    About
+  </span>
+</button>
+<ul id="nav-about" class="usa-nav__submenu">
+  
+  
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/">
+  <span>
+    About
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/key-benefits/">
+  <span>
+    Key benefits
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/product-values/">
+  <span>
+    Product values
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/contribute/">
+  <span>
+    Contribute
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/community/">
+  <span>
+    Community
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/whats-new/">
+  <span>
+    What’s new
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/monthly-calls/">
+  <span>
+    Monthly call archive
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/product-roadmap/">
+  <span>
+    Product roadmap
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/research/">
+  <span>
+    Research
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/security/">
+  <span>
+    Security
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/website-policies-notices/">
+  <span>
+    Website policies and notices
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+</ul>
+
+  
+  </li>
+
+
+    </ul>
+    <!-- /Mobile nav -->
+    <!-- Desktop nav -->
+    <ul class="usa-nav__primary usa-nav__primary--desktop">
+      
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/how-to-use-uswds/">
+  <span>
+    How to use USWDS
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-principles/">
+  <span>
+    Design principles
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item is-current">
+    
+
+<a href="/components/"class="usa-current">
+  <span>
+    Components
+  </span>
+</a>
+
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/patterns/">
+  <span>
+    Patterns
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/">
+  <span>
+    Design tokens
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/">
+  <span>
+    Utilities
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/templates/">
+  <span>
+    Templates
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/">
+  <span>
+    About
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+    </ul>
+    <!-- /Desktop nav -->
+    <div class="usa-nav__secondary">
+      <form id="search_form-mobile" class="site-search usa-search usa-search--small"
+  action="https://search.usa.gov/search" accept-charset="UTF-8" method="get">
+  <input name="utf8" type="hidden" value="&#x2713;" />
+  <input type="hidden" name="affiliate" id="affiliate-mobile" value="uswds" />
+  <div role="search">
+    <label class="usa-sr-only" for="query-mobile">Search</label>
+    <input
+      id="query-mobile"
+      class="usa-input usagov-search-autocomplete"
+      name="query"
+      type="search"
+      autocomplete="off" />
+    <button class="site-search__button usa-button margin-top-0" type="submit" name="commit">
+      <img
+        src="/assets/img/usa-icons-bg/search--white.svg"
+        class="usa-search__submit-icon"
+        alt="Search"
+      >
+    </button>
+  </div>
+</form>
+
+      <div class="site-cta-buttons buttons">
+  <a
+    class="usa-button site-button-outline-secondary site-button-standards margin-x-0 desktop:margin-right-1 padding-x-05 desktop:padding-left-1 desktop:padding-right-05 desktop-lg:padding-left-205 desktop-lg:padding-right-2 font-lang-sm"
+    href="/website-standards/"
+    onclick="ga('send', 'event', 'Read website standards', 'Clicked Read website standards from inside site');"
+  >
+    Read website standards
+  </a>
+  <a
+    class="usa-button site-button-outline-secondary site-button-download margin-x-0 desktop:margin-right-1 desktop:padding-left-1 desktop:padding-right-05 desktop-lg:padding-left-205 desktop-lg:padding-right-2 font-lang-sm"
+    href="/download/"
+    onclick="ga('send', 'event', 'Downloaded code and design files', 'Clicked Download code and design files from inside site');"
+  >
+    Download <span class="version desktop:display-none desktop-lg:display-inline">v3.14.0</span>
+  </a>
+  <a
+    class="usa-button site-button-github margin-x-0 font-lang-sm"
+    href="https://github.com/uswds/uswds"
+    onclick="ga('send', 'event', 'Viewed on Github', 'Clicked View on Github from inside site');"
+  >
+    <?xml version="1.0" encoding="UTF-8"?><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="33"
+  height="32"
+  viewBox="0 0 33 32"
+  class="logo"
+>
+  <title>Github logo</title>
+  <path
+    fill="#161514"
+    fill-rule="evenodd"
+    d="M16.288 0C7.294 0 0 7.293 0 16.29c0 7.197 4.667 13.302 11.14 15.456.815.15 1.112-.353 1.112-.785 0-.386-.014-1.411-.022-2.77-4.531.984-5.487-2.184-5.487-2.184-.741-1.882-1.809-2.383-1.809-2.383-1.479-1.01.112-.99.112-.99 1.635.115 2.495 1.679 2.495 1.679 1.453 2.489 3.813 1.77 4.741 1.353.148-1.052.569-1.77 1.034-2.177-3.617-.411-7.42-1.809-7.42-8.051 0-1.778.635-3.233 1.677-4.371-.168-.412-.727-2.069.16-4.311 0 0 1.367-.438 4.479 1.67a15.602 15.602 0 0 1 4.078-.549 15.62 15.62 0 0 1 4.078.549c3.11-2.108 4.475-1.67 4.475-1.67.889 2.242.33 3.899.163 4.311 1.044 1.138 1.674 2.593 1.674 4.371 0 6.258-3.809 7.635-7.437 8.038.584.503 1.105 1.497 1.105 3.017 0 2.177-.02 3.934-.02 4.468 0 .436.294.943 1.12.784 6.468-2.159 11.131-8.26 11.131-15.455C32.579 7.293 25.285 0 16.288 0"
+  />
+</svg>
+
+    <span class="text">View on GitHub</span>
+  </a>
+</div>
+
+    </div>
+  </div>
+</nav>
+<div class="usa-overlay"></div>
+
+
+<div class="default-container">
+  <aside class="sidenav" id="page-side-navigation" aria-label="Section navigation">
+    
+    
+    <ul class="site-sidenav usa-sidenav">
+      
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/">
+  
+    Components
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/accordion/">
+  
+    Accordion
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/alert/">
+  
+    Alert
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/banner/">
+  
+    Banner
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/breadcrumb/">
+  
+    Breadcrumb
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/button/">
+  
+    Button
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/button-group/">
+  
+    Button group
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/card/">
+  
+    Card
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/character-count/">
+  
+    Character count
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/checkbox/">
+  
+    Checkbox
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/collection/">
+  
+    Collection
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/combo-box/">
+  
+    Combo box
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/data-visualizations/">
+  
+    Data visualizations
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/date-picker/">
+  
+    Date picker
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/date-range-picker/">
+  
+    Date range picker
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/file-input/">
+  
+    File input
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/footer/">
+  
+    Footer
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/form/">
+  
+    Form
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/utilities/layout-grid/">
+  
+    Grid
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/header/">
+  
+    Header
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/icon/">
+  
+    Icon
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/icon-list/">
+  
+    Icon list
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/identifier/">
+  
+    Identifier
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/in-page-navigation/">
+  
+    In-page navigation
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/input-mask/">
+  
+    Input mask
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/input-prefix-suffix/">
+  
+    Input prefix/suffix
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/language-selector/">
+  
+    Language selector
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item is-current">
+    
+
+<a href="/components/link/"class="usa-current">
+  
+    Link
+  
+</a>
+
+    
+    
+    
+    <ul class="usa-sidenav__sublist">
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/link/accessibility-tests/">
+  
+    Link accessibility tests
+  
+</a>
+
+
+    
+  </li>
+
+</ul>
+    
+  
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/list/">
+  
+    List
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/memorable-date/">
+  
+    Memorable date
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/modal/">
+  
+    Modal
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/pagination/">
+  
+    Pagination
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/process-list/">
+  
+    Process list
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/prose/">
+  
+    Prose
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/radio-buttons/">
+  
+    Radio buttons
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/range-slider/">
+  
+    Range slider
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/search/">
+  
+    Search
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/select/">
+  
+    Select
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/side-navigation/">
+  
+    Side navigation
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/site-alert/">
+  
+    Site alert
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/step-indicator/">
+  
+    Step indicator
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/summary-box/">
+  
+    Summary box
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/table/">
+  
+    Table
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/tag/">
+  
+    Tag
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/text-input/">
+  
+    Text input
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/time-picker/">
+  
+    Time picker
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/tooltip/">
+  
+    Tooltip
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/typography/">
+  
+    Typography
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/validation/">
+  
+    Validation
+  
+</a>
+
+
+    
+  </li>
+
+
+    </ul>
+    
+  </aside>
+
+  
+  <div class="usa-in-page-nav-container">
+    <aside class="usa-in-page-nav"
+      aria-label="On this page"
+      data-scroll-offset="48"
+      data-root-margin="48px 0px -90% 0px"
+      data-threshold="1"
+      data-heading-elements=
+    ></aside>
+  
+    <main id="main-content" class="main-content">
+      <div class="styleguide-content usa-prose site-prose">
+        <header>
+          
+            
+              <p class="site-subheading">Components</p>
+            
+          
+          <h1 id="link" class="site-page-title">Link</h1>
+        </header>
+
+        <p class="site-text-intro">A link connects users to a different page or further information.</p>
+
+
+
+
+        <!-- Add wcag compliance status tag -->
+        <!-- Add compliance tag -->
+
+
+
+
+
+
+
+<p class="margin-top-0 margin-bottom-4">
+  <span class="usa-tag site-compliance-tag site-compliance-tag--pass">
+    Passed WCAG 2.1 AA
+  </span>
+</p>
+
+
+
+        
+
+
+
+
+
+
+
+
+
+<h2 class="site-component-section-title">About the link component</h2>
+<div class="font-lang-md measure-5 margin-top-3 margin-bottom-6">
+  <p>Links are navigational elements that direct visitors to other locations, either on the same page or to a different page or site. They can be inline or separate from the text flow. Since every link is a potential user interaction, too many links can be overwhelming. Be judicious with links to better identify necessary calls to action.</p>
+
+</div>
+
+
+
+  
+
+
+
+
+
+
+
+  
+<div class="usa-accordion usa-accordion--bordered site-accordion-code site-component-preview">
+  
+  
+  <h2 id="link-preview" class="usa-accordion__heading site-accordion-heading">
+    <button
+      type="button"
+      class="usa-accordion__button"
+      aria-controls="link-preview-content"
+      aria-expanded="true">
+      Component preview
+    </button>
+  </h2>
+  <div id="link-preview-content" class="usa-accordion__content">
+
+    
+        <p>
+  This is <a class="usa-link" href="javascript:void(0);">a text link</a> on a
+  light background.
+</p>
+<p>
+  This is
+  <a class="usa-link usa-color-text-visited" href="javascript:void(0);"
+    >a visited link</a
+  >.
+</p>
+<p>
+  This is a link that opens in the <em>current</em> tab and goes to an
+  <a
+    class="usa-link usa-link--external"
+    rel="noreferrer"
+    href="https://i.giphy.com/media/WPzQF6ruiIIVzHNlwX/source.gif"
+    >external website</a
+  >.
+</p>
+<p>
+  This is a link that opens in a <em>new</em> tab and goes to an
+  <a
+    class="usa-link usa-link--external"
+    rel="noreferrer"
+    target="_blank"
+    href="https://i.giphy.com/media/WPzQF6ruiIIVzHNlwX/source.gif"
+    >external website</a
+  >.
+</p>
+<div class="usa-dark-background padding-1 display-inline-block">
+  <p>
+    This is
+    <a class="usa-link" href="javascript:void(0);"
+      >a text link on a dark background</a
+    >.
+  </p>
+  <p>
+    <a
+      class="usa-link usa-link--alt usa-link--external"
+      rel="noreferrer"
+      href="https://i.giphy.com/media/WPzQF6ruiIIVzHNlwX/source.gif"
+      >This</a
+    >
+    is an alternate external text link on a dark background.
+  </p>
+</div>
+
+    
+  </div>
+</div>
+
+
+
+<div class="usa-accordion usa-accordion--bordered site-accordion-code">
+  
+  
+  <h2 id="link-code" class="usa-accordion__heading site-accordion-heading">
+    <button
+      type="button"
+      class="usa-accordion__button"
+      aria-controls="link-code-content">
+      Component code
+    </button>
+  </h2>
+  <div id="link-code-content" class="usa-accordion__content copy-code">
+    
+
+<div class="usa-sr-only">
+  
+<figure class="highlight"><pre><code class="language-text" data-lang="text">&lt;p&gt;
+  This is &lt;a class="usa-link" href="javascript:void(0);"&gt;a text link&lt;/a&gt; on a
+  light background.
+&lt;/p&gt;
+&lt;p&gt;
+  This is
+  &lt;a class="usa-link usa-color-text-visited" href="javascript:void(0);"
+    &gt;a visited link&lt;/a
+  &gt;.
+&lt;/p&gt;
+&lt;p&gt;
+  This is a link that opens in the &lt;em&gt;current&lt;/em&gt; tab and goes to an
+  &lt;a
+    class="usa-link usa-link--external"
+    rel="noreferrer"
+    href="https://i.giphy.com/media/WPzQF6ruiIIVzHNlwX/source.gif"
+    &gt;external website&lt;/a
+  &gt;.
+&lt;/p&gt;
+&lt;p&gt;
+  This is a link that opens in a &lt;em&gt;new&lt;/em&gt; tab and goes to an
+  &lt;a
+    class="usa-link usa-link--external"
+    rel="noreferrer"
+    target="_blank"
+    href="https://i.giphy.com/media/WPzQF6ruiIIVzHNlwX/source.gif"
+    &gt;external website&lt;/a
+  &gt;.
+&lt;/p&gt;
+&lt;div class="usa-dark-background padding-1 display-inline-block"&gt;
+  &lt;p&gt;
+    This is
+    &lt;a class="usa-link" href="javascript:void(0);"
+      &gt;a text link on a dark background&lt;/a
+    &gt;.
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;a
+      class="usa-link usa-link--alt usa-link--external"
+      rel="noreferrer"
+      href="https://i.giphy.com/media/WPzQF6ruiIIVzHNlwX/source.gif"
+      &gt;This&lt;/a
+    &gt;
+    is an alternate external text link on a dark background.
+  &lt;/p&gt;
+&lt;/div&gt;</code></pre></figure>
+
+</div>
+<div aria-hidden="true">
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>
+  This is <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"usa-link"</span> <span class="na">href=</span><span class="s">"javascript:void(0);"</span><span class="nt">&gt;</span>a text link<span class="nt">&lt;/a&gt;</span> on a
+  light background.
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+  This is
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"usa-link usa-color-text-visited"</span> <span class="na">href=</span><span class="s">"javascript:void(0);"</span>
+    <span class="nt">&gt;</span>a visited link<span class="nt">&lt;/a</span>
+  <span class="nt">&gt;</span>.
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+  This is a link that opens in the <span class="nt">&lt;em&gt;</span>current<span class="nt">&lt;/em&gt;</span> tab and goes to an
+  <span class="nt">&lt;a</span>
+    <span class="na">class=</span><span class="s">"usa-link usa-link--external"</span>
+    <span class="na">rel=</span><span class="s">"noreferrer"</span>
+    <span class="na">href=</span><span class="s">"https://i.giphy.com/media/WPzQF6ruiIIVzHNlwX/source.gif"</span>
+    <span class="nt">&gt;</span>external website<span class="nt">&lt;/a</span>
+  <span class="nt">&gt;</span>.
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+  This is a link that opens in a <span class="nt">&lt;em&gt;</span>new<span class="nt">&lt;/em&gt;</span> tab and goes to an
+  <span class="nt">&lt;a</span>
+    <span class="na">class=</span><span class="s">"usa-link usa-link--external"</span>
+    <span class="na">rel=</span><span class="s">"noreferrer"</span>
+    <span class="na">target=</span><span class="s">"_blank"</span>
+    <span class="na">href=</span><span class="s">"https://i.giphy.com/media/WPzQF6ruiIIVzHNlwX/source.gif"</span>
+    <span class="nt">&gt;</span>external website<span class="nt">&lt;/a</span>
+  <span class="nt">&gt;</span>.
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"usa-dark-background padding-1 display-inline-block"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p&gt;</span>
+    This is
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"usa-link"</span> <span class="na">href=</span><span class="s">"javascript:void(0);"</span>
+      <span class="nt">&gt;</span>a text link on a dark background<span class="nt">&lt;/a</span>
+    <span class="nt">&gt;</span>.
+  <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;</span>
+    <span class="nt">&lt;a</span>
+      <span class="na">class=</span><span class="s">"usa-link usa-link--alt usa-link--external"</span>
+      <span class="na">rel=</span><span class="s">"noreferrer"</span>
+      <span class="na">href=</span><span class="s">"https://i.giphy.com/media/WPzQF6ruiIIVzHNlwX/source.gif"</span>
+      <span class="nt">&gt;</span>This<span class="nt">&lt;/a</span>
+    <span class="nt">&gt;</span>
+    is an alternate external text link on a dark background.
+  <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+</div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="link-guidance" class="site-component-section-title">
+  Guidance
+</h2>
+<div class="site-component-usage">
+  
+    <h3 id="overview" class="usa-heading site-component-usage__header--secondary">
+      Overview
+    </h3>
+    
+<p class="margin-top-2 padding-top-1 border-top-1px border-base-lighter">Each item below is explained in the guidance sections that follow.<p>
+
+<div class="bg-white border-1px border-base-lightest padding-2 radius-lg">
+  <div class="grid-row grid-gap-lg">
+    <div class="margin-top-3 tablet:margin-top-0 tablet:grid-col">
+      <h4>What you should do</h4>
+      <ul class="usa-icon-list usa-icon-list--success margin-top-2">
+        <li class="usa-icon-list__item">
+          <div class="usa-icon-list__icon">
+            <svg class="usa-icon" aria-hidden="true" role="img"><use href="/assets/img/sprite.svg#check_circle"></use></svg>
+          </div>
+          <div class="usa-icon-list__content">
+            Clearly identify external links
+          </div>
+        </li>
+        <li class="usa-icon-list__item">
+          <div class="usa-icon-list__icon">
+            <svg class="usa-icon" aria-hidden="true" role="img"><use href="/assets/img/sprite.svg#check_circle"></use></svg>
+          </div>
+          <div class="usa-icon-list__content">
+            Notify users about non-federal external links
+          </div>
+        </li>
+        <li class="usa-icon-list__item">
+          <div class="usa-icon-list__icon">
+            <svg class="usa-icon" aria-hidden="true" role="img"><use href="/assets/img/sprite.svg#check_circle"></use></svg>
+          </div>
+          <div class="usa-icon-list__content">
+            Use unique, meaningful link text
+          </div>
+        </li>
+        <li class="usa-icon-list__item">
+          <div class="usa-icon-list__icon">
+            <svg class="usa-icon" aria-hidden="true" role="img"><use href="/assets/img/sprite.svg#check_circle"></use></svg>
+          </div>
+          <div class="usa-icon-list__content">
+            Simplify link placement in body text
+          </div>
+        </li>
+        <li class="usa-icon-list__item">
+          <div class="usa-icon-list__icon">
+            <svg class="usa-icon" aria-hidden="true" role="img"><use href="/assets/img/sprite.svg#check_circle"></use></svg>
+          </div>
+          <div class="usa-icon-list__content">
+            Link directly to the most relevant page
+          </div>
+        </li>
+        <li class="usa-icon-list__item">
+          <div class="usa-icon-list__icon">
+            <svg class="usa-icon" aria-hidden="true" role="img"><use href="/assets/img/sprite.svg#check_circle"></use></svg>
+          </div>
+          <div class="usa-icon-list__content">
+            Indicate nonpublic links that require authentication
+          </div>
+        </li>
+        <li class="usa-icon-list__item">
+          <div class="usa-icon-list__icon">
+            <svg class="usa-icon" aria-hidden="true" role="img"><use href="/assets/img/sprite.svg#check_circle"></use></svg>
+          </div>
+          <div class="usa-icon-list__content">
+            If you use an external link indicator, use it consistently for all text links
+          </div>
+        </li>
+        <li class="usa-icon-list__item">
+          <div class="usa-icon-list__icon">
+            <svg class="usa-icon" aria-hidden="true" role="img"><use href="/assets/img/sprite.svg#check_circle"></use></svg>
+          </div>
+          <div class="usa-icon-list__content">
+            Add <code>rel="noreferrer"</code> to external links
+          </div>
+        </li>
+        <li class="usa-icon-list__item">
+          <div class="usa-icon-list__icon">
+            <svg class="usa-icon" aria-hidden="true" role="img"><use href="/assets/img/sprite.svg#check_circle"></use></svg>
+          </div>
+          <div class="usa-icon-list__content">
+            Provide text context for external links
+          </div>
+        </li>
+         <li class="usa-icon-list__item">
+          <div class="usa-icon-list__icon">
+            <svg class="usa-icon" aria-hidden="true" role="img"><use href="/assets/img/sprite.svg#check_circle"></use></svg>
+          </div>
+          <div class="usa-icon-list__content">
+            Add a non-endorsement statement
+          </div>
+        </li>
+        <li class="usa-icon-list__item">
+          <div class="usa-icon-list__icon">
+            <svg class="usa-icon" aria-hidden="true" role="img"><use href="/assets/img/sprite.svg#check_circle"></use></svg>
+          </div>
+          <div class="usa-icon-list__content">
+            Indicate file type and size for links to non-HTML content
+          </div>
+        </li>
+        <li class="usa-icon-list__item">
+          <div class="usa-icon-list__icon">
+            <svg class="usa-icon" aria-hidden="true" role="img"><use href="/assets/img/sprite.svg#check_circle"></use></svg>
+          </div>
+          <div class="usa-icon-list__content">
+            Identify jump links in body text
+          </div>
+        </li>
+        <li class="usa-icon-list__item">
+          <div class="usa-icon-list__icon">
+            <svg class="usa-icon" aria-hidden="true" role="img"><use href="/assets/img/sprite.svg#check_circle"></use></svg>
+          </div>
+          <div class="usa-icon-list__content">
+            Write out email and phone links
+          </div>
+        </li>
+        <li class="usa-icon-list__item">
+          <div class="usa-icon-list__icon">
+            <svg class="usa-icon" aria-hidden="true" role="img"><use href="/assets/img/sprite.svg#check_circle"></use></svg>
+          </div>
+          <div class="usa-icon-list__content">
+            Encode email and phone links
+          </div>
+        </li>
+        <li class="usa-icon-list__item">
+          <div class="usa-icon-list__icon">
+            <svg class="usa-icon" aria-hidden="true" role="img"><use href="/assets/img/sprite.svg#check_circle"></use></svg>
+          </div>
+          <div class="usa-icon-list__content">
+            Check with your IT security department regarding email link best practices
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="margin-top-3 tablet:margin-top-0 tablet:grid-col">
+      <h4>What you shouldn't do</h4>
+      <ul class="usa-icon-list usa-icon-list--error margin-top-2">
+        <li class="usa-icon-list__item">
+          <div class="usa-icon-list__icon">
+            <svg class="usa-icon" aria-hidden="true" role="img"><use href="/assets/img/sprite.svg#cancel"></use></svg>
+          </div>
+          <div class="usa-icon-list__content">
+            Don’t rely only on color to distinguish links
+          </div>
+        </li>
+        <li class="usa-icon-list__item">
+          <div class="usa-icon-list__icon">
+            <svg class="usa-icon" aria-hidden="true" role="img"><use href="/assets/img/sprite.svg#cancel"></use></svg>
+          </div>
+          <div class="usa-icon-list__content">
+            Don’t block external links with disruptive notifications
+          </div>
+        </li>
+        <li class="usa-icon-list__item">
+          <div class="usa-icon-list__icon">
+            <svg class="usa-icon" aria-hidden="true" role="img"><use href="/assets/img/sprite.svg#cancel"></use></svg>
+          </div>
+          <div class="usa-icon-list__content">
+            Don’t use generic link text like “read more” or “link”
+          </div>
+        </li>
+        <li class="usa-icon-list__item">
+          <div class="usa-icon-list__icon">
+            <svg class="usa-icon" aria-hidden="true" role="img"><use href="/assets/img/sprite.svg#cancel"></use></svg>
+          </div>
+          <div class="usa-icon-list__content">
+            Don’t use the same link text for different URLs on the same page
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  
+    <h3 id="what-you-should-do" class="usa-heading site-component-usage__header--secondary">
+      What you should do
+    </h3>
+    
+
+      <ul class="usa-content-list">
+  <li>
+    <p><strong>Clearly identify external links.</strong> The external link icon (<svg class="usa-icon text-middle" aria-hidden="true" focusable="false" role="img"><use href="/assets/img/sprite.svg#launch"></use></svg>) is a good way to communicate that a link is external.</p>
+  </li>
+  <li>
+    <p><strong>Notify users about non-federal links.</strong> Review <a href="https://digital.gov/resources/required-web-content-and-links">this resource on Digital.gov</a> for guidance on non-federal link requirements.</p>
+  </li>
+  <li>
+    <p><strong>Use unique, meaningful link text.</strong> Link text should explain the link’s purpose and help the user understand the link’s destination. Vague and repetitive text like “click here” or “read more” is unhelpful to those using screen-reading software. Screen-reading software collects all page links into a single list, and users typically start with that list. When they do so, they will not be able to tell the difference between links with similar wording.</p>
+  </li>
+  <li>
+    <p><strong>Simplify link placement in body text.</strong> A link requires mental effort, which affects readability. Reduce the number of links in a single sentence to simplify its message. Consider placing links at the beginning or end of sentences to improve readability.</p>
+  </li>
+  <li>
+    <p><strong>Link directly to the most relevant page.</strong> Avoid links to pages that require further user action to locate the intended information.</p>
+  </li>
+  <li>
+    <p><strong>Indicate nonpublic links that require authentication.</strong> Use text or an indicator like a lock icon to signal any link that is not available publicly. This includes links behind a login or other authentication like a paywall.</p>
+
+    <p><strong>Example 1:</strong></p>
+    <blockquote>
+      <p>We’ve documented our research in the <a href="javascript:void(0)">raw research notes 🔒</a>.</p>
+    </blockquote>
+
+    <p><strong>Example 2:</strong></p>
+    <blockquote>
+      <p>We’ve documented our research in the <a href="javascript:void(0)">raw research notes</a> (requires login).</p>
+    </blockquote>
+  </li>
+  <li>
+    <p><strong>If you use an external link indicator, use it consistently for all external text links.</strong> If your project uses an external link indicator (like an icon), use that indicator for all text links across your site. If users learn to associate an external link with the indicator, they will also appropriately expect that text links without an indicator are not external links. Icon- or image-only links like social share buttons or logos do not need the same treatment as text links.</p>
+  </li>
+  <li>
+    <p><strong>Use <code class="language-plaintext highlighter-rouge">rel="noreferrer"</code> property on external links.</strong> Setting <code class="language-plaintext highlighter-rouge">noreferrer</code> on links prevents the browser from leaking information about the original web address.</p>
+  </li>
+  <li>
+    <p><strong>Provide text context for external links.</strong> Following a link is a user decision. Users need enough information to make that decision - short links without context often don’t provide that. Plain, straightforward text can be the best way to communicate to users that a link will take them away from your site, which can be useful whether the external link is to either a government or a non-government site. When possible, use the content of the link text itself to indicate where it goes. By itself, an external link indicator (like an icon) can be ambiguous. Adding plain text can help make any link destination more clear.</p>
+
+    <p><strong>Example 1:</strong></p>
+    <blockquote>
+      <p><a href="https://www.cdc.gov/skin-cancer/sun-safety/">CDC recommends using sunscreen when you’re outside</a> to reduce your risk of skin damage and skin cancer.</p>
+    </blockquote>
+
+    <blockquote>
+      <p>To ensure food safety during an emergency, <a href="https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/food-safety.html">the Red Cross recommends you do not open the refrigerator or freezer</a>.</p>
+    </blockquote>
+
+    <p><strong>Example 2:</strong></p>
+    <blockquote>
+      <p><a href="https://www.cdc.gov/skin-cancer/sun-safety/">Sun safety guidance [cdc.gov]</a>.</p>
+    </blockquote>
+
+    <blockquote>
+      <p><a href="https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/food-safety.html">Food safety during an emergency [redcross.org]</a></p>
+    </blockquote>
+  </li>
+  <li>
+    <p><strong>Add a non-endorsement statement to your site.</strong> Your “Policy and Notices” page should explain to users that your agency does not endorse the information on any linked non-federal site. See, for example, <a href="https://www.usa.gov/linking-policy">USA.gov’s linking policy</a>. In addition to this site-level notice, consider adding additional non-endorsement statements on individual pages with non-federal links.</p>
+  </li>
+  <li>
+    <p><strong>Indicate file type and size for links to non-HTML content.</strong> Whenever possible, create HTML pages instead of linking to files like PDFs. If you do link to a file, tell users ahead of time if the link may trigger a file download, and show the size and format of that file.</p>
+
+    <p>We recommend including this information at the end of the link, in the format <code class="language-plaintext highlighter-rouge">[FILE_TYPE, SIZE]</code>. We recommend using the file type rather than a product name. Use uppercase for the file type and a comma for the separator. For file size, use the number of pages in the document or the size in MB or KB if the document is not paginated.</p>
+
+    <p><strong>Example 1:</strong></p>
+    <blockquote>
+      <p>GSA published a report, <a href="https://designsystem.digital.gov/files/next/Transforming-the-American-digital-experience.pdf">Transforming the American Digital Experience [PDF, 18 pages]</a></p>
+    </blockquote>
+
+    <p><strong>Example 2:</strong></p>
+    <blockquote>
+      <p>Download the <a href="https://assets.section508.gov/assets/files/508-standards-applicability-checklist.docx">Revised 508 Standards Applicability Checklist [DOCX, 2 pages]</a></p>
+    </blockquote>
+
+    <p><strong>Example 3:</strong></p>
+    <blockquote>
+      <p>Download the <a href="https://github.com/uswds/uswds-for-designers/releases/download/v2.4.0/uswds-for-designers-v2.4.0.zip">USWDS 2.11.2 Design Kit for Sketch [ZIP, 13.3 MB]</a></p>
+    </blockquote>
+  </li>
+  <li>
+    <p><strong>Identify jump links in body text.</strong> Jump links (or in-page links) send the user to another part of the same page. This behavior can be unexpected in body text links. In these cases, use the link text like “jump to”, “above” or “below” to tell users that the destination is elsewhere on the same page.</p>
+
+    <p><strong>Example 1:</strong></p>
+    <blockquote>
+      <p><a href="javascript:void(0)">Jump to video resources</a> for more information about how to boil water.</p>
+    </blockquote>
+
+    <p><strong>Example 2:</strong></p>
+    <blockquote>
+      <p>For more information on how to boil water, see <a href="javascript:void(0)">video resources</a>, below.</p>
+    </blockquote>
+  </li>
+  <li>
+    <p><strong>Write out email and phone links.</strong> For <code class="language-plaintext highlighter-rouge">mailto:</code> and <code class="language-plaintext highlighter-rouge">tel:</code> links, write out email addresses and phone numbers so users can read or copy this information without selecting the link.</p>
+
+    <p><strong>Example:</strong></p>
+    <blockquote>
+      <p>Email us at <a href="mailto:uswds@gsa.gov">uswds@gsa.gov</a></p>
+    </blockquote>
+  </li>
+  <li>
+    <p><strong>Encode email and phone links.</strong> Some browsers don’t automatically display a clickable link for email addresses or phone numbers, so encode email and phone links with <code class="language-plaintext highlighter-rouge">mailto:</code> and <code class="language-plaintext highlighter-rouge">tel:</code>. Be sure to include the country code in phone numbers to support international users.</p>
+
+    <p><strong>Examples:</strong></p>
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"mailto:program-team@agency.gov"</span><span class="nt">&gt;</span>program-team@agency.gov<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>    </div>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"tel:1-800-555-1234"</span><span class="nt">&gt;</span>1-800-555-1234<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Check with your IT security department regarding email link best practices.</strong> While displaying email addresses and phone numbers provides a better experience for users, it can also increase spam for the email recipient. One approach is to use a group email address to protect individuals. Another benefit of that approach is the email will remain the same even as staff and organizational structures change. You can also consider using a contact form instead of showing email addresses.</p>
+  </li>
+</ul>
+
+    
+  
+    <h3 id="what-you-shouldn-t-do" class="usa-heading site-component-usage__header--secondary">
+      What you shouldn't do
+    </h3>
+    
+
+      <ul class="usa-content-list">
+  <li>
+    <p><strong>Don’t rely on only color to distinguish links.</strong> Site visitors should be able to distinguish text links from surrounding text. In most cases, include an underline or bottom border on text links, in addition to a consistent link color. Text links not distinguished with an underline need a contrast level of at least 3:1 with their surrounding text (the same as AA Large, or a USWDS magic number of <code class="language-plaintext highlighter-rouge">40</code>) and should show an underline on hover.</p>
+  </li>
+  <li>
+    <p><strong>Don’t block external links with disruptive notifications.</strong> Allow users to follow external links without taking a separate action to acknowledge leaving your site. Roadblock notices, such as modals and dialog boxes, result in a poor user experience. Instead, communicate about a link’s destination through <a href="https://designsystem.digital.gov/components/link/#what-you-should-do">descriptive link text</a> and external link indicators. Use your site’s policy and notices page to provide important information about non-government sites without disrupting the user experience.</p>
+  </li>
+  <li>
+    <p><strong>Don’t use generic link text.</strong> Vague text like “click here” and “read more” is confusing and repetitive, especially to people using screen readers. Link text should describe the destination and explain where users will go if they follow the link.</p>
+  </li>
+  <li>
+    <p><strong>Don’t use the same link text for different URLs on the same page.</strong> Differentiate between links by using unique text for each.</p>
+  </li>
+</ul>
+
+    
+  
+  
+  
+  
+  
+  
+    <h3 id="accessibility-link" class="usa-heading site-component-usage__header--secondary">
+      Accessibility guidance
+    </h3>
+    
+    
+
+<div class="usa-alert site-alert usa-alert--info usa-alert--no-icon measure-5 margin-bottom-2">
+  <div class="usa-alert__body">
+    <p class="usa-alert__text text-bold">
+      Test the link component in your own project.
+    </p>
+    <p class="margin-y-1">
+      USWDS tested the link component for accessibility. You should test your implementation, too.
+    </p>
+      <a class="usa-button margin-top-1 font-lang-xs" href="/components/link/accessibility-tests">
+        Use link accessibility tests
+      </a>
+  </div>
+</div>
+
+    
+    <ul class="usa-content-list">
+  <li><strong>Allow keyboard navigation of links.</strong> Users should be able to navigate between links by using the “Tab” key. They should be able to activate a link by pressing the “Enter” key.</li>
+  <li><strong>Link hover state should be visible on focus.</strong> Users should be able to activate hover and focus states with both a mouse and a keyboard.</li>
+</ul>
+
+  
+  
+  
+    <h3  id="using-the-link-component" class="usa-heading site-component-usage__header--secondary">
+      Using the link component
+    </h3>
+    
+    
+      <h4 id="component-settings-link" class="site-component-usage__header--tertiary">
+        Link settings
+      </h4>
+      
+      
+
+
+
+
+
+
+
+  <table class="usa-table--borderless site-table-responsive site-table-simple">
+    <thead>
+      <tr>
+        <th scope="col" class="flex-6 display-inline-flex">Variable</th>
+        <th scope="col" class="flex-6 display-inline-flex">Description</th>
+      </tr>
+    </thead>
+    <tbody class="font-mono-2xs">
+      
+      <tr>
+        <td data-title="Variable" class="flex-6 display-inline-flex flex-align-start">
+          <code>
+            $theme-external-link-sr-label-tab-new
+          </code>
+        </td>
+        <td data-title="Description" class="flex-6 display-inline-flex flex-align-start">
+          <span class="font-lang-3xs">
+            <p>Screen reader label for external links that open in new tabs.</p>
+
+          </span>
+        </td>
+      </tr>
+      
+      <tr>
+        <td data-title="Variable" class="flex-6 display-inline-flex flex-align-start">
+          <code>
+            $theme-external-link-sr-label-tab-same
+          </code>
+        </td>
+        <td data-title="Description" class="flex-6 display-inline-flex flex-align-start">
+          <span class="font-lang-3xs">
+            <p>Screen reader label for external links that open in current tab.</p>
+
+          </span>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+
+      <h4 id="component-variants-link" class="site-component-usage__header--tertiary">
+        Link variants
+      </h4>
+      
+
+
+  <table class="usa-table--borderless site-table-responsive site-table-simple margin-top-105">
+    <thead>
+      <tr>
+
+        <th scope="col" class="flex-1 display-inline-flex">Variant</th>
+
+        <th scope="col" class="flex-1 display-inline-flex">Description</th>
+      </tr>
+    </thead>
+    <tbody class="font-lang-3xs">
+      <tr>
+
+        <td class="flex-1 display-inline-flex flex-align-start"
+          data-title="Variant"
+          >
+          <p><code class="language-plaintext highlighter-rouge">.usa-link--external</code></p>
+
+        </td>
+
+        <td class="flex-1 display-inline-flex flex-align-start"
+          data-title="Description"
+          >
+          <p>Display an external link icon after the link.</p>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+    
+  
+  
+    <h3 id="additional-information" class="usa-heading site-component-usage__header--secondary">
+      Additional information
+    </h3>
+    <ul class="usa-content-list">
+  <li>OMB M-23-22: Delivering a Digital-First Public Experience, retrieved from <code class="language-plaintext highlighter-rouge">https://www.whitehouse.gov/omb/management/ofcio/delivering-a-digital-first-public-experience/</code>. [This link is no longer active. <a href="https://bidenwhitehouse.archives.gov/omb/management/ofcio/delivering-a-digital-first-public-experience/">Archived copy of OMB M-23-22</a>]</li>
+  <li><a href="https://obamawhitehouse.archives.gov/sites/default/files/omb/assets/memoranda_2010/m10-23.pdf">OMB M-10-23: Guidance for Agency Use of Third-Party Websites and Applications [PDF, 9 pages]</a></li>
+</ul>
+
+  
+    <h3 id="research-findings" class="usa-heading site-component-usage__header--secondary">
+      Research findings
+    </h3>
+    <ul class="usa-content-list">
+  <li><strong>Qualitative comparison A/B test of external link indicator:</strong> In May–June 2021, USWDS conducted research around using an external link indicator for text links to external websites. We first performed a landscape analysis of commonly used external link icons and designed an alternative variant of the external link indicator. Then, we conducted a qualitative comparison A/B usability test of our default external link icon and a newly designed “Exit” badge. Our findings:
+    <ul>
+      <li>Users understand a link’s destination when that destination is included in the link text or the context of the link.</li>
+      <li>Users are more likely to ignore link icons and badges than think about their meaning.</li>
+      <li>Users didn’t consistently understand either the external link icon nor an “Exit” badge.</li>
+      <li>Users expect an icon or badge alongside a link to be clickable.</li>
+      <li>If users have a specific goal to accomplish on a page, they won’t leave that page and follow a link elsewhere until they complete their task on the current page.</li>
+      <li>Links can be a distraction when users read blocks of text.</li>
+      <li>Long link text can be hard to read or understand.</li>
+      <li>Government-speak and acronyms make links more confusing.</li>
+      <li>Paragraphs with lots of links can be hard to read or understand.</li>
+      <li>Users expect to find reference links at the bottom of the page.</li>
+      <li>Users find agency name/branding in the top left corner of a web page critical for orientation.</li>
+    </ul>
+
+    <p>Read the <a href="https://github.com/uswds/uswds/wiki/2021-07-29-External-Link-Indicator-Research-Findings">complete Research findings</a> on GitHub →</p>
+  </li>
+</ul>
+
+  
+  
+</div>
+
+<!-- Add accessibility test results -->
+
+  
+
+
+
+<!-- Create a list of each status type -->
+
+
+<!-- Set status icons -->
+
+
+
+
+
+<!-- Count the number of items for each status type -->
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="site-component-section-title">Accessibility test status</h2>
+
+
+  <p class="margin-top-1 margin-bottom-0">The USWDS team did 4 tests based on WCAG 2.1 AA success criteria.</p>
+
+  <!-- Add test summary for desktop widths -->
+  <table class="usa-table site-checklist-test-summary__table">
+    <caption>
+      Overview of recent accessibility test results:
+    </caption>
+    <thead>
+      <tr>
+        <th>Total tests</th>
+        
+          
+          <th>
+            <div class="display-flex flex-align-center">
+                <svg class="usa-icon site-checklist-icon site-checklist-icon--pass" aria-hidden="true" role="img">
+                  <use href="/assets/img/sprite.svg#check_circle"></use>
+                </svg>
+              Passed
+            </div>
+          </th>
+        
+          
+          <th>
+            <div class="display-flex flex-align-center">
+                <svg class="usa-icon site-checklist-icon site-checklist-icon--exception" aria-hidden="true" role="img">
+                  <use href="/assets/img/sprite.svg#warning"></use>
+                </svg>
+              Passed with exceptions
+            </div>
+          </th>
+        
+          
+          <th>
+            <div class="display-flex flex-align-center">
+                <svg class="usa-icon site-checklist-icon site-checklist-icon--conditional" aria-hidden="true" role="img">
+                  <use href="/assets/img/sprite.svg#info"></use>
+                </svg>
+              Conditional
+            </div>
+          </th>
+        
+          
+          <th>
+            <div class="display-flex flex-align-center">
+                <svg class="usa-icon site-checklist-icon site-checklist-icon--fail" aria-hidden="true" role="img">
+                  <use href="/assets/img/sprite.svg#cancel"></use>
+                </svg>
+              Failed
+            </div>
+          </th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>4</td>
+        
+          
+          <td class="border-">3</td>
+        
+          
+          <td class="border-">0</td>
+        
+          
+          <td class="border-">1</td>
+        
+          
+          <td class="border-">0</td>
+        
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Add test summary for mobile widths -->
+  <div class="site-checklist-test-summary__list">
+    <p class="site-checklist-test-summary__list-summary">Overview of recent accessibility test results:</p>
+    <ul class="usa-icon-list">
+      
+        
+
+        
+        
+
+        <li class="usa-icon-list__item">
+          <div class="usa-icon-list__icon site-checklist-icon--pass">
+            <svg class="usa-icon" aria-hidden="true" role="img">
+              <use href="/assets/img/sprite.svg#check_circle"></use>
+            </svg>
+          </div>
+          <div class="usa-icon-list__content">
+            <b>Passed:</b> 3
+          </div>
+        </li>
+      
+        
+
+        
+        
+
+        <li class="usa-icon-list__item">
+          <div class="usa-icon-list__icon site-checklist-icon--exception">
+            <svg class="usa-icon" aria-hidden="true" role="img">
+              <use href="/assets/img/sprite.svg#warning"></use>
+            </svg>
+          </div>
+          <div class="usa-icon-list__content">
+            <b>Passed with exceptions:</b> 0
+          </div>
+        </li>
+      
+        
+
+        
+        
+
+        <li class="usa-icon-list__item">
+          <div class="usa-icon-list__icon site-checklist-icon--conditional">
+            <svg class="usa-icon" aria-hidden="true" role="img">
+              <use href="/assets/img/sprite.svg#info"></use>
+            </svg>
+          </div>
+          <div class="usa-icon-list__content">
+            <b>Conditional:</b> 1
+          </div>
+        </li>
+      
+        
+
+        
+        
+
+        <li class="usa-icon-list__item">
+          <div class="usa-icon-list__icon site-checklist-icon--fail">
+            <svg class="usa-icon" aria-hidden="true" role="img">
+              <use href="/assets/img/sprite.svg#cancel"></use>
+            </svg>
+          </div>
+          <div class="usa-icon-list__content">
+            <b>Failed:</b> 0
+          </div>
+        </li>
+      
+    </ul>
+  </div>
+
+<p class="margin-top-0">Learn more on the <a href="/components/link/accessibility-tests/">link accessibility tests page</a>.</p>
+
+
+
+
+
+  
+
+
+
+
+
+<h2 id="link-package" class="site-component-section-title">Package</h2>
+<ul class="usa-content-list">
+  <li>
+    <strong>Package usage:</strong> <code>@forward "usa-link";</code>
+  </li>
+  <li><strong>Dependencies: </strong><code class="text-no-wrap">uswds-fonts</code>, 
+<code class="text-no-wrap">usa-icon</code>
+</li>
+</ul>
+
+
+
+
+
+
+        
+
+
+
+<h2 id="changelog" class="site-component-section-title">Latest updates</h2><p>Meaningful code and guidance updates are listed in the following table:</p>
+  
+    
+
+
+
+
+
+
+
+
+
+
+<table class="usa-table--borderless site-table-responsive site-table-simple">
+  <thead>
+    <tr>
+      <th scope="col" class="tablet:grid-col">Date</th>
+      <th scope="col" class="tablet:grid-col tablet:padding-left-0">USWDS version</th>
+      <th scope="col" class="tablet:grid-col">Affects</th>
+      <th scope="col" class="tablet:grid-col site-changelog--hide-tablet">Breaking</th>
+      <th scope="col" class="tablet:grid-col-6">Description</th>
+    </tr>
+  </thead>
+  <tbody class="font-lang-3xs">
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2025-01-22</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        N/A
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+          
+          
+            <li><span class="output-neutral">Guidance</span></li>
+          
+          
+          
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Updated the url for the “OMB M-23-22” link.
+
+          </strong>
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds-site/pull/3068">
+              uswds-site#3068
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2024-01-17</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        N/A
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+          
+          
+            <li><span class="output-neutral">Guidance</span></li>
+          
+          
+          
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Added WCAG compliance tag and accessibility test status section.
+
+          </strong>
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds-site/pull/2138">
+              uswds-site#2138
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2023-11-20</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        N/A
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+          
+          
+            <li><span class="output-neutral">Guidance</span></li>
+          
+          
+          
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Added <code class="language-plaintext highlighter-rouge">uswds-fonts</code> and <code class="language-plaintext highlighter-rouge">usa-icon</code> to list of dependencies.
+
+          </strong>
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds-site/pull/2162">
+              uswds-site#2162
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2023-11-20</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        N/A
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+          
+          
+            <li><span class="output-neutral">Guidance</span></li>
+          
+          
+          
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Updated code examples for encoding email and phone links.
+
+          </strong>
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds-site/pull/2162">
+              uswds-site#2162
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2023-06-09</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        <span class="font-mono-3xs">
+          <a href="https://github.com/uswds/uswds/releases/tag/v3.5.0">
+            3.5.0
+          </a>
+        </span>
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+            <li><span class="output-warning">Accessibility</span></li>
+          
+          
+          
+          
+          
+          
+          
+          
+            <li><span class="output-neutral">Settings</span></li>
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Labeled external links for screen readers.
+
+          </strong>
+          
+            Adds a label for screen readers that identifies external links and if they open in a new tab.
+
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds/pull/5166">
+              uswds#5166
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2023-03-09</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        <span class="font-mono-3xs">
+          <a href="https://github.com/uswds/uswds/releases/tag/v3.4.0">
+            3.4.0
+          </a>
+        </span>
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+          
+          
+          
+          
+          
+            <li><span class="output-neutral">Styles</span></li>
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            External link icons and link text now wrap as expected.
+
+          </strong>
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds/pull/5046">
+              uswds#5046
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2022-04-28</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        <span class="font-mono-3xs">
+          <a href="https://github.com/uswds/uswds/releases/tag/v3.0.0">
+            3.0.0
+          </a>
+        </span>
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+            <li><span class="output-neutral">Assets</span></li>
+          
+          
+          
+          
+            <li><span class="output-neutral">JavaScript</span></li>
+          
+          
+          
+            <li><span class="output-neutral">Styles</span></li>
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          <span class="output-false">Breaking</span>
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+            <span class="site-changelog--show-tablet output-false">Breaking</span>
+          
+          <strong>
+            Updated to Sass module syntax and new package structure.
+
+          </strong>
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds/pull/4656">
+              uswds#4656
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2022-01-20</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        <span class="font-mono-3xs">
+          <a href="https://github.com/uswds/uswds/releases/tag/v2.13.1">
+            2.13.1
+          </a>
+        </span>
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+          
+          
+          
+          
+          
+            <li><span class="output-neutral">Styles</span></li>
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Fixed external link icon display bug in Safari.
+
+          </strong>
+          
+            Fixed a bug that resulted in colored bars on the top and bottom of external link icons in Safari.
+
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds/pull/4439">
+              uswds#4439
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2021-10-01</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        N/A
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+          
+          
+            <li><span class="output-neutral">Guidance</span></li>
+          
+          
+          
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Updated component definition and use case.
+
+          </strong>
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds-site/pull/1275">
+              uswds-site#1275
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2021-11-01</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        <span class="font-mono-3xs">
+          <a href="https://github.com/uswds/uswds/releases/tag/v2.12.2">
+            2.12.2
+          </a>
+        </span>
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+            <li><span class="output-neutral">Assets</span></li>
+          
+          
+          
+          
+          
+          
+            <li><span class="output-neutral">Styles</span></li>
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Fixed external link icon color.
+
+          </strong>
+          
+            Resolved an issue with visited links where the icon color may not match the color of the link.
+
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds/pull/4297">
+              uswds#4297
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2021-09-16</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        N/A
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+          
+          
+            <li><span class="output-neutral">Guidance</span></li>
+          
+          
+          
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Added a link to the external link indicator research findings.
+
+          </strong>
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds-site/pull/1261">
+              uswds-site#1261
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2021-08-18</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        <span class="font-mono-3xs">
+          <a href="https://github.com/uswds/uswds/releases/tag/v2.12.1">
+            2.12.1
+          </a>
+        </span>
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+          
+          
+          
+          
+          
+            <li><span class="output-neutral">Styles</span></li>
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Improved external link icon display.
+
+          </strong>
+          
+            Made external link icon bigger and better aligned with the link text.
+
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds/pull/4277">
+              uswds#4277
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2021-07-30</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        N/A
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+          
+          
+            <li><span class="output-neutral">Guidance</span></li>
+          
+          
+          
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Updated external link guidance and added a summary of external link indicator research findings.
+
+          </strong>
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds-site/pull/1249">
+              uswds-site#1249
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2021-06-16</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        N/A
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+          
+          
+            <li><span class="output-neutral">Guidance</span></li>
+          
+          
+          
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Updated accessibility and usability guidance for external links.
+
+          </strong>
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds-site/pull/1225">
+              uswds-site#1225
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2021-03-18</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        N/A
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+          
+          
+            <li><span class="output-neutral">Guidance</span></li>
+          
+          
+          
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Added documentation for the <code class="language-plaintext highlighter-rouge">usa-link--external</code> variant.
+
+          </strong>
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds-site/pull/1186">
+              uswds-site#1186
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2021-03-17</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        <span class="font-mono-3xs">
+          <a href="https://github.com/uswds/uswds/releases/tag/v2.11.0">
+            2.11.0
+          </a>
+        </span>
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+          
+          
+            <li><span class="output-neutral">Guidance</span></li>
+          
+          
+          
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Updated and improved guidance around links.
+
+          </strong>
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds-site/pull/1180">
+              uswds-site#1180
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+  
+
+      </div>
+    </main>
+  
+  </div>
+  
+</div>
+
+
+
+
+
+  
+  <script src="https://touchpoints.app.cloud.gov/touchpoints/5c2410e4.js" async></script>
+
+
+
+
+
+
+<section class="touchpoints__container" role="complementary" aria-label="Page feedback">
+  
+    <button type="button" class="usa-button site-button usa-button--outline" id="touchpoints-modal-button" aria-label="Provide feedback about this page" tabindex="0">Was this page helpful?</button>
+  
+</section>
+
+
+
+<footer class="usa-footer site-footer">
+  <div class="usa-footer__secondary-section">
+    <div class="grid-container footer-content">
+      <h2>Become part of the community</h2>
+      <p>
+        USWDS is an active open source community of government engineers, content specialists, and designers. Our contributors both in and out of government support dozens of agencies and nearly 200 sites.
+      </p>
+      <div class="grid-row footer-contact-links">
+        
+          <div class="tablet:grid-col">
+            <div class="usa-media-block">
+              <div class="usa-media-block__img circle-5 bg-accent-cool display-flex flex-row flex-align-center flex-justify-center text-white">
+                <svg class="usa-icon usa-icon--size-3" aria-hidden="true" role="img" focusable="false">
+                  <use href="/assets/img/sprite.svg#help"></use>
+                </svg>
+              </div>
+              <div class="usa-media-block__body">
+                <h3>Have an idea or an issue?</h3>
+                <a href="https://github.com/uswds/uswds/issues/new/choose">Reach out in GitHub</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="tablet:grid-col">
+            <div class="usa-media-block">
+              <div class="usa-media-block__img circle-5 bg-accent-cool display-flex flex-row flex-align-center flex-justify-center text-white">
+                <svg class="usa-icon usa-icon--size-3" aria-hidden="true" role="img" focusable="false">
+                  <use href="/assets/img/sprite.svg#people"></use>
+                </svg>
+              </div>
+              <div class="usa-media-block__body">
+                <h3>Engage with the community</h3>
+                <a href="https://designsystem.digital.gov/about/community/">Find a channel that works for you</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="tablet:grid-col">
+            <div class="usa-media-block">
+              <div class="usa-media-block__img circle-5 bg-accent-cool display-flex flex-row flex-align-center flex-justify-center text-white">
+                <svg class="usa-icon usa-icon--size-3" aria-hidden="true" role="img" focusable="false">
+                  <use href="/assets/img/sprite.svg#mail"></use>
+                </svg>
+              </div>
+              <div class="usa-media-block__body">
+                <h3>Subscribe to our newsletter</h3>
+                <a href="https://public.govdelivery.com/accounts/USGSATTS/subscriber/new?qsp=GSA_TTS">Sign up for USWDS updates</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="tablet:grid-col">
+            <div class="usa-media-block">
+              <div class="usa-media-block__img circle-5 bg-accent-cool display-flex flex-row flex-align-center flex-justify-center text-white">
+                <svg class="usa-icon usa-icon--size-3" aria-hidden="true" role="img" focusable="false">
+                  <use href="/assets/img/sprite.svg#support"></use>
+                </svg>
+              </div>
+              <div class="usa-media-block__body">
+                <h3>Get support</h3>
+                <a href="mailto:uswds@gsa.gov">Email the USWDS team</a>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+
+    <div class="bg-base-light padding-y-1 line-height-sans-3 font-lang-4">
+      <div class="grid-container">
+        Looking for USWDS v1 documentation?
+        <a
+          href="https://v1.designsystem.digital.gov"
+          class="text-ink text-bold hover:text-no-underline"
+          >Visit v1.designsystem.digital.gov</a
+        >
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<div class="usa-identifier site-identifier">
+  <section
+    class="usa-identifier__section usa-identifier__section--masthead"
+    aria-label="Agency identifier,,,,,,"
+  >
+    <div class="usa-identifier__container">
+      <div class="usa-identifier__logos"><a href="javascript:void(0);" class="usa-identifier__logo">
+          <img
+            class="usa-identifier__logo-img"
+            src="/img/gsa-logo.svg"
+            alt="GSA Logo"
+            role="img"
+            width="48"
+            height="48"
+          >
+        </a></div>
+      <section class="usa-identifier__identity" aria-label="Agency description">
+        <p class="usa-identifier__identity-domain">designsystem.digital.gov</p>
+        <p class="usa-identifier__identity-disclaimer"><span aria-hidden="true">An </span>official website of the <a href=https://gsa.gov>General Services Administration</a></p>
+      </section>
+    </div>
+  </section>
+  <nav class="usa-identifier__section usa-identifier__section--required-links" aria-label="Important links">
+      <div class="usa-identifier__container">
+        <ul class="usa-identifier__required-links-list"><li class="usa-identifier__required-links-item">
+            <a href="https://www.gsa.gov/about-us" class="usa-identifier__required-link">About GSA</a>
+          </li><li class="usa-identifier__required-links-item">
+            <a href="https://www.gsa.gov/website-information/accessibility-statement" class="usa-identifier__required-link">Accessibility statement</a>
+          </li><li class="usa-identifier__required-links-item">
+            <a href="https://www.gsa.gov/reference/freedom-of-information-act-foia" class="usa-identifier__required-link">FOIA requests</a>
+          </li><li class="usa-identifier__required-links-item">
+            <a href="https://www.gsa.gov/reference/civil-rights-programs/notification-and-federal-employee-antidiscrimination-and-retaliation-act-of-2002" class="usa-identifier__required-link">No FEAR Act data</a>
+          </li><li class="usa-identifier__required-links-item">
+            <a href="https://www.gsaig.gov/" class="usa-identifier__required-link">Office of the Inspector General</a>
+          </li><li class="usa-identifier__required-links-item">
+            <a href="https://www.gsa.gov/about-gsa/newsroom/budget-and-performance" class="usa-identifier__required-link">Performance reports</a>
+          </li><li class="usa-identifier__required-links-item">
+            <a href="https://www.gsa.gov/website-information/website-policies" class="usa-identifier__required-link">Privacy policy</a>
+          </li></ul>
+      </div>
+  </nav>
+  <section class="usa-identifier__section usa-identifier__section--usagov" aria-label="Government information and services">
+    <div class="usa-identifier__container">
+      <div class="usa-identifier__usagov-description">
+        Looking for U.S. government information and services?
+      </div>
+      <a href="https://www.usa.gov/" class="usa-link">Visit USA.gov</a>
+    </div>
+  </section>
+</div>
+
+
+
+    <script src="/assets/js/styleguide.js"></script>
+
+<script src="/assets/js/vendor/uswds.min.js"></script>
+<!--<script>
+//<![CDATA[
+      var usasearch_config = { siteHandle:"uswds" };
+
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "//search.usa.gov/javascripts/remote.loader.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+
+//]]>
+</script>
+-->
+
+  </body>
+</html>

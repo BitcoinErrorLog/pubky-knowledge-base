@@ -1,0 +1,5450 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+  <head>
+    <!-- ANALYTICS
+================================================== -->
+
+<!-- Google Analytics - GA4 -->
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KH01P8TN5V"></script>
+	<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-KH01P8TN5V'); </script>
+
+<!-- Digital Analytics Program roll-up, see https://analytics.usa.gov for data -->
+	<script async type="text/javascript" id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA&subagency=TTS"></script>
+
+
+<!-- Basic Page Needs
+================================================== -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+  
+
+  
+
+<!-- Mobile Specific Metas
+================================================== -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Title and meta description
+================================================== -->
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Modal | U.S. Web Design System (USWDS)</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Modal" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A modal prevents interaction with page content until the user completes an action or dismisses the modal. This intentionally interrupts the user’s workflow. Use modals sparingly to minimize unnecessary disruptions." />
+<meta property="og:description" content="A modal prevents interaction with page content until the user completes an action or dismisses the modal. This intentionally interrupts the user’s workflow. Use modals sparingly to minimize unnecessary disruptions." />
+<link rel="canonical" href="https://designsystem.digital.gov/components/modal/" />
+<meta property="og:url" content="https://designsystem.digital.gov/components/modal/" />
+<meta property="og:site_name" content="U.S. Web Design System (USWDS)" />
+<meta property="og:image" content="https://designsystem.digital.gov/img/uswds-logo/lg-black.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-28T03:12:17+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://designsystem.digital.gov/img/uswds-logo/lg-black.png" />
+<meta property="twitter:title" content="Modal" />
+<meta name="twitter:site" content="@USWDS" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-09-28T03:12:17+00:00","datePublished":"2026-09-28T03:12:17+00:00","description":"A modal prevents interaction with page content until the user completes an action or dismisses the modal. This intentionally interrupts the user’s workflow. Use modals sparingly to minimize unnecessary disruptions.","headline":"Modal","image":"https://designsystem.digital.gov/img/uswds-logo/lg-black.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://designsystem.digital.gov/components/modal/"},"url":"https://designsystem.digital.gov/components/modal/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Favicons
+================================================== -->
+  <!-- 128x128 -->
+  <link rel="shortcut icon" type="image/ico" href="/assets/img/favicons/favicon.ico">
+  <link rel="icon" type="image/png" href="/assets/img/favicons/favicon.png">
+
+  <!-- 192x192, as recommended for Android
+  http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
+  -->
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicons/favicon-192.png">
+
+  <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+  <link rel="apple-touch-icon-precomposed" href="/assets/img/favicons/favicon-57.png">
+  <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/img/favicons/favicon-72.png">
+  <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/img/favicons/favicon-114.png">
+  <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/img/favicons/favicon-144.png">
+
+<!-- CSS
+================================================== -->
+<!-- env: production -->
+
+
+  
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  
+
+
+<!-- USWDS INIT
+================================================== -->
+<script>
+  /**
+   * This script block contains the contents of the uswds-init.js script.
+   * It's inlined because it's necessary for the first paint of the banner,
+   * and we want to avoid a round-trip to the server.
+   */
+  (function uswdsInit() {
+    "use strict";
+
+    const loadingClass = "usa-js-loading";
+    let fallback;
+
+    document.documentElement.classList.add(loadingClass);
+    function revertClass() {
+      document.documentElement.classList.remove(loadingClass);
+    }
+
+    fallback = setTimeout(revertClass, 8000);
+
+    function verifyLoaded() {
+      if (window.uswdsPresent) {
+        clearTimeout(fallback);
+        revertClass();
+        window.removeEventListener("load", verifyLoaded, true);
+      }
+    }
+
+    window.addEventListener("load", verifyLoaded, true);
+  })();
+</script>
+<script src="/assets/uswds/components/usa-banner.js.mjs" type="module"></script>
+<link rel="preload" href="/assets/js/vendor/uswds.min.js" as="script">
+  </head>
+  <body class="page-modal layout-component ">
+    <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+<section
+  class="usa-banner site-banner"
+  aria-label="Official website of the United States government,,,,,,"
+>
+  <div class="usa-accordion">
+    <header class="usa-banner__header">
+      <div class="usa-banner__inner">
+        <div class="grid-col-auto">
+          <img
+            aria-hidden="true"
+            class="usa-banner__header-flag"
+            src="/assets/img/us_flag_small.png"
+            alt=""
+          />
+        </div>
+        <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+          <p class="usa-banner__header-text">
+            An official website of the United States government
+          </p>
+          <p class="usa-banner__header-action">Here’s how you know</p>
+        </div>
+        <button
+          type="button"
+          class="usa-accordion__button usa-banner__button"
+          aria-expanded="false"
+          aria-controls="gov-banner"
+        >
+          <span class="usa-banner__button-text">Here’s how you know</span>
+        </button>
+      </div>
+    </header>
+    <div
+      class="usa-banner__content usa-accordion__content"
+      id="gov-banner"
+    >
+      <div class="grid-row grid-gap-lg">
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img
+            class="usa-banner__icon usa-media-block__img"
+            src="/assets/img/icon-dot-gov.svg"
+            role="img"
+            alt=""
+            aria-hidden="true"
+          />
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Official websites use .gov</strong><br />A
+              <strong>.gov</strong> website belongs to an official government
+              organization in the United States.
+            </p>
+          </div>
+        </div>
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img
+            class="usa-banner__icon usa-media-block__img"
+            src="/assets/img/icon-https.svg"
+            role="img"
+            alt=""
+            aria-hidden="true"
+          />
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Secure .gov websites use HTTPS</strong><br />A
+              <strong>lock</strong> (
+              <span class="icon-lock"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="52"
+                  height="64"
+                  viewBox="0 0 52 64"
+                  class="usa-banner__lock-image"
+                  role="img"
+                  aria-labelledby="banner-lock-description"
+                  focusable="false"
+                >
+                  <title id="banner-lock-title">Lock</title>
+                  <desc id="banner-lock-description">Locked padlock icon</desc>
+                  <path
+                    fill="#000000"
+                    fill-rule="evenodd"
+                    d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z"
+                  />
+                </svg> </span
+              >) or <strong>https://</strong> means you’ve safely connected to
+              the .gov website. Share sensitive information only on official,
+              secure websites.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<header class="usa-header usa-header--extended site-header site-header--dark" role="banner">
+  <div class="usa-navbar site-header__navbar">
+    <div class="usa-logo site-logo" id="logo">
+      <em class="usa-logo__text site-logo__text">
+        <a href="/" title="U.S. Web Design System (USWDS) Home">
+          <span aria-hidden="true" class="site-title--short">USWDS</span>
+          <span class="site-title--long">U.S. Web Design System (USWDS)</span>
+        </a>
+      </em>
+    </div>
+    <button type="button" class="usa-menu-btn">Menu</button>
+  </div>
+</header>
+<nav aria-label="Primary navigation" class="usa-nav site-nav sticky">
+  <div class="usa-nav__inner site-nav__inner">
+    <button type="button" class="usa-nav__close">
+      <img src="/assets/img/usa-icons/close.svg" role="img" alt="Close">
+    </button>
+    <!-- Mobile nav -->
+    <ul class="usa-nav__primary usa-nav__primary--mobile usa-accordion">
+      
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<button type="button" class="usa-accordion__button usa-nav__link" aria-controls="nav-how-to-use-uswds"
+  aria-expanded="false"
+  >
+  <span>
+    How to use USWDS
+  </span>
+</button>
+<ul id="nav-how-to-use-uswds" class="usa-nav__submenu">
+  
+  
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/how-to-use-uswds/">
+  <span>
+    How to use USWDS
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/getting-started-for-developers/">
+  <span>
+    Getting started for developers
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/getting-started-for-designers/">
+  <span>
+    Getting started for designers
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/developers/">
+  <span>
+    Documentation
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/settings/">
+  <span>
+    Settings
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/maturity-model/">
+  <span>
+    USWDS maturity model
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/accessibility/">
+  <span>
+    Accessibility
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/performance/">
+  <span>
+    Performance guidelines
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/code-guidelines/">
+  <span>
+    Code guidelines
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/migration/">
+  <span>
+    Migrating to USWDS 3.0
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/migration-v2/">
+  <span>
+    Migrating to USWDS 2.0
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/implementations/">
+  <span>
+    Implementations
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/showcase/">
+  <span>
+    Showcase
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/sample-contract-language/">
+  <span>
+    Sample contract language for 21st Century IDEA
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/website-standards/">
+  <span>
+    Website standards
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+</ul>
+
+  
+  </li>
+
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<a href="/design-principles/">
+  <span>
+    Design principles
+  </span>
+</a>
+
+
+  
+  </li>
+
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<button type="button" class="usa-accordion__button usa-nav__link" aria-controls="nav-components"
+  
+  class="usa-current"
+  aria-expanded="true"
+  >
+  <span>
+    Components
+  </span>
+</button>
+<ul id="nav-components" class="usa-nav__submenu">
+  
+  
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/">
+  <span>
+    Components
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/accordion/">
+  <span>
+    Accordion
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/alert/">
+  <span>
+    Alert
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/banner/">
+  <span>
+    Banner
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/breadcrumb/">
+  <span>
+    Breadcrumb
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/button/">
+  <span>
+    Button
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/button-group/">
+  <span>
+    Button group
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/card/">
+  <span>
+    Card
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/character-count/">
+  <span>
+    Character count
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/checkbox/">
+  <span>
+    Checkbox
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/collection/">
+  <span>
+    Collection
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/combo-box/">
+  <span>
+    Combo box
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/data-visualizations/">
+  <span>
+    Data visualizations
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/date-picker/">
+  <span>
+    Date picker
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/date-range-picker/">
+  <span>
+    Date range picker
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/file-input/">
+  <span>
+    File input
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/footer/">
+  <span>
+    Footer
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/form/">
+  <span>
+    Form
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/layout-grid/">
+  <span>
+    Grid
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/header/">
+  <span>
+    Header
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/icon/">
+  <span>
+    Icon
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/icon-list/">
+  <span>
+    Icon list
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/identifier/">
+  <span>
+    Identifier
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/in-page-navigation/">
+  <span>
+    In-page navigation
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/input-mask/">
+  <span>
+    Input mask
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/input-prefix-suffix/">
+  <span>
+    Input prefix/suffix
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/language-selector/">
+  <span>
+    Language selector
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/link/">
+  <span>
+    Link
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/list/">
+  <span>
+    List
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/memorable-date/">
+  <span>
+    Memorable date
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item is-current">
+    
+
+<a href="/components/modal/"class="usa-current">
+  <span>
+    Modal
+  </span>
+</a>
+
+    
+    
+    
+    <ul class="usa-nav__submenu">
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/modal/accessibility-tests/">
+  <span>
+    Modal accessibility tests
+  </span>
+</a>
+
+
+    
+  </li>
+
+</ul>
+    
+  
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/pagination/">
+  <span>
+    Pagination
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/process-list/">
+  <span>
+    Process list
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/prose/">
+  <span>
+    Prose
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/radio-buttons/">
+  <span>
+    Radio buttons
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/range-slider/">
+  <span>
+    Range slider
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/search/">
+  <span>
+    Search
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/select/">
+  <span>
+    Select
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/side-navigation/">
+  <span>
+    Side navigation
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/site-alert/">
+  <span>
+    Site alert
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/step-indicator/">
+  <span>
+    Step indicator
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/summary-box/">
+  <span>
+    Summary box
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/table/">
+  <span>
+    Table
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/tag/">
+  <span>
+    Tag
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/text-input/">
+  <span>
+    Text input
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/time-picker/">
+  <span>
+    Time picker
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/tooltip/">
+  <span>
+    Tooltip
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/typography/">
+  <span>
+    Typography
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/validation/">
+  <span>
+    Validation
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+</ul>
+
+  
+  </li>
+
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<button type="button" class="usa-accordion__button usa-nav__link" aria-controls="nav-patterns"
+  aria-expanded="false"
+  >
+  <span>
+    Patterns
+  </span>
+</button>
+<ul id="nav-patterns" class="usa-nav__submenu">
+  
+  
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/patterns/">
+  <span>
+    Patterns
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/patterns/intro/">
+  <span>
+    Introducing patterns
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/patterns/create-a-user-profile/">
+  <span>
+    Create a user profile
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/patterns/complete-a-complex-form/">
+  <span>
+    Complete a complex form
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/patterns/select-a-language/">
+  <span>
+    Select a language
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+</ul>
+
+  
+  </li>
+
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<button type="button" class="usa-accordion__button usa-nav__link" aria-controls="nav-design-tokens"
+  aria-expanded="false"
+  >
+  <span>
+    Design tokens
+  </span>
+</button>
+<ul id="nav-design-tokens" class="usa-nav__submenu">
+  
+  
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/">
+  <span>
+    Design tokens
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/color/">
+  <span>
+    Color
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/typesetting/">
+  <span>
+    Typesetting
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/flex/">
+  <span>
+    Flex
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/opacity/">
+  <span>
+    Opacity
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/order/">
+  <span>
+    Order
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/shadow/">
+  <span>
+    Shadow
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/spacing-units/">
+  <span>
+    Spacing units
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/z-index/">
+  <span>
+    Z-index
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+</ul>
+
+  
+  </li>
+
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<button type="button" class="usa-accordion__button usa-nav__link" aria-controls="nav-utilities"
+  aria-expanded="false"
+  >
+  <span>
+    Utilities
+  </span>
+</button>
+<ul id="nav-utilities" class="usa-nav__submenu">
+  
+  
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/">
+  <span>
+    Utilities
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/layout-grid/">
+  <span>
+    Layout grid
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/color/">
+  <span>
+    Color
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/height-and-width/">
+  <span>
+    Height and width
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/margin-and-padding/">
+  <span>
+    Margin and padding
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/border/">
+  <span>
+    Border
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/outline/">
+  <span>
+    Outline
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/font-size-and-family/">
+  <span>
+    Font size and family
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/text-styles/">
+  <span>
+    Text styles
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/paragraph-styles/">
+  <span>
+    Paragraph styles
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/display/">
+  <span>
+    Display
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/flex/">
+  <span>
+    Flex
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/shadow/">
+  <span>
+    Shadow
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/float/">
+  <span>
+    Float
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/clearfix/">
+  <span>
+    Clearfix
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/list-reset/">
+  <span>
+    List reset
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+</ul>
+
+  
+  </li>
+
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<button type="button" class="usa-accordion__button usa-nav__link" aria-controls="nav-templates"
+  aria-expanded="false"
+  >
+  <span>
+    Templates
+  </span>
+</button>
+<ul id="nav-templates" class="usa-nav__submenu">
+  
+  
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/templates/">
+  <span>
+    Templates
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/templates/404-page/">
+  <span>
+    404 page
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/templates/documentation-page/">
+  <span>
+    Documentation page
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/templates/landing-page/">
+  <span>
+    Landing page
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/templates/authentication-pages/">
+  <span>
+    Authentication pages
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/templates/form-templates/">
+  <span>
+    Form templates
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+</ul>
+
+  
+  </li>
+
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<button type="button" class="usa-accordion__button usa-nav__link" aria-controls="nav-about"
+  aria-expanded="false"
+  >
+  <span>
+    About
+  </span>
+</button>
+<ul id="nav-about" class="usa-nav__submenu">
+  
+  
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/">
+  <span>
+    About
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/key-benefits/">
+  <span>
+    Key benefits
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/product-values/">
+  <span>
+    Product values
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/contribute/">
+  <span>
+    Contribute
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/community/">
+  <span>
+    Community
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/whats-new/">
+  <span>
+    What’s new
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/monthly-calls/">
+  <span>
+    Monthly call archive
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/product-roadmap/">
+  <span>
+    Product roadmap
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/research/">
+  <span>
+    Research
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/security/">
+  <span>
+    Security
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/website-policies-notices/">
+  <span>
+    Website policies and notices
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+</ul>
+
+  
+  </li>
+
+
+    </ul>
+    <!-- /Mobile nav -->
+    <!-- Desktop nav -->
+    <ul class="usa-nav__primary usa-nav__primary--desktop">
+      
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/how-to-use-uswds/">
+  <span>
+    How to use USWDS
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-principles/">
+  <span>
+    Design principles
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item is-current">
+    
+
+<a href="/components/"class="usa-current">
+  <span>
+    Components
+  </span>
+</a>
+
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/patterns/">
+  <span>
+    Patterns
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/">
+  <span>
+    Design tokens
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/">
+  <span>
+    Utilities
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/templates/">
+  <span>
+    Templates
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/">
+  <span>
+    About
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+    </ul>
+    <!-- /Desktop nav -->
+    <div class="usa-nav__secondary">
+      <form id="search_form-mobile" class="site-search usa-search usa-search--small"
+  action="https://search.usa.gov/search" accept-charset="UTF-8" method="get">
+  <input name="utf8" type="hidden" value="&#x2713;" />
+  <input type="hidden" name="affiliate" id="affiliate-mobile" value="uswds" />
+  <div role="search">
+    <label class="usa-sr-only" for="query-mobile">Search</label>
+    <input
+      id="query-mobile"
+      class="usa-input usagov-search-autocomplete"
+      name="query"
+      type="search"
+      autocomplete="off" />
+    <button class="site-search__button usa-button margin-top-0" type="submit" name="commit">
+      <img
+        src="/assets/img/usa-icons-bg/search--white.svg"
+        class="usa-search__submit-icon"
+        alt="Search"
+      >
+    </button>
+  </div>
+</form>
+
+      <div class="site-cta-buttons buttons">
+  <a
+    class="usa-button site-button-outline-secondary site-button-standards margin-x-0 desktop:margin-right-1 padding-x-05 desktop:padding-left-1 desktop:padding-right-05 desktop-lg:padding-left-205 desktop-lg:padding-right-2 font-lang-sm"
+    href="/website-standards/"
+    onclick="ga('send', 'event', 'Read website standards', 'Clicked Read website standards from inside site');"
+  >
+    Read website standards
+  </a>
+  <a
+    class="usa-button site-button-outline-secondary site-button-download margin-x-0 desktop:margin-right-1 desktop:padding-left-1 desktop:padding-right-05 desktop-lg:padding-left-205 desktop-lg:padding-right-2 font-lang-sm"
+    href="/download/"
+    onclick="ga('send', 'event', 'Downloaded code and design files', 'Clicked Download code and design files from inside site');"
+  >
+    Download <span class="version desktop:display-none desktop-lg:display-inline">v3.14.0</span>
+  </a>
+  <a
+    class="usa-button site-button-github margin-x-0 font-lang-sm"
+    href="https://github.com/uswds/uswds"
+    onclick="ga('send', 'event', 'Viewed on Github', 'Clicked View on Github from inside site');"
+  >
+    <?xml version="1.0" encoding="UTF-8"?><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="33"
+  height="32"
+  viewBox="0 0 33 32"
+  class="logo"
+>
+  <title>Github logo</title>
+  <path
+    fill="#161514"
+    fill-rule="evenodd"
+    d="M16.288 0C7.294 0 0 7.293 0 16.29c0 7.197 4.667 13.302 11.14 15.456.815.15 1.112-.353 1.112-.785 0-.386-.014-1.411-.022-2.77-4.531.984-5.487-2.184-5.487-2.184-.741-1.882-1.809-2.383-1.809-2.383-1.479-1.01.112-.99.112-.99 1.635.115 2.495 1.679 2.495 1.679 1.453 2.489 3.813 1.77 4.741 1.353.148-1.052.569-1.77 1.034-2.177-3.617-.411-7.42-1.809-7.42-8.051 0-1.778.635-3.233 1.677-4.371-.168-.412-.727-2.069.16-4.311 0 0 1.367-.438 4.479 1.67a15.602 15.602 0 0 1 4.078-.549 15.62 15.62 0 0 1 4.078.549c3.11-2.108 4.475-1.67 4.475-1.67.889 2.242.33 3.899.163 4.311 1.044 1.138 1.674 2.593 1.674 4.371 0 6.258-3.809 7.635-7.437 8.038.584.503 1.105 1.497 1.105 3.017 0 2.177-.02 3.934-.02 4.468 0 .436.294.943 1.12.784 6.468-2.159 11.131-8.26 11.131-15.455C32.579 7.293 25.285 0 16.288 0"
+  />
+</svg>
+
+    <span class="text">View on GitHub</span>
+  </a>
+</div>
+
+    </div>
+  </div>
+</nav>
+<div class="usa-overlay"></div>
+
+
+<div class="default-container">
+  <aside class="sidenav" id="page-side-navigation" aria-label="Section navigation">
+    
+    
+    <ul class="site-sidenav usa-sidenav">
+      
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/">
+  
+    Components
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/accordion/">
+  
+    Accordion
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/alert/">
+  
+    Alert
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/banner/">
+  
+    Banner
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/breadcrumb/">
+  
+    Breadcrumb
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/button/">
+  
+    Button
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/button-group/">
+  
+    Button group
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/card/">
+  
+    Card
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/character-count/">
+  
+    Character count
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/checkbox/">
+  
+    Checkbox
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/collection/">
+  
+    Collection
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/combo-box/">
+  
+    Combo box
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/data-visualizations/">
+  
+    Data visualizations
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/date-picker/">
+  
+    Date picker
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/date-range-picker/">
+  
+    Date range picker
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/file-input/">
+  
+    File input
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/footer/">
+  
+    Footer
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/form/">
+  
+    Form
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/utilities/layout-grid/">
+  
+    Grid
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/header/">
+  
+    Header
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/icon/">
+  
+    Icon
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/icon-list/">
+  
+    Icon list
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/identifier/">
+  
+    Identifier
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/in-page-navigation/">
+  
+    In-page navigation
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/input-mask/">
+  
+    Input mask
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/input-prefix-suffix/">
+  
+    Input prefix/suffix
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/language-selector/">
+  
+    Language selector
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/link/">
+  
+    Link
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/list/">
+  
+    List
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/memorable-date/">
+  
+    Memorable date
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item is-current">
+    
+
+<a href="/components/modal/"class="usa-current">
+  
+    Modal
+  
+</a>
+
+    
+    
+    
+    <ul class="usa-sidenav__sublist">
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/modal/accessibility-tests/">
+  
+    Modal accessibility tests
+  
+</a>
+
+
+    
+  </li>
+
+</ul>
+    
+  
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/pagination/">
+  
+    Pagination
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/process-list/">
+  
+    Process list
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/prose/">
+  
+    Prose
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/radio-buttons/">
+  
+    Radio buttons
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/range-slider/">
+  
+    Range slider
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/search/">
+  
+    Search
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/select/">
+  
+    Select
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/side-navigation/">
+  
+    Side navigation
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/site-alert/">
+  
+    Site alert
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/step-indicator/">
+  
+    Step indicator
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/summary-box/">
+  
+    Summary box
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/table/">
+  
+    Table
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/tag/">
+  
+    Tag
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/text-input/">
+  
+    Text input
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/time-picker/">
+  
+    Time picker
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/tooltip/">
+  
+    Tooltip
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/typography/">
+  
+    Typography
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/validation/">
+  
+    Validation
+  
+</a>
+
+
+    
+  </li>
+
+
+    </ul>
+    
+  </aside>
+
+  
+  <div class="usa-in-page-nav-container">
+    <aside class="usa-in-page-nav"
+      aria-label="On this page"
+      data-scroll-offset="48"
+      data-root-margin="48px 0px -90% 0px"
+      data-threshold="1"
+      data-heading-elements=
+    ></aside>
+  
+    <main id="main-content" class="main-content">
+      <div class="styleguide-content usa-prose site-prose">
+        <header>
+          
+            
+              <p class="site-subheading">Components</p>
+            
+          
+          <h1 id="modal" class="site-page-title">Modal</h1>
+        </header>
+
+        <p class="site-text-intro">A modal disables page content and focuses the user’s attention on a single task or message.</p>
+
+
+
+
+        <!-- Add wcag compliance status tag -->
+        <!-- Add compliance tag -->
+
+
+
+
+
+
+
+<p class="margin-top-0 margin-bottom-4">
+  <span class="usa-tag site-compliance-tag site-compliance-tag--pass">
+    Passed WCAG 2.1 AA
+  </span>
+</p>
+
+
+
+        
+
+
+
+
+
+
+
+
+
+<h2 class="site-component-section-title">About the modal component</h2>
+<div class="font-lang-md measure-5 margin-top-3 margin-bottom-6">
+  <p>A modal prevents interaction with page content until the user completes an action or dismisses the modal. This intentionally interrupts the user’s workflow. <strong>Use modals sparingly to minimize unnecessary disruptions.</strong></p>
+
+<p>Modals should have a simple headline that explains its purpose. Use enough descriptive text to be clear what the user needs to do and why. Avoid using modals to display complex forms or large amounts of information.</p>
+
+</div>
+
+
+
+  
+
+
+
+
+
+
+
+  
+<div class="usa-accordion usa-accordion--bordered site-accordion-code site-component-preview">
+  
+  
+  <h2 id="modal-preview" class="usa-accordion__heading site-accordion-heading">
+    <button
+      type="button"
+      class="usa-accordion__button"
+      aria-controls="modal-preview-content"
+      aria-expanded="true">
+      Component preview
+    </button>
+  </h2>
+  <div id="modal-preview-content" class="usa-accordion__content">
+
+    
+        <div class="margin-y-3">
+  <a
+    href="#example-modal-1"
+    class="usa-button"
+    aria-controls="example-modal-1"
+    data-open-modal
+    >Open default modal</a
+  >
+  <div
+    class="usa-modal"
+    id="example-modal-1"
+    aria-labelledby="modal-1-heading"
+    aria-describedby="modal-1-description"
+  >
+    <div class="usa-modal__content">
+      <div class="usa-modal__main">
+        <h2 class="usa-modal__heading" id="modal-1-heading">
+          Are you sure you want to continue?
+        </h2>
+        <div class="usa-prose">
+          <p id="modal-1-description">
+            You have unsaved changes that will be lost.
+          </p>
+        </div>
+        <div class="usa-modal__footer">
+          <ul class="usa-button-group">
+            <li class="usa-button-group__item">
+              <button type="button" class="usa-button" data-close-modal>
+                Continue without saving
+              </button>
+            </li>
+            <li class="usa-button-group__item">
+              <button
+                type="button"
+                class="usa-button usa-button--unstyled padding-105 text-center"
+                data-close-modal
+              >
+                Go back
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button
+        type="button"
+        class="usa-button usa-modal__close"
+        aria-label="Close this window"
+        data-close-modal
+      >
+        <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+          <use href="/assets/img/sprite.svg#close"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+  <div class="margin-y-3">
+  <a
+    href="#example-modal-2"
+    class="usa-button"
+    aria-controls="example-modal-2"
+    data-open-modal
+    >Open large modal</a
+  >
+  <div
+    class="usa-modal usa-modal--lg"
+    id="example-modal-2"
+    aria-labelledby="modal-2-heading"
+    aria-describedby="modal-2-description"
+  >
+    <div class="usa-modal__content">
+      <div class="usa-modal__main">
+        <h2 class="usa-modal__heading" id="modal-2-heading">
+          Are you sure you want to continue?
+        </h2>
+        <div class="usa-prose">
+          <p id="modal-2-description">
+            You have unsaved changes that will be lost.
+          </p>
+        </div>
+        <div class="usa-modal__footer">
+          <ul class="usa-button-group">
+            <li class="usa-button-group__item">
+              <button type="button" class="usa-button" data-close-modal>
+                Continue without saving
+              </button>
+            </li>
+            <li class="usa-button-group__item">
+              <button
+                type="button"
+                class="usa-button usa-button--unstyled padding-105 text-center"
+                data-close-modal
+              >
+                Go back
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button
+        type="button"
+        class="usa-button usa-modal__close"
+        aria-label="Close this window"
+        data-close-modal
+      >
+        <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+          <use href="/assets/img/sprite.svg#close"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+  <div class="margin-y-3">
+  <a
+    href="#example-modal-3"
+    class="usa-button"
+    aria-controls="example-modal-3"
+    data-open-modal
+    >Open modal with forced action</a
+  >
+  <div
+    class="usa-modal"
+    id="example-modal-3"
+    aria-labelledby="modal-3-heading"
+    aria-describedby="modal-3-description"
+    data-force-action
+  >
+    <div class="usa-modal__content">
+      <div class="usa-modal__main">
+        <h2 class="usa-modal__heading" id="modal-3-heading">
+          Your session will end soon.
+        </h2>
+        <div class="usa-prose">
+          <p id="modal-3-description">
+            You’ve been inactive for too long. Please choose to stay signed in
+            or sign out. Otherwise, you’ll be signed out automatically in 5
+            minutes.
+          </p>
+        </div>
+        <div class="usa-modal__footer">
+          <ul class="usa-button-group">
+            <li class="usa-button-group__item">
+              <button type="button" class="usa-button" data-close-modal>
+                Yes, stay signed in
+              </button>
+            </li>
+            <li class="usa-button-group__item">
+              <button
+                type="button"
+                class="usa-button usa-button--unstyled padding-105 text-center"
+                data-close-modal
+              >
+                Sign out
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  </div>
+</div>
+
+
+
+<div class="usa-accordion usa-accordion--bordered site-accordion-code">
+  
+  
+  <h2 id="modal-code" class="usa-accordion__heading site-accordion-heading">
+    <button
+      type="button"
+      class="usa-accordion__button"
+      aria-controls="modal-code-content">
+      Component code
+    </button>
+  </h2>
+  <div id="modal-code-content" class="usa-accordion__content copy-code">
+    
+
+<div class="usa-sr-only">
+  
+<figure class="highlight"><pre><code class="language-text" data-lang="text">&lt;div class="margin-y-3"&gt;
+  &lt;a
+    href="#example-modal-1"
+    class="usa-button"
+    aria-controls="example-modal-1"
+    data-open-modal
+    &gt;Open default modal&lt;/a
+  &gt;
+  &lt;div
+    class="usa-modal"
+    id="example-modal-1"
+    aria-labelledby="modal-1-heading"
+    aria-describedby="modal-1-description"
+  &gt;
+    &lt;div class="usa-modal__content"&gt;
+      &lt;div class="usa-modal__main"&gt;
+        &lt;h2 class="usa-modal__heading" id="modal-1-heading"&gt;
+          Are you sure you want to continue?
+        &lt;/h2&gt;
+        &lt;div class="usa-prose"&gt;
+          &lt;p id="modal-1-description"&gt;
+            You have unsaved changes that will be lost.
+          &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="usa-modal__footer"&gt;
+          &lt;ul class="usa-button-group"&gt;
+            &lt;li class="usa-button-group__item"&gt;
+              &lt;button type="button" class="usa-button" data-close-modal&gt;
+                Continue without saving
+              &lt;/button&gt;
+            &lt;/li&gt;
+            &lt;li class="usa-button-group__item"&gt;
+              &lt;button
+                type="button"
+                class="usa-button usa-button--unstyled padding-105 text-center"
+                data-close-modal
+              &gt;
+                Go back
+              &lt;/button&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;button
+        type="button"
+        class="usa-button usa-modal__close"
+        aria-label="Close this window"
+        data-close-modal
+      &gt;
+        &lt;svg class="usa-icon" aria-hidden="true" focusable="false" role="img"&gt;
+          &lt;use href="/assets/img/sprite.svg#close"&gt;&lt;/use&gt;
+        &lt;/svg&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+  &lt;div class="margin-y-3"&gt;
+  &lt;a
+    href="#example-modal-2"
+    class="usa-button"
+    aria-controls="example-modal-2"
+    data-open-modal
+    &gt;Open large modal&lt;/a
+  &gt;
+  &lt;div
+    class="usa-modal usa-modal--lg"
+    id="example-modal-2"
+    aria-labelledby="modal-2-heading"
+    aria-describedby="modal-2-description"
+  &gt;
+    &lt;div class="usa-modal__content"&gt;
+      &lt;div class="usa-modal__main"&gt;
+        &lt;h2 class="usa-modal__heading" id="modal-2-heading"&gt;
+          Are you sure you want to continue?
+        &lt;/h2&gt;
+        &lt;div class="usa-prose"&gt;
+          &lt;p id="modal-2-description"&gt;
+            You have unsaved changes that will be lost.
+          &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="usa-modal__footer"&gt;
+          &lt;ul class="usa-button-group"&gt;
+            &lt;li class="usa-button-group__item"&gt;
+              &lt;button type="button" class="usa-button" data-close-modal&gt;
+                Continue without saving
+              &lt;/button&gt;
+            &lt;/li&gt;
+            &lt;li class="usa-button-group__item"&gt;
+              &lt;button
+                type="button"
+                class="usa-button usa-button--unstyled padding-105 text-center"
+                data-close-modal
+              &gt;
+                Go back
+              &lt;/button&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;button
+        type="button"
+        class="usa-button usa-modal__close"
+        aria-label="Close this window"
+        data-close-modal
+      &gt;
+        &lt;svg class="usa-icon" aria-hidden="true" focusable="false" role="img"&gt;
+          &lt;use href="/assets/img/sprite.svg#close"&gt;&lt;/use&gt;
+        &lt;/svg&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+  &lt;div class="margin-y-3"&gt;
+  &lt;a
+    href="#example-modal-3"
+    class="usa-button"
+    aria-controls="example-modal-3"
+    data-open-modal
+    &gt;Open modal with forced action&lt;/a
+  &gt;
+  &lt;div
+    class="usa-modal"
+    id="example-modal-3"
+    aria-labelledby="modal-3-heading"
+    aria-describedby="modal-3-description"
+    data-force-action
+  &gt;
+    &lt;div class="usa-modal__content"&gt;
+      &lt;div class="usa-modal__main"&gt;
+        &lt;h2 class="usa-modal__heading" id="modal-3-heading"&gt;
+          Your session will end soon.
+        &lt;/h2&gt;
+        &lt;div class="usa-prose"&gt;
+          &lt;p id="modal-3-description"&gt;
+            You’ve been inactive for too long. Please choose to stay signed in
+            or sign out. Otherwise, you’ll be signed out automatically in 5
+            minutes.
+          &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="usa-modal__footer"&gt;
+          &lt;ul class="usa-button-group"&gt;
+            &lt;li class="usa-button-group__item"&gt;
+              &lt;button type="button" class="usa-button" data-close-modal&gt;
+                Yes, stay signed in
+              &lt;/button&gt;
+            &lt;/li&gt;
+            &lt;li class="usa-button-group__item"&gt;
+              &lt;button
+                type="button"
+                class="usa-button usa-button--unstyled padding-105 text-center"
+                data-close-modal
+              &gt;
+                Sign out
+              &lt;/button&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></figure>
+
+</div>
+<div aria-hidden="true">
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"margin-y-3"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span>
+    <span class="na">href=</span><span class="s">"#example-modal-1"</span>
+    <span class="na">class=</span><span class="s">"usa-button"</span>
+    <span class="na">aria-controls=</span><span class="s">"example-modal-1"</span>
+    <span class="na">data-open-modal</span>
+    <span class="nt">&gt;</span>Open default modal<span class="nt">&lt;/a</span>
+  <span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span>
+    <span class="na">class=</span><span class="s">"usa-modal"</span>
+    <span class="na">id=</span><span class="s">"example-modal-1"</span>
+    <span class="na">aria-labelledby=</span><span class="s">"modal-1-heading"</span>
+    <span class="na">aria-describedby=</span><span class="s">"modal-1-description"</span>
+  <span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"usa-modal__content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"usa-modal__main"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"usa-modal__heading"</span> <span class="na">id=</span><span class="s">"modal-1-heading"</span><span class="nt">&gt;</span>
+          Are you sure you want to continue?
+        <span class="nt">&lt;/h2&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"usa-prose"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"modal-1-description"</span><span class="nt">&gt;</span>
+            You have unsaved changes that will be lost.
+          <span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"usa-modal__footer"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"usa-button-group"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"usa-button-group__item"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"usa-button"</span> <span class="na">data-close-modal</span><span class="nt">&gt;</span>
+                Continue without saving
+              <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"usa-button-group__item"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;button</span>
+                <span class="na">type=</span><span class="s">"button"</span>
+                <span class="na">class=</span><span class="s">"usa-button usa-button--unstyled padding-105 text-center"</span>
+                <span class="na">data-close-modal</span>
+              <span class="nt">&gt;</span>
+                Go back
+              <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;button</span>
+        <span class="na">type=</span><span class="s">"button"</span>
+        <span class="na">class=</span><span class="s">"usa-button usa-modal__close"</span>
+        <span class="na">aria-label=</span><span class="s">"Close this window"</span>
+        <span class="na">data-close-modal</span>
+      <span class="nt">&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"usa-icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">focusable=</span><span class="s">"false"</span> <span class="na">role=</span><span class="s">"img"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;use</span> <span class="na">href=</span><span class="s">"/assets/img/sprite.svg#close"</span><span class="nt">&gt;&lt;/use&gt;</span>
+        <span class="nt">&lt;/svg&gt;</span>
+      <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"margin-y-3"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span>
+    <span class="na">href=</span><span class="s">"#example-modal-2"</span>
+    <span class="na">class=</span><span class="s">"usa-button"</span>
+    <span class="na">aria-controls=</span><span class="s">"example-modal-2"</span>
+    <span class="na">data-open-modal</span>
+    <span class="nt">&gt;</span>Open large modal<span class="nt">&lt;/a</span>
+  <span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span>
+    <span class="na">class=</span><span class="s">"usa-modal usa-modal--lg"</span>
+    <span class="na">id=</span><span class="s">"example-modal-2"</span>
+    <span class="na">aria-labelledby=</span><span class="s">"modal-2-heading"</span>
+    <span class="na">aria-describedby=</span><span class="s">"modal-2-description"</span>
+  <span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"usa-modal__content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"usa-modal__main"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"usa-modal__heading"</span> <span class="na">id=</span><span class="s">"modal-2-heading"</span><span class="nt">&gt;</span>
+          Are you sure you want to continue?
+        <span class="nt">&lt;/h2&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"usa-prose"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"modal-2-description"</span><span class="nt">&gt;</span>
+            You have unsaved changes that will be lost.
+          <span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"usa-modal__footer"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"usa-button-group"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"usa-button-group__item"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"usa-button"</span> <span class="na">data-close-modal</span><span class="nt">&gt;</span>
+                Continue without saving
+              <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"usa-button-group__item"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;button</span>
+                <span class="na">type=</span><span class="s">"button"</span>
+                <span class="na">class=</span><span class="s">"usa-button usa-button--unstyled padding-105 text-center"</span>
+                <span class="na">data-close-modal</span>
+              <span class="nt">&gt;</span>
+                Go back
+              <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;button</span>
+        <span class="na">type=</span><span class="s">"button"</span>
+        <span class="na">class=</span><span class="s">"usa-button usa-modal__close"</span>
+        <span class="na">aria-label=</span><span class="s">"Close this window"</span>
+        <span class="na">data-close-modal</span>
+      <span class="nt">&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"usa-icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">focusable=</span><span class="s">"false"</span> <span class="na">role=</span><span class="s">"img"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;use</span> <span class="na">href=</span><span class="s">"/assets/img/sprite.svg#close"</span><span class="nt">&gt;&lt;/use&gt;</span>
+        <span class="nt">&lt;/svg&gt;</span>
+      <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"margin-y-3"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span>
+    <span class="na">href=</span><span class="s">"#example-modal-3"</span>
+    <span class="na">class=</span><span class="s">"usa-button"</span>
+    <span class="na">aria-controls=</span><span class="s">"example-modal-3"</span>
+    <span class="na">data-open-modal</span>
+    <span class="nt">&gt;</span>Open modal with forced action<span class="nt">&lt;/a</span>
+  <span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span>
+    <span class="na">class=</span><span class="s">"usa-modal"</span>
+    <span class="na">id=</span><span class="s">"example-modal-3"</span>
+    <span class="na">aria-labelledby=</span><span class="s">"modal-3-heading"</span>
+    <span class="na">aria-describedby=</span><span class="s">"modal-3-description"</span>
+    <span class="na">data-force-action</span>
+  <span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"usa-modal__content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"usa-modal__main"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"usa-modal__heading"</span> <span class="na">id=</span><span class="s">"modal-3-heading"</span><span class="nt">&gt;</span>
+          Your session will end soon.
+        <span class="nt">&lt;/h2&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"usa-prose"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"modal-3-description"</span><span class="nt">&gt;</span>
+            You’ve been inactive for too long. Please choose to stay signed in
+            or sign out. Otherwise, you’ll be signed out automatically in 5
+            minutes.
+          <span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"usa-modal__footer"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"usa-button-group"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"usa-button-group__item"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"usa-button"</span> <span class="na">data-close-modal</span><span class="nt">&gt;</span>
+                Yes, stay signed in
+              <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"usa-button-group__item"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;button</span>
+                <span class="na">type=</span><span class="s">"button"</span>
+                <span class="na">class=</span><span class="s">"usa-button usa-button--unstyled padding-105 text-center"</span>
+                <span class="na">data-close-modal</span>
+              <span class="nt">&gt;</span>
+                Sign out
+              <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+</div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="modal-guidance" class="site-component-section-title">
+  Guidance
+</h2>
+<div class="site-component-usage">
+  
+  
+  
+    <h3 id="when-to-use-the-modal" class="usa-heading site-component-usage__header--secondary">
+      When to use the modal component
+    </h3>
+    <ul class="usa-content-list">
+  <li>
+    <p><strong>Confirmation.</strong> Use modals to force the user to complete a task or make a decision that requires their full attention outside of the main workflow. These modals are usually triggered by a user action on the page and offer more than one option to proceed — such as a “yes” and “no” button. They are commonly used to confirm user actions or tasks that can’t be undone.</p>
+
+    <p>Examples:</p>
+    <ul>
+      <li>“Your work isn’t saved. Do you want to proceed?”</li>
+      <li>“Are you sure you want to cancel?”</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Acknowledgement before continuing.</strong> These modals are used as a “gate” to prevent users from moving forward without acknowledging or answering specific information in the modal. A key differentiator of these modals is that a user should not be able to close the modal or escape without making a selection — this means the “close” button should be disabled on these modals. It also means there needs to be a clear way to accept or reject the content in the modal.</p>
+
+    <p>Examples:</p>
+    <ul>
+      <li>“By using this website, you are agreeing to our privacy policy.”</li>
+      <li>“Your session is about to timeout. Do you need more time?”</li>
+      <li>“Are you 65 or older?”</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Explanatory content without disrupting a process.</strong> A modal can be used to display information without taking users away from a process or task. These modals usually show optional information to help a user gain further understanding about what they’re doing — for instance, displaying a privacy policy while creating an account or viewing an in-depth definition or explanation while filling out a form. Typically these modals don’t require a user to take action other than closing it.</p>
+  </li>
+</ul>
+
+  
+  
+    <h3 id="when-to-consider-something-else-modal" class="usa-heading site-component-usage__header--secondary">
+      When to consider something else
+    </h3>
+    <ul class="usa-content-list">
+  <li>
+    <p><strong>Every time!</strong> Before using a modal, consider whether there’s another component that might be less disruptive for the user. Modals should be a last resort.</p>
+  </li>
+  <li>
+    <p><strong>Multi-step process.</strong> Avoid complicated user flows in a modal that may take the user away from the original page. A multi-step process is better suited to an individual page, guiding the user and accommodating complexities in the user flow.</p>
+  </li>
+  <li>
+    <p><strong>Error, success, or warning messages.</strong> When these relate to a form field, these are better displayed in the context of the page (such as showing an error next to a missing required field). When these relate to page-level messages (such as confirming that a form has been successfully submitted), they should appear as an <a href="/components/alert/">alert</a> at the top of the page where the user is taken next.</p>
+  </li>
+</ul>
+
+  
+  
+    <h3 id="usability-guidance-modal" class="usa-heading site-component-usage__header--secondary">Usability guidance</h3>
+    <ul class="usa-content-list">
+  <li>
+    <p><strong>Users should trigger modals.</strong> Modals should appear as a result of an action made by the user or (less commonly) inactivity. A modal should not surprise the user, so don’t automatically display them. Some <strong>exceptions</strong> would be to alert the user that their authenticated session in a web application is about to expire due to inactivity or if information needs to be displayed when arriving at a webpage for the first time (like accepting the use of cookies).</p>
+  </li>
+  <li>
+    <p><strong>Choose the modal size that fits your content.</strong> There are two sizes to choose from: default and large. If a modal’s content can’t fit without scrolling, you may need to use the large variant or consider moving the content to its own page.</p>
+  </li>
+  <li>
+    <p><strong>Use clear header and button text.</strong> The header should clearly state what’s happening or what action the modal is prompting the user to do. The button text should indicate what will happen when selected and avoid ambiguity. For example, if a modal asks “Do you want to cancel?” the button options should not be “yes” and “cancel” — instead use something like “Yes, cancel” and “No, don’t cancel.”</p>
+  </li>
+  <li>
+    <p><strong>Limit in-modal interactions.</strong> Avoid using components other than buttons inside the modal. Components such as accordions and form fields often don’t scale well for mobile users and they can easily lose context that they’re viewing a modal. If you need to include links that navigate away from a modal to another webpage, refer to our link guidance about how to handle external links.</p>
+  </li>
+  <li>
+    <p><strong>Consider what happens when the modal is dismissed.</strong> The page underneath should not reload or change to new content.</p>
+  </li>
+  <li>
+    <p><strong>Avoid long content that requires scrolling.</strong> If a lot of content is needed, make sure it’s clear that users have to scroll to see all of it. Lengthy content can be problematic because it pushes buttons out of a user’s initial view, which may cause confusion.</p>
+  </li>
+  <li>
+    <p><strong>Don’t roadblock external links with a modal window or dialog box.</strong> Allow users to follow external links without taking a separate action to acknowledge leaving your site. Roadblock notices result in a poor user experience and are redundant with both the link’s destination context and your site’s policies and notices page (see <a href="/components/link">Link guidance</a>).</p>
+  </li>
+</ul>
+
+  
+  
+    <h3 id="accessibility-modal" class="usa-heading site-component-usage__header--secondary">
+      Accessibility guidance
+    </h3>
+    
+    
+
+<div class="usa-alert site-alert usa-alert--info usa-alert--no-icon measure-5 margin-bottom-2">
+  <div class="usa-alert__body">
+    <p class="usa-alert__text text-bold">
+      Test the modal component in your own project.
+    </p>
+    <p class="margin-y-1">
+      USWDS tested the modal component for accessibility. You should test your implementation, too.
+    </p>
+      <a class="usa-button margin-top-1 font-lang-xs" href="/components/modal/accessibility-tests">
+        Use modal accessibility tests
+      </a>
+  </div>
+</div>
+
+    
+    <ul class="usa-content-list">
+  <li>
+    <p><strong>Label the modal with its heading.</strong> Use <code class="language-plaintext highlighter-rouge">aria-labelledby=”[id]”</code> on <code class="language-plaintext highlighter-rouge">.usa-modal</code> to read out the modal title when opening the modal. The <code class="language-plaintext highlighter-rouge">[id]</code> should match the value of the <code class="language-plaintext highlighter-rouge">id</code> attribute on the <code class="language-plaintext highlighter-rouge">usa-modal__heading</code> element.</p>
+  </li>
+  <li>
+    <p><strong>Share more context with <code class="language-plaintext highlighter-rouge">aria-describedby</code>.</strong> Optionally, you may also use <code class="language-plaintext highlighter-rouge">aria-describedby=”[id]”</code> on <code class="language-plaintext highlighter-rouge">.usa-modal</code> to associate descriptive text to the modal window so that it’s read when opening the modal. The <code class="language-plaintext highlighter-rouge">id</code> should belong to a paragraph or a brief piece of content.</p>
+  </li>
+  <li>
+    <p><strong>Include the “X” close button at the end of the modal code.</strong> CSS will display <code class="language-plaintext highlighter-rouge">.usa-modal__close</code> at the top right of the modal window, but placing the close button at the bottom of the modal will prevent some screen readers from reading the close button first and allow users to navigate directly to the main content instead.</p>
+  </li>
+  <li>
+    <p><strong>Ensure keyboard focus is trapped inside the modal.</strong> When using a keyboard to test the modal, ensure focus does not move to the page behind it.</p>
+  </li>
+</ul>
+
+  
+  
+  
+    <h3  id="using-the-modal-component" class="usa-heading site-component-usage__header--secondary">
+      Using the modal component
+    </h3>
+    <ul class="usa-content-list">
+  <li>
+    <p><strong>Use unique ids.</strong> Each <code class="language-plaintext highlighter-rouge">.usa-modal</code> must have a unique <code class="language-plaintext highlighter-rouge">id</code> so that openers can associate them with their <code class="language-plaintext highlighter-rouge">aria-controls</code> attribute.</p>
+  </li>
+  <li>
+    <p><strong>Openers.</strong> A single modal can have multiple openers. Each opener requires <code class="language-plaintext highlighter-rouge">data-open-modal</code> and <code class="language-plaintext highlighter-rouge">aria-controls=”[modal_id]”</code> attributes. Openers can be coded as either <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code> or <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> elements. Using <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> helps link to modals in the event JavaScript fails.</p>
+  </li>
+  <li>
+    <p><strong>Closers.</strong> Place a <code class="language-plaintext highlighter-rouge">data-close-modal</code> attribute on any button that will close a modal. Closers may have event listeners attached to them. Code closers as <code class="language-plaintext highlighter-rouge">&lt;button type="button"&gt;</code>.</p>
+  </li>
+  <li>
+    <p><strong>Disabling close when an action is required.</strong> In instances that a user must make a choice before continuing, you want to prevent them from closing the modal without taking action. Add <code class="language-plaintext highlighter-rouge">data-force-action</code> attribute to <code class="language-plaintext highlighter-rouge">.usa-modal</code> to prevent the user from closing the modal without taking an action.</p>
+  </li>
+</ul>
+
+<p class="site-note">
+  <strong>Note:</strong> We recommend loading <code>uswds-init.js</code> when using banner, header, or modal components to assist in preventing flashes of unstyled content (FOUC) as well as cumulative layout shift (CLS). This small JavaScript file (less than 1 KB minified) helps the browser know if the USWDS JavaScript library is loading properly.
+  <br />
+  <br />
+  To add <code>uswds-init</code> to your site, simply copy <code>uswds-init.js</code> into your site assets from either the <a href="https://github.com/uswds/uswds/blob/develop/packages/uswds-core/src/js"><code>uswds-core/src/js</code></a> package or the <code>dist/js</code> directory in the <a href="/download/">downloadable package</a>. Then, reference the file in the <code>&lt;head&gt;</code> of your HTML files. Alternatively, you can inline its contents directly into a <code>&lt;script&gt;</code> tag in your HTML files.
+</p>
+
+
+    
+      <h4 id="component-settings-modal" class="site-component-usage__header--tertiary">
+        Modal settings
+      </h4>
+      
+      
+
+
+
+
+
+
+
+  <table class="usa-table--borderless site-table-responsive site-table-simple">
+    <thead>
+      <tr>
+        <th scope="col" class="flex-6 display-inline-flex">Variable</th>
+        <th scope="col" class="flex-6 display-inline-flex">Description</th>
+      </tr>
+    </thead>
+    <tbody class="font-mono-2xs">
+      
+      <tr>
+        <td data-title="Variable" class="flex-6 display-inline-flex flex-align-start">
+          <code>
+            $theme-modal-border-radius
+          </code>
+        </td>
+        <td data-title="Description" class="flex-6 display-inline-flex flex-align-start">
+          <span class="font-lang-3xs">
+            <p>The border radius of the modal window.</p>
+
+          </span>
+        </td>
+      </tr>
+      
+      <tr>
+        <td data-title="Variable" class="flex-6 display-inline-flex flex-align-start">
+          <code>
+            $theme-modal-default-max-width
+          </code>
+        </td>
+        <td data-title="Description" class="flex-6 display-inline-flex flex-align-start">
+          <span class="font-lang-3xs">
+            <p>Maximum width of default modal window.</p>
+
+          </span>
+        </td>
+      </tr>
+      
+      <tr>
+        <td data-title="Variable" class="flex-6 display-inline-flex flex-align-start">
+          <code>
+            $theme-modal-lg-max-width
+          </code>
+        </td>
+        <td data-title="Description" class="flex-6 display-inline-flex flex-align-start">
+          <span class="font-lang-3xs">
+            <p>Maximum width of large modal window.</p>
+
+          </span>
+        </td>
+      </tr>
+      
+      <tr>
+        <td data-title="Variable" class="flex-6 display-inline-flex flex-align-start">
+          <code>
+            $theme-modal-lg-content-max-width
+          </code>
+        </td>
+        <td data-title="Description" class="flex-6 display-inline-flex flex-align-start">
+          <span class="font-lang-3xs">
+            <p>Maximum width of content area within large modal window.</p>
+
+          </span>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+
+      <h4 id="component-variants-modal" class="site-component-usage__header--tertiary">
+        Modal variants
+      </h4>
+      
+
+
+  <table class="usa-table--borderless site-table-responsive site-table-simple margin-top-105">
+    <thead>
+      <tr>
+
+        <th scope="col" class="flex-1 display-inline-flex">Variant</th>
+
+        <th scope="col" class="flex-1 display-inline-flex">Description</th>
+      </tr>
+    </thead>
+    <tbody class="font-lang-3xs">
+      <tr>
+
+        <td class="flex-1 display-inline-flex flex-align-start"
+          data-title="Variant"
+          >
+          <p><code class="language-plaintext highlighter-rouge">.usa-modal--lg</code></p>
+
+        </td>
+
+        <td class="flex-1 display-inline-flex flex-align-start"
+          data-title="Description"
+          >
+          <p>Add <code class="language-plaintext highlighter-rouge">.usa-modal--lg</code> to <code class="language-plaintext highlighter-rouge">.usa-modal</code> for a larger window and larger heading size on wider screens.</p>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+    
+  
+  
+  
+</div>
+
+<!-- Add accessibility test results -->
+
+  
+
+
+
+<!-- Create a list of each status type -->
+
+
+<!-- Set status icons -->
+
+
+
+
+
+<!-- Count the number of items for each status type -->
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="site-component-section-title">Accessibility test status</h2>
+
+
+  <p class="margin-top-1 margin-bottom-0">The USWDS team did 14 tests based on WCAG 2.1 AA success criteria.</p>
+
+  <!-- Add test summary for desktop widths -->
+  <table class="usa-table site-checklist-test-summary__table">
+    <caption>
+      Overview of recent accessibility test results:
+    </caption>
+    <thead>
+      <tr>
+        <th>Total tests</th>
+        
+          
+          <th>
+            <div class="display-flex flex-align-center">
+                <svg class="usa-icon site-checklist-icon site-checklist-icon--pass" aria-hidden="true" role="img">
+                  <use href="/assets/img/sprite.svg#check_circle"></use>
+                </svg>
+              Passed
+            </div>
+          </th>
+        
+          
+          <th>
+            <div class="display-flex flex-align-center">
+                <svg class="usa-icon site-checklist-icon site-checklist-icon--exception" aria-hidden="true" role="img">
+                  <use href="/assets/img/sprite.svg#warning"></use>
+                </svg>
+              Passed with exceptions
+            </div>
+          </th>
+        
+          
+          <th>
+            <div class="display-flex flex-align-center">
+                <svg class="usa-icon site-checklist-icon site-checklist-icon--conditional" aria-hidden="true" role="img">
+                  <use href="/assets/img/sprite.svg#info"></use>
+                </svg>
+              Conditional
+            </div>
+          </th>
+        
+          
+          <th>
+            <div class="display-flex flex-align-center">
+                <svg class="usa-icon site-checklist-icon site-checklist-icon--fail" aria-hidden="true" role="img">
+                  <use href="/assets/img/sprite.svg#cancel"></use>
+                </svg>
+              Failed
+            </div>
+          </th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>14</td>
+        
+          
+          <td class="border-">13</td>
+        
+          
+          <td class="border-">0</td>
+        
+          
+          <td class="border-">1</td>
+        
+          
+          <td class="border-">0</td>
+        
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Add test summary for mobile widths -->
+  <div class="site-checklist-test-summary__list">
+    <p class="site-checklist-test-summary__list-summary">Overview of recent accessibility test results:</p>
+    <ul class="usa-icon-list">
+      
+        
+
+        
+        
+
+        <li class="usa-icon-list__item">
+          <div class="usa-icon-list__icon site-checklist-icon--pass">
+            <svg class="usa-icon" aria-hidden="true" role="img">
+              <use href="/assets/img/sprite.svg#check_circle"></use>
+            </svg>
+          </div>
+          <div class="usa-icon-list__content">
+            <b>Passed:</b> 13
+          </div>
+        </li>
+      
+        
+
+        
+        
+
+        <li class="usa-icon-list__item">
+          <div class="usa-icon-list__icon site-checklist-icon--exception">
+            <svg class="usa-icon" aria-hidden="true" role="img">
+              <use href="/assets/img/sprite.svg#warning"></use>
+            </svg>
+          </div>
+          <div class="usa-icon-list__content">
+            <b>Passed with exceptions:</b> 0
+          </div>
+        </li>
+      
+        
+
+        
+        
+
+        <li class="usa-icon-list__item">
+          <div class="usa-icon-list__icon site-checklist-icon--conditional">
+            <svg class="usa-icon" aria-hidden="true" role="img">
+              <use href="/assets/img/sprite.svg#info"></use>
+            </svg>
+          </div>
+          <div class="usa-icon-list__content">
+            <b>Conditional:</b> 1
+          </div>
+        </li>
+      
+        
+
+        
+        
+
+        <li class="usa-icon-list__item">
+          <div class="usa-icon-list__icon site-checklist-icon--fail">
+            <svg class="usa-icon" aria-hidden="true" role="img">
+              <use href="/assets/img/sprite.svg#cancel"></use>
+            </svg>
+          </div>
+          <div class="usa-icon-list__content">
+            <b>Failed:</b> 0
+          </div>
+        </li>
+      
+    </ul>
+  </div>
+
+<p class="margin-top-0">Learn more on the <a href="/components/modal/accessibility-tests/">modal accessibility tests page</a>.</p>
+
+
+
+
+
+  
+
+
+
+
+
+<h2 id="modal-package" class="site-component-section-title">Package</h2>
+<ul class="usa-content-list">
+  <li>
+    <strong>Package usage:</strong> <code>@forward "usa-modal";</code>
+  </li>
+  <li><strong>Dependencies: </strong><code class="text-no-wrap">uswds-fonts</code>, 
+<code class="text-no-wrap">usa-button</code>
+</li>
+</ul>
+
+
+
+
+
+
+        
+
+
+
+<h2 id="changelog" class="site-component-section-title">Latest updates</h2><p>Meaningful code and guidance updates are listed in the following table:</p>
+  
+    
+
+
+
+
+
+
+
+
+
+
+<table class="usa-table--borderless site-table-responsive site-table-simple">
+  <thead>
+    <tr>
+      <th scope="col" class="tablet:grid-col">Date</th>
+      <th scope="col" class="tablet:grid-col tablet:padding-left-0">USWDS version</th>
+      <th scope="col" class="tablet:grid-col">Affects</th>
+      <th scope="col" class="tablet:grid-col site-changelog--hide-tablet">Breaking</th>
+      <th scope="col" class="tablet:grid-col-6">Description</th>
+    </tr>
+  </thead>
+  <tbody class="font-lang-3xs">
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2026-08-18</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        <span class="font-mono-3xs">
+          <a href="https://github.com/uswds/uswds/releases/tag/v3.14.0">
+            3.14.0
+          </a>
+        </span>
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+            <li><span class="output-warning">Accessibility</span></li>
+          
+          
+          
+          
+          
+            <li><span class="output-neutral">JavaScript</span></li>
+          
+          
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Fixed page content staying hidden from screen readers after closing a modal.
+
+          </strong>
+          
+            If the element that opened the modal was no longer in the document when the modal closed, page content kept aria-hidden and stayed invisible to assistive technology until reload. Closing now always restores page content, independent of whether the opener still exists.
+
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds/pull/6786">
+              uswds#6786
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2026-08-18</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        <span class="font-mono-3xs">
+          <a href="https://github.com/uswds/uswds/releases/tag/v3.14.0">
+            3.14.0
+          </a>
+        </span>
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+            <li><span class="output-warning">Accessibility</span></li>
+          
+          
+          
+          
+          
+            <li><span class="output-neutral">JavaScript</span></li>
+          
+          
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Fixed screen readers announcing modal content twice.
+
+          </strong>
+          
+            The modal now controls initial focus (first footer button), disables focus-trap auto-focus, and sets aria-modal on the wrapper to prevent duplicate announcements, especially in NVDA.
+
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds/pull/6703">
+              uswds#6703
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2025-05-23</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        <span class="font-mono-3xs">
+          <a href="https://github.com/uswds/uswds/releases/tag/v3.13.0">
+            3.13.0
+          </a>
+        </span>
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+            <li><span class="output-warning">Accessibility</span></li>
+          
+          
+          
+          
+          
+          
+          
+            <li><span class="output-neutral">Styles</span></li>
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Disabled the nonessential modal transition when reduced motion is requested.
+
+          </strong>
+          
+            The transition utility respects the operating system’s reduced-motion preference.
+
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds/pull/6268">
+              uswds#6268
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2025-02-14</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        N/A
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+          
+          
+            <li><span class="output-neutral">Guidance</span></li>
+          
+          
+          
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Added WCAG compliance tag and accessibility test status section.
+
+          </strong>
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds-site/pull/3103">
+              uswds-site#3103
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2024-12-18</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        <span class="font-mono-3xs">
+          <a href="https://github.com/uswds/uswds/releases/tag/v3.11.0">
+            3.11.0
+          </a>
+        </span>
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+          
+          
+          
+          
+            <li><span class="output-warning">Markup</span></li>
+          
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Replaced deprecated <code class="language-plaintext highlighter-rouge">xlink:href</code> references with <code class="language-plaintext highlighter-rouge">href</code>.
+
+          </strong>
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds/pull/6165">
+              uswds#6165
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2024-11-13</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        <span class="font-mono-3xs">
+          <a href="https://github.com/uswds/uswds/releases/tag/v3.10.0">
+            3.10.0
+          </a>
+        </span>
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+          
+          
+          
+            <li><span class="output-neutral">JavaScript</span></li>
+          
+          
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Fixed a bug that prevented bundling the modal package with a custom prefix.
+
+          </strong>
+          
+            This update removed hard-coded class names from the modal JavaScript.
+
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds/pull/6026">
+              uswds#6026
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2024-11-6</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        <span class="font-mono-3xs">
+          <a href="https://github.com/uswds/uswds/releases/tag/v3.9.0">
+            3.9.0
+          </a>
+        </span>
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+          
+          
+            <li><span class="output-neutral">Guidance</span></li>
+          
+          
+          
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Added focus trap guidance.
+
+          </strong>
+          
+            Updated guidance to ensure users trap focus inside the modal so that it doesn’t move to the content behind it.
+
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds-site/pull/2874">
+              uswds-site#2874
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2023-11-09</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        <span class="font-mono-3xs">
+          <a href="https://github.com/uswds/uswds/releases/tag/v3.7.0">
+            3.7.0
+          </a>
+        </span>
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+          
+          
+          
+            <li><span class="output-neutral">JavaScript</span></li>
+          
+          
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Updated JavaScript to include fallbacks and error messages when initialization cannot be completed.
+
+          </strong>
+          
+            Additionally, this improved code consistency and prevented errors when trying to initialize modal twice.
+
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds/pull/5315">
+              uswds#5315
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2023-09-29</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        <span class="font-mono-3xs">
+          <a href="https://github.com/uswds/uswds/releases/tag/v3.6.1">
+            3.6.1
+          </a>
+        </span>
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+          
+          
+          
+            <li><span class="output-neutral">JavaScript</span></li>
+          
+          
+          
+            <li><span class="output-neutral">Styles</span></li>
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Updated how the modal JavaScript resets body padding and improved body padding detection.
+
+          </strong>
+          
+            Now the component will rely on the CSS to reset body padding rather than injecting an inline style with JavaScript.
+
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds/pull/5493">
+              uswds#5493
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2023-03-09</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        <span class="font-mono-3xs">
+          <a href="https://github.com/uswds/uswds/releases/tag/v3.4.0">
+            3.4.0
+          </a>
+        </span>
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+          
+          
+          
+            <li><span class="output-neutral">JavaScript</span></li>
+          
+          
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Fixed the display of interactive form elements (like Date Picker) in modal windows.
+
+          </strong>
+          
+            Now any element in a modal should work as expected.
+
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds/pull/5049">
+              uswds#5049
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2022-08-05</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        <span class="font-mono-3xs">
+          <a href="https://github.com/uswds/uswds/releases/tag/v3.1.0">
+            3.1.0
+          </a>
+        </span>
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+            <li><span class="output-warning">Accessibility</span></li>
+          
+          
+          
+          
+          
+          
+          
+            <li><span class="output-neutral">Styles</span></li>
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Styled aria-disabled to match disabled.
+
+          </strong>
+          
+            Now disabled styling is applied whether you use <code class="language-plaintext highlighter-rouge">disabled</code> (disabled and hidden from screen readers) or <code class="language-plaintext highlighter-rouge">aria-disabled</code> (disabled and visible to screen readers).
+
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds/pull/4783">
+              uswds#4783
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2022-08-05</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        <span class="font-mono-3xs">
+          <a href="https://github.com/uswds/uswds/releases/tag/v3.1.0">
+            3.1.0
+          </a>
+        </span>
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+          
+          
+          
+            <li><span class="output-neutral">JavaScript</span></li>
+          
+          
+            <li><span class="output-warning">Markup</span></li>
+          
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Added <code class="language-plaintext highlighter-rouge">type="button"</code> to all non-form buttons to prevent default submit behaviors.
+
+          </strong>
+          
+            This allowed us to remove <code class="language-plaintext highlighter-rouge">preventDefault()</code> from the relevant component JavaScript.
+
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds/pull/4695">
+              uswds#4695
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2022-04-28</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        <span class="font-mono-3xs">
+          <a href="https://github.com/uswds/uswds/releases/tag/v3.0.0">
+            3.0.0
+          </a>
+        </span>
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+            <li><span class="output-warning">Accessibility</span></li>
+          
+          
+            <li><span class="output-neutral">Assets</span></li>
+          
+          
+          
+            <li><span class="output-neutral">Guidance</span></li>
+          
+          
+            <li><span class="output-neutral">JavaScript</span></li>
+          
+          
+            <li><span class="output-warning">Markup</span></li>
+          
+          
+            <li><span class="output-neutral">Styles</span></li>
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          <span class="output-false">Breaking</span>
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+            <span class="site-changelog--show-tablet output-false">Breaking</span>
+          
+          <strong>
+            Updated to Sass module syntax and new package structure.
+
+          </strong>
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds/pull/4656">
+              uswds#4656
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2022-06-16</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        N/A
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+          
+          
+            <li><span class="output-neutral">Guidance</span></li>
+          
+          
+          
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Added guidance for handling external links.
+
+          </strong>
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds-site/pull/1225">
+              uswds-site#1225
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2021-03-17</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        N/A
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+          
+          
+            <li><span class="output-neutral">Guidance</span></li>
+          
+          
+          
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Added modal documentation.
+
+          </strong>
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds-site/pull/1180">
+              uswds-site#1180
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2021-03-17</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        <span class="font-mono-3xs">
+          <a href="https://github.com/uswds/uswds/releases/tag/v2.11.0">
+            2.11.0
+          </a>
+        </span>
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+          
+          
+            <li><span class="output-neutral">Guidance</span></li>
+          
+          
+            <li><span class="output-neutral">JavaScript</span></li>
+          
+          
+            <li><span class="output-warning">Markup</span></li>
+          
+          
+            <li><span class="output-neutral">Styles</span></li>
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Added modal component.
+
+          </strong>
+          
+            A modal disables page content and focuses the user’s attention on a single task or message.
+
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds/pull/3981">
+              uswds#3981
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+  
+
+      </div>
+    </main>
+  
+  </div>
+  
+</div>
+
+
+
+
+
+  
+  <script src="https://touchpoints.app.cloud.gov/touchpoints/5c2410e4.js" async></script>
+
+
+
+
+
+
+<section class="touchpoints__container" role="complementary" aria-label="Page feedback">
+  
+    <button type="button" class="usa-button site-button usa-button--outline" id="touchpoints-modal-button" aria-label="Provide feedback about this page" tabindex="0">Was this page helpful?</button>
+  
+</section>
+
+
+
+<footer class="usa-footer site-footer">
+  <div class="usa-footer__secondary-section">
+    <div class="grid-container footer-content">
+      <h2>Become part of the community</h2>
+      <p>
+        USWDS is an active open source community of government engineers, content specialists, and designers. Our contributors both in and out of government support dozens of agencies and nearly 200 sites.
+      </p>
+      <div class="grid-row footer-contact-links">
+        
+          <div class="tablet:grid-col">
+            <div class="usa-media-block">
+              <div class="usa-media-block__img circle-5 bg-accent-cool display-flex flex-row flex-align-center flex-justify-center text-white">
+                <svg class="usa-icon usa-icon--size-3" aria-hidden="true" role="img" focusable="false">
+                  <use href="/assets/img/sprite.svg#help"></use>
+                </svg>
+              </div>
+              <div class="usa-media-block__body">
+                <h3>Have an idea or an issue?</h3>
+                <a href="https://github.com/uswds/uswds/issues/new/choose">Reach out in GitHub</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="tablet:grid-col">
+            <div class="usa-media-block">
+              <div class="usa-media-block__img circle-5 bg-accent-cool display-flex flex-row flex-align-center flex-justify-center text-white">
+                <svg class="usa-icon usa-icon--size-3" aria-hidden="true" role="img" focusable="false">
+                  <use href="/assets/img/sprite.svg#people"></use>
+                </svg>
+              </div>
+              <div class="usa-media-block__body">
+                <h3>Engage with the community</h3>
+                <a href="https://designsystem.digital.gov/about/community/">Find a channel that works for you</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="tablet:grid-col">
+            <div class="usa-media-block">
+              <div class="usa-media-block__img circle-5 bg-accent-cool display-flex flex-row flex-align-center flex-justify-center text-white">
+                <svg class="usa-icon usa-icon--size-3" aria-hidden="true" role="img" focusable="false">
+                  <use href="/assets/img/sprite.svg#mail"></use>
+                </svg>
+              </div>
+              <div class="usa-media-block__body">
+                <h3>Subscribe to our newsletter</h3>
+                <a href="https://public.govdelivery.com/accounts/USGSATTS/subscriber/new?qsp=GSA_TTS">Sign up for USWDS updates</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="tablet:grid-col">
+            <div class="usa-media-block">
+              <div class="usa-media-block__img circle-5 bg-accent-cool display-flex flex-row flex-align-center flex-justify-center text-white">
+                <svg class="usa-icon usa-icon--size-3" aria-hidden="true" role="img" focusable="false">
+                  <use href="/assets/img/sprite.svg#support"></use>
+                </svg>
+              </div>
+              <div class="usa-media-block__body">
+                <h3>Get support</h3>
+                <a href="mailto:uswds@gsa.gov">Email the USWDS team</a>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+
+    <div class="bg-base-light padding-y-1 line-height-sans-3 font-lang-4">
+      <div class="grid-container">
+        Looking for USWDS v1 documentation?
+        <a
+          href="https://v1.designsystem.digital.gov"
+          class="text-ink text-bold hover:text-no-underline"
+          >Visit v1.designsystem.digital.gov</a
+        >
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<div class="usa-identifier site-identifier">
+  <section
+    class="usa-identifier__section usa-identifier__section--masthead"
+    aria-label="Agency identifier,,,,,,"
+  >
+    <div class="usa-identifier__container">
+      <div class="usa-identifier__logos"><a href="javascript:void(0);" class="usa-identifier__logo">
+          <img
+            class="usa-identifier__logo-img"
+            src="/img/gsa-logo.svg"
+            alt="GSA Logo"
+            role="img"
+            width="48"
+            height="48"
+          >
+        </a></div>
+      <section class="usa-identifier__identity" aria-label="Agency description">
+        <p class="usa-identifier__identity-domain">designsystem.digital.gov</p>
+        <p class="usa-identifier__identity-disclaimer"><span aria-hidden="true">An </span>official website of the <a href=https://gsa.gov>General Services Administration</a></p>
+      </section>
+    </div>
+  </section>
+  <nav class="usa-identifier__section usa-identifier__section--required-links" aria-label="Important links">
+      <div class="usa-identifier__container">
+        <ul class="usa-identifier__required-links-list"><li class="usa-identifier__required-links-item">
+            <a href="https://www.gsa.gov/about-us" class="usa-identifier__required-link">About GSA</a>
+          </li><li class="usa-identifier__required-links-item">
+            <a href="https://www.gsa.gov/website-information/accessibility-statement" class="usa-identifier__required-link">Accessibility statement</a>
+          </li><li class="usa-identifier__required-links-item">
+            <a href="https://www.gsa.gov/reference/freedom-of-information-act-foia" class="usa-identifier__required-link">FOIA requests</a>
+          </li><li class="usa-identifier__required-links-item">
+            <a href="https://www.gsa.gov/reference/civil-rights-programs/notification-and-federal-employee-antidiscrimination-and-retaliation-act-of-2002" class="usa-identifier__required-link">No FEAR Act data</a>
+          </li><li class="usa-identifier__required-links-item">
+            <a href="https://www.gsaig.gov/" class="usa-identifier__required-link">Office of the Inspector General</a>
+          </li><li class="usa-identifier__required-links-item">
+            <a href="https://www.gsa.gov/about-gsa/newsroom/budget-and-performance" class="usa-identifier__required-link">Performance reports</a>
+          </li><li class="usa-identifier__required-links-item">
+            <a href="https://www.gsa.gov/website-information/website-policies" class="usa-identifier__required-link">Privacy policy</a>
+          </li></ul>
+      </div>
+  </nav>
+  <section class="usa-identifier__section usa-identifier__section--usagov" aria-label="Government information and services">
+    <div class="usa-identifier__container">
+      <div class="usa-identifier__usagov-description">
+        Looking for U.S. government information and services?
+      </div>
+      <a href="https://www.usa.gov/" class="usa-link">Visit USA.gov</a>
+    </div>
+  </section>
+</div>
+
+
+
+    <script src="/assets/js/styleguide.js"></script>
+
+<script src="/assets/js/vendor/uswds.min.js"></script>
+<!--<script>
+//<![CDATA[
+      var usasearch_config = { siteHandle:"uswds" };
+
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "//search.usa.gov/javascripts/remote.loader.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+
+//]]>
+</script>
+-->
+
+  </body>
+</html>

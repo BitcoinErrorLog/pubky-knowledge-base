@@ -1,0 +1,4062 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+  <head>
+    <!-- ANALYTICS
+================================================== -->
+
+<!-- Google Analytics - GA4 -->
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KH01P8TN5V"></script>
+	<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-KH01P8TN5V'); </script>
+
+<!-- Digital Analytics Program roll-up, see https://analytics.usa.gov for data -->
+	<script async type="text/javascript" id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA&subagency=TTS"></script>
+
+
+<!-- Basic Page Needs
+================================================== -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+  
+
+  
+
+<!-- Mobile Specific Metas
+================================================== -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Title and meta description
+================================================== -->
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Data visualizations | U.S. Web Design System (USWDS)</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Data visualizations" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Note: The data visualizations components are guidance-only and do not include any Component Code. The examples of specific visualizations included with our guidance are intended to be a demonstration of one way to implement our guidance with a focus on accessibility and assistive tooling. General guidance Usability and accessibility are complementary goals for data visualizations. Simplicity Prefer common visualization types. Use data visualizations types that your target audience understands. When the level of the audience&#39;s data literacy is unknown, stick to well-used types (like line and bar charts) for explanatory visualizations. Don&#39;t try to do too much. Limit the &#39;big idea&#39; expressed in a visualization to a central theme. Use no more than two or three concepts to reduce the cognitive load placed on the audience. Use color with care. Simplify color selection and don&#39;t reuse colors for different variables or within a particular variable. If you are finding this difficult, it may indicate too many concepts are present for a single visualization. When selecting colors, be sure to meet contrast requirements. References Choosing Colors&nbsp; [nightingaledvs.com] Color Contrast and Color Blindness&nbsp; [venngage.com] Lossless representation Avoid embedded information. Avoid embedding information as part of an image. Provide a textual representation of axis values and labels, and provide the ability to get a tabular representation of the underlying data. Reduce interaction. Even simple interactions have a usability cost. Your audience shouldn&#39;t be required to interact with a visualization to understand its message. Presuming the ability to use a mouse to hover over page elements eliminates portions of the audience from the full experience. Clarity of intent Provide context-sensitive explanations. Data visualization authors should consider the audience&#39;s experience when providing the background for the information they&#39;re sharing. Provide explanations or summaries that make sense to the target audience not just the author. Get to the point. If the visualization is intended to explain a specific point, don&#39;t leave the audience guessing as to the conclusion they&#39;re meant to draw. Clearly state the author&#39;s intended message as text. This avoids unintended ambiguity and helps the audience understand the visualization&#39;s intention. Accessibility Solve for individual impacted groups, and be specific in your solutions. Provide equivalent access. Semantic headings and descriptions that provide the author&#39;s stated intent support assistive technologies and deliver a clear message to across audiences. Screen readers might have difficulty reading content within an SVG. Provide an screen-reader accessible data table of the information represented in your visualization using the class usa-sr-only. When providing accessible equivalent, you can hide the visualization using the attribute aria-hidden=&quot;true&quot;. The information in both of the example charts on this page is made accessible to screen readers with a visually-hidden table. Note: This is not always a sufficient alternative for complex data sets. Provide equivalent facilitation. Access to the underlying data provides an alternative affordance for consuming the same information, but a data table does not provide an equivalent narrative to a visualization. Increase accessibility by providing additional information that the visualization communicates (like trends or a statistical summary) in plain text, using a screen reader–only class like .usa-sr-only. Focus on manual testing. Become familiar with testing tools and browser plugins. But only manual testing can check context and intent. The use of automated or mechanical checks can verify the presence of tags, not the proper content. Choose an accessible charting tool. There are many charting tools available, but not many adequately support accessibility. When using a 3rd-party tool, look for features such as: Support for accessible patterns and colors Sonification as a audio tool for visual impairment and analysis&nbsp; [perkinselearning.org] Announcement handling References Accessibility for Teams&nbsp; [digital.gov] 508 testing&nbsp; [section508.gov] Accessibility testing with tab key&nbsp; [matuzo.at] United States Access Board&nbsp; [access-board.gov]" />
+<meta property="og:description" content="Note: The data visualizations components are guidance-only and do not include any Component Code. The examples of specific visualizations included with our guidance are intended to be a demonstration of one way to implement our guidance with a focus on accessibility and assistive tooling. General guidance Usability and accessibility are complementary goals for data visualizations. Simplicity Prefer common visualization types. Use data visualizations types that your target audience understands. When the level of the audience&#39;s data literacy is unknown, stick to well-used types (like line and bar charts) for explanatory visualizations. Don&#39;t try to do too much. Limit the &#39;big idea&#39; expressed in a visualization to a central theme. Use no more than two or three concepts to reduce the cognitive load placed on the audience. Use color with care. Simplify color selection and don&#39;t reuse colors for different variables or within a particular variable. If you are finding this difficult, it may indicate too many concepts are present for a single visualization. When selecting colors, be sure to meet contrast requirements. References Choosing Colors&nbsp; [nightingaledvs.com] Color Contrast and Color Blindness&nbsp; [venngage.com] Lossless representation Avoid embedded information. Avoid embedding information as part of an image. Provide a textual representation of axis values and labels, and provide the ability to get a tabular representation of the underlying data. Reduce interaction. Even simple interactions have a usability cost. Your audience shouldn&#39;t be required to interact with a visualization to understand its message. Presuming the ability to use a mouse to hover over page elements eliminates portions of the audience from the full experience. Clarity of intent Provide context-sensitive explanations. Data visualization authors should consider the audience&#39;s experience when providing the background for the information they&#39;re sharing. Provide explanations or summaries that make sense to the target audience not just the author. Get to the point. If the visualization is intended to explain a specific point, don&#39;t leave the audience guessing as to the conclusion they&#39;re meant to draw. Clearly state the author&#39;s intended message as text. This avoids unintended ambiguity and helps the audience understand the visualization&#39;s intention. Accessibility Solve for individual impacted groups, and be specific in your solutions. Provide equivalent access. Semantic headings and descriptions that provide the author&#39;s stated intent support assistive technologies and deliver a clear message to across audiences. Screen readers might have difficulty reading content within an SVG. Provide an screen-reader accessible data table of the information represented in your visualization using the class usa-sr-only. When providing accessible equivalent, you can hide the visualization using the attribute aria-hidden=&quot;true&quot;. The information in both of the example charts on this page is made accessible to screen readers with a visually-hidden table. Note: This is not always a sufficient alternative for complex data sets. Provide equivalent facilitation. Access to the underlying data provides an alternative affordance for consuming the same information, but a data table does not provide an equivalent narrative to a visualization. Increase accessibility by providing additional information that the visualization communicates (like trends or a statistical summary) in plain text, using a screen reader–only class like .usa-sr-only. Focus on manual testing. Become familiar with testing tools and browser plugins. But only manual testing can check context and intent. The use of automated or mechanical checks can verify the presence of tags, not the proper content. Choose an accessible charting tool. There are many charting tools available, but not many adequately support accessibility. When using a 3rd-party tool, look for features such as: Support for accessible patterns and colors Sonification as a audio tool for visual impairment and analysis&nbsp; [perkinselearning.org] Announcement handling References Accessibility for Teams&nbsp; [digital.gov] 508 testing&nbsp; [section508.gov] Accessibility testing with tab key&nbsp; [matuzo.at] United States Access Board&nbsp; [access-board.gov]" />
+<link rel="canonical" href="https://designsystem.digital.gov/components/data-visualizations/" />
+<meta property="og:url" content="https://designsystem.digital.gov/components/data-visualizations/" />
+<meta property="og:site_name" content="U.S. Web Design System (USWDS)" />
+<meta property="og:image" content="https://designsystem.digital.gov/img/uswds-logo/lg-black.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-28T03:12:17+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://designsystem.digital.gov/img/uswds-logo/lg-black.png" />
+<meta property="twitter:title" content="Data visualizations" />
+<meta name="twitter:site" content="@USWDS" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-09-28T03:12:17+00:00","datePublished":"2026-09-28T03:12:17+00:00","description":"Note: The data visualizations components are guidance-only and do not include any Component Code. The examples of specific visualizations included with our guidance are intended to be a demonstration of one way to implement our guidance with a focus on accessibility and assistive tooling. General guidance Usability and accessibility are complementary goals for data visualizations. Simplicity Prefer common visualization types. Use data visualizations types that your target audience understands. When the level of the audience&#39;s data literacy is unknown, stick to well-used types (like line and bar charts) for explanatory visualizations. Don&#39;t try to do too much. Limit the &#39;big idea&#39; expressed in a visualization to a central theme. Use no more than two or three concepts to reduce the cognitive load placed on the audience. Use color with care. Simplify color selection and don&#39;t reuse colors for different variables or within a particular variable. If you are finding this difficult, it may indicate too many concepts are present for a single visualization. When selecting colors, be sure to meet contrast requirements. References Choosing Colors&nbsp; [nightingaledvs.com] Color Contrast and Color Blindness&nbsp; [venngage.com] Lossless representation Avoid embedded information. Avoid embedding information as part of an image. Provide a textual representation of axis values and labels, and provide the ability to get a tabular representation of the underlying data. Reduce interaction. Even simple interactions have a usability cost. Your audience shouldn&#39;t be required to interact with a visualization to understand its message. Presuming the ability to use a mouse to hover over page elements eliminates portions of the audience from the full experience. Clarity of intent Provide context-sensitive explanations. Data visualization authors should consider the audience&#39;s experience when providing the background for the information they&#39;re sharing. Provide explanations or summaries that make sense to the target audience not just the author. Get to the point. If the visualization is intended to explain a specific point, don&#39;t leave the audience guessing as to the conclusion they&#39;re meant to draw. Clearly state the author&#39;s intended message as text. This avoids unintended ambiguity and helps the audience understand the visualization&#39;s intention. Accessibility Solve for individual impacted groups, and be specific in your solutions. Provide equivalent access. Semantic headings and descriptions that provide the author&#39;s stated intent support assistive technologies and deliver a clear message to across audiences. Screen readers might have difficulty reading content within an SVG. Provide an screen-reader accessible data table of the information represented in your visualization using the class usa-sr-only. When providing accessible equivalent, you can hide the visualization using the attribute aria-hidden=&quot;true&quot;. The information in both of the example charts on this page is made accessible to screen readers with a visually-hidden table. Note: This is not always a sufficient alternative for complex data sets. Provide equivalent facilitation. Access to the underlying data provides an alternative affordance for consuming the same information, but a data table does not provide an equivalent narrative to a visualization. Increase accessibility by providing additional information that the visualization communicates (like trends or a statistical summary) in plain text, using a screen reader–only class like .usa-sr-only. Focus on manual testing. Become familiar with testing tools and browser plugins. But only manual testing can check context and intent. The use of automated or mechanical checks can verify the presence of tags, not the proper content. Choose an accessible charting tool. There are many charting tools available, but not many adequately support accessibility. When using a 3rd-party tool, look for features such as: Support for accessible patterns and colors Sonification as a audio tool for visual impairment and analysis&nbsp; [perkinselearning.org] Announcement handling References Accessibility for Teams&nbsp; [digital.gov] 508 testing&nbsp; [section508.gov] Accessibility testing with tab key&nbsp; [matuzo.at] United States Access Board&nbsp; [access-board.gov]","headline":"Data visualizations","image":"https://designsystem.digital.gov/img/uswds-logo/lg-black.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://designsystem.digital.gov/components/data-visualizations/"},"url":"https://designsystem.digital.gov/components/data-visualizations/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Favicons
+================================================== -->
+  <!-- 128x128 -->
+  <link rel="shortcut icon" type="image/ico" href="/assets/img/favicons/favicon.ico">
+  <link rel="icon" type="image/png" href="/assets/img/favicons/favicon.png">
+
+  <!-- 192x192, as recommended for Android
+  http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
+  -->
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicons/favicon-192.png">
+
+  <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+  <link rel="apple-touch-icon-precomposed" href="/assets/img/favicons/favicon-57.png">
+  <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/img/favicons/favicon-72.png">
+  <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/img/favicons/favicon-114.png">
+  <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/img/favicons/favicon-144.png">
+
+<!-- CSS
+================================================== -->
+<!-- env: production -->
+
+
+  
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  
+
+
+<!-- USWDS INIT
+================================================== -->
+<script>
+  /**
+   * This script block contains the contents of the uswds-init.js script.
+   * It's inlined because it's necessary for the first paint of the banner,
+   * and we want to avoid a round-trip to the server.
+   */
+  (function uswdsInit() {
+    "use strict";
+
+    const loadingClass = "usa-js-loading";
+    let fallback;
+
+    document.documentElement.classList.add(loadingClass);
+    function revertClass() {
+      document.documentElement.classList.remove(loadingClass);
+    }
+
+    fallback = setTimeout(revertClass, 8000);
+
+    function verifyLoaded() {
+      if (window.uswdsPresent) {
+        clearTimeout(fallback);
+        revertClass();
+        window.removeEventListener("load", verifyLoaded, true);
+      }
+    }
+
+    window.addEventListener("load", verifyLoaded, true);
+  })();
+</script>
+<script src="/assets/uswds/components/usa-banner.js.mjs" type="module"></script>
+<link rel="preload" href="/assets/js/vendor/uswds.min.js" as="script">
+  </head>
+  <body class="page-data-visualizations layout-styleguide ">
+    <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+<section
+  class="usa-banner site-banner"
+  aria-label="Official website of the United States government,,,,,,"
+>
+  <div class="usa-accordion">
+    <header class="usa-banner__header">
+      <div class="usa-banner__inner">
+        <div class="grid-col-auto">
+          <img
+            aria-hidden="true"
+            class="usa-banner__header-flag"
+            src="/assets/img/us_flag_small.png"
+            alt=""
+          />
+        </div>
+        <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+          <p class="usa-banner__header-text">
+            An official website of the United States government
+          </p>
+          <p class="usa-banner__header-action">Here’s how you know</p>
+        </div>
+        <button
+          type="button"
+          class="usa-accordion__button usa-banner__button"
+          aria-expanded="false"
+          aria-controls="gov-banner"
+        >
+          <span class="usa-banner__button-text">Here’s how you know</span>
+        </button>
+      </div>
+    </header>
+    <div
+      class="usa-banner__content usa-accordion__content"
+      id="gov-banner"
+    >
+      <div class="grid-row grid-gap-lg">
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img
+            class="usa-banner__icon usa-media-block__img"
+            src="/assets/img/icon-dot-gov.svg"
+            role="img"
+            alt=""
+            aria-hidden="true"
+          />
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Official websites use .gov</strong><br />A
+              <strong>.gov</strong> website belongs to an official government
+              organization in the United States.
+            </p>
+          </div>
+        </div>
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img
+            class="usa-banner__icon usa-media-block__img"
+            src="/assets/img/icon-https.svg"
+            role="img"
+            alt=""
+            aria-hidden="true"
+          />
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Secure .gov websites use HTTPS</strong><br />A
+              <strong>lock</strong> (
+              <span class="icon-lock"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="52"
+                  height="64"
+                  viewBox="0 0 52 64"
+                  class="usa-banner__lock-image"
+                  role="img"
+                  aria-labelledby="banner-lock-description"
+                  focusable="false"
+                >
+                  <title id="banner-lock-title">Lock</title>
+                  <desc id="banner-lock-description">Locked padlock icon</desc>
+                  <path
+                    fill="#000000"
+                    fill-rule="evenodd"
+                    d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z"
+                  />
+                </svg> </span
+              >) or <strong>https://</strong> means you’ve safely connected to
+              the .gov website. Share sensitive information only on official,
+              secure websites.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<header class="usa-header usa-header--extended site-header site-header--dark" role="banner">
+  <div class="usa-navbar site-header__navbar">
+    <div class="usa-logo site-logo" id="logo">
+      <em class="usa-logo__text site-logo__text">
+        <a href="/" title="U.S. Web Design System (USWDS) Home">
+          <span aria-hidden="true" class="site-title--short">USWDS</span>
+          <span class="site-title--long">U.S. Web Design System (USWDS)</span>
+        </a>
+      </em>
+    </div>
+    <button type="button" class="usa-menu-btn">Menu</button>
+  </div>
+</header>
+<nav aria-label="Primary navigation" class="usa-nav site-nav sticky">
+  <div class="usa-nav__inner site-nav__inner">
+    <button type="button" class="usa-nav__close">
+      <img src="/assets/img/usa-icons/close.svg" role="img" alt="Close">
+    </button>
+    <!-- Mobile nav -->
+    <ul class="usa-nav__primary usa-nav__primary--mobile usa-accordion">
+      
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<button type="button" class="usa-accordion__button usa-nav__link" aria-controls="nav-how-to-use-uswds"
+  aria-expanded="false"
+  >
+  <span>
+    How to use USWDS
+  </span>
+</button>
+<ul id="nav-how-to-use-uswds" class="usa-nav__submenu">
+  
+  
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/how-to-use-uswds/">
+  <span>
+    How to use USWDS
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/getting-started-for-developers/">
+  <span>
+    Getting started for developers
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/getting-started-for-designers/">
+  <span>
+    Getting started for designers
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/developers/">
+  <span>
+    Documentation
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/settings/">
+  <span>
+    Settings
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/maturity-model/">
+  <span>
+    USWDS maturity model
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/accessibility/">
+  <span>
+    Accessibility
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/performance/">
+  <span>
+    Performance guidelines
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/code-guidelines/">
+  <span>
+    Code guidelines
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/migration/">
+  <span>
+    Migrating to USWDS 3.0
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/migration-v2/">
+  <span>
+    Migrating to USWDS 2.0
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/implementations/">
+  <span>
+    Implementations
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/showcase/">
+  <span>
+    Showcase
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/sample-contract-language/">
+  <span>
+    Sample contract language for 21st Century IDEA
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/website-standards/">
+  <span>
+    Website standards
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+</ul>
+
+  
+  </li>
+
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<a href="/design-principles/">
+  <span>
+    Design principles
+  </span>
+</a>
+
+
+  
+  </li>
+
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<button type="button" class="usa-accordion__button usa-nav__link" aria-controls="nav-components"
+  
+  class="usa-current"
+  aria-expanded="true"
+  >
+  <span>
+    Components
+  </span>
+</button>
+<ul id="nav-components" class="usa-nav__submenu">
+  
+  
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/">
+  <span>
+    Components
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/accordion/">
+  <span>
+    Accordion
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/alert/">
+  <span>
+    Alert
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/banner/">
+  <span>
+    Banner
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/breadcrumb/">
+  <span>
+    Breadcrumb
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/button/">
+  <span>
+    Button
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/button-group/">
+  <span>
+    Button group
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/card/">
+  <span>
+    Card
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/character-count/">
+  <span>
+    Character count
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/checkbox/">
+  <span>
+    Checkbox
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/collection/">
+  <span>
+    Collection
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/combo-box/">
+  <span>
+    Combo box
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item is-current">
+    
+
+<a href="/components/data-visualizations/"class="usa-current">
+  <span>
+    Data visualizations
+  </span>
+</a>
+
+    
+    
+    
+    <ul class="usa-nav__submenu">
+  
+  <li class="usa-nav__submenu-item is-current">
+    
+
+
+<a href="#general-guidance">General guidance</a>
+
+    
+  </li>
+
+  
+  <li class="usa-nav__submenu-item is-current">
+    
+
+
+<a href="#line-charts">Line charts</a>
+
+    
+  </li>
+
+  
+  <li class="usa-nav__submenu-item is-current">
+    
+
+
+<a href="#bar-charts">Bar charts</a>
+
+    
+  </li>
+
+  
+  <li class="usa-nav__submenu-item is-current">
+    
+
+
+<a href="#changelog">Latest updates</a>
+
+    
+  </li>
+
+</ul>
+    
+  
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/date-picker/">
+  <span>
+    Date picker
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/date-range-picker/">
+  <span>
+    Date range picker
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/file-input/">
+  <span>
+    File input
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/footer/">
+  <span>
+    Footer
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/form/">
+  <span>
+    Form
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/layout-grid/">
+  <span>
+    Grid
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/header/">
+  <span>
+    Header
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/icon/">
+  <span>
+    Icon
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/icon-list/">
+  <span>
+    Icon list
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/identifier/">
+  <span>
+    Identifier
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/in-page-navigation/">
+  <span>
+    In-page navigation
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/input-mask/">
+  <span>
+    Input mask
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/input-prefix-suffix/">
+  <span>
+    Input prefix/suffix
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/language-selector/">
+  <span>
+    Language selector
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/link/">
+  <span>
+    Link
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/list/">
+  <span>
+    List
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/memorable-date/">
+  <span>
+    Memorable date
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/modal/">
+  <span>
+    Modal
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/pagination/">
+  <span>
+    Pagination
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/process-list/">
+  <span>
+    Process list
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/prose/">
+  <span>
+    Prose
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/radio-buttons/">
+  <span>
+    Radio buttons
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/range-slider/">
+  <span>
+    Range slider
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/search/">
+  <span>
+    Search
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/select/">
+  <span>
+    Select
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/side-navigation/">
+  <span>
+    Side navigation
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/site-alert/">
+  <span>
+    Site alert
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/step-indicator/">
+  <span>
+    Step indicator
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/summary-box/">
+  <span>
+    Summary box
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/table/">
+  <span>
+    Table
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/tag/">
+  <span>
+    Tag
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/text-input/">
+  <span>
+    Text input
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/time-picker/">
+  <span>
+    Time picker
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/tooltip/">
+  <span>
+    Tooltip
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/typography/">
+  <span>
+    Typography
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/validation/">
+  <span>
+    Validation
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+</ul>
+
+  
+  </li>
+
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<button type="button" class="usa-accordion__button usa-nav__link" aria-controls="nav-patterns"
+  aria-expanded="false"
+  >
+  <span>
+    Patterns
+  </span>
+</button>
+<ul id="nav-patterns" class="usa-nav__submenu">
+  
+  
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/patterns/">
+  <span>
+    Patterns
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/patterns/intro/">
+  <span>
+    Introducing patterns
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/patterns/create-a-user-profile/">
+  <span>
+    Create a user profile
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/patterns/complete-a-complex-form/">
+  <span>
+    Complete a complex form
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/patterns/select-a-language/">
+  <span>
+    Select a language
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+</ul>
+
+  
+  </li>
+
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<button type="button" class="usa-accordion__button usa-nav__link" aria-controls="nav-design-tokens"
+  aria-expanded="false"
+  >
+  <span>
+    Design tokens
+  </span>
+</button>
+<ul id="nav-design-tokens" class="usa-nav__submenu">
+  
+  
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/">
+  <span>
+    Design tokens
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/color/">
+  <span>
+    Color
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/typesetting/">
+  <span>
+    Typesetting
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/flex/">
+  <span>
+    Flex
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/opacity/">
+  <span>
+    Opacity
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/order/">
+  <span>
+    Order
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/shadow/">
+  <span>
+    Shadow
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/spacing-units/">
+  <span>
+    Spacing units
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/z-index/">
+  <span>
+    Z-index
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+</ul>
+
+  
+  </li>
+
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<button type="button" class="usa-accordion__button usa-nav__link" aria-controls="nav-utilities"
+  aria-expanded="false"
+  >
+  <span>
+    Utilities
+  </span>
+</button>
+<ul id="nav-utilities" class="usa-nav__submenu">
+  
+  
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/">
+  <span>
+    Utilities
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/layout-grid/">
+  <span>
+    Layout grid
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/color/">
+  <span>
+    Color
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/height-and-width/">
+  <span>
+    Height and width
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/margin-and-padding/">
+  <span>
+    Margin and padding
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/border/">
+  <span>
+    Border
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/outline/">
+  <span>
+    Outline
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/font-size-and-family/">
+  <span>
+    Font size and family
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/text-styles/">
+  <span>
+    Text styles
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/paragraph-styles/">
+  <span>
+    Paragraph styles
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/display/">
+  <span>
+    Display
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/flex/">
+  <span>
+    Flex
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/shadow/">
+  <span>
+    Shadow
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/float/">
+  <span>
+    Float
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/clearfix/">
+  <span>
+    Clearfix
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/list-reset/">
+  <span>
+    List reset
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+</ul>
+
+  
+  </li>
+
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<button type="button" class="usa-accordion__button usa-nav__link" aria-controls="nav-templates"
+  aria-expanded="false"
+  >
+  <span>
+    Templates
+  </span>
+</button>
+<ul id="nav-templates" class="usa-nav__submenu">
+  
+  
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/templates/">
+  <span>
+    Templates
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/templates/404-page/">
+  <span>
+    404 page
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/templates/documentation-page/">
+  <span>
+    Documentation page
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/templates/landing-page/">
+  <span>
+    Landing page
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/templates/authentication-pages/">
+  <span>
+    Authentication pages
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/templates/form-templates/">
+  <span>
+    Form templates
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+</ul>
+
+  
+  </li>
+
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<button type="button" class="usa-accordion__button usa-nav__link" aria-controls="nav-about"
+  aria-expanded="false"
+  >
+  <span>
+    About
+  </span>
+</button>
+<ul id="nav-about" class="usa-nav__submenu">
+  
+  
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/">
+  <span>
+    About
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/key-benefits/">
+  <span>
+    Key benefits
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/product-values/">
+  <span>
+    Product values
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/contribute/">
+  <span>
+    Contribute
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/community/">
+  <span>
+    Community
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/whats-new/">
+  <span>
+    What’s new
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/monthly-calls/">
+  <span>
+    Monthly call archive
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/product-roadmap/">
+  <span>
+    Product roadmap
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/research/">
+  <span>
+    Research
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/security/">
+  <span>
+    Security
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/website-policies-notices/">
+  <span>
+    Website policies and notices
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+</ul>
+
+  
+  </li>
+
+
+    </ul>
+    <!-- /Mobile nav -->
+    <!-- Desktop nav -->
+    <ul class="usa-nav__primary usa-nav__primary--desktop">
+      
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/how-to-use-uswds/">
+  <span>
+    How to use USWDS
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-principles/">
+  <span>
+    Design principles
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item is-current">
+    
+
+<a href="/components/"class="usa-current">
+  <span>
+    Components
+  </span>
+</a>
+
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/patterns/">
+  <span>
+    Patterns
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/">
+  <span>
+    Design tokens
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/">
+  <span>
+    Utilities
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/templates/">
+  <span>
+    Templates
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/">
+  <span>
+    About
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+    </ul>
+    <!-- /Desktop nav -->
+    <div class="usa-nav__secondary">
+      <form id="search_form-mobile" class="site-search usa-search usa-search--small"
+  action="https://search.usa.gov/search" accept-charset="UTF-8" method="get">
+  <input name="utf8" type="hidden" value="&#x2713;" />
+  <input type="hidden" name="affiliate" id="affiliate-mobile" value="uswds" />
+  <div role="search">
+    <label class="usa-sr-only" for="query-mobile">Search</label>
+    <input
+      id="query-mobile"
+      class="usa-input usagov-search-autocomplete"
+      name="query"
+      type="search"
+      autocomplete="off" />
+    <button class="site-search__button usa-button margin-top-0" type="submit" name="commit">
+      <img
+        src="/assets/img/usa-icons-bg/search--white.svg"
+        class="usa-search__submit-icon"
+        alt="Search"
+      >
+    </button>
+  </div>
+</form>
+
+      <div class="site-cta-buttons buttons">
+  <a
+    class="usa-button site-button-outline-secondary site-button-standards margin-x-0 desktop:margin-right-1 padding-x-05 desktop:padding-left-1 desktop:padding-right-05 desktop-lg:padding-left-205 desktop-lg:padding-right-2 font-lang-sm"
+    href="/website-standards/"
+    onclick="ga('send', 'event', 'Read website standards', 'Clicked Read website standards from inside site');"
+  >
+    Read website standards
+  </a>
+  <a
+    class="usa-button site-button-outline-secondary site-button-download margin-x-0 desktop:margin-right-1 desktop:padding-left-1 desktop:padding-right-05 desktop-lg:padding-left-205 desktop-lg:padding-right-2 font-lang-sm"
+    href="/download/"
+    onclick="ga('send', 'event', 'Downloaded code and design files', 'Clicked Download code and design files from inside site');"
+  >
+    Download <span class="version desktop:display-none desktop-lg:display-inline">v3.14.0</span>
+  </a>
+  <a
+    class="usa-button site-button-github margin-x-0 font-lang-sm"
+    href="https://github.com/uswds/uswds"
+    onclick="ga('send', 'event', 'Viewed on Github', 'Clicked View on Github from inside site');"
+  >
+    <?xml version="1.0" encoding="UTF-8"?><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="33"
+  height="32"
+  viewBox="0 0 33 32"
+  class="logo"
+>
+  <title>Github logo</title>
+  <path
+    fill="#161514"
+    fill-rule="evenodd"
+    d="M16.288 0C7.294 0 0 7.293 0 16.29c0 7.197 4.667 13.302 11.14 15.456.815.15 1.112-.353 1.112-.785 0-.386-.014-1.411-.022-2.77-4.531.984-5.487-2.184-5.487-2.184-.741-1.882-1.809-2.383-1.809-2.383-1.479-1.01.112-.99.112-.99 1.635.115 2.495 1.679 2.495 1.679 1.453 2.489 3.813 1.77 4.741 1.353.148-1.052.569-1.77 1.034-2.177-3.617-.411-7.42-1.809-7.42-8.051 0-1.778.635-3.233 1.677-4.371-.168-.412-.727-2.069.16-4.311 0 0 1.367-.438 4.479 1.67a15.602 15.602 0 0 1 4.078-.549 15.62 15.62 0 0 1 4.078.549c3.11-2.108 4.475-1.67 4.475-1.67.889 2.242.33 3.899.163 4.311 1.044 1.138 1.674 2.593 1.674 4.371 0 6.258-3.809 7.635-7.437 8.038.584.503 1.105 1.497 1.105 3.017 0 2.177-.02 3.934-.02 4.468 0 .436.294.943 1.12.784 6.468-2.159 11.131-8.26 11.131-15.455C32.579 7.293 25.285 0 16.288 0"
+  />
+</svg>
+
+    <span class="text">View on GitHub</span>
+  </a>
+</div>
+
+    </div>
+  </div>
+</nav>
+<div class="usa-overlay"></div>
+
+
+<div class="default-container">
+  <aside class="sidenav" id="page-side-navigation" aria-label="Section navigation">
+    
+    
+    <ul class="site-sidenav usa-sidenav">
+      
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/">
+  
+    Components
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/accordion/">
+  
+    Accordion
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/alert/">
+  
+    Alert
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/banner/">
+  
+    Banner
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/breadcrumb/">
+  
+    Breadcrumb
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/button/">
+  
+    Button
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/button-group/">
+  
+    Button group
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/card/">
+  
+    Card
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/character-count/">
+  
+    Character count
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/checkbox/">
+  
+    Checkbox
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/collection/">
+  
+    Collection
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/combo-box/">
+  
+    Combo box
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item is-current">
+    
+
+<a href="/components/data-visualizations/"class="usa-current">
+  
+    Data visualizations
+  
+</a>
+
+    
+    
+    
+    <ul class="usa-sidenav__sublist">
+  
+  <li class="usa-sidenav__item is-current">
+    
+
+
+<a href="#general-guidance">General guidance</a>
+
+    
+  </li>
+
+  
+  <li class="usa-sidenav__item is-current">
+    
+
+
+<a href="#line-charts">Line charts</a>
+
+    
+  </li>
+
+  
+  <li class="usa-sidenav__item is-current">
+    
+
+
+<a href="#bar-charts">Bar charts</a>
+
+    
+  </li>
+
+  
+  <li class="usa-sidenav__item is-current">
+    
+
+
+<a href="#changelog">Latest updates</a>
+
+    
+  </li>
+
+</ul>
+    
+  
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/date-picker/">
+  
+    Date picker
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/date-range-picker/">
+  
+    Date range picker
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/file-input/">
+  
+    File input
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/footer/">
+  
+    Footer
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/form/">
+  
+    Form
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/utilities/layout-grid/">
+  
+    Grid
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/header/">
+  
+    Header
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/icon/">
+  
+    Icon
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/icon-list/">
+  
+    Icon list
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/identifier/">
+  
+    Identifier
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/in-page-navigation/">
+  
+    In-page navigation
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/input-mask/">
+  
+    Input mask
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/input-prefix-suffix/">
+  
+    Input prefix/suffix
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/language-selector/">
+  
+    Language selector
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/link/">
+  
+    Link
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/list/">
+  
+    List
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/memorable-date/">
+  
+    Memorable date
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/modal/">
+  
+    Modal
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/pagination/">
+  
+    Pagination
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/process-list/">
+  
+    Process list
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/prose/">
+  
+    Prose
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/radio-buttons/">
+  
+    Radio buttons
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/range-slider/">
+  
+    Range slider
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/search/">
+  
+    Search
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/select/">
+  
+    Select
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/side-navigation/">
+  
+    Side navigation
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/site-alert/">
+  
+    Site alert
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/step-indicator/">
+  
+    Step indicator
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/summary-box/">
+  
+    Summary box
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/table/">
+  
+    Table
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/tag/">
+  
+    Tag
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/text-input/">
+  
+    Text input
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/time-picker/">
+  
+    Time picker
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/tooltip/">
+  
+    Tooltip
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/typography/">
+  
+    Typography
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/validation/">
+  
+    Validation
+  
+</a>
+
+
+    
+  </li>
+
+
+    </ul>
+    
+  </aside>
+
+  
+  <div class="usa-in-page-nav-container">
+    <aside class="usa-in-page-nav"
+      aria-label="On this page"
+      data-scroll-offset="48"
+      data-root-margin="48px 0px -90% 0px"
+      data-threshold="1"
+      data-heading-elements=
+    ></aside>
+  
+    <main id="main-content" class="main-content">
+      <div class="styleguide-content usa-prose site-prose">
+        <header>
+          
+            
+              <p class="site-subheading">Components</p>
+            
+          
+          <h1 id="data-visualizations" class="site-page-title">Data visualizations</h1>
+        </header>
+
+        <p class="site-text-intro">Data visualizations help communicate patterns and relationships in a data set.</p>
+
+
+
+
+        <!-- Add wcag compliance status tag -->
+        <!-- Add compliance tag -->
+
+
+
+
+
+
+
+
+
+        <div class="site-note"><strong>Note:</strong> The data visualizations components are guidance-only and do not include any <code>Component Code</code>. The examples of specific visualizations included with our guidance are intended to be a demonstration of one way to implement our guidance with a focus on accessibility and assistive tooling.</div>
+<section class="site-component-section site-component-usage">
+  <h2 id="general-guidance" class="site-component-name">General guidance</h2>
+  <p>Usability and accessibility are complementary goals for data visualizations.</p>
+  <h3 class="margin-bottom-1">Simplicity</h3>
+  <ul class="usa-content-list">
+    <li><strong>Prefer common visualization types.</strong> Use data visualizations types that your target audience understands. When the level of the audience's data literacy is unknown, stick to well-used types (like line and bar charts) for explanatory visualizations.</li>
+    <li><strong>Don't try to do too much.</strong> Limit the 'big idea' expressed in a visualization to a central theme. Use no more than two or three concepts to reduce the cognitive load placed on the audience.</li>
+    <li><strong>Use color with care.</strong> Simplify color selection and don't reuse colors for different variables or within a particular variable. If you are finding this difficult, it may indicate too many concepts are present for a single visualization. When selecting colors, be sure to meet contrast requirements.</li>
+  </ul>
+  <h4>References</h4>
+  <ul class="usa-content-list">
+    <li><a href="https://nightingaledvs.com/how-to-choose-colors-for-your-data-visualizations/">Choosing Colors</a>&nbsp; [nightingaledvs.com]</li>
+    <li><a href="https://venngage.com/blog/color-blind-friendly-palette/">Color Contrast and Color Blindness</a>&nbsp; [venngage.com]</li>
+  </ul>
+  <h3>Lossless representation</h3>
+  <ul class="usa-content-list">
+    <li><strong>Avoid embedded information.</strong> Avoid embedding information as part of an image. Provide a textual representation of axis values and labels, and provide the ability to get a tabular representation of the underlying data.</li>
+    <li><strong>Reduce interaction.</strong> Even simple interactions have a usability cost. Your audience shouldn't be required to interact with a visualization to understand its message. Presuming the ability to use a mouse to hover over page elements eliminates portions of the audience from the full experience.</li>
+  </ul>
+  <h3>Clarity of intent</h3>
+  <ul class="usa-content-list">
+    <li><strong>Provide context-sensitive explanations.</strong> Data visualization authors should consider the audience's experience when providing the background for the information they're sharing. Provide explanations or summaries that make sense to the target audience not just the author.</li>
+    <li><strong>Get to the point.</strong> If the visualization is intended to explain a specific point, don't leave the audience guessing as to the conclusion they're meant to draw.</li>
+    <li><strong>Clearly state the author's intended message as text.</strong> This avoids unintended ambiguity and helps the audience understand the visualization's intention. </li>
+  </ul>
+  <h3>Accessibility</h3>
+  <ul class="usa-content-list">
+    <li>Solve for individual impacted groups, and be specific in your solutions.</li>
+    <li><strong>Provide equivalent access.</strong>
+      <ul>
+        <li>Semantic headings and descriptions that provide the author's stated intent support assistive technologies and deliver a clear message to across audiences.</li>
+        <li>Screen readers might have difficulty reading content within an SVG. Provide an screen-reader accessible data table of the information represented in your visualization using the class <code>usa-sr-only</code>. When providing accessible equivalent, you can hide the visualization using the attribute <code>aria-hidden="true"</code>. The information in both of the example charts on this page is made accessible to screen readers with a visually-hidden table. <strong>Note:</strong> This is not always a sufficient alternative for complex data sets.</li>
+      </ul>
+    </li>
+    <li><strong>Provide equivalent facilitation.</strong>
+      <ul>
+        <li>Access to the underlying data provides an alternative affordance for consuming the same information, but a data table does not provide an equivalent narrative to a visualization.</li>
+        <li>Increase accessibility by providing additional information that the visualization communicates (like trends or a statistical summary) in plain text, using a screen reader–only class like <code>.usa-sr-only</code>.</li>
+      </ul>
+    </li>
+    <li><strong>Focus on manual testing.</strong> Become familiar with testing tools and browser plugins. But only manual testing can check  context and intent. The use of automated or mechanical checks can verify the presence of tags, not the proper content.</li>
+    <li><strong>Choose an accessible charting tool.</strong> There are many charting tools available, but not many adequately support accessibility. When using a 3rd-party tool, look for features such as:
+      <ul>
+        <li>Support for accessible patterns and colors</li>
+        <li><a href="https://www.perkinselearning.org/technology/blog/sonification-sounds-meaning-activity">Sonification as a audio tool for visual impairment and analysis</a>&nbsp; [perkinselearning.org]</li>
+        <li>Announcement handling</li>
+      </ul>
+    </li>
+  </ul>
+  <h4>References</h4>
+  <ul class="usa-content-list">
+    <li><a href="https://digital.gov/guides/accessibility-for-teams/visual-design#data-visualizations">Accessibility for Teams</a>&nbsp; [digital.gov]</li>
+    <li><a href="https://www.section508.gov/test">508 testing</a>&nbsp; [section508.gov]</li>
+    <li><a href="https://www.matuzo.at/blog/testing-with-tab/">Accessibility testing with tab key</a>&nbsp; [matuzo.at]</li>
+    <li><a href="https://www.access-board.gov/">United States Access Board</a>&nbsp; [access-board.gov]</li>
+  </ul>
+</section>
+
+<section id="section-linechart" class="site-component-section site-component-usage">
+<h2 class="site-component-name" id="line-charts">Line charts</h2>
+
+<p class="site-text-intro">Line charts are ideal for depicting trends in data over time using a continuous line.</p>
+
+<h3>Guidance</h3>
+<p>In addition to the general guidance above, the following line chart guidance applies:</p>
+<ul class="usa-content-list">
+  <li>Line charts origin should start at zero, unless clearly noted.</li>
+  <li>If high contrast color selection is not an option, the usage of discrete dash or datapoint styles distinguishes lines without relying upon color.</li>
+</ul>
+
+
+<h3>Example line chart</h3>
+<div class="border bg-white padding-2 margin-bottom-2 margin-top-1 radius-md padding-bottom-0 maxw-tablet">
+
+<h4 class="margin-0">Search interest in Franklin D. and Theodore Roosevelt for the first week of March, 2020</h4>
+<p class="margin-top-1 font-sans-2xs text-base margin-bottom--3">Search interest in Franklin D. Roosevelt has been consistently higher than Theodore Roosevelt. Numbers represent search interest relative to the highest point on the chart for the given region and time. A value of 100 is the peak popularity for the term. A value of 50 means that the term is half as popular. A score of 0 means there was not enough data for this term.</p>
+
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="LineChart" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1020.29 660.46" style="enable-background:new 0 0 1020.29 660.46;" xml:space="preserve" aria-hidden="true">
+<style type="text/css">
+.line-st0{fill:none;stroke:#71767a;stroke-miterlimit:10;}
+.line-st0-light{fill:none;stroke:#dfe1e2;stroke-miterlimit:10;}
+.line-st2{font-size:27px;}
+.line-st3{fill:none;stroke:#FA9441;stroke-width:5;stroke-miterlimit:10;}
+.line-st4{fill:none;stroke:#005EA2;stroke-width:5;stroke-linecap:round;stroke-miterlimit:10;}
+.line-st5{fill:none;stroke:#005EA2;stroke-width:6;stroke-linecap:round;stroke-miterlimit:10;}
+.line-st6{fill:#C05600;}
+.line-st7{fill:#005EA2;}
+.line-st8{font-size:24px;}
+.font-svg-main{font-size:26px;}
+</style>
+<g id="Roosevelts">
+<g>
+  <line class="line-st0" x1="69.45" y1="574.89" x2="971.08" y2="574.89" />
+</g>
+<g>
+  <g>
+    <text transform="matrix(1 0 0 1 41.5112 586.7432)" class="line-st1 line-st2">0</text>
+    <text transform="matrix(1 0 0 1 27.6606 469.9014)" class="line-st1 line-st2">25</text>
+    <text transform="matrix(1 0 0 1 27.6606 353.0591)" class="line-st1 line-st2">50</text>
+    <text transform="matrix(1 0 0 1 27.6606 236.2168)" class="line-st1 line-st2">75</text>
+    <text transform="matrix(1 0 0 1 13.8101 119.375)" class="line-st1 line-st2">100</text>
+  </g>
+  <line class="line-st0" x1="69.45" y1="574.89" x2="69.45" y2="107.53" stroke-width="1px" vector-effect="non-scaling-stroke" />
+  <g>
+    <g>
+      <line class="line-st0" x1="69.45" y1="574.89" x2="971.08" y2="574.89" stroke-width="1px" vector-effect="non-scaling-stroke" />
+      <line class="line-st0-light" x1="69.45" y1="458.05" x2="971.08" y2="458.05" stroke-width="1px" vector-effect="non-scaling-stroke" />
+      <line class="line-st0-light" x1="69.45" y1="341.21" x2="971.08" y2="341.21" stroke-width="1px" vector-effect="non-scaling-stroke" />
+      <line class="line-st0-light" x1="69.45" y1="224.37" x2="971.08" y2="224.37" stroke-width="1px" vector-effect="non-scaling-stroke" />
+      <line class="line-st0-light" x1="69.45" y1="107.53" x2="971.08" y2="107.53" stroke-width="1px" vector-effect="non-scaling-stroke" />
+    </g>
+    <g>
+    </g>
+  </g>
+</g>
+<g>
+  <g>
+    <line class="line-st3" x1="73.43" y1="42.89" x2="186.14" y2="42.89" stroke-dasharray="4 1" />
+    <g>
+      <line class="line-st3" x1="262.66" y1="168.28" x2="133.85" y2="355.23" stroke-dasharray="4 1" />
+      <line class="line-st3" x1="391.46" y1="149.59" x2="262.66" y2="168.28" stroke-dasharray="4 1" />
+      <line class="line-st3" x1="520.27" y1="172.96" x2="391.46" y2="149.59" stroke-dasharray="4 1" />
+      <line class="line-st3" x1="649.07" y1="107.53" x2="520.27" y2="172.96" stroke-dasharray="4 1" />
+      <line class="line-st3" x1="777.88" y1="210.35" x2="649.07" y2="107.53" stroke-dasharray="4 1" />
+      <line class="line-st3" x1="906.68" y1="392.62" x2="777.88" y2="210.35" stroke-dasharray="4 1" />
+    </g>
+  </g>
+  <g>
+    <line class="line-st4" x1="622.43" y1="43" x2="735.14" y2="43" />
+    <g>
+      <line class="line-st4" x1="262.66" y1="341.21" x2="133.85" y2="434.68" />
+      <line class="line-st4" x1="391.46" y1="359.9" x2="262.66" y2="341.21" />
+      <line class="line-st4" x1="520.27" y1="378.6" x2="391.46" y2="359.9" />
+      <line class="line-st4" x1="649.07" y1="359.9" x2="520.27" y2="378.6" />
+      <line class="line-st5" x1="777.88" y1="392.62" x2="649.07" y2="359.9" />
+      <line class="line-st5" x1="906.68" y1="472.07" x2="777.88" y2="392.62" />
+    </g>
+  </g>
+</g>
+<g>
+  <g>
+    <g>
+      <circle class="line-st6" cx="129.79" cy="42.89" r="8" />
+    </g>
+    <g>
+      <g>
+        <circle class="line-st6" cx="133.85" cy="355.23" r="8" />
+      </g>
+      <g>
+        <circle class="line-st6" cx="262.66" cy="168.28" r="8" />
+      </g>
+      <g>
+        <circle class="line-st6" cx="391.46" cy="149.59" r="8" />
+      </g>
+      <g>
+        <circle class="line-st6" cx="520.27" cy="172.96" r="8" />
+      </g>
+      <g>
+        <circle class="line-st6" cx="649.07" cy="107.53" r="8" />
+      </g>
+      <g>
+        <circle class="line-st6" cx="777.88" cy="210.35" r="8" />
+      </g>
+      <g>
+        <circle class="line-st6" cx="906.68" cy="392.62" r="8" />
+      </g>
+    </g>
+  </g>
+  <g>
+    <g>
+      <circle class="line-st7" cx="678.79" cy="43" r="8" />
+    </g>
+    <g>
+      <g>
+        <circle class="line-st7" cx="133.85" cy="434.68" r="8" />
+      </g>
+      <g>
+        <circle class="line-st7" cx="262.66" cy="341.21" r="8" />
+      </g>
+      <g>
+        <circle class="line-st7" cx="391.46" cy="359.9" r="8" />
+      </g>
+      <g>
+        <circle class="line-st7" cx="520.27" cy="378.6" r="8" />
+      </g>
+      <g>
+        <circle class="line-st7" cx="649.07" cy="359.9" r="8" />
+      </g>
+      <g>
+        <circle class="line-st7" cx="777.88" cy="392.62" r="8" />
+      </g>
+      <g>
+        <circle class="line-st7" cx="906.68" cy="472.07" r="8" />
+      </g>
+    </g>
+  </g>
+</g>
+<g>
+  <g>
+  </g>
+  <text class="font-svg-main" transform="matrix(1 0 0 1 200.2261 50.7432)">Franklin D. Roosevelt</text>
+  <text class="font-svg-main" transform="matrix(1 0 0 1 749.2261 50.8486)">Theodore Roosevelt</text>
+</g>
+<g>
+  <text class="font-svg-main" transform="matrix(1 0 0 1 88.8032 613.895)">Mar. 1</text>
+  <text class="font-svg-main" transform="matrix(1 0 0 1 217.6079 613.895)">Mar. 2</text>
+  <text class="font-svg-main" transform="matrix(1 0 0 1 346.4126 613.895)">Mar. 3</text>
+  <text class="font-svg-main" transform="matrix(1 0 0 1 475.2173 613.895)">Mar. 4</text>
+  <text class="font-svg-main" transform="matrix(1 0 0 1 604.022 613.895)">Mar. 5</text>
+  <text class="font-svg-main" transform="matrix(1 0 0 1 732.8267 613.895)">Mar. 6</text>
+  <text class="font-svg-main" transform="matrix(1 0 0 1 861.6313 613.895)">Mar. 7</text>
+</g>
+</g>
+</svg>
+
+  <table class="usa-sr-only" aria-describedby="source_line">
+    <caption>Search interest in the Roosevelts first week of March, 2020</caption>
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">March 1</th>
+        <th scope="col">March 2</th>
+        <th scope="col">March 3</th>
+        <th scope="col">March 4</th>
+        <th scope="col">March 5</th>
+        <th scope="col">March 6</th>
+        <th scope="col">March 7</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Franklin D. Roosevelt</th>
+        <td>47</td>
+        <td>87</td>
+        <td>91</td>
+        <td>86</td>
+        <td>100</td>
+        <td>78</td>
+        <td>39</td>
+      </tr>
+      <tr>
+        <th scope="row">Theodore Roosevelt</th>
+        <td>30</td>
+        <td>50</td>
+        <td>46</td>
+        <td>42</td>
+        <td>46</td>
+        <td>39</td>
+        <td>22</td>
+      </tr>
+    </tbody>
+  </table>
+  <p id="source_line">Source: <a href="https://trends.google.com/trends/explore?date=2020-03-01%202020-03-07&amp;geo=US&amp;q=%2Fm%2F07hyk,%2Fm%2F02yy8">Google Trends</a></p>
+  </div>
+
+  <h3>What we did in our line chart example</h3>
+  <ul class="usa-content-list">
+    <li><strong>There is a clear summary.</strong> Users may not understand some narrative objectives from a graphic alone. The visualization also explains what the chart intends to communicate in plain language.</li>
+    <li><strong>The lines are visually distinct from each other.</strong> One is a solid color, and the other uses both a dash pattern and a color contrast between the line and the indicators. The indicators can also be triangles, squares, or other simple shapes. Typically, multiple indicator shapes and textures are most useful when comparing more than three data sets.</li>
+    <li><strong>The graphic is hidden from screen readers.</strong> Because the data set is fairly simple, non-visual users will be able to read the same data in the form of data table that's hidden from visual users but accessible to screen readers. If the data were more complex, we might consider using a 3rd party charting tool with support for accessibility as described above.</li>
+    <li><strong>Original data linked.</strong> We linked back to the original source data for the line chart.</li>
+  </ul>
+
+  <h3>References</h3>
+  <ul class="usa-content-list">
+    <li><a href="https://accessibility.psu.edu/images/charts/">Chart Accessibility guidance</a> &nbsp;[psu.edu]</li>
+  </ul>
+
+</section>
+<section id="section-barchart" class="site-component-section site-component-usage">
+  <h2 class="site-component-name" id="bar-charts">Bar charts</h2>
+
+  <p class="site-text-intro">Bar charts are ideal for displaying categorical data.</p>
+
+  <h3>Guidance</h3>
+  <p> In addition to the general guidance above, the following bar chart guidance applies:</p>
+  <ul class="usa-content-list">
+    <li>When displaying multi-variant data:
+      <ul>
+        <li>It is important to use discrete, high contrast colors or textured fill. This accommodation differentiates variables for audiences with visual impairments like color blindness or low vision. </li>
+        <li>The use of stacked bar charts for multi-variant data can be used if it is important to communicate the sum of the data set.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Example bar chart</h3>
+  <div class="border bg-white padding-2 margin-bottom-2 radius-md padding-bottom-0 maxw-tablet">
+    <h4 class="margin-0">The five most-visited national parks of 2019</h4>
+    <p class="margin-top-0 font-sans-2xs text-base margin-bottom-0 radius-1">Of the 62 parks with the designation "national park" as part of their official title, these were the top five. The Great Smoky Mountains National Park was the most-visited park by more than a factor of two.</p>
+    <?xml version="1.0" encoding="utf-8"?>
+    <?xml version="1.0" encoding="utf-8"?>
+    <!-- Generator: Adobe Illustrator 24.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 952 601" style="enable-background:new 0 0 952 601;" xml:space="preserve" aria-hidden="true">
+    <style type="text/css">
+      .st0{fill:#1B1B1B;}
+      .st1{font-family:'MyriadPro-Regular';}
+      .st2{font-size:28.6875px;}
+      .st3{fill:#71767a;stroke:#71767a;stroke-miterlimit:10;}
+      .st3a{fill:#dfe1e2;stroke:#dfe1e2;stroke-miterlimit:10;}
+      .st4{fill:#005EA2;}
+      .st5{letter-spacing:-2;}
+      .font-lang-xl-m{font-size: 25px}
+    </style>
+    <g>
+      <g>
+        <g>
+          <text transform="matrix(1 0 0 1 307.1421 582.875)" class="font-lang-xl-m">0</text>
+          <text transform="matrix(1 0 0 1 394.5708 582.875)" class="font-lang-xl-m">2</text>
+          <text transform="matrix(1 0 0 1 481.999 582.875)" class="font-lang-xl-m">4</text>
+          <text transform="matrix(1 0 0 1 569.4277 582.875)" class="font-lang-xl-m">6</text>
+          <text transform="matrix(1 0 0 1 656.8564 582.875)" class="font-lang-xl-m">8</text>
+          <text transform="matrix(1 0 0 1 736.9268 582.875)" class="font-lang-xl-m">10</text>
+          <text transform="matrix(1 0 0 1 824.3555 582.875)" class="font-lang-xl-m">12</text>
+          <text transform="matrix(1 0 0 1 911.7842 582.875)" class="font-lang-xl-m">14</text>
+        </g>
+        <line class="st3" x1="314.5" y1="554.5" x2="926.5" y2="554.5" stroke-width="1px" vector-effect="non-scaling-stroke" />
+        <g>
+          <g>
+            <line class="st3" x1="314.5" y1="554.5" x2="314.5" y2="115.5" stroke-width="1px" vector-effect="non-scaling-stroke" />
+            <line class="st3a" x1="401.93" y1="554.5" x2="401.93" y2="115.5" stroke-width="1px" vector-effect="non-scaling-stroke" />
+            <line class="st3a" x1="489.36" y1="554.5" x2="489.36" y2="115.5" stroke-width="1px" vector-effect="non-scaling-stroke" />
+            <line class="st3a" x1="576.79" y1="554.5" x2="576.79" y2="115.5" stroke-width="1px" vector-effect="non-scaling-stroke" />
+            <line class="st3a" x1="664.21" y1="554.5" x2="664.21" y2="115.5" stroke-width="1px" vector-effect="non-scaling-stroke" />
+            <line class="st3a" x1="751.64" y1="554.5" x2="751.64" y2="115.5" stroke-width="1px" vector-effect="non-scaling-stroke" />
+            <line class="st3a" x1="839.07" y1="554.5" x2="839.07" y2="115.5" stroke-width="1px" vector-effect="non-scaling-stroke" />
+            <line class="st3a" x1="926.5" y1="554.5" x2="926.5" y2="115.5" stroke-width="1px" vector-effect="non-scaling-stroke" />
+          </g>
+          <g>
+          </g>
+        </g>
+      </g>
+      <g>
+        <line class="st3" x1="314.5" y1="554.5" x2="314.5" y2="115.5" stroke-width="1px" vector-effect="non-scaling-stroke" />
+        <g>
+          <g>
+            <line class="st3" x1="314.5" y1="510.6" x2="329.8" y2="510.6" />
+            <line class="st3" x1="314.5" y1="422.8" x2="329.8" y2="422.8" />
+            <line class="st3" x1="314.5" y1="335" x2="329.8" y2="335" />
+            <line class="st3" x1="314.5" y1="247.2" x2="329.8" y2="247.2" />
+            <line class="st3" x1="314.5" y1="159.4" x2="329.8" y2="159.4" />
+          </g>
+          <g>
+          </g>
+        </g>
+      </g>
+      <g>
+        <g>
+          <rect x="314.5" y="50.34" class="st4" width="38.25" height="41.16" />
+          <g>
+            <rect x="314.5" y="127.79" class="st4" width="546.43" height="63.22" />
+            <rect x="314.5" y="215.59" class="st4" width="260.97" height="63.22" />
+            <rect x="314.5" y="303.39" class="st4" width="205.46" height="63.22" />
+            <rect x="314.5" y="391.19" class="st4" width="196.71" height="63.22" />
+            <rect x="314.5" y="478.99" class="st4" width="196.71" height="63.22" />
+          </g>
+        </g>
+      </g>
+      <g>
+        <g>
+        </g>
+      </g>
+      <g>
+        <g>
+        </g>
+        <text transform="matrix(1 0 0 1 366.5312 80.6797)" class="font-lang-xl-m">Visits (in millions)</text>
+      </g>
+      <g>
+        <text transform="matrix(1 0 0 1 290 501.3574)" class="font-lang-xl-m"><tspan x="0" text-anchor="end">Yosemite</tspan><tspan x="0" y="35" text-anchor="end">National Park</tspan></text>
+        <text transform="matrix(1 0 0 1 290 413.5576)" class="font-lang-xl-m"><tspan x="0" text-anchor="end">Zion</tspan><tspan x="0" y="35" text-anchor="end">National Park</tspan></text>
+        <text transform="matrix(1 0 0 1 290 325.7578)" class="font-lang-xl-m"><tspan x="0" text-anchor="end">Rocky Mountain</tspan><tspan x="0" y="35" text-anchor="end">National Park</tspan></text>
+        <text transform="matrix(1 0 0 1 290 237.958)" class="font-lang-xl-m"><tspan x="0" text-anchor="end">Grand Canyon</tspan><tspan x="0" y="35" text-anchor="end">National Park</tspan></text>
+        <text transform="matrix(1 0 0 1 290 153.1577)" class="font-lang-xl-m"><tspan x="0" text-anchor="end">Great Smoky Mountains</tspan><tspan x="0" y="35" text-anchor="end">National Park</tspan></text>
+      </g>
+    </g>
+    </svg>
+    <table class="usa-sr-only" aria-describedby="source_bar">
+      <caption>Top 5 most visited Nation Parks</caption>
+      <thead>
+        <tr>
+          <th scope="col">Park</th>
+          <th scope="col">Visits (in millions)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Great Smoky Mountain National Park</th>
+          <td>12.5</td>
+        </tr>
+        <tr>
+          <th scope="row">Grand Canyon National Park</th>
+          <td>5.87</td>
+        </tr>
+        <tr>
+          <th scope="row">Rocky Mountain National Park</th>
+          <td>4.7</td>
+        </tr>
+        <tr>
+          <th scope="row">Zion National Park</th>
+          <td>4.5</td>
+        </tr>
+        <tr>
+          <th scope="row">Yosemite National Park</th>
+          <td>4.5</td>
+        </tr>
+      </tbody>
+    </table>
+    <p id="source_bar">Source: <a href="https://www.nps.gov/aboutus/visitation-numbers.htm">National Park Service</a></p>
+  </div>
+
+  <h3>What we did in our bar chart example</h3>
+  <ul class="usa-content-list">
+    <li><strong>There is a clear summary.</strong> Users may not understand some narrative objectives from a graphic alone. The visualization also explains what the chart intends to communicate in plain language.</li>
+    <li><strong>Used a single color for the bars.</strong> The bars are the same color because the data is categorically the same (visits) for each national park.</li>
+    <li><strong>The graphic is hidden from screen readers.</strong> Because the data set is fairly simple, non-visual users will be able to read the same data in the form of data table that's hidden from visual users but accessible to screen readers. If the data were more complex, we might consider using a 3rd party charting tool with support for accessibility as described above.</li>
+    <li><strong>Original data linked.</strong> We linked back to the original source data for the line chart.</li>
+  </ul>
+
+  <h3>References</h3>
+    <ul class="usa-content-list">
+      <li><a href="https://www.highcharts.com/blog/tutorials/best-chart-accessibility-practices/">Bar chart accessibility practices</a>&nbsp; [highcharts.com]</li>
+    </ul>
+</section>
+
+
+        
+
+
+
+<h2 id="changelog" class="site-component-section-title">Latest updates</h2><p>Meaningful code and guidance updates are listed in the following table:</p>
+  
+    
+
+
+
+
+
+
+
+
+
+
+<table class="usa-table--borderless site-table-responsive site-table-simple">
+  <thead>
+    <tr>
+      <th scope="col" class="tablet:grid-col">Date</th>
+      <th scope="col" class="tablet:grid-col tablet:padding-left-0">USWDS version</th>
+      <th scope="col" class="tablet:grid-col">Affects</th>
+      <th scope="col" class="tablet:grid-col site-changelog--hide-tablet">Breaking</th>
+      <th scope="col" class="tablet:grid-col-6">Description</th>
+    </tr>
+  </thead>
+  <tbody class="font-lang-3xs">
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2022-10-31</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        N/A
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+          
+          
+            <li><span class="output-neutral">Guidance</span></li>
+          
+          
+          
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Fixed invalid value for <code class="language-plaintext highlighter-rouge">aria-describedby</code> in the bar chart example.
+
+          </strong>
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds-site/pull/1861">
+              uswds-site#1861
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2022-04-28</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        <span class="font-mono-3xs">
+          <a href="https://github.com/uswds/uswds/releases/tag/v3.0.0">
+            3.0.0
+          </a>
+        </span>
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+            <li><span class="output-neutral">Assets</span></li>
+          
+          
+          
+          
+            <li><span class="output-neutral">JavaScript</span></li>
+          
+          
+          
+            <li><span class="output-neutral">Styles</span></li>
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          <span class="output-false">Breaking</span>
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+            <span class="site-changelog--show-tablet output-false">Breaking</span>
+          
+          <strong>
+            Updated to Sass module syntax and new package structure.
+
+          </strong>
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds/pull/4656">
+              uswds#4656
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+  
+
+      </div>
+    </main>
+  
+  </div>
+  
+</div>
+
+
+
+
+
+  
+  <script src="https://touchpoints.app.cloud.gov/touchpoints/5c2410e4.js" async></script>
+
+
+
+
+
+
+<section class="touchpoints__container" role="complementary" aria-label="Page feedback">
+  
+    <button type="button" class="usa-button site-button usa-button--outline" id="touchpoints-modal-button" aria-label="Provide feedback about this page" tabindex="0">Was this page helpful?</button>
+  
+</section>
+
+
+
+<footer class="usa-footer site-footer">
+  <div class="usa-footer__secondary-section">
+    <div class="grid-container footer-content">
+      <h2>Become part of the community</h2>
+      <p>
+        USWDS is an active open source community of government engineers, content specialists, and designers. Our contributors both in and out of government support dozens of agencies and nearly 200 sites.
+      </p>
+      <div class="grid-row footer-contact-links">
+        
+          <div class="tablet:grid-col">
+            <div class="usa-media-block">
+              <div class="usa-media-block__img circle-5 bg-accent-cool display-flex flex-row flex-align-center flex-justify-center text-white">
+                <svg class="usa-icon usa-icon--size-3" aria-hidden="true" role="img" focusable="false">
+                  <use href="/assets/img/sprite.svg#help"></use>
+                </svg>
+              </div>
+              <div class="usa-media-block__body">
+                <h3>Have an idea or an issue?</h3>
+                <a href="https://github.com/uswds/uswds/issues/new/choose">Reach out in GitHub</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="tablet:grid-col">
+            <div class="usa-media-block">
+              <div class="usa-media-block__img circle-5 bg-accent-cool display-flex flex-row flex-align-center flex-justify-center text-white">
+                <svg class="usa-icon usa-icon--size-3" aria-hidden="true" role="img" focusable="false">
+                  <use href="/assets/img/sprite.svg#people"></use>
+                </svg>
+              </div>
+              <div class="usa-media-block__body">
+                <h3>Engage with the community</h3>
+                <a href="https://designsystem.digital.gov/about/community/">Find a channel that works for you</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="tablet:grid-col">
+            <div class="usa-media-block">
+              <div class="usa-media-block__img circle-5 bg-accent-cool display-flex flex-row flex-align-center flex-justify-center text-white">
+                <svg class="usa-icon usa-icon--size-3" aria-hidden="true" role="img" focusable="false">
+                  <use href="/assets/img/sprite.svg#mail"></use>
+                </svg>
+              </div>
+              <div class="usa-media-block__body">
+                <h3>Subscribe to our newsletter</h3>
+                <a href="https://public.govdelivery.com/accounts/USGSATTS/subscriber/new?qsp=GSA_TTS">Sign up for USWDS updates</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="tablet:grid-col">
+            <div class="usa-media-block">
+              <div class="usa-media-block__img circle-5 bg-accent-cool display-flex flex-row flex-align-center flex-justify-center text-white">
+                <svg class="usa-icon usa-icon--size-3" aria-hidden="true" role="img" focusable="false">
+                  <use href="/assets/img/sprite.svg#support"></use>
+                </svg>
+              </div>
+              <div class="usa-media-block__body">
+                <h3>Get support</h3>
+                <a href="mailto:uswds@gsa.gov">Email the USWDS team</a>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+
+    <div class="bg-base-light padding-y-1 line-height-sans-3 font-lang-4">
+      <div class="grid-container">
+        Looking for USWDS v1 documentation?
+        <a
+          href="https://v1.designsystem.digital.gov"
+          class="text-ink text-bold hover:text-no-underline"
+          >Visit v1.designsystem.digital.gov</a
+        >
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<div class="usa-identifier site-identifier">
+  <section
+    class="usa-identifier__section usa-identifier__section--masthead"
+    aria-label="Agency identifier,,,,,,"
+  >
+    <div class="usa-identifier__container">
+      <div class="usa-identifier__logos"><a href="javascript:void(0);" class="usa-identifier__logo">
+          <img
+            class="usa-identifier__logo-img"
+            src="/img/gsa-logo.svg"
+            alt="GSA Logo"
+            role="img"
+            width="48"
+            height="48"
+          >
+        </a></div>
+      <section class="usa-identifier__identity" aria-label="Agency description">
+        <p class="usa-identifier__identity-domain">designsystem.digital.gov</p>
+        <p class="usa-identifier__identity-disclaimer"><span aria-hidden="true">An </span>official website of the <a href=https://gsa.gov>General Services Administration</a></p>
+      </section>
+    </div>
+  </section>
+  <nav class="usa-identifier__section usa-identifier__section--required-links" aria-label="Important links">
+      <div class="usa-identifier__container">
+        <ul class="usa-identifier__required-links-list"><li class="usa-identifier__required-links-item">
+            <a href="https://www.gsa.gov/about-us" class="usa-identifier__required-link">About GSA</a>
+          </li><li class="usa-identifier__required-links-item">
+            <a href="https://www.gsa.gov/website-information/accessibility-statement" class="usa-identifier__required-link">Accessibility statement</a>
+          </li><li class="usa-identifier__required-links-item">
+            <a href="https://www.gsa.gov/reference/freedom-of-information-act-foia" class="usa-identifier__required-link">FOIA requests</a>
+          </li><li class="usa-identifier__required-links-item">
+            <a href="https://www.gsa.gov/reference/civil-rights-programs/notification-and-federal-employee-antidiscrimination-and-retaliation-act-of-2002" class="usa-identifier__required-link">No FEAR Act data</a>
+          </li><li class="usa-identifier__required-links-item">
+            <a href="https://www.gsaig.gov/" class="usa-identifier__required-link">Office of the Inspector General</a>
+          </li><li class="usa-identifier__required-links-item">
+            <a href="https://www.gsa.gov/about-gsa/newsroom/budget-and-performance" class="usa-identifier__required-link">Performance reports</a>
+          </li><li class="usa-identifier__required-links-item">
+            <a href="https://www.gsa.gov/website-information/website-policies" class="usa-identifier__required-link">Privacy policy</a>
+          </li></ul>
+      </div>
+  </nav>
+  <section class="usa-identifier__section usa-identifier__section--usagov" aria-label="Government information and services">
+    <div class="usa-identifier__container">
+      <div class="usa-identifier__usagov-description">
+        Looking for U.S. government information and services?
+      </div>
+      <a href="https://www.usa.gov/" class="usa-link">Visit USA.gov</a>
+    </div>
+  </section>
+</div>
+
+
+
+    <script src="/assets/js/styleguide.js"></script>
+
+<script src="/assets/js/vendor/uswds.min.js"></script>
+<!--<script>
+//<![CDATA[
+      var usasearch_config = { siteHandle:"uswds" };
+
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "//search.usa.gov/javascripts/remote.loader.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+
+//]]>
+</script>
+-->
+
+  </body>
+</html>

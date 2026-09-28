@@ -21,25 +21,23 @@ directory:
 
 | Source | Reason |
 | --- | --- |
-| WAI guidance other than a page explicitly carrying CC BY 4.0 | WAI pages commonly use the W3C Document License. They require an individual immutable-copy assessment before addition. |
 | Digital.gov usability topic pages | The topic collection has no verified blanket clearance for contractor or third-party material. |
-| US Web Design System | Most project material is CC0, but dependencies, fonts, icons, and assets have file-level notices. No subset has been inventoried for this corpus. |
 | Named-designer heuristics and proprietary design courses | Not cleared for redistribution or ingestion. |
 
-## Expanded verbatim collections
+## Leaf-page verbatim collections
 
-`fetch-expanded-sources.sh` retrieves sixteen further exact HTML payloads into
-`sources/expanded/`; `expanded-checksums.sha256` is their per-file provenance
-record. W3C payloads are complete unmodified reference copies under the W3C
-Document License. GOV.UK Design System payloads are MIT-licensed. USWDS
-payloads are public web documentation; no fonts, icons, or other separately
-licensed repository assets are included.
+`fetch-leaf-sources.py` retrieves every allowlisted leaf and writes one
+frontmatter record per raw payload in `records/`. W3C payloads are complete
+unmodified reference copies under the W3C Document License. GOV.UK Design
+System pages are OGL v3; its repository code is separately MIT-licensed.
+USWDS pages are public-domain/CC0 government documentation; no fonts, icons,
+or other separately licensed repository assets are included.
 
 | Collection | Payloads | Topics |
 | --- | ---: | --- |
-| W3C WAI tutorials, APG, Understanding WCAG 2.2 | 9 | accessibility, ARIA semantics, forms, menus, page structure, images, tables, carousels |
-| GOV.UK Design System | 4 | components, patterns, styles, forms, navigation, content design |
-| US Web Design System | 3 | design principles, component system, mobile/responsive government-service guidance |
+| W3C WCAG Understanding + ARIA APG | generated leaf set | WCAG success criteria, ARIA patterns, accessibility |
+| GOV.UK Design System | generated leaf set | components, patterns, forms, navigation, content design |
+| US Web Design System | generated leaf set | component guidance, responsive/mobile service design |
 
 ## Reference-only exclusions
 
