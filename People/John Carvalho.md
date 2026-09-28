@@ -27,56 +27,20 @@ The knowledge base page [[CredibleExit|Credible Exit]] describes a Pubky propert
 
 ### Atomic Economy collection
 
-His Pubky collection [The Atomic Economy](https://pubky.app/post/gujx6qd8ksydh1makdphd3bxu351d9b8waqka8hfg6q7hnqkxexo/0035HNW0W7TTG) is described in the post as “A civic design blog for distributed systems architects.” These items are his posts in that collection:
-
-- [Zero Knowledge of the Problem](https://pubky.app/post/gujx6qd8ksydh1makdphd3bxu351d9b8waqka8hfg6q7hnqkxexo/0035RDS6DMPZ0)
-- [How to Think About Names](https://pubky.app/post/gujx6qd8ksydh1makdphd3bxu351d9b8waqka8hfg6q7hnqkxexo/0035R8SA18FCG)
-- [Molt: Anti-Correlation for Networks](https://pubky.app/post/gujx6qd8ksydh1makdphd3bxu351d9b8waqka8hfg6q7hnqkxexo/0035N5ZWYP5W0)
-- [Social Intelligence is Not Artificial](https://pubky.app/post/gujx6qd8ksydh1makdphd3bxu351d9b8waqka8hfg6q7hnqkxexo/0035MMN9XV790)
-- [The Vibeware Technical Playbook](https://pubky.app/post/gujx6qd8ksydh1makdphd3bxu351d9b8waqka8hfg6q7hnqkxexo/0035MGHDR2ZT0)
-- [Vibeware: Sensitive Software](https://pubky.app/post/gujx6qd8ksydh1makdphd3bxu351d9b8waqka8hfg6q7hnqkxexo/0035MGFN2ZRJG)
-- [Vibes-First Software R&D](https://pubky.app/post/gujx6qd8ksydh1makdphd3bxu351d9b8waqka8hfg6q7hnqkxexo/0035M0GPCS9DG)
-- [You Cannot Store “Lifetime”](https://pubky.app/post/gujx6qd8ksydh1makdphd3bxu351d9b8waqka8hfg6q7hnqkxexo/0035JX1KFXSRG)
-- [Exit-Ordered Role Allocation for Recovery and Continuity](https://pubky.app/post/gujx6qd8ksydh1makdphd3bxu351d9b8waqka8hfg6q7hnqkxexo/0035JSEN5F7KG)
-- [The Human Algorithm](https://pubky.app/post/gujx6qd8ksydh1makdphd3bxu351d9b8waqka8hfg6q7hnqkxexo/0035JADGV0FRG)
-- [AI & The Subjective Web](https://pubky.app/post/gujx6qd8ksydh1makdphd3bxu351d9b8waqka8hfg6q7hnqkxexo/0035J0NX92A6G)
-- [Settlement is Subjective](https://pubky.app/post/gujx6qd8ksydh1makdphd3bxu351d9b8waqka8hfg6q7hnqkxexo/0035HNVJEEBXG)
-- [Hunger Is Not Bread](https://pubky.app/post/gujx6qd8ksydh1makdphd3bxu351d9b8waqka8hfg6q7hnqkxexo/0034XEBK9V9Q0)
-- [The Age of Social Intelligence](https://pubky.app/post/gujx6qd8ksydh1makdphd3bxu351d9b8waqka8hfg6q7hnqkxexo/0034WADK62XRG)
-- [How to Fix the Web (link)](https://pubky.app/post/gujx6qd8ksydh1makdphd3bxu351d9b8waqka8hfg6q7hnqkxexo/0035KD6FWG9C0)
-- [Minimizing Violence Through Systems Design](https://pubky.app/post/gujx6qd8ksydh1makdphd3bxu351d9b8waqka8hfg6q7hnqkxexo/0034RZVYA7780)
-
-The collection also includes [I'm Jeb. Ask me about Pubky.](https://pubky.app/post/9o6xrx8wgqu48dmb47uep6w3dgbwdnf5jgw83gbeuxg9yi7x444y/0035N8NR4ATE0), whose author is Jeb’s key, not John’s.
+His Pubky collection [The Atomic Economy](https://pubky.app/post/gujx6qd8ksydh1makdphd3bxu351d9b8waqka8hfg6q7hnqkxexo/0035HNW0W7TTG) is described in the post as “A civic design blog for distributed systems architects.” The public list is the [Nexus collection object](https://nexus.pubky.app/v0/post/gujx6qd8ksydh1makdphd3bxu351d9b8waqka8hfg6q7hnqkxexo/0035HNW0W7TTG). Among the posts already cited above, that list includes [How to Think About Names](https://pubky.app/post/gujx6qd8ksydh1makdphd3bxu351d9b8waqka8hfg6q7hnqkxexo/0035R8SA18FCG), [Exit-Ordered Role Allocation for Recovery and Continuity](https://pubky.app/post/gujx6qd8ksydh1makdphd3bxu351d9b8waqka8hfg6q7hnqkxexo/0035JSEN5F7KG), [You Cannot Store “Lifetime”](https://pubky.app/post/gujx6qd8ksydh1makdphd3bxu351d9b8waqka8hfg6q7hnqkxexo/0035JX1KFXSRG), [Settlement is Subjective](https://pubky.app/post/gujx6qd8ksydh1makdphd3bxu351d9b8waqka8hfg6q7hnqkxexo/0035HNVJEEBXG), and the [How to Fix the Web link](https://pubky.app/post/gujx6qd8ksydh1makdphd3bxu351d9b8waqka8hfg6q7hnqkxexo/0035KD6FWG9C0).
 
 ### Public repositories
 
-[BitcoinErrorLog](https://github.com/BitcoinErrorLog) also publishes forks of upstream Pubky, Bitkit, Pkarr, and related repositories. Those forks are not listed here as original works. These public repositories are not GitHub forks, and the descriptions are the repositories’ own:
+The public account is [BitcoinErrorLog](https://github.com/BitcoinErrorLog). These repositories are not GitHub forks, and the descriptions are the repositories’ own:
 
-- [conservation-of-blockspace](https://github.com/BitcoinErrorLog/conservation-of-blockspace) — “Research on Bitcoin scaling limitations.”
-- [ideas](https://github.com/BitcoinErrorLog/ideas) — “Original research papers and essays.”
-- [pubky-marketplace](https://github.com/BitcoinErrorLog/pubky-marketplace) — “Umbrella repo for the Pubky App marketplace: integration environment and project map.”
-- [pubky-shop](https://github.com/BitcoinErrorLog/pubky-shop) — “Pubky Shop SDK (@bitcoinerrorlog/pubky-shop): inventory client, JSON/CSV codecs, import manifests for shop.pubky.app.”
-- [paykit-rs](https://github.com/BitcoinErrorLog/paykit-rs) — “Super superficial payment protocol.”
-- [pubky-locks](https://github.com/BitcoinErrorLog/pubky-locks) — “Unlock P2P commerce.”
-- [pubky-fiat-verifier](https://github.com/BitcoinErrorLog/pubky-fiat-verifier) — “Payment verifier gateway for Locks: Paykit wire contract, BTC pass-through, Stripe test-mode fiat rail.”
-- [pubky-payment-rails](https://github.com/BitcoinErrorLog/pubky-payment-rails)
-- [pubky-marketplace-service](https://github.com/BitcoinErrorLog/pubky-marketplace-service)
-- [pubky-molt](https://github.com/BitcoinErrorLog/pubky-molt) — “Molt: privacy routing core for Pubky — carries intent across identity, transport, and payment networks while shedding correlation at each boundary.”
-- [pubky-noise](https://github.com/BitcoinErrorLog/pubky-noise) — “PKARR + Snow and more.”
-- [pubky-chat](https://github.com/BitcoinErrorLog/pubky-chat) — “Pubky Encrypted-Link chat kinds spec and library suite.”
-- [hypercolor](https://github.com/BitcoinErrorLog/hypercolor) — “Pubky-native chat app (working name).”
-- [hypercolor-web](https://github.com/BitcoinErrorLog/hypercolor-web) — “Hypercolor web + desktop: Encrypted Links over official Paykit, static Next.js + Tauri v2.”
-- [pubky-web-index](https://github.com/BitcoinErrorLog/pubky-web-index) — web indexing service for Pubky.
-- [pubky-node](https://github.com/BitcoinErrorLog/pubky-node) — “PKDNS and Mainline DHT tools & services.”
-- [personal-homeserver](https://github.com/BitcoinErrorLog/personal-homeserver) — “sqlite pubky homeserver.”
-- [pubky-mobile](https://github.com/BitcoinErrorLog/pubky-mobile) — “pubky.app app.”
-- [switchboard](https://github.com/BitcoinErrorLog/switchboard) — “Social bridging.”
-- [spectivity](https://github.com/BitcoinErrorLog/spectivity) — “P2P specification curation.”
-- [slime](https://github.com/BitcoinErrorLog/slime) — “Social Latent Intelligence Mesh Exchange.”
-- [pubky-swarm](https://github.com/BitcoinErrorLog/pubky-swarm) — “Pubky + Torrents.”
-- [pubkegaard](https://github.com/BitcoinErrorLog/pubkegaard) — “Wireguard across public keys.”
+- [conservation-of-blockspace](https://github.com/BitcoinErrorLog/conservation-of-blockspace) — “Research on Bitcoin scaling limitations”
+- [ideas](https://github.com/BitcoinErrorLog/ideas) — “Original research papers and essays”
+- [paykit-rs](https://github.com/BitcoinErrorLog/paykit-rs) — “Super superficial payment protocol”
+- [pubky-node](https://github.com/BitcoinErrorLog/pubky-node) — “PKDNS and Mainline DHT tools & services”
 
-[synonym.to](https://synonym.to/) and [synonym.to/team](https://synonym.to/team) are the company pages that name him. [pubky.org](https://pubky.org/) is the public product site. His Pubky profile also links [medium.com/@pubky](https://medium.com/@pubky), [x.com/@bitcoinerrorlog](https://x.com/@bitcoinerrorlog), and [github.com/pubky](https://github.com/pubky).
+[BitcoinErrorLog/bitkit](https://github.com/BitcoinErrorLog/bitkit) is a GitHub fork of [synonymdev/bitkit-react-native](https://github.com/synonymdev/bitkit-react-native), described on the fork as “Self-custodial Bitcoin and Lightning Wallet for Android and iOS.”
+
+[synonym.to](https://synonym.to/) and [synonym.to/team](https://synonym.to/team) are the company pages that name him. [pubky.org](https://pubky.org/) is the public product site. His [Pubky profile details](https://nexus.pubky.app/v0/user/gujx6qd8ksydh1makdphd3bxu351d9b8waqka8hfg6q7hnqkxexo/details) list external links, including [medium.com/@pubky](https://medium.com/@pubky) and [github.com/pubky](https://github.com/pubky). The Synonym team page lists the handle `@BitcoinErrorLog`; that X account is [x.com/BitcoinErrorLog](https://x.com/BitcoinErrorLog).
 
 ## Sources
 
