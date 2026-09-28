@@ -1,6 +1,6 @@
 # Coach source register
 
-No verbatim source payload is admitted yet.
+The following commercial/restricted sources are not admitted.
 
 | Source | Status | Reason |
 | --- | --- | --- |
