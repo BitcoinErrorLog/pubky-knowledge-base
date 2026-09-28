@@ -5,12 +5,14 @@ from __future__ import annotations
 import argparse
 import hashlib
 import re
+import shutil
 import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).parent
 REQUIRED = ("title", "author", "date", "original_url", "archive_url", "source_collection", "rights_status", "retrieval_date", "checksum")
 BANNED = ("[编辑]", "返回頂部", "维基百科條目", "Lionel Giles", "THE ART OF WAR")
+CHAPTER_THIRTEEN_APPENDICES = ("答話", "孫子占", "又按")
 
 def validate(root: Path) -> list[str]:
     errors: list[str] = []
@@ -24,6 +26,8 @@ def validate(root: Path) -> list[str]:
         errors.append("SOURCES.md must state that Giles is reference-only")
     if "Calthrop" not in sources or "died in 1915" not in sources:
         errors.append("SOURCES.md must state Calthrop's worldwide public-domain basis")
+    if "CC BY-SA 4.0" not in sources or "Chinese Wikisource contributors" not in sources:
+        errors.append("SOURCES.md must retain Chinese Wikisource CC BY-SA 4.0 attribution")
     for path in chapters:
         data = path.read_text()
         if not data.startswith("---\n") or data.count("---\n") < 2:
@@ -43,16 +47,20 @@ def validate(root: Path) -> list[str]:
             errors.append(f"{path.name}: incomplete rights attribution")
         if any(term in body for term in BANNED) or (path.name.startswith("calthrop-") and ("Wutzu" in body or "INTRODUCTION" in body)):
             errors.append(f"{path.name}: prohibited site or translation text")
+        if path.name == "chapter-13.md" and any(heading in body for heading in CHAPTER_THIRTEEN_APPENDICES):
+            errors.append(f"{path.name}: contains post-用間 appendix material")
         if path.stem not in sources:
             errors.append(f"{path.name}: missing SOURCES.md register entry")
     return errors
 
 def mutation_test() -> None:
     with tempfile.TemporaryDirectory() as temp:
-        fixture = Path(temp)
-        (fixture / "SOURCES.md").write_text("Giles reference-only\n")
-        (fixture / "chapter-01.md").write_text("---\ntitle: x\n---\n\n")
-        assert validate(fixture), "validator accepted intentionally malformed corpus"
+        fixture = Path(temp) / "corpus"
+        shutil.copytree(ROOT, fixture, ignore=shutil.ignore_patterns("__pycache__"))
+        chapter = fixture / "chapter-13.md"
+        chapter.write_text(chapter.read_text() + "\n答話\n")
+        errors = validate(fixture)
+        assert any("post-用間 appendix" in error for error in errors), "validator accepted planted appendix material"
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

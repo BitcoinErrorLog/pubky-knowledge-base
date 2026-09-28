@@ -5,7 +5,7 @@ date: "Ancient text; rendered revision retrieved 2026-09-28"
 original_url: "https://zh.wikisource.org/wiki/%E5%AD%AB%E5%AD%90%E5%85%B5%E6%B3%95#始計第一"
 archive_url: "https://zh.wikisource.org/wiki/%E5%AD%AB%E5%AD%90%E5%85%B5%E6%B3%95"
 source_collection: "Chinese Wikisource rendered ancient-text transcription"
-rights_status: "Ancient underlying text is public domain; rendered Wikisource transcription is CC BY-SA 3.0"
+rights_status: "Ancient underlying text is public domain; rendered Wikisource transcription is CC BY-SA 4.0"
 retrieval_date: "2026-09-28"
 checksum: "sha256:2c109579f74d63f5a9c89948b2e9b73e06ca8a0a45308d522e70d0af82e2b8cf"
 ---

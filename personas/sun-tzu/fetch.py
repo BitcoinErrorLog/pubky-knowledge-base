@@ -31,6 +31,7 @@ def clean_rendered_html(markup: str) -> str:
     text = re.sub(r"[ \t]+\n", "\n", text)
     text = re.sub(r"\n{3,}", "\n\n", text)
     text = text[text.index("始計第一"):]
+    text = text[:text.index("\n\n答話")]
     lines = [line.strip() for line in text.splitlines()]
     lines = [line for line in lines if line not in {"[编辑]", "返回頂部"} and "返回頂部" not in line and "维基" not in line]
     return "\n\n".join(line for line in lines if line).strip() + "\n"
@@ -40,7 +41,7 @@ def frontmatter(title: str, checksum: str, *, calthrop: bool = False) -> str:
     original_url = CALTHROP_URL if calthrop else f"{PAGE_URL}#{title}"
     archive_url = CALTHROP_ARCHIVE_URL if calthrop else PAGE_URL
     collection = "Project Gutenberg ebook 44024, transcribed from Calthrop's 1908 London edition" if calthrop else "Chinese Wikisource rendered ancient-text transcription"
-    rights = "Calthrop died in 1915; his 1908 English translation is public domain worldwide under ordinary life-plus-70 terms" if calthrop else "Ancient underlying text is public domain; rendered Wikisource transcription is CC BY-SA 3.0"
+    rights = "Calthrop died in 1915; his 1908 English translation is public domain worldwide under ordinary life-plus-70 terms" if calthrop else "Ancient underlying text is public domain; rendered Wikisource transcription is CC BY-SA 4.0"
     date = "1908 Calthrop edition" if calthrop else f"Ancient text; rendered revision retrieved {RETRIEVAL_DATE}"
     return f'''---
 title: "{title}"
@@ -90,13 +91,13 @@ def main() -> None:
         checksum = hashlib.sha256(body.encode()).hexdigest()
         filename = f"chapter-{index:02d}.md"
         (ROOT / filename).write_text(frontmatter(title, checksum) + body)
-        rows.append(f"| sun-tzu-chapter-{index:02d} | *孫子兵法* — {title} | Ancient underlying text is public domain; rendered transcription is CC BY-SA 3.0. | Yes | [{title}]({PAGE_URL}#{title}), retrieved {RETRIEVAL_DATE}; site navigation and annotations excluded. | `sha256:{checksum}` |")
+        rows.append(f"| sun-tzu-chapter-{index:02d} | *孫子兵法* — {title} | Ancient underlying text is public domain; rendered transcription is CC BY-SA 4.0. | Yes | [{title}]({PAGE_URL}#{title}), retrieved {RETRIEVAL_DATE}; site navigation and annotations excluded. Attribution: Chinese Wikisource contributors, CC BY-SA 4.0. | `sha256:{checksum}` |")
     for index, (title, body) in enumerate(calthrop, start=1):
         checksum = hashlib.sha256(body.encode()).hexdigest()
         filename = f"calthrop-chapter-{index:02d}.md"
         (ROOT / filename).write_text(frontmatter(title, checksum, calthrop=True) + body)
         rows.append(f"| calthrop-chapter-{index:02d} | Calthrop, *The Book of War* — {title} | Calthrop died in 1915; his 1908 translation is public domain worldwide under ordinary life-plus-70 terms. | Yes | [Gutenberg 44024]({CALTHROP_URL}), transcribed from [Internet Archive's 1908 scan]({CALTHROP_ARCHIVE_URL}); retrieved {RETRIEVAL_DATE}. Introductory/editorial and Wutzu material excluded. | `sha256:{checksum}` |")
-    (ROOT / "SOURCES.md").write_text("# Sun Tzu sources\n\n| ID | Item | Rights basis | Copied text | Provenance | SHA-256 |\n| --- | --- | --- | --- | --- | --- |\n" + "\n".join(rows) + "\n\nCalthrop's 1908 translation is retained as an English companion to the original Chinese; its vocabulary and rendering choices differ from Lionel Giles's translation. Reference-only: Lionel Giles’s 1910 English translation is public domain in the United States but remains copyright-protected in ordinary life-plus-70 jurisdictions until 2029; its body is not copied. [Gutenberg record](https://www.gutenberg.org/ebooks/132). [Britannica](https://www.britannica.com/biography/Sunzi) is reference-only.\n")
+    (ROOT / "SOURCES.md").write_text("# Sun Tzu sources\n\nThe Chinese Wikisource transcription is attributed to Chinese Wikisource contributors and licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). This corpus retains that attribution and share-alike notice.\n\n| ID | Item | Rights basis | Copied text | Provenance | SHA-256 |\n| --- | --- | --- | --- | --- | --- |\n" + "\n".join(rows) + "\n\nCalthrop's 1908 translation is retained as an English companion to the original Chinese; its vocabulary and rendering choices differ from Lionel Giles's translation. Reference-only: Lionel Giles’s 1910 English translation is public domain in the United States but remains copyright-protected in ordinary life-plus-70 jurisdictions until 2029; its body is not copied. [Gutenberg record](https://www.gutenberg.org/ebooks/132). [Britannica](https://www.britannica.com/biography/Sunzi) is reference-only.\n")
 
 if __name__ == "__main__":
     main()

@@ -5,7 +5,7 @@ date: "Ancient text; rendered revision retrieved 2026-09-28"
 original_url: "https://zh.wikisource.org/wiki/%E5%AD%AB%E5%AD%90%E5%85%B5%E6%B3%95#地形第十"
 archive_url: "https://zh.wikisource.org/wiki/%E5%AD%AB%E5%AD%90%E5%85%B5%E6%B3%95"
 source_collection: "Chinese Wikisource rendered ancient-text transcription"
-rights_status: "Ancient underlying text is public domain; rendered Wikisource transcription is CC BY-SA 3.0"
+rights_status: "Ancient underlying text is public domain; rendered Wikisource transcription is CC BY-SA 4.0"
 retrieval_date: "2026-09-28"
 checksum: "sha256:430ccba1bdd159c959b9580955279e3db3a821cb9a9875d7cc12f8e6b50f3abf"
 ---
