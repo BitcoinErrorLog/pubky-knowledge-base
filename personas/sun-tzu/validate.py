@@ -15,11 +15,15 @@ BANNED = ("[编辑]", "返回頂部", "维基百科條目", "Lionel Giles", "THE
 def validate(root: Path) -> list[str]:
     errors: list[str] = []
     sources = (root / "SOURCES.md").read_text() if (root / "SOURCES.md").exists() else ""
-    chapters = sorted(root.glob("chapter-*.md"))
-    if len(chapters) != 13:
-        errors.append(f"expected 13 chapter files, found {len(chapters)}")
+    chinese = sorted(root.glob("chapter-*.md"))
+    calthrop = sorted(root.glob("calthrop-chapter-*.md"))
+    chapters = chinese + calthrop
+    if len(chinese) != 13 or len(calthrop) != 13:
+        errors.append(f"expected 13 Chinese and 13 Calthrop chapter files, found {len(chinese)} and {len(calthrop)}")
     if "Giles" not in sources or "reference-only" not in sources:
         errors.append("SOURCES.md must state that Giles is reference-only")
+    if "Calthrop" not in sources or "died in 1915" not in sources:
+        errors.append("SOURCES.md must state Calthrop's worldwide public-domain basis")
     for path in chapters:
         data = path.read_text()
         if not data.startswith("---\n") or data.count("---\n") < 2:
@@ -35,9 +39,9 @@ def validate(root: Path) -> list[str]:
             errors.append(f"{path.name}: checksum mismatch")
         if not body.strip():
             errors.append(f"{path.name}: empty body")
-        if "public domain" not in frontmatter.lower() or "CC BY-SA" not in frontmatter:
+        if "public domain" not in frontmatter.lower() or (path.name.startswith("chapter-") and "CC BY-SA" not in frontmatter):
             errors.append(f"{path.name}: incomplete rights attribution")
-        if any(term in body for term in BANNED):
+        if any(term in body for term in BANNED) or (path.name.startswith("calthrop-") and ("Wutzu" in body or "INTRODUCTION" in body)):
             errors.append(f"{path.name}: prohibited site or translation text")
         if path.stem not in sources:
             errors.append(f"{path.name}: missing SOURCES.md register entry")
