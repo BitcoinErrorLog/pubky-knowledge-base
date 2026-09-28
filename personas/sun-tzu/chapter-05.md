@@ -1,0 +1,25 @@
+---
+title: "兵勢第五"
+author: "Sun Tzu (attributed)"
+date: "Ancient text; rendered revision retrieved 2026-09-28"
+original_url: "https://zh.wikisource.org/wiki/%E5%AD%AB%E5%AD%90%E5%85%B5%E6%B3%95#兵勢第五"
+archive_url: "https://zh.wikisource.org/wiki/%E5%AD%AB%E5%AD%90%E5%85%B5%E6%B3%95"
+source_collection: "Chinese Wikisource rendered ancient-text transcription"
+rights_status: "Ancient underlying text is public domain; rendered Wikisource transcription is CC BY-SA 4.0"
+retrieval_date: "2026-09-28"
+checksum: "sha256:62d614eec1ad43860d0609c549767801107dd3b85905266d090dea6e4f7f4c52"
+---
+
+兵勢第五
+
+孫子曰：凡治衆如治寡，分數是也；鬥衆如鬥寡，形名是也；三軍之衆，可使必受敵而無敗者，奇正是也；兵之所加，如以碫投卵者，虛實是也。
+
+凡戰者，以正合，以奇勝。故善出奇者，無窮如天地，不竭如江海。終而復始，日月是也。死而復生，四時是也。聲不過五，五聲之變，不可勝聽也；色不過五，五色之變，不可勝觀也；味不過五，五味之變，不可勝嘗也；戰勢不過奇正，奇正之變，不可勝窮也。奇正相生，如循環之無端，孰能窮之哉？
+
+激水之疾，至於漂石者，勢也；鷙鳥之疾，至於毀折者，節也。故善戰者，其勢險，其節短。勢如彍弩，節如發機。
+
+紛紛紜紜，鬥亂而不可亂也；渾渾沌沌，形圓而不可敗也。亂生於治，怯生於勇，弱生於強。治亂，數也；勇怯，勢也；強弱，形也。
+
+故善動敵者，形之，敵必從之；予之，敵必取之。以利動之，以卒待之。
+
+故善戰者，求之於勢，不責於人，故能擇人而任勢。任勢者，其戰人也，如轉木石。木石之性，安則靜，危則動，方則止，圓則行。故善戰人之勢，如轉圓石於千仞之山者，勢也。
