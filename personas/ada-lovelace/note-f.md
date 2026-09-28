@@ -7,7 +7,7 @@ archive_url: "https://www.gutenberg.org/ebooks/75107"
 source_collection: "Project Gutenberg ebook 75107, transcribed from Scientific Memoirs volume 3 (1843)"
 rights_status: "Lovelace died in 1852; the 1843 Notes are public domain worldwide under ordinary life-plus-70 terms"
 retrieval_date: "2026-09-28"
-checksum: "sha256:7dc9892645e8443ab4f81963a0d99049adbeb7ec5a98dd6095b9095a343ce1b5"
+checksum: "sha256:e97153bc1fbdee3d522c7eb6b1da518c8505bc64875e86b89485fd071978cc6c"
 ---
 
 NOTE F.—Page 23.
@@ -47,6 +47,8 @@ of problem from those that are mentioned in any of the other Notes.
 Suppose it be required to eliminate nine variables from ten simple
 equations of the form—
 
+array of equations
+
 We should explain, before proceeding, that it is not our object to
 consider this problem with reference to the actual arrangement of the
 [Pg 55]
@@ -55,32 +57,62 @@ of the nature and number of the operations
 required to be performed during its complete solution.
 
 The first step would be the elimination of the first unknown quantity
+
+x_0
  between the two first equations. This would be obtained by the
 form—
 
-for which the operations 10 () would be needed. The
-second step would be the elimination of , between the second and
+array of equations
+
+for which the operations 10 (
+x,x,-
+) would be needed. The
+second step would be the elimination of
+x_0
+, between the second and
 third equations, for which the operations would be precisely the same.
 We should then have had altogether the following operations:—
 
+10(x,x,-), 10(x,x,-)=20(x,x,-)
+
 Continuing in the same manner, the total number of operations for the
-complete elimination of  between all the successive pairs of
+complete elimination of
+x_0
+ between all the successive pairs of
 equations, would be—
 
+9.10(x,x,-)=90(x,x,-)
+
 We should then be left with nine simple equations of nine variables
-from which to eliminate the next variable ; for which the total
+from which to eliminate the next variable
+x_1
+; for which the total
 of the processes would be—
 
+8.9(x,X,-)=72(x,x,-)
+
 We should then be left with eight simple equations of eight variables
-from which to eliminate , for which the processes would be—
+from which to eliminate
+x_2
+, for which the processes would be—
+
+7.8(x,x-)=56(x,x,-)
 
 and so on. The total operations for the elimination of all the
 variables would thus be—
 
+9.10+8.9+7.8+6.7+5.6+4.5+3.4+2.3+1.2=330
+
 So that three Operation-cards would perform the office of 330
 such cards.
 
-If we take  simple equations containing  variables,
+If we take
+n
+ simple equations containing
+n-1
+ variables,
+n
+
 being a number unlimited in magnitude, the case becomes still more
 obvious, as the same three cards might then take the place of thousands
 or millions of cards.

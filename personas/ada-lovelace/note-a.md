@@ -7,7 +7,7 @@ archive_url: "https://www.gutenberg.org/ebooks/75107"
 source_collection: "Project Gutenberg ebook 75107, transcribed from Scientific Memoirs volume 3 (1843)"
 rights_status: "Lovelace died in 1852; the 1843 Notes are public domain worldwide under ordinary life-plus-70 terms"
 retrieval_date: "2026-09-28"
-checksum: "sha256:5c8378c3fc0f138dfe1c5c4cd95d3cc8092d17d89d61c2f57725afa5f11cd6d1"
+checksum: "sha256:405aad3b58a9d473213baa47a6254b9f50236469b84c36c9d54b774fa80b0124"
 ---
 
 NOTE A.—Page 9.
@@ -15,11 +15,23 @@ NOTE A.—Page 9.
 The particular function whose integral the Difference Engine was
 constructed to tabulate, is
 
+Delta^7 u_z=0
+
 The purpose which that engine has been specially intended and adapted
 to fulfil, is the computation of nautical and astronomical tables. The
 integral of
 
-the constants , , , &c. are represented on the seven
+Delta^7 u_z=0
+
+being u_z=a+bx+cx^{2}+dx^{3}+ex^{4}+fx^{5}+g x^{6}
+
+the constants
+a
+,
+b
+,
+c
+, &c. are represented on the seven
 columns of discs, of which the engine consists. It can therefore
 tabulate accurately and to an unlimited extent, all
 series whose general term is comprised in the above formula; and it can
@@ -33,6 +45,8 @@ other, but for developing and tabulating any function whatever.
 In fact the engine may be described as being the material expression
 of any indefinite function of any degree of generality and complexity,
 such as for instance,
+
+F(x,y,z,log x,sin y,x^{p}, &c.)
 
 which is, it will be observed, a function of all other possible
 functions of any number of quantities.
@@ -48,13 +62,23 @@ function that may be under consideration, and they compel the mechanism
 to act accordingly in a certain corresponding order. One of the
 simplest cases would be, for example, to suppose that
 
+F(x,y,z, &c., &c.)
+
 is the particular function
 
-which the Difference Engine tabulates for values of  only up to
+Delta^{n} u_z = 0
+
+which the Difference Engine tabulates for values of
+n
+ only up to
 7. In this case the cards would order the mechanism to go through that
 succession of operations which would tabulate
 
-where  might be any number whatever.
+u_z = a + bx + cx^{2} + ... mx^{n-1}
+
+where
+n
+ might be any number whatever.
 
 [Pg 27]
 
@@ -66,11 +90,19 @@ do not bring out any definite numerical results unless the numerical
 data of the problem have been impressed on the requisite portions of
 the train of mechanism. In the above example, the first essential step
 towards an arithmetical result, would be the substitution of specific
-numbers for , and for the other primitive quantities which enter
+numbers for
+n
+, and for the other primitive quantities which enter
 into the function.
 
-Again, let us suppose that for  we put two complete
-equations of the fourth degree between  and . We must then
+Again, let us suppose that for
+F
+ we put two complete
+equations of the fourth degree between
+x
+ and
+y
+. We must then
 express on the cards the law of elimination for such equations. The
 engine would follow out those laws, and would ultimately give the
 equation of one variable which results from such elimination. Various
@@ -79,9 +111,19 @@ must be made out accordingly. The following is one mode that might be
 adopted. The engine is able to multiply together any two functions of
 the form
 
+a+bx+cx^{2}+ ... px^{n}
+
 This granted, the two equations may be arranged according to the powers
-of , and the coefficients of the powers of  may be arranged
-according to powers of . The elimination of  will result
+of
+y
+, and the coefficients of the powers of
+y
+ may be arranged
+according to powers of
+x
+. The elimination of
+y
+ will result
 from the successive multiplications and subtractions of several such
 functions. In this, and in all other instances, as was explained above,
 the particular numerical data and the numerical results
@@ -160,7 +202,9 @@ wholly separate and independent manner, becoming connected with the
 operating mechanism exclusively, and re-acting upon this. They
 never come into combination with numbers upon any other columns meaning
 quantities; though, of course, if there are numbers meaning
-operations upon  columns, these may combine amongst each
+operations upon
+n
+ columns, these may combine amongst each
 other, and will often be required to do so, just as numbers meaning
 quantities combine with each other in any variety. It might
 have been arranged that all numbers meaning operations should
@@ -240,7 +284,11 @@ relationship as that of analysis to arithmetic. The Difference Engine
 can effect but one particular series of operations, viz. that required
 for tabulating the integral of the special function
 
-and as it can only do this for values of  up to 7[18], it cannot
+Delta^{n} u_z = 0
+
+and as it can only do this for values of
+n
+ up to 7[18], it cannot
 be considered as being the most general expression even of
 one particular function, much less as being the expression
 of any and all possible functions of all degrees of generality. The
@@ -405,7 +453,9 @@ self-evident to the reader (the mathematical reader at least) in what
 manner and degree the powers of the Analytical Engine transcend those
 of an engine, which, like the Difference Engine, can only work out
 such results as may be derived from one restricted and particular
-series of processes, such as those included in  .
+series of processes, such as those included in
+Delta^{n} u_z = 0
+.
 We think this of importance, because we know that there exists
 considerable vagueness and inaccuracy in the mind of persons in general
 on the subject. There is a misty notion amongst most of those who have

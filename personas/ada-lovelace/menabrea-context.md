@@ -7,7 +7,7 @@ archive_url: "https://www.gutenberg.org/ebooks/75107"
 source_collection: "Project Gutenberg ebook 75107, Scientific Memoirs volume 3 (1843)"
 rights_status: "Menabrea died in 1896 and Lovelace in 1852; this 1843 translation is public domain worldwide under ordinary life-plus-70 terms"
 retrieval_date: "2026-09-28"
-checksum: "sha256:b5c7426080e762f0163b937a235c6076ba2c4c03312b54778fdc1951c6358108"
+checksum: "sha256:c6cb3b89b600ebb02362c9f9464ab5cb3b349d9fabd521a35c8e6f0ab7addc63"
 role: "context-only; never mount as Ada voice"
 ---
 
@@ -110,29 +110,53 @@ the following table:—
 
    1
 
+...
+
    3
 
    4
 
+...
+
    2
+b
+
+...
 
    5
 
+a
+
    9
 
+...
+
    2
+d
+
+...
 
    7
 
+c
+
    16
 
+...
+
    2
+
+...
 
    9
 
    25
 
+...
+
    2
+
+...
 
    11
 
@@ -146,38 +170,76 @@ pass to the following one 16, we must add to the former the difference
 7, which difference is in other words the preceding difference 5, plus
 the constant difference 2; or again, which comes to the same thing,
 to obtain 16 we have only to add together the three numbers 2, 5,
-9, placed obliquely in the direction . Similarly, we obtain
+9, placed obliquely in the direction
+a b
+. Similarly, we obtain
 the number 25 by summing up the three numbers placed in the oblique
-direction : commencing by the addition 2 + 7, we have the
+direction
+d c
+: commencing by the addition 2 + 7, we have the
 first difference 9 consecutively to 7; adding 16 to the 9 we have the
 square 25. We see then that the three numbers 2, 5, 9 being given, the
 whole series of successive square numbers, and that of their first
 differences likewise, may be obtained by means of simple additions.
 
 Now, to conceive how these operations may be reproduced by a machine,
-suppose the latter to have three dials, designated as , ,
+suppose the latter to have three dials, designated as
+A
+,
+B
+,
+
+C
 , on each of which are traced, say a thousand divisions, by way of
-example, over which a needle shall pass. The two dials, , ,
+example, over which a needle shall pass. The two dials,
+C
+,
+B
+,
 shall have in addition a registering hammer, which is to give a number
 of strokes equal to that of the divisions indicated by the needle. For
-each stroke of the registering hammer of the dial , the needle
- shall advance one division; similarly, the needle  shall
+each stroke of the registering hammer of the dial
+C
+, the needle
+
+B
+ shall advance one division; similarly, the needle
+A
+ shall
 [Pg 8]
 advance one division for every stroke of the registering hammer of the
-dial . Such is the general disposition of the mechanism.
+dial
+B
+. Such is the general disposition of the mechanism.
 
 This being understood, let us at the beginning of the series of
-operations we wish to execute, place the needle  on the division
-2, the needle  on the division 5, and the needle  on the
-division 9. Let us allow the hammer of the dial  to strike; it
-will strike twice, and at the same time the needle  will pass
+operations we wish to execute, place the needle
+C
+ on the division
+2, the needle
+B
+ on the division 5, and the needle
+A
+ on the
+division 9. Let us allow the hammer of the dial
+C
+ to strike; it
+will strike twice, and at the same time the needle
+B
+ will pass
 over two divisions. The latter will then indicate the number 7, which
 succeeds the number 5 in the column of first differences. If we now
-permit the hammer of the dial  to strike in its turn, it will
-strike seven times, during which the needle  will advance seven
+permit the hammer of the dial
+B
+ to strike in its turn, it will
+strike seven times, during which the needle
+A
+ will advance seven
 divisions; these added to the nine already marked by it, will give
 the number 16, which is the square number consecutive to 9. If we now
-recommence these operations, beginning with the needle , which
+recommence these operations, beginning with the needle
+C
+, which
 is always to be left on the division 2, we shall perceive that by
 repeating them indefinitely, we may successively reproduce the series
 of whole square numbers by means of a very simple mechanism.
@@ -185,13 +247,19 @@ of whole square numbers by means of a very simple mechanism.
 The theorem on which is based the construction of the machine we have
 just been describing, is a particular case of the following more
 general theorem: that if in any polynomial whatever, the highest power
-of whose variable is , this same variable be increased by equal
+of whose variable is
+m
+, this same variable be increased by equal
 degrees; the corresponding values of the polynomial then calculated,
 and the first, second, third, differences of these be taken (as for the
-preceding series of squares); the th differences will all be equal
+preceding series of squares); the
+m
+th differences will all be equal
 to each other. So that, in order to reproduce the series of values
 of the polynomial by means of a machine analogous to the one above
-described, it is sufficient that there be () dials, having the
+described, it is sufficient that there be (
+m+1
+) dials, having the
 mutual relations we have indicated. As the differences may be either
 positive or negative, the machine will have a contrivance for either
 advancing or retrograding each needle, according as the number to be
@@ -243,9 +311,24 @@ firstly, the numerical calculation of the various coefficients; and
 secondly, their distribution in relation to the quantities affected by
 them. If, for example, we have to obtain the product of two binomials
 [Pg 10]
-(), the result will be represented by
- in which expression we must first calculate ,
-, , ; then take the sum of ; and lastly,
+(
+a+bx
+), the result will be represented by
+am + (an + bm)
+
+x + bnx^{2}
+ in which expression we must first calculate
+am
+,
+
+an
+,
+bm
+,
+bn
+; then take the sum of
+an + bm
+; and lastly,
 respectively distribute the coefficients thus obtained, amongst the
 powers of the variable. In order to reproduce these operations by means
 of a machine, the latter must therefore possess two distinct sets of
@@ -297,10 +380,26 @@ hundreds, and so on. When two numbers have been thus written on two
 distinct columns, we may propose to combine them arithmetically with
 each other, and to obtain the result on a third column. In general, if
 we have a series of columns[5] consisting of discs, which columns w e
-will designate as , , ,
-, , &c., we may require, for instance,
-to divide the number written on the column  by that on
-the column , and to obtain the result on the column
+will designate as
+V_0
+,
+V_1
+,
+V_2
+,
+
+V_3
+,
+V_4
+, &c., we may require, for instance,
+to divide the number written on the column
+V_1
+ by that on
+the column
+V_4
+, and to obtain the result on the column
+
+V_7
 . To effect this operation, must impart to the machine
 two distinct arrangements; through the first it is prepared for
 executing a division, and through the second the columns it is
@@ -405,17 +504,65 @@ In order more perfectly to conceive the thing, let us select as an
 [Pg 14]
 example the resolution of two equations of the first degree with two
 unknown quantities. Let the following be the two equations, in which
- and  are the unknown quantities:—
 
-We deduce , and for  an
-analogous expression. Let us continue to represent by ,
-, , &c. the different columns which
+x
+ and
+y
+ are the unknown quantities:—
+
+resolution of two equations of first degree with two unknown quantities
+
+We deduce
+x={dn′- d′}/(n′m - nm′}
+, and for
+y
+ an
+analogous expression. Let us continue to represent by
+V_0
+,
+
+V_1
+,
+V_2
+, &c. the different columns which
 contain the numbers, and let us suppose that the first eight columns
 have been chosen for expressing on them the numbers represented by
-, , , , , ,  and , which
-implies that , , ,
-, , ,
-, .
+
+m
+,
+n
+,
+d
+,
+m′
+,
+m′
+,
+d′
+,
+n
+ and
+n′
+, which
+implies that
+V_0=m
+,
+V_1=n
+,
+V_2=d
+,
+
+V_3=m′
+,
+V_4
+,
+V_5=d′
+,
+
+V_6=n
+,
+V_7=n′
+.
 
 The series of operations commanded by the cards, and the results
 obtained, may be represented in the following table:—
@@ -445,30 +592,106 @@ results of operations.
 
 1
 
+x
+
+V_2xV_4=
+
+V_8
+
+dn′
+
 2
+
+x
+
+V_5xV_1=
+
+V_9
+
+d′n
 
 3
 
+x
+
+V_4xV_0=
+
+V_10
+
+n′m
+
 4
+
+x
+
+V_1xV_3=
+
+V_11
+
+nm′
 
 5
 
+-
+
+V_8-V_9=
+
+V_12
+
+dn′-d′n
+
 6
 
+-
+
+V_10-V_11=
+
+V_13
+
+n′m-nm′
+
 7
+
+/
+
+V_12/V_13=
+
+V_14
+
+x=(dn′-d′n)/(n′,-nm′)
 
 Since the cards do nothing but indicate in what manner and on what
 columns the machine shall act, it is clear that we must still, in every
 particular case, introduce the numerical data for the calculation.
 Thus, in the example we have selected, we must previously inscribe the
-numerical values of , , , , , , in the
+numerical values of
+m
+,
+n
+,
+d
+,
+m′
+,
+n′
+,
+d′
+, in the
 order and on the columns indicated, after which the machine when put
-in action will give the value of the unknown quantity  for this
+in action will give the value of the unknown quantity
+x
+ for this
 particular case. To obtain the value of another series of operations
 analogous to the preceding must be performed. But we see that they
 will be only four in number, since the denominator of the expression
-for , excepting the sign, is the same as that for  and equal
-to . In the preceding table it will be remarked that the
+for
+y
+, excepting the sign, is the same as that for
+x
+ and equal
+to
+n′m-nm′
+. In the preceding table it will be remarked that the
 column for operations indicates four successive multiplications,
 two subtractions, and one division. Therefore, if
 [Pg 15]
@@ -478,10 +701,30 @@ after the first multiplication, for instance, retain the card which
 relates to this operation, and not allow it to advance so as to be
 replaced by another one, until after this same operation shall have
 been four times repeated. In the preceding example we have seen, that
-to find the value of  we must begin by writing the coefficients
-, , , , ,  upon eight columns, thus
-repeating  and  twice. According to the same method, if it
-were required to calculate  likewise, these coefficients must be
+to find the value of
+x
+ we must begin by writing the coefficients
+
+m
+,
+n
+,
+d
+,
+m′
+,
+n′
+,
+d′
+ upon eight columns, thus
+repeating
+n
+ and
+n′
+ twice. According to the same method, if it
+were required to calculate
+y
+ likewise, these coefficients must be
 written on twelve different columns. But it is possible to simplify
 this process, and thus to diminish the chances of errors, which chances
 are greater, the larger the number of the quantities that have to be
@@ -490,21 +733,55 @@ simplification, we must remember that every number written on a column
 must, in order to be arithmetically combined with another number,
 be effaced from the column on which it is, and transferred to the
 mill. Thus, in the example we have discussed, we will take the
-two coefficients  and , which are each of them to enter into
-two different products, that is  into  and ,
-into  and . These coefficients will be inscribed on the
-columns  and . If we commence the
-series of operations by the product of  into , these numbers
-will be effaced from the columns  and ,
+two coefficients
+m
+ and
+n′
+, which are each of them to enter into
+two different products, that is
+m
+ into
+mn′
+ and
+md′
+,
+n′
+
+into
+mn′
+ and
+n′d
+. These coefficients will be inscribed on the
+columns
+V_0
+ and
+V_4
+. If we commence the
+series of operations by the product of
+m
+ into
+n′
+, these numbers
+will be effaced from the columns
+V_0
+ and
+V_4
+,
 that they may be transferred to the mill, which will multiply them into
 each other, and will then command the machine to represent the result,
-say on the column . But as these numbers are each
+say on the column
+V_6
+. But as these numbers are each
 to be used again in another operation, they must again be inscribed
 somewhere; therefore, while the mill is working out their product,
 the machine will inscribe them anew on any two columns that may be
 indicated to it through the cards; and, as in the actual case, there
 is no reason why they should not resume their former places, we will
-suppose them again inscribed on  and ,
+suppose them again inscribed on
+V_0
+ and
+V_4
+,
 whence in short they would not finally disappear, to be reproduced no
 more, until they should have gone through all the combinations in which
 they might have to be used.
@@ -547,38 +824,160 @@ Indication of change
 
 of value on any column.
 
+^1V_0=m
+
 1
 1
+
+x
+
+^1V_0x^1V4=
+
+^1V_6
+
+correlation between ^1V_0 and ^1V_4
+
+^1V_6=mn′
+
+^1V_1=n
 
 2
 "
 
+x
+
+^1V2 x ^1V_1=
+
+^1V_7
+
+correlation between ^1V_3 and ^1V_1
+
+^1V_7=m′n
+
+^1V_2=d
+
 3
 "
+
+x
+
+^1V_2 x ^1V_4=
+
+^1V_8
+
+correlation between ^1V_2, ^1V_4 and ^0V_4
+
+^1V_8=dn′
+
+^1V_3=m′
 
 4
 "
 
+x
+
+^1V_5 x ^1V_1=
+
+^1V_9
+
+correlation between ^1V_5, ^1V_1 and ^0V_1
+
+^1V_9=d′n
+
+^1V_4=n′
+
 5
 "
+
+x
+
+^1V_0 x ^1V_5=
+
+^1V_10
+
+correlation between ^1V_0, ^0V_0, ^1V_5 and ^0V_5
+
+^1V_10=d′m
+
+^1V_5=d′
 
 6
 "
 
+x
+
+^1V_2 x ^1V_3=
+
+^1V_11
+
+correlation between ^1V-2, ^0V_2, ^1V_3 and ^0V_3
+
+^1V_11=dm′
+
 7
 2
+
+-
+
+^1V_6-^1V_7=
+
+^1V_12
+
+correlation between _1V_6, =^V_6, ^1V_7 and ^0V_7
+
+^1V_12=mn′-m′n
 
 8
 "
 
+-
+
+^1V_8-^1V_9=
+
+^1V_13
+
+correlation between ^1V_8, ^0V_8, ^1V_9 and ^0V_9
+
+^1V_13=dn′-d′n
+
 9
 "
+
+-
+
+^1V_10-^1V_11=
+
+^1V_14
+
+correlation between ^1V_10, ^0V_10, ^1V_11 and ^0V_11
+
+^1V_14=dm′-dm′
 
 10
 3
 
+/
+
+^1V_13/^1V_12
+
+^1V_15
+
+correlation between ^1V_13, ^0V_13 and ^1V_12
+
+^1V_15=dn′-d′n/mn′-m′n=x
+
 11
 "
+
+/
+
+^1V_14/^1V-12=
+
+^1V_16
+
+correlation between ^1V_14, ^0V_14, ^1V-12 and ^0V_12
+
+^1V_160 d′m-dm′/mn′-m′n=y
 
 1
 2
@@ -682,21 +1081,81 @@ that of calculating their coefficients according to the laws demanded
 by the nature of the question. In order to make this more clear, we
 shall take the following:[10] very simple example, in which we are
 [Pg 19]
-to multiply () by (). We shall begin by
-writing , , , , above the columns
-, , , ;
+to multiply (
+a+bx′
+) by (
+A+B cos^1 x
+). We shall begin by
+writing
+x^0
+,
+x^1
+,
+cos^0 x
+,
+cos^1 x
+, above the columns
+
+V_0
+,
+V_1
+,
+V_12
+,
+V_3
+;
 then, since from the form of the two functions to be combined, the
 terms which are to compose the products will be of the following
-nature, , ,
-, ; these will be
-inscribed above the columns , ,
-, . The coefficients of ,
-, ,  being given, they will, by means of
-the mill, be passed to the columns , ,
- and . Such are the primitive data of
+nature,
+x^0 x cos^0
+,
+x^0 x cos^1 x
+,
+
+x^1 x cos^0 x
+,
+x^1 x cos^1 x
+; these will be
+inscribed above the columns
+V_4
+,
+V_5
+,
+
+V_6
+,
+V_7
+. The coefficients of
+x^0
+,
+
+x^1
+,
+cos^0 x
+,
+cos^1 x
+ being given, they will, by means of
+the mill, be passed to the columns
+V_0
+,
+V_1
+,
+
+V_2
+ and
+V_3
+. Such are the primitive data of
 the problem. It is now the business of the machine to work out its
 solution, that is to find the coefficients which are to be inscribed on
-, , , .
+
+V_4
+,
+V_5
+,
+V_6
+,
+V_7
+.
 To attain this object, the law of formation of these same coefficients
 being known, the machine will act through the intervention of the
 cards, in the manner indicated by the following table:—
@@ -743,13 +1202,9 @@ Results of the
 
 operations.
 
-"
-"
-"
-"
-"
-"
-     "     "
+x^0 ... ^1V_0
+
+a
 
 "
 "
@@ -759,13 +1214,9 @@ operations.
 "
      "     "
 
-"
-"
-"
-"
-"
-"
-     "     "
+x^1 ... ^1V-1
+
+b
 
 "
 "
@@ -774,14 +1225,102 @@ operations.
 "
 "
      "     "
+
+cos^0 ... ^1V_2
+
+A
+
+"
+"
+"
+"
+"
+"
+     "     "
+
+cos^1x ... ^1V_3
+
+B
+
+"
+"
+"
+"
+"
+"
+     "     "
+
+x^0 cos^0 x ... ^=V-4
+
+...
+
+A
 
 1
 
+x
+
+^1V_0 x ^1V-2
+
+^1V_4
+
+correlation between ^1V_0 and ^1V_2
+
+^1V_4 =aA coefficients of x^0 cos^0 x
+
+x^0 cos^1x ... ^0V_5
+
+...
+
+aB
+
 2
+
+x
+
+^1V_0 x ^1V_3=
+
+^1V_5
+
+correlation between ^1V_0, ^0V_0 and ^1V_3
+
+^1V_5=aB coefficients of x^0 cos^1x
+
+x^1 cos^0x ... ^0V_6
+
+...
+
+bA
 
 3
 
+x
+
+^1V_1 x ^1V_2=
+
+^1V_6
+
+correlation between ^1V_1, ^1V_2 and ^0V_2
+
+^1V_6=bA coefficients of x^0 x^1 cos^0x
+
+x^1 ... ^0V_7
+
+...
+
+bB
+
 4
+
+x
+
+1V_1 x ^1V_3
+
+^1V_7
+
+correlation between ^1V_1, ^0V_1; ^1V_3 and ^0V_3
+
+^1V_7=bB coefficients of x^0 x^1 cos^1x
 
 It will now be perceived that a general application may be made of
 the principle developed in the preceding example, to every species
@@ -823,64 +1362,170 @@ through zero and infinity. These new cards may follow the first, but
 may only come into play contingently upon one or other of the two
 circumstances just mentioned taking place.
 
-Let us consider a term of the form ; since the cards are
+Let us consider a term of the form
+ab^n
+; since the cards are
 but a translation of the analytical formula, their number in this
-particular case must be the same, whatever be the value of ; that
+particular case must be the same, whatever be the value of
+n
+; that
 is to say, whatever be the number of multiplications required for
-elevating  to the th power (we are supposing for the moment
-that  is a whole number). Now, since the exponent  indicates
-that  is to be multiplied  times by itself, and all these
+elevating
+b
+ to the
+n
+th power (we are supposing for the moment
+that
+n
+ is a whole number). Now, since the exponent
+n
+ indicates
+that
+b
+ is to be multiplied
+n
+ times by itself, and all these
 operations are of the same nature, it will be sufficient to employ one
 [Pg 21]
 single operation-card, viz. that which orders the multiplication.
 
-But when  is given for the particular case to be calculated,
+But when
+n
+ is given for the particular case to be calculated,
 it will be further requisite that the machine limit the number of
 its multiplications according to the given values. The process may
-be thus arranged. The three numbers ,  and  will be
+be thus arranged. The three numbers
+a
+,
+b
+ and
+n
+ will be
 written on as many distinct columns of the store; we shall designate
-them , , ; the result
- will place itself on the column . When the
-number  has been introduced into the machine, a card will order
-a certain registering-apparatus to mark (), and will at the
-same time execute the multiplication of  by . When this is
+them
+V_0
+,
+V_1
+,
+V_2
+; the result
+
+ab^2
+ will place itself on the column
+V_3
+. When the
+number
+n
+ has been introduced into the machine, a card will order
+a certain registering-apparatus to mark (
+n-1
+), and will at the
+same time execute the multiplication of
+b
+ by
+b
+. When this is
 completed, it will be found that the registering-apparatus has effaced
-a unit, and that it only marks (); while the machine will now
-again order the number  written on the column
-to multiply itself with the product  written on the column
-, which will give . Another unit is then effaced
+a unit, and that it only marks (
+n-2
+); while the machine will now
+again order the number
+b
+ written on the column
+V_1
+
+to multiply itself with the product
+b^2
+ written on the column
+
+V_3
+, which will give
+b^3
+. Another unit is then effaced
 from the registering-apparatus, and the same processes are continually
-repeated until it only marks zero. Thus the number  will be
-found inscribed on , when the machine, pursuing its
-course of operations, will order the product of  by ; and
+repeated until it only marks zero. Thus the number
+b^n
+ will be
+found inscribed on
+V_3
+, when the machine, pursuing its
+course of operations, will order the product of
+b^n
+ by
+a
+; and
 the required calculation will have been completed without there being
 any necessity that the number of operation-cards used should vary
-with the value of . If  were negative, the cards, instead
-of ordering the multiplication of  by , would order its
+with the value of
+n
+. If
+n
+ were negative, the cards, instead
+of ordering the multiplication of
+a
+ by
+b^n
+, would order its
 division; this we can easily conceive, since every number, being
 inscribed with its respective sign, is consequently capable of reacting
-on the nature of the operations to be executed. Finally, if  were
-fractional, of the form , an additional column would
-be used for the inscription of , and the machine would bring into
-action two sets of processes, one for raising  to the power ,
-the other for extracting the th root of the number so obtained.
+on the nature of the operations to be executed. Finally, if
+n
+ were
+fractional, of the form
+p/q
+, an additional column would
+be used for the inscription of
+q
+, and the machine would bring into
+action two sets of processes, one for raising
+b
+ to the power
+p
+,
+the other for extracting the
+q
+th root of the number so obtained.
 
 Again, it may be required, for example, to multiply an expression of
-the form  by another ,
+the form
+ax^m-bx^n
+ by another
+Ax^p+Bx^q
+,
 and then to reduce the product to the least number of terms,
 if any of the indices are equal. The two factors being ordered with
-respect to , the general result of the multiplication would be
+respect to
+x
+, the general result of the multiplication would be
+
+Aax^(n+p)+Bax^(n+q)
 .
 Up to this point the process presents no difficulties; but suppose
-that we have  and , and that we wish to reduce the two middle terms to a single one (.
+that we have
+m=p
+ and
+n=q
+, and that we wish to reduce the two middle terms to a single one (
+{A}b + {B}a)x^{m+q}
+.
 [Pg 22]
-For this purpose, the cards may order  and
+For this purpose, the cards may order
+m+q
+ and
+n+p
+
 to be transferred into the mill, and there subtracted one from
 the other; if the remainder is nothing, as would be the case on the
 present hypothesis, the mill will order other cards to bring to it the
-coefficients  and , that it may add them
+coefficients
+aB
+ and
+Ba
+, that it may add them
 together and give them in this state as a coefficient for the single
-term .
+term
+x^{n+q} = x^{m+q}
+.
 
 This example illustrates how the cards are able to reproduce all the
 operations which intellect performs in order to attain a determinate
@@ -889,20 +1534,36 @@ defined.
 
 Let us now examine the following expression:—
 
+2 x 2^2 x 4^2 x 6^2 x 8^2 x 10^2 ... 2n^2/1^2 x 3^2 x 5^2 x 7^2 x 9^2 ... (2n-1^2
+
 which we know becomes equal to the ratio of the circumference to the
-diameter, when  is infinite. We may require the machine not only
+diameter, when
+n
+ is infinite. We may require the machine not only
 to perform the calculation of this fractional expression, but further
 to give indication as soon as the value becomes identical with that of
-the ratio of the circumference to the diameter when  is infinite,
+the ratio of the circumference to the diameter when
+n
+ is infinite,
 a case in which the computation would be impossible. Observe that we
 should thus require of the machine to interpret a result not of itself
 evident, and that this is not amongst its attributes, since it is no
-thinking being. Nevertheless, when the  of  has
+thinking being. Nevertheless, when the
+cos
+ of
+ n=infty
+ has
 been foreseen, a card may immediately order the substitution of the
-value of , ( being the ratio of the circumference to the
+value of
+pi
+, (
+pi
+ being the ratio of the circumference to the
 diameter), without going through the series of calculations indicated.
 This would merely require that the machine contain a special card,
-whose office it should be to place the number  in a direct
+whose office it should be to place the number
+pi
+ in a direct
 and independent manner on the column indicated to it. And here we
 should introduce the mention of a third species of cards, which may
 be called cards of numbers. There are certain numbers, such
@@ -1109,7 +1770,9 @@ See Note E.
 
 [11]
 For an explanation of the upper left-hand indices
-attached to the s in this and in the preceding table,
+attached to the
+V′
+s in this and in the preceding table,
 we must refer the reader to Note D., amongst those appended to the
 memoir.—NOTE BY TRANSLATOR.
 
