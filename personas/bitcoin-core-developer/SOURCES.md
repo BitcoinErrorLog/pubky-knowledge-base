@@ -12,3 +12,9 @@ Pinned archives:
 a `License:` field. The pinned BIP tree currently fails that condition, so no
 BIP text is approved for retrieval until the per-file rights manifest
 quarantines or resolves every missing declaration.
+
+## Optech newsletter extraction
+
+`extract-optech-newsletters.py` extracts the pinned MIT site newsletter posts as
+individual source files, preserving each post's upstream frontmatter. Their
+per-file SHA-256 values are in `optech-newsletters.sha256`.
