@@ -95,6 +95,14 @@ Learn more about the overall vision here: [[TheVisionOfPubky|The Vision of Pubky
 - [Live API](https://nexus.pubky.app/swagger-ui/) - Production REST API with Swagger UI
 - [Staging API](https://nexus.staging.pubky.app/swagger-ui/) - Latest development version
 
+## People and public research
+
+These pages cite public sources. Thesis statements in them are attributed to John Carvalho.
+
+- **[[John Carvalho]]** — Public identity and an index of his public Synonym-related work
+- **[[Conservation of Blockspace]]** — His paper and [blockspace.science](https://blockspace.science/) on unilateral Bitcoin exit bounds
+- **[[How to Fix the Web]]** — His March 2026 essay on keys, tags, and contextual trust
+
 ## Key Concepts
 
 Understand the fundamental ideas behind Pubky:
