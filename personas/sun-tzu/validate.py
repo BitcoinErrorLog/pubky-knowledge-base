@@ -1,0 +1,76 @@
+#!/usr/bin/env python3
+"""Validate Sun Tzu corpus provenance, attribution, and source integrity."""
+from __future__ import annotations
+
+import argparse
+import hashlib
+import re
+import shutil
+import tempfile
+from pathlib import Path
+
+ROOT = Path(__file__).parent
+REQUIRED = ("title", "author", "date", "original_url", "archive_url", "source_collection", "rights_status", "retrieval_date", "checksum")
+BANNED = ("[编辑]", "返回頂部", "维基百科條目", "Lionel Giles", "THE ART OF WAR")
+CHAPTER_THIRTEEN_APPENDICES = ("答話", "孫子占", "又按")
+
+def validate(root: Path) -> list[str]:
+    errors: list[str] = []
+    sources = (root / "SOURCES.md").read_text() if (root / "SOURCES.md").exists() else ""
+    chinese = sorted(root.glob("chapter-*.md"))
+    calthrop = sorted(root.glob("calthrop-chapter-*.md"))
+    chapters = chinese + calthrop
+    if len(chinese) != 13 or len(calthrop) != 13:
+        errors.append(f"expected 13 Chinese and 13 Calthrop chapter files, found {len(chinese)} and {len(calthrop)}")
+    if "Giles" not in sources or "reference-only" not in sources:
+        errors.append("SOURCES.md must state that Giles is reference-only")
+    if "Calthrop" not in sources or "died in 1915" not in sources:
+        errors.append("SOURCES.md must state Calthrop's worldwide public-domain basis")
+    if "CC BY-SA 4.0" not in sources or "Chinese Wikisource contributors" not in sources:
+        errors.append("SOURCES.md must retain Chinese Wikisource CC BY-SA 4.0 attribution")
+    for path in chapters:
+        data = path.read_text()
+        if not data.startswith("---\n") or data.count("---\n") < 2:
+            errors.append(f"{path.name}: missing frontmatter")
+            continue
+        frontmatter, body = data.split("---\n", 2)[1:]
+        body = body.lstrip("\n")
+        for field in REQUIRED:
+            if not re.search(rf"^{field}:", frontmatter, re.M):
+                errors.append(f"{path.name}: missing {field}")
+        checksum = re.search(r'^checksum: "sha256:([0-9a-f]{64})"$', frontmatter, re.M)
+        if not checksum or checksum.group(1) != hashlib.sha256(body.encode()).hexdigest():
+            errors.append(f"{path.name}: checksum mismatch")
+        if not body.strip():
+            errors.append(f"{path.name}: empty body")
+        if "public domain" not in frontmatter.lower() or (path.name.startswith("chapter-") and "CC BY-SA" not in frontmatter):
+            errors.append(f"{path.name}: incomplete rights attribution")
+        if any(term in body for term in BANNED) or (path.name.startswith("calthrop-") and ("Wutzu" in body or "INTRODUCTION" in body)):
+            errors.append(f"{path.name}: prohibited site or translation text")
+        if path.name == "chapter-13.md" and any(heading in body for heading in CHAPTER_THIRTEEN_APPENDICES):
+            errors.append(f"{path.name}: contains post-用間 appendix material")
+        if path.stem not in sources:
+            errors.append(f"{path.name}: missing SOURCES.md register entry")
+    return errors
+
+def mutation_test() -> None:
+    with tempfile.TemporaryDirectory() as temp:
+        fixture = Path(temp) / "corpus"
+        shutil.copytree(ROOT, fixture, ignore=shutil.ignore_patterns("__pycache__"))
+        chapter = fixture / "chapter-13.md"
+        chapter.write_text(chapter.read_text() + "\n答話\n")
+        errors = validate(fixture)
+        assert any("post-用間 appendix" in error for error in errors), "validator accepted planted appendix material"
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--mutation-test", action="store_true")
+    args = parser.parse_args()
+    if args.mutation_test:
+        mutation_test()
+        print("mutation test: PASS (malformed fixture rejected)")
+    errors = validate(ROOT)
+    if errors:
+        print("\n".join(errors))
+        raise SystemExit(1)
+    print("Sun Tzu corpus: PASS (13 attributed non-empty chapter bodies; checksums and rights register verified)")

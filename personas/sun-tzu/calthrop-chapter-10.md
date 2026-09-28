@@ -1,0 +1,123 @@
+---
+title: "10. GROUND"
+author: "Sun Tzu (attributed); translated by E. F. Calthrop"
+date: "1908 Calthrop edition"
+original_url: "https://www.gutenberg.org/files/44024/44024-0.txt"
+archive_url: "https://archive.org/details/bookofwarmilitar00caltiala"
+source_collection: "Project Gutenberg ebook 44024, transcribed from Calthrop's 1908 London edition"
+rights_status: "Calthrop died in 1915; his 1908 English translation is public domain worldwide under ordinary life-plus-70 terms"
+retrieval_date: "2026-09-28"
+checksum: "sha256:13b5e94b64b4c9035d04fa2a25a89c56bbcac547d671b724b1618da4d44809cb"
+---
+
+X
+
+GROUND
+
+
+Sun the Master said:--
+
+With regard to the different natures of ground there are:--
+
+Open ground; broken ground; suspended ground; defiles; precipices; far
+countries.
+
+Open ground is that where either side has liberty of movement: be
+quick to occupy any high ground in the neighbourhood and consider well
+the line of supplies.
+
+Broken ground. Advance is easy, but retreat from it is difficult. Here,
+if the enemy be not prepared, we may win: but should he be prepared,
+and defeat us, and retreat be impossible, then there is disaster.
+
+Suspended ground. The side that takes the initiative is under a
+disadvantage. Here, if the enemy offer some allurement, we should not
+advance: but rather, by feigning retreat, wait until he has put forth
+half his force. Then we may attack him with advantage.
+
+Defiles, make haste to occupy; garrison strongly and await the enemy.
+Should the enemy be before you, and in strength, do not engage him; but
+if there be unoccupied points, attack him.
+
+In precipitous ground quickly occupy a position on a sunny height, and
+await the enemy. If the enemy be before you, withdraw and do not attack
+him.
+
+If distant from the enemy, and the forces be equal, to take the
+initiative is disadvantageous.
+
+Now, these are the six kinds of ground. It is the duty of generals to
+study them.
+
+Again, there are six calamities among the troops, arising, not from
+defect of ground, or lack of opportunity, but from the general's
+incapacity.
+
+These are: repulse, relaxation, distress, disorganisation, confusion
+and rout.
+
+If troops be sent to attack an enemy of equal quality, but ten times
+their number, they retire discomfited.
+
+Strong soldiers with weak officers cause relaxation.
+
+Able officers with feeble soldiers cause distress.
+
+Enraged senior officers, who fall upon the enemy without orders, and
+obey not the general because he does not recognise their abilities,
+produce disorganisation.
+
+Weak and amiable generals, whose directions and leadership are vague,
+whose officers' and men's duties are not fixed, and whose dispositions
+are contradictory, produce confusion.
+
+Generals, who are unable to estimate the enemy, who oppose small
+numbers to large, weakness to strength, and who do not put picked men
+in the van of the army, cause it to be routed.
+
+These six things lead to defeat. It is the duty of the general to study
+them carefully.
+
+Ground is the handmaid of victory.
+
+Ability to estimate the enemy, and plan the victory; an eye for
+steepness, command and distances: these are the qualities of the good
+general.
+
+Whosoever knows these things, conquers; he who understands them not, is
+defeated.
+
+If victory be certain from the military standpoint, fight, even if the
+lord forbid.
+
+If defeat be certain from the military standpoint, do not fight, even
+though the lord commands it.
+
+The general who advances, from no thought of his own glory, or retires,
+regardless of punishment; but only strives for the people's welfare,
+and his lord's advantage, is a treasure to the state.
+
+The good general cares for his soldiers, and lovingly treats them as
+his children; as a consequence they follow him through deep valleys,
+and are beside him in death.
+
+Nevertheless, over-care for the soldiers may cause disobedience;
+over-attention may make them unserviceable; over-indulgence may produce
+disorder: they become like spoilt children, and cannot be used.
+
+He who is confident of his own men, but is ignorant that the enemy
+should not be attacked, has no certainty of victory.
+
+He who knows that the enemy may be attacked with advantage, but knows
+not his own men, has no certainty of victory.
+
+Confidence in the troops, right judgment when to attack the enemy, but
+ignorance of the ground, bring uncertain victory.
+
+The wise soldier, once in motion, does not waver, and is never at a
+loss.
+
+As has been said: "Know thyself; know the enemy; fear not for victory."
+
+Also, if the season and the opportunity be realised, and the ground
+known, complete victory is certain.
