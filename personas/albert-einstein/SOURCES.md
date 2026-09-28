@@ -6,7 +6,7 @@
 
 ## Reference-only
 
-No exact Wikisource leaf transcription resolved for *Die Grundlage der allgemeinen Relativitätstheorie* (1916), *Über die spezielle und die allgemeine Relativitätstheorie* (1917), *Äther und Relativitätstheorie* (1920), or *Geometrie und Erfahrung* (1921); no body is copied. Lawson’s 1920 English translation is reference-only because Lawson died in 1960. All other translations are reference-only until their translator’s independent public-domain basis is recorded.
+No exact Wikisource leaf transcription resolved for *Die Grundlage der allgemeinen Relativitätstheorie* (1916), *Äther und Relativitätstheorie* (1920), or *Geometrie und Erfahrung* (1921); no body is copied. Lawson’s 1920 English translation is reference-only because Lawson died in 1960. All other translations are reference-only until their translator’s independent public-domain basis is recorded.
 
 | einstein-inertia-1905 | *Ist die Trägheit eines Körpers von seinem Energieinhalt abhängig?* | Author died 1955; PD life+70 from 2026; pre-1931 US PD. | Yes | German Wikisource. | `sha256:cd39e9f8d9bbd9cce467da02e0a42d0ce7f690b71d34faa8f7fd8740c728d784` |
 | einstein-relativity-1917 | *Über die spezielle und die allgemeine Relativitätstheorie* | Author died 1955; PD life+70 from 2026; pre-1931 US PD. | Yes | Gutenberg 77850; boilerplate and transcriber notes stripped. | `sha256:8649e46c9e87a0124778d89eebb9c717960eb723883138258612c5136cc64a17` |
