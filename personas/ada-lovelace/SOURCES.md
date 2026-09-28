@@ -9,9 +9,10 @@
 | ada-note-e | Lovelace, Note E | Public domain worldwide: Lovelace died in 1852. | Yes | [Gutenberg ebook 75107](https://www.gutenberg.org/ebooks/75107), Scientific Memoirs vol. 3 (1843), retrieved 2026-09-28. | `sha256:19c54b88524fbe551f6086ba73ba098054a778bb430e3ac858e4cbeb7c87698e` |
 | ada-note-f | Lovelace, Note F | Public domain worldwide: Lovelace died in 1852. | Yes | [Gutenberg ebook 75107](https://www.gutenberg.org/ebooks/75107), Scientific Memoirs vol. 3 (1843), retrieved 2026-09-28. | `sha256:7dc9892645e8443ab4f81963a0d99049adbeb7ec5a98dd6095b9095a343ce1b5` |
 | ada-note-g | Lovelace, Note G | Public domain worldwide: Lovelace died in 1852. | Yes | [Gutenberg ebook 75107](https://www.gutenberg.org/ebooks/75107), Scientific Memoirs vol. 3 (1843), retrieved 2026-09-28. | `sha256:91d16d33acaaa5096091d1d2ef0b2ac664646c0086bc3a25dd76878b979d5159` |
+| menabrea-context-1843 | Menabrea translation by Lovelace | Public domain worldwide: Menabrea died 1896 and Lovelace 1852. | Yes, context only | [Gutenberg ebook 75107](https://www.gutenberg.org/ebooks/75107), retrieved 2026-09-28; never mount as Ada voice. | `sha256:b5c7426080e762f0163b937a235c6076ba2c4c03312b54778fdc1951c6358108` |
 
 ## Reference-only correspondence
 
 No letter body is copied. Known holdings include the British Library, Add MS 37192 (Lovelace–Babbage correspondence), and Bodleian Library Babbage Papers. Betty Alexandra Toole, *Ada, the Enchantress of Numbers* (1992), is in copyright and is reference-only.
 
-Menabrea’s translation is historical context only and is not included in Ada-voice source files.
+Menabrea’s translation is labelled context-only and is excluded from Ada voice material.

@@ -7,6 +7,9 @@ def validate(root):
  errors=[]; sources=(root/'SOURCES.md').read_text(); notes=sorted(root.glob('note-?.md'))
  if [p.stem for p in notes]!=[f'note-{x}' for x in 'abcdefg']: errors.append('expected exactly Notes A-G')
  if 'Reference-only correspondence' not in sources or 'Toole' not in sources: errors.append('missing correspondence rights register')
+ context=root/'menabrea-context.md'
+ if not context.exists() or 'role: "context-only; never mount as Ada voice"' not in context.read_text(): errors.append('missing labelled Menabrea context')
+ elif not re.search(r'checksum: "sha256:[0-9a-f]{64}"', context.read_text()): errors.append('Menabrea context missing checksum')
  for p in notes:
   d=p.read_text();
   if not d.startswith('---\n') or d.count('---\n')<2: errors.append(f'{p.name}: missing frontmatter'); continue
