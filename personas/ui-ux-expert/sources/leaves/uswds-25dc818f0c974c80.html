@@ -1,0 +1,3868 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+  <head>
+    <!-- ANALYTICS
+================================================== -->
+
+<!-- Google Analytics - GA4 -->
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KH01P8TN5V"></script>
+	<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-KH01P8TN5V'); </script>
+
+<!-- Digital Analytics Program roll-up, see https://analytics.usa.gov for data -->
+	<script async type="text/javascript" id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA&subagency=TTS"></script>
+
+
+<!-- Basic Page Needs
+================================================== -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+  
+
+  
+
+<!-- Mobile Specific Metas
+================================================== -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Title and meta description
+================================================== -->
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Typography | U.S. Web Design System (USWDS)</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Typography" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Typesetting with USWDS Typesetting controls the readability of a text with the size, style, and spacing of its type. It’s a function of microtypography (how text is styled within a text block) and macrotypography (how content elements are arranged on the page). The more readable a text is the more easily users can understand its content. Text with poor readability turns off readers and can make it challenging for them to stay focused. The U.S. Web Design System controls typesetting values with a token system. You can learn more about typesetting tokens in the Typesetting tokens section and the Utilities section. Accessibility for Teams also provides good guidance around typesetting." />
+<meta property="og:description" content="Typesetting with USWDS Typesetting controls the readability of a text with the size, style, and spacing of its type. It’s a function of microtypography (how text is styled within a text block) and macrotypography (how content elements are arranged on the page). The more readable a text is the more easily users can understand its content. Text with poor readability turns off readers and can make it challenging for them to stay focused. The U.S. Web Design System controls typesetting values with a token system. You can learn more about typesetting tokens in the Typesetting tokens section and the Utilities section. Accessibility for Teams also provides good guidance around typesetting." />
+<link rel="canonical" href="https://designsystem.digital.gov/components/typography/" />
+<meta property="og:url" content="https://designsystem.digital.gov/components/typography/" />
+<meta property="og:site_name" content="U.S. Web Design System (USWDS)" />
+<meta property="og:image" content="https://designsystem.digital.gov/img/uswds-logo/lg-black.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-28T03:12:17+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://designsystem.digital.gov/img/uswds-logo/lg-black.png" />
+<meta property="twitter:title" content="Typography" />
+<meta name="twitter:site" content="@USWDS" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-09-28T03:12:17+00:00","datePublished":"2026-09-28T03:12:17+00:00","description":"Typesetting with USWDS Typesetting controls the readability of a text with the size, style, and spacing of its type. It’s a function of microtypography (how text is styled within a text block) and macrotypography (how content elements are arranged on the page). The more readable a text is the more easily users can understand its content. Text with poor readability turns off readers and can make it challenging for them to stay focused. The U.S. Web Design System controls typesetting values with a token system. You can learn more about typesetting tokens in the Typesetting tokens section and the Utilities section. Accessibility for Teams also provides good guidance around typesetting.","headline":"Typography","image":"https://designsystem.digital.gov/img/uswds-logo/lg-black.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://designsystem.digital.gov/components/typography/"},"url":"https://designsystem.digital.gov/components/typography/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Favicons
+================================================== -->
+  <!-- 128x128 -->
+  <link rel="shortcut icon" type="image/ico" href="/assets/img/favicons/favicon.ico">
+  <link rel="icon" type="image/png" href="/assets/img/favicons/favicon.png">
+
+  <!-- 192x192, as recommended for Android
+  http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
+  -->
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicons/favicon-192.png">
+
+  <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+  <link rel="apple-touch-icon-precomposed" href="/assets/img/favicons/favicon-57.png">
+  <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/img/favicons/favicon-72.png">
+  <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/img/favicons/favicon-114.png">
+  <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/img/favicons/favicon-144.png">
+
+<!-- CSS
+================================================== -->
+<!-- env: production -->
+
+
+  
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  
+
+
+<!-- USWDS INIT
+================================================== -->
+<script>
+  /**
+   * This script block contains the contents of the uswds-init.js script.
+   * It's inlined because it's necessary for the first paint of the banner,
+   * and we want to avoid a round-trip to the server.
+   */
+  (function uswdsInit() {
+    "use strict";
+
+    const loadingClass = "usa-js-loading";
+    let fallback;
+
+    document.documentElement.classList.add(loadingClass);
+    function revertClass() {
+      document.documentElement.classList.remove(loadingClass);
+    }
+
+    fallback = setTimeout(revertClass, 8000);
+
+    function verifyLoaded() {
+      if (window.uswdsPresent) {
+        clearTimeout(fallback);
+        revertClass();
+        window.removeEventListener("load", verifyLoaded, true);
+      }
+    }
+
+    window.addEventListener("load", verifyLoaded, true);
+  })();
+</script>
+<script src="/assets/uswds/components/usa-banner.js.mjs" type="module"></script>
+<link rel="preload" href="/assets/js/vendor/uswds.min.js" as="script">
+  </head>
+  <body class="page-typography layout-styleguide ">
+    <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+<section
+  class="usa-banner site-banner"
+  aria-label="Official website of the United States government,,,,,,"
+>
+  <div class="usa-accordion">
+    <header class="usa-banner__header">
+      <div class="usa-banner__inner">
+        <div class="grid-col-auto">
+          <img
+            aria-hidden="true"
+            class="usa-banner__header-flag"
+            src="/assets/img/us_flag_small.png"
+            alt=""
+          />
+        </div>
+        <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+          <p class="usa-banner__header-text">
+            An official website of the United States government
+          </p>
+          <p class="usa-banner__header-action">Here’s how you know</p>
+        </div>
+        <button
+          type="button"
+          class="usa-accordion__button usa-banner__button"
+          aria-expanded="false"
+          aria-controls="gov-banner"
+        >
+          <span class="usa-banner__button-text">Here’s how you know</span>
+        </button>
+      </div>
+    </header>
+    <div
+      class="usa-banner__content usa-accordion__content"
+      id="gov-banner"
+    >
+      <div class="grid-row grid-gap-lg">
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img
+            class="usa-banner__icon usa-media-block__img"
+            src="/assets/img/icon-dot-gov.svg"
+            role="img"
+            alt=""
+            aria-hidden="true"
+          />
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Official websites use .gov</strong><br />A
+              <strong>.gov</strong> website belongs to an official government
+              organization in the United States.
+            </p>
+          </div>
+        </div>
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img
+            class="usa-banner__icon usa-media-block__img"
+            src="/assets/img/icon-https.svg"
+            role="img"
+            alt=""
+            aria-hidden="true"
+          />
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Secure .gov websites use HTTPS</strong><br />A
+              <strong>lock</strong> (
+              <span class="icon-lock"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="52"
+                  height="64"
+                  viewBox="0 0 52 64"
+                  class="usa-banner__lock-image"
+                  role="img"
+                  aria-labelledby="banner-lock-description"
+                  focusable="false"
+                >
+                  <title id="banner-lock-title">Lock</title>
+                  <desc id="banner-lock-description">Locked padlock icon</desc>
+                  <path
+                    fill="#000000"
+                    fill-rule="evenodd"
+                    d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z"
+                  />
+                </svg> </span
+              >) or <strong>https://</strong> means you’ve safely connected to
+              the .gov website. Share sensitive information only on official,
+              secure websites.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<header class="usa-header usa-header--extended site-header site-header--dark" role="banner">
+  <div class="usa-navbar site-header__navbar">
+    <div class="usa-logo site-logo" id="logo">
+      <em class="usa-logo__text site-logo__text">
+        <a href="/" title="U.S. Web Design System (USWDS) Home">
+          <span aria-hidden="true" class="site-title--short">USWDS</span>
+          <span class="site-title--long">U.S. Web Design System (USWDS)</span>
+        </a>
+      </em>
+    </div>
+    <button type="button" class="usa-menu-btn">Menu</button>
+  </div>
+</header>
+<nav aria-label="Primary navigation" class="usa-nav site-nav sticky">
+  <div class="usa-nav__inner site-nav__inner">
+    <button type="button" class="usa-nav__close">
+      <img src="/assets/img/usa-icons/close.svg" role="img" alt="Close">
+    </button>
+    <!-- Mobile nav -->
+    <ul class="usa-nav__primary usa-nav__primary--mobile usa-accordion">
+      
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<button type="button" class="usa-accordion__button usa-nav__link" aria-controls="nav-how-to-use-uswds"
+  aria-expanded="false"
+  >
+  <span>
+    How to use USWDS
+  </span>
+</button>
+<ul id="nav-how-to-use-uswds" class="usa-nav__submenu">
+  
+  
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/how-to-use-uswds/">
+  <span>
+    How to use USWDS
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/getting-started-for-developers/">
+  <span>
+    Getting started for developers
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/getting-started-for-designers/">
+  <span>
+    Getting started for designers
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/developers/">
+  <span>
+    Documentation
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/settings/">
+  <span>
+    Settings
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/maturity-model/">
+  <span>
+    USWDS maturity model
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/accessibility/">
+  <span>
+    Accessibility
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/performance/">
+  <span>
+    Performance guidelines
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/code-guidelines/">
+  <span>
+    Code guidelines
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/migration/">
+  <span>
+    Migrating to USWDS 3.0
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/migration-v2/">
+  <span>
+    Migrating to USWDS 2.0
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/implementations/">
+  <span>
+    Implementations
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/showcase/">
+  <span>
+    Showcase
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/documentation/sample-contract-language/">
+  <span>
+    Sample contract language for 21st Century IDEA
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/website-standards/">
+  <span>
+    Website standards
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+</ul>
+
+  
+  </li>
+
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<a href="/design-principles/">
+  <span>
+    Design principles
+  </span>
+</a>
+
+
+  
+  </li>
+
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<button type="button" class="usa-accordion__button usa-nav__link" aria-controls="nav-components"
+  
+  class="usa-current"
+  aria-expanded="true"
+  >
+  <span>
+    Components
+  </span>
+</button>
+<ul id="nav-components" class="usa-nav__submenu">
+  
+  
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/">
+  <span>
+    Components
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/accordion/">
+  <span>
+    Accordion
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/alert/">
+  <span>
+    Alert
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/banner/">
+  <span>
+    Banner
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/breadcrumb/">
+  <span>
+    Breadcrumb
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/button/">
+  <span>
+    Button
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/button-group/">
+  <span>
+    Button group
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/card/">
+  <span>
+    Card
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/character-count/">
+  <span>
+    Character count
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/checkbox/">
+  <span>
+    Checkbox
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/collection/">
+  <span>
+    Collection
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/combo-box/">
+  <span>
+    Combo box
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/data-visualizations/">
+  <span>
+    Data visualizations
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/date-picker/">
+  <span>
+    Date picker
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/date-range-picker/">
+  <span>
+    Date range picker
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/file-input/">
+  <span>
+    File input
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/footer/">
+  <span>
+    Footer
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/form/">
+  <span>
+    Form
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/layout-grid/">
+  <span>
+    Grid
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/header/">
+  <span>
+    Header
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/icon/">
+  <span>
+    Icon
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/icon-list/">
+  <span>
+    Icon list
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/identifier/">
+  <span>
+    Identifier
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/in-page-navigation/">
+  <span>
+    In-page navigation
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/input-mask/">
+  <span>
+    Input mask
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/input-prefix-suffix/">
+  <span>
+    Input prefix/suffix
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/language-selector/">
+  <span>
+    Language selector
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/link/">
+  <span>
+    Link
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/list/">
+  <span>
+    List
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/memorable-date/">
+  <span>
+    Memorable date
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/modal/">
+  <span>
+    Modal
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/pagination/">
+  <span>
+    Pagination
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/process-list/">
+  <span>
+    Process list
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/prose/">
+  <span>
+    Prose
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/radio-buttons/">
+  <span>
+    Radio buttons
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/range-slider/">
+  <span>
+    Range slider
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/search/">
+  <span>
+    Search
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/select/">
+  <span>
+    Select
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/side-navigation/">
+  <span>
+    Side navigation
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/site-alert/">
+  <span>
+    Site alert
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/step-indicator/">
+  <span>
+    Step indicator
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/summary-box/">
+  <span>
+    Summary box
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/table/">
+  <span>
+    Table
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/tag/">
+  <span>
+    Tag
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/text-input/">
+  <span>
+    Text input
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/time-picker/">
+  <span>
+    Time picker
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/tooltip/">
+  <span>
+    Tooltip
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item is-current">
+    
+
+<a href="/components/typography/"class="usa-current">
+  <span>
+    Typography
+  </span>
+</a>
+
+    
+    
+    
+    <ul class="usa-nav__submenu">
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/typography/accessibility-tests/">
+  <span>
+    Typography accessibility tests
+  </span>
+</a>
+
+
+    
+  </li>
+
+</ul>
+    
+  
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/components/validation/">
+  <span>
+    Validation
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+</ul>
+
+  
+  </li>
+
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<button type="button" class="usa-accordion__button usa-nav__link" aria-controls="nav-patterns"
+  aria-expanded="false"
+  >
+  <span>
+    Patterns
+  </span>
+</button>
+<ul id="nav-patterns" class="usa-nav__submenu">
+  
+  
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/patterns/">
+  <span>
+    Patterns
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/patterns/intro/">
+  <span>
+    Introducing patterns
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/patterns/create-a-user-profile/">
+  <span>
+    Create a user profile
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/patterns/complete-a-complex-form/">
+  <span>
+    Complete a complex form
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/patterns/select-a-language/">
+  <span>
+    Select a language
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+</ul>
+
+  
+  </li>
+
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<button type="button" class="usa-accordion__button usa-nav__link" aria-controls="nav-design-tokens"
+  aria-expanded="false"
+  >
+  <span>
+    Design tokens
+  </span>
+</button>
+<ul id="nav-design-tokens" class="usa-nav__submenu">
+  
+  
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/">
+  <span>
+    Design tokens
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/color/">
+  <span>
+    Color
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/typesetting/">
+  <span>
+    Typesetting
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/flex/">
+  <span>
+    Flex
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/opacity/">
+  <span>
+    Opacity
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/order/">
+  <span>
+    Order
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/shadow/">
+  <span>
+    Shadow
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/spacing-units/">
+  <span>
+    Spacing units
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/z-index/">
+  <span>
+    Z-index
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+</ul>
+
+  
+  </li>
+
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<button type="button" class="usa-accordion__button usa-nav__link" aria-controls="nav-utilities"
+  aria-expanded="false"
+  >
+  <span>
+    Utilities
+  </span>
+</button>
+<ul id="nav-utilities" class="usa-nav__submenu">
+  
+  
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/">
+  <span>
+    Utilities
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/layout-grid/">
+  <span>
+    Layout grid
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/color/">
+  <span>
+    Color
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/height-and-width/">
+  <span>
+    Height and width
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/margin-and-padding/">
+  <span>
+    Margin and padding
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/border/">
+  <span>
+    Border
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/outline/">
+  <span>
+    Outline
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/font-size-and-family/">
+  <span>
+    Font size and family
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/text-styles/">
+  <span>
+    Text styles
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/paragraph-styles/">
+  <span>
+    Paragraph styles
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/display/">
+  <span>
+    Display
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/flex/">
+  <span>
+    Flex
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/shadow/">
+  <span>
+    Shadow
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/float/">
+  <span>
+    Float
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/clearfix/">
+  <span>
+    Clearfix
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/list-reset/">
+  <span>
+    List reset
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+</ul>
+
+  
+  </li>
+
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<button type="button" class="usa-accordion__button usa-nav__link" aria-controls="nav-templates"
+  aria-expanded="false"
+  >
+  <span>
+    Templates
+  </span>
+</button>
+<ul id="nav-templates" class="usa-nav__submenu">
+  
+  
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/templates/">
+  <span>
+    Templates
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/templates/404-page/">
+  <span>
+    404 page
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/templates/documentation-page/">
+  <span>
+    Documentation page
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/templates/landing-page/">
+  <span>
+    Landing page
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/templates/authentication-pages/">
+  <span>
+    Authentication pages
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/templates/form-templates/">
+  <span>
+    Form templates
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+</ul>
+
+  
+  </li>
+
+  <li class="usa-nav__primary-item">
+  
+  
+    
+
+<button type="button" class="usa-accordion__button usa-nav__link" aria-controls="nav-about"
+  aria-expanded="false"
+  >
+  <span>
+    About
+  </span>
+</button>
+<ul id="nav-about" class="usa-nav__submenu">
+  
+  
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/">
+  <span>
+    About
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/key-benefits/">
+  <span>
+    Key benefits
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/product-values/">
+  <span>
+    Product values
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/contribute/">
+  <span>
+    Contribute
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/community/">
+  <span>
+    Community
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/whats-new/">
+  <span>
+    What’s new
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/monthly-calls/">
+  <span>
+    Monthly call archive
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/product-roadmap/">
+  <span>
+    Product roadmap
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/research/">
+  <span>
+    Research
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/security/">
+  <span>
+    Security
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/website-policies-notices/">
+  <span>
+    Website policies and notices
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+</ul>
+
+  
+  </li>
+
+
+    </ul>
+    <!-- /Mobile nav -->
+    <!-- Desktop nav -->
+    <ul class="usa-nav__primary usa-nav__primary--desktop">
+      
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/how-to-use-uswds/">
+  <span>
+    How to use USWDS
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-principles/">
+  <span>
+    Design principles
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item is-current">
+    
+
+<a href="/components/"class="usa-current">
+  <span>
+    Components
+  </span>
+</a>
+
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/patterns/">
+  <span>
+    Patterns
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/design-tokens/">
+  <span>
+    Design tokens
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/utilities/">
+  <span>
+    Utilities
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/templates/">
+  <span>
+    Templates
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-nav__submenu-item">
+    
+
+<a href="/about/">
+  <span>
+    About
+  </span>
+</a>
+
+
+    
+  </li>
+
+
+    </ul>
+    <!-- /Desktop nav -->
+    <div class="usa-nav__secondary">
+      <form id="search_form-mobile" class="site-search usa-search usa-search--small"
+  action="https://search.usa.gov/search" accept-charset="UTF-8" method="get">
+  <input name="utf8" type="hidden" value="&#x2713;" />
+  <input type="hidden" name="affiliate" id="affiliate-mobile" value="uswds" />
+  <div role="search">
+    <label class="usa-sr-only" for="query-mobile">Search</label>
+    <input
+      id="query-mobile"
+      class="usa-input usagov-search-autocomplete"
+      name="query"
+      type="search"
+      autocomplete="off" />
+    <button class="site-search__button usa-button margin-top-0" type="submit" name="commit">
+      <img
+        src="/assets/img/usa-icons-bg/search--white.svg"
+        class="usa-search__submit-icon"
+        alt="Search"
+      >
+    </button>
+  </div>
+</form>
+
+      <div class="site-cta-buttons buttons">
+  <a
+    class="usa-button site-button-outline-secondary site-button-standards margin-x-0 desktop:margin-right-1 padding-x-05 desktop:padding-left-1 desktop:padding-right-05 desktop-lg:padding-left-205 desktop-lg:padding-right-2 font-lang-sm"
+    href="/website-standards/"
+    onclick="ga('send', 'event', 'Read website standards', 'Clicked Read website standards from inside site');"
+  >
+    Read website standards
+  </a>
+  <a
+    class="usa-button site-button-outline-secondary site-button-download margin-x-0 desktop:margin-right-1 desktop:padding-left-1 desktop:padding-right-05 desktop-lg:padding-left-205 desktop-lg:padding-right-2 font-lang-sm"
+    href="/download/"
+    onclick="ga('send', 'event', 'Downloaded code and design files', 'Clicked Download code and design files from inside site');"
+  >
+    Download <span class="version desktop:display-none desktop-lg:display-inline">v3.14.0</span>
+  </a>
+  <a
+    class="usa-button site-button-github margin-x-0 font-lang-sm"
+    href="https://github.com/uswds/uswds"
+    onclick="ga('send', 'event', 'Viewed on Github', 'Clicked View on Github from inside site');"
+  >
+    <?xml version="1.0" encoding="UTF-8"?><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="33"
+  height="32"
+  viewBox="0 0 33 32"
+  class="logo"
+>
+  <title>Github logo</title>
+  <path
+    fill="#161514"
+    fill-rule="evenodd"
+    d="M16.288 0C7.294 0 0 7.293 0 16.29c0 7.197 4.667 13.302 11.14 15.456.815.15 1.112-.353 1.112-.785 0-.386-.014-1.411-.022-2.77-4.531.984-5.487-2.184-5.487-2.184-.741-1.882-1.809-2.383-1.809-2.383-1.479-1.01.112-.99.112-.99 1.635.115 2.495 1.679 2.495 1.679 1.453 2.489 3.813 1.77 4.741 1.353.148-1.052.569-1.77 1.034-2.177-3.617-.411-7.42-1.809-7.42-8.051 0-1.778.635-3.233 1.677-4.371-.168-.412-.727-2.069.16-4.311 0 0 1.367-.438 4.479 1.67a15.602 15.602 0 0 1 4.078-.549 15.62 15.62 0 0 1 4.078.549c3.11-2.108 4.475-1.67 4.475-1.67.889 2.242.33 3.899.163 4.311 1.044 1.138 1.674 2.593 1.674 4.371 0 6.258-3.809 7.635-7.437 8.038.584.503 1.105 1.497 1.105 3.017 0 2.177-.02 3.934-.02 4.468 0 .436.294.943 1.12.784 6.468-2.159 11.131-8.26 11.131-15.455C32.579 7.293 25.285 0 16.288 0"
+  />
+</svg>
+
+    <span class="text">View on GitHub</span>
+  </a>
+</div>
+
+    </div>
+  </div>
+</nav>
+<div class="usa-overlay"></div>
+
+
+<div class="default-container">
+  <aside class="sidenav" id="page-side-navigation" aria-label="Section navigation">
+    
+    
+    <ul class="site-sidenav usa-sidenav">
+      
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/">
+  
+    Components
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/accordion/">
+  
+    Accordion
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/alert/">
+  
+    Alert
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/banner/">
+  
+    Banner
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/breadcrumb/">
+  
+    Breadcrumb
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/button/">
+  
+    Button
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/button-group/">
+  
+    Button group
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/card/">
+  
+    Card
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/character-count/">
+  
+    Character count
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/checkbox/">
+  
+    Checkbox
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/collection/">
+  
+    Collection
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/combo-box/">
+  
+    Combo box
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/data-visualizations/">
+  
+    Data visualizations
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/date-picker/">
+  
+    Date picker
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/date-range-picker/">
+  
+    Date range picker
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/file-input/">
+  
+    File input
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/footer/">
+  
+    Footer
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/form/">
+  
+    Form
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/utilities/layout-grid/">
+  
+    Grid
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/header/">
+  
+    Header
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/icon/">
+  
+    Icon
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/icon-list/">
+  
+    Icon list
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/identifier/">
+  
+    Identifier
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/in-page-navigation/">
+  
+    In-page navigation
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/input-mask/">
+  
+    Input mask
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/input-prefix-suffix/">
+  
+    Input prefix/suffix
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/language-selector/">
+  
+    Language selector
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/link/">
+  
+    Link
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/list/">
+  
+    List
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/memorable-date/">
+  
+    Memorable date
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/modal/">
+  
+    Modal
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/pagination/">
+  
+    Pagination
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/process-list/">
+  
+    Process list
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/prose/">
+  
+    Prose
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/radio-buttons/">
+  
+    Radio buttons
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/range-slider/">
+  
+    Range slider
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/search/">
+  
+    Search
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/select/">
+  
+    Select
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/side-navigation/">
+  
+    Side navigation
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/site-alert/">
+  
+    Site alert
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/step-indicator/">
+  
+    Step indicator
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/summary-box/">
+  
+    Summary box
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/table/">
+  
+    Table
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/tag/">
+  
+    Tag
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/text-input/">
+  
+    Text input
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/time-picker/">
+  
+    Time picker
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/tooltip/">
+  
+    Tooltip
+  
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item is-current">
+    
+
+<a href="/components/typography/"class="usa-current">
+  
+    Typography
+  
+</a>
+
+    
+    
+    
+    <ul class="usa-sidenav__sublist">
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/typography/accessibility-tests/">
+  
+    Typography accessibility tests
+  
+</a>
+
+
+    
+  </li>
+
+</ul>
+    
+  
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="usa-sidenav__item">
+    
+
+<a href="/components/validation/">
+  
+    Validation
+  
+</a>
+
+
+    
+  </li>
+
+
+    </ul>
+    
+  </aside>
+
+  
+  <div class="usa-in-page-nav-container">
+    <aside class="usa-in-page-nav"
+      aria-label="On this page"
+      data-scroll-offset="48"
+      data-root-margin="48px 0px -90% 0px"
+      data-threshold="1"
+      data-heading-elements=
+    ></aside>
+  
+    <main id="main-content" class="main-content">
+      <div class="styleguide-content usa-prose site-prose">
+        <header>
+          
+            
+              <p class="site-subheading">Components</p>
+            
+          
+          <h1 id="typography" class="site-page-title">Typography</h1>
+        </header>
+
+        <p class="site-text-intro">Government websites need clear and consistent headings, highly legible body paragraphs, clear labels, and easy-to-use input fields. Our default typefaces are designed for legibility and can adapt to a variety of visual tones.</p>
+
+
+
+
+        <!-- Add wcag compliance status tag -->
+        <!-- Add compliance tag -->
+
+
+
+
+
+
+
+<p class="margin-top-0 margin-bottom-4">
+  <span class="usa-tag site-compliance-tag site-compliance-tag--pass">
+    Passed WCAG 2.1 AA
+  </span>
+</p>
+
+
+
+        <h2 id="typesetting-with-uswds">Typesetting with USWDS</h2>
+<p>Typesetting controls the readability of a text with the size, style, and spacing of its type. It’s a function of microtypography (how text is styled within a text block) and macrotypography (how content elements are arranged on the page). The more readable a text is the more easily users can understand its content. Text with poor readability turns off readers and can make it challenging for them to stay focused.</p>
+<p>The U.S. Web Design System controls typesetting values with a token system. You can learn more about typesetting tokens in the <a href="/design-tokens/typesetting/overview/">Typesetting tokens</a> section and the <a href="/utilities/">Utilities</a> section.</p>
+<p><a href="https://digital.gov/guides/accessibility-for-teams/visual-design#typography"> Accessibility for Teams</a> also provides good guidance around typesetting.</p>
+
+<h3 id="font-size">Font size</h3>
+
+<ul class="usa-content-list">
+  <li><strong>Use a comfortable reading size for body text.</strong> For most text, including body copy, use at least an effective size of 16px (<a href="/design-tokens/typesetting/font-size/" class="token">font-size 5</a>). Smaller and larger text can be used sparingly for special purposes (like headings, captions, photo credits, footnotes, data tables, or specialized UI elements).</li>
+  <li><strong>Font size tokens.</strong> The following two points are basic guidelines for selecting font size tokens:
+    <ul>
+      <li>Use tokens between <a href="/design-tokens/typesetting/font-size/" class="token">font-size 5</a> and <a href="/design-tokens/typesetting/font-size/" class="token">font-size 8</a> for most running text.</li>
+      <li>Use tokens smaller than <a href="/design-tokens/typesetting/font-size/" class="token">font-size 5</a> more sparingly — for shorter companion text like captions, footnotes, photo credits, or specialized UI elements.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="text-alignment">Text alignment</h3>
+<p>While right-aligned, centered, and justified text have their place, most websites benefit from a consistent use of left-aligned text. Justified text, common in print, does not yet display well enough in a web browser to be considered a best practice.</p>
+
+<ul class="usa-content-list">
+  <li><strong>Set type flush left.</strong> Type set flush left provides the eye a constant starting point for each line, making text easier to read.</li>
+  <li><strong>Alignment tokens:</strong> none.</li>
+</ul>
+
+<h3 id="measure-line-length">Measure (line length)</h3>
+<p>Controlling the length of lines of text (also known as <em>measure</em>) helps readers’ attention flow easily from one line to the next, making reading more natural and comfortable.</p>
+
+<ul class="usa-content-list">
+  <li><strong>Most lines of text should be 45–90 characters.</strong> The current standard range for readable line length is 45 (<a href="/design-tokens/typesetting/measure/" class="token">measure 1</a>) to 90 characters per line (<a href="/design-tokens/typesetting/measure/" class="token">measure 5</a>). A good target for long texts is 66 characters (<a href="/design-tokens/typesetting/measure/" class="token">measure 2</a>).</li>
+  <li><strong>Text with greater line height can have a longer measure.</strong> Since one of the functions of measure is to help readers move from one line of text to another more naturally, the effects of a long measure can be lessened by increasing the space between lines. Thus, text with more space between lines can have somewhat longer line length.</li>
+  <li><strong>Short passages can have measure outside the ideal range.</strong> In contexts when users will be reading short passages of text (such as footnotes or alerts), you can safely set somewhat longer or shorter lines than usual.</li>
+  <li><strong>Large text can have a shorter measure.</strong> Since larger text takes up more screen real estate, it may make sense to assign it a relatively small measure.</li>
+  <li><strong>Measure tokens.</strong> The following three points are basic guidelines for selecting measure tokens:
+    <ul>
+      <li>Tokens between <a href="/design-tokens/typesetting/measure/" class="token">measure 2</a> and <a href="/design-tokens/typesetting/measure/" class="token">measure 5</a> are appropriate for most long-running text.</li>
+      <li>The <a href="/design-tokens/typesetting/measure/" class="token">measure 6</a> token can be appropriate for shorter blocks of text, like captions of fewer than three lines, or for text that isn’t meant for longform reading.</li>
+      <li>The <a href="/design-tokens/typesetting/measure/" class="token">measure 1</a> token can be appropriate for helper text (no longer than a paragraph or two) or for larger text (like a subheading or intro text).</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="line-height">Line height</h3>
+<p>Line height controls the vertical rhythm and density of a block of text. It is written as a unitless multiplier of the text’s font size — for instance, a line height of 1.5 on 16px text results in a line height of 24px.</p>
+
+<ul class="usa-content-list">
+  <li><strong>Longer texts require more line height.</strong> Headings and other content elements no longer than a line or two can have a line height between 1 (<a href="/design-tokens/typesetting/line-height/" class="token">line-height 1</a>) and 1.35 (<a href="/design-tokens/typesetting/line-height/" class="token">line-height 3</a>). Longer texts should have a line height of at least 1.5 (<a href="/design-tokens/typesetting/line-height/" class="token">line-height 4</a>).</li>
+  <li><strong>Longer lines usually require more line height.</strong> Distinguishing between lines of text can be difficult when the eye has to travel from the end of one long line to the beginning of the next. Using more line height makes it easier for readers to distinguish individual lines. Though, somewhat counterintuitively, long lines of text can benefit from slightly less line height than usual, as too much line height can make each individual line appear too prominent.</li>
+  <li><strong>Readable text has a medium density.</strong> Strive for text that appears neither very dense nor loose. The reader typically shouldn’t notice the space between lines of text.</li>
+  <li><strong>Line height tokens.</strong> The following six points are basic guidelines for selecting line height tokens:
+    <ul>
+      <li>The <a href="/design-tokens/typesetting/line-height/" class="token">line-height 1</a> token is a good option for most buttons and other short UI elements. (This option is often best for clear vertical alignment.)</li>
+      <li>The <a href="/design-tokens/typesetting/line-height/" class="token">line-height 2</a> token is a good option for most headings and introductory text no longer than 1-2 sentences.</li>
+      <li>The <a href="/design-tokens/typesetting/line-height/" class="token">line-height 3</a> token is a good option for short text (under a paragraph), captions, and long lines.</li>
+      <li>The <a href="/design-tokens/typesetting/line-height/" class="token">line-height 4</a> token is a good option when your chunks of running text are a paragraph or two long, especially when using a short measure (like <a href="/design-tokens/typesetting/measure/" class="token">measure 1</a>  or <a href="/design-tokens/typesetting/measure/" class="token">measure 2</a>.</li>
+      <li>The <a href="/design-tokens/typesetting/line-height/" class="token">line-height 5</a> token is a good option for most reading text, especially text meant for extended reading.</li>
+      <li>The <a href="/design-tokens/typesetting/line-height/" class="token">line-height 6</a> token is a good option for shorter text (around 1-2 paragraphs) meant to be distinguished from other page text, like pullquotes.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="whitespace">Whitespace</h3>
+<p>The space around your content elements affects the relationship between these elements. Use less whitespace to group elements and more whitespace to distinguish them from each other.</p>
+
+<ul class="usa-content-list">
+  <li><strong>Don’t indent paragraphs, use whitespace before.</strong> While most longform print design uses indented lines to distinguish paragraphs, it’s more conventional on the web to use unindented paragraphs separated by whitespace.</li>
+  <li><strong>Use at least 1em of whitespace between paragraphs.</strong> To properly separate paragraphs from one another, use the equivalent of one blank line of whitespace between them. Using more than 1.5em disturbs the flow of the text, and using less than 0.5em doesn’t provide enough separation.</li>
+  <li><strong>Use at least 0.5em of whitespace between list items.</strong> List items should also be separated by whitespace, but they need less space than paragraphs because the list item indicator also helps distinguish adjacent items.</li>
+  <li><strong>Headings should be closer to the text they introduce than the text that preceeds them.</strong> It’s important that headings are more visually connected to the text for which they’re the heading than the text of the previous section to reduce ambiguity and cognitive dissonance. Use at least 1.5 times the amount of whitespace above the heading as below it.</li>
+  <li><strong>Text should have sufficient margin on the left and right</strong>. Running text requires right and left margin proportional to the width of the viewport. Use at least <a href="/design-tokens/spacing-units/" class="token">1 unit</a> of margin between the text and the edge of the viewport at mobile widths and at least <a href="/design-tokens/spacing-units/" class="token">2 units</a> on a tablet. Desktop widths can require as much as <a href="/design-tokens/spacing-units/" class="token">4-5 units</a> of minimum horizontal margin between the body of the text and any adjacent elements.</li>
+</ul>
+
+<h3 id="font-style">Font style</h3>
+<p>The style of a typeface affects its readability. In general, serif typefaces are more appropriate for long blocks of text and sans serif typefaces are more appropriate for UIs — but this norm is not a hard-and-fast rule. The conventions of the web are more forgiving of longer, sans serifed texts and serif UIs are not out of the question for sites of a certain tone.</p>
+
+<ul class="usa-content-list">
+  <li><strong>Serif faces can be a good choice for long texts.</strong> Serif typefaces tend to be designed for readability. While they are most useful for true extended longform reading like novels, nonfiction, and essays, any site that requires long stretches of continuous reading could benefit from using a serif body typeface.</li>
+  <li><strong>Neutral faces can be a good choice for interfaces.</strong> UIs are the practical expression of a site’s organization and functionality. A straightforward and neutral typeface can help the user focus on using the interface as a tool.</li>
+  <li><strong>Avoid long sections of italic or bold text.</strong> Both italic and bold text can degrade readability. Both are best used for limited sections of contrast. Consider replacing long sections of bold or italic text with a callout box, a section header, or some other technique that avoids extended stretches of styled text.</li>
+  <li><strong>Avoid long sections of uppercase text.</strong> Uppercase text has a serious negative effect on readability. Unless mandated by law, consider other type treatments for any uppercase text longer than just a few words.</li>
+</ul>
+
+<h3 id="letterspacing">Letterspacing</h3>
+<p>Letterspacing is the spacing between individual letterforms in a block of text. Typically, letterspacing is defined by the type designer and shouldn’t be modified. Certain situations, however, can call for letterspacing adjustments.</p>
+
+<ul class="usa-content-list">
+  <li><strong>Very small text can use looser letterspacing.</strong> At very small type sizes, extra letterspacing improves readability. Consider using <a href="/design-tokens/typesetting/letterspacing/" class="token">letterspacing 1</a> when using <a href="/design-tokens/typesetting/font-size/" class="token">font size micro</a> or <a href="/design-tokens/typesetting/font-size/" class="token">font size 1</a>.</li>
+  <li><strong>Very large text can use tighter letterspacing.</strong> Tighter letterspacing can improve large headings. Headings of <a href="/design-tokens/typesetting/font-size/" class="token">font-size 9+</a> could use <a href="/design-tokens/typesetting/letterspacing/" class="token">letterspacing -1</a>. Headings of <a href="/design-tokens/typesetting/font-size/" class="token">font-size 12+</a> could use <a href="/design-tokens/typesetting/letterspacing/" class="token">letterspacing -2</a>. Headings of <a href="/design-tokens/typesetting/font-size/" class="token">font-size 17+</a> could use <a href="/design-tokens/typesetting/letterspacing/" class="token">letterspacing -3</a>.</li>
+  <li><strong>Text set in uppercase or small caps should use looser letterspacing.</strong> Uppercase text and small caps can appear too tight with normal letterspacing. Consider using <a href="/design-tokens/typesetting/letterspacing/" class="token">letterspacing 1</a> with uppercase buttons and <a href="/design-tokens/typesetting/letterspacing/" class="token">letterspacing 2-3</a> with longer stretches of uppercase or small cap text (like acronyms or section intros).</li>
+</ul>
+
+<h2 id="included-typefaces">Included typefaces</h2>
+<h3 class="usa-heading-alt">Source Sans Pro</h3>
+<div class="grid-row grid-gap">
+  <div class="tablet:grid-col usa-prose site-prose">
+    <p>Source Sans Pro, designed by Paul D. Hunt, is an open-source sans serif typeface created for legibility in UI design. With a variety of weights that read easily at all sizes, Source Sans Pro provides clear headers as well as highly readable body text.</p>
+    <p>Inspired by 20th-century American gothic typeface design, its slender but open letters offer a clean and friendly simplicity. Advanced hinting allows Source Sans Pro to render well on Windows systems, which run Cleartype, and across browsers and devices. Moreover, it supports a variety of languages and alphabets, including Western and European languages, Vietnamese, pinyin Romanization of Chinese, and Navajo.</p>
+  </div>
+
+  <div class="typography-sans-intro tablet:grid-col">
+    <span class="text-huge">Aa</span>
+    <div>
+      <p class="text-tiny">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
+      <p class="text-tiny">a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+      <p class="text-tiny">0 1 2 3 4 5 6 7 8 9</p>
+    </div>
+  </div>
+</div>
+
+<h3 class="usa-heading-alt">Merriweather</h3>
+<div class="grid-row grid-gap">
+  <div class="tablet:grid-col">
+    <p>Merriweather, designed by Sorkin Type, is an open-source serif typeface designed for on-screen reading. This font is ideal for text-dense design: the letterforms have a tall x-height but remain relatively small, making for excellent readability across screen sizes while not occupying extra horizontal space.</p>
+    <p>The combination of thin and thick weights gives the typeface stylistic range while conveying a desirable mix of classic, yet modern, simplicity. Merriweather communicates warmth and credibility at both large and small font sizes.</p>
+  </div>
+
+  <div class="typography-serif-intro tablet:grid-col font-alt-md">
+    <span class="text-huge">Aa</span>
+    <div>
+      <p class="text-tiny">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
+      <p class="text-tiny">a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+      <p class="text-tiny">0 1 2 3 4 5 6 7 8 9</p>
+    </div>
+  </div>
+</div>
+
+<h3 class="usa-heading-alt">Public Sans</h3>
+<div class="grid-row grid-gap">
+  <div class="tablet:grid-col">
+    <p><a href="https://github.com/uswds/public-sans">Public Sans</a> (available on GitHub) is an open-source sans serif typeface designed and maintained by the Design System and derived from <a href="https://github.com/impallari/Libre-Franklin">Libre Franklin</a> (also available on GitHub). It is a strong, neutral, principles-driven typeface for text or display based on a traditional American form. (The Franklin form is most noticeable in the two-story design of the “g” character.) It uses metrics similar to common system fonts for smoother progressive enhancement. It has a plain, straightforward style, appropriate for interfaces and running text. Its large x-height makes it legible at small sizes. It features a broad range of weights — and its heavier weights have tighter letterspacing than its lighter weights, meaning running text (which tends to be relatively small) is spaced more generously and headings (which tend to be relatively large) are more compact. It has tabular numerals for aligning numbers in tables.</p>
+  </div>
+  <div class="typography-lang-intro tablet:grid-col font-alt-md">
+    <span class="text-huge">Aa</span>
+    <div>
+      <p class="text-tiny">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
+      <p class="text-tiny">a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+      <p class="text-tiny">0 1 2 3 4 5 6 7 8 9</p>
+    </div>
+  </div>
+</div>
+
+<h3 class="usa-heading-alt">Roboto Mono</h3>
+<div class="grid-row grid-gap">
+  <div class="tablet:grid-col">
+    <p>Roboto Mono, designed by Christian Robinson, is a monospaced addition to the Roboto type family. Like the other members of the Roboto family, the fonts are optimized for readability on screens across a wide variety of devices and reading environments.</p>
+    <p>Special consideration is given to glyphs important for reading and writing code. Letters with similar shapes are easy to tell apart.</p>
+  </div>
+
+  <div class="typography-mono-intro tablet:grid-col font-alt-md">
+    <span class="text-huge">Aa</span>
+    <div>
+      <p class="text-tiny">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
+      <p class="text-tiny">a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+      <p class="text-tiny">0 1 2 3 4 5 6 7 8 9</p>
+    </div>
+  </div>
+</div>
+
+
+        
+
+
+
+<h2 id="changelog" class="site-component-section-title">Latest updates</h2><p>Meaningful code and guidance updates are listed in the following table:</p>
+  
+    
+
+
+
+
+
+
+
+
+
+
+<table class="usa-table--borderless site-table-responsive site-table-simple">
+  <thead>
+    <tr>
+      <th scope="col" class="tablet:grid-col">Date</th>
+      <th scope="col" class="tablet:grid-col tablet:padding-left-0">USWDS version</th>
+      <th scope="col" class="tablet:grid-col">Affects</th>
+      <th scope="col" class="tablet:grid-col site-changelog--hide-tablet">Breaking</th>
+      <th scope="col" class="tablet:grid-col-6">Description</th>
+    </tr>
+  </thead>
+  <tbody class="font-lang-3xs">
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2024-03-20</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        N/A
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+          
+          
+            <li><span class="output-neutral">Guidance</span></li>
+          
+          
+          
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Added WCAG compliance tag.
+
+          </strong>
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds-site/pull/2540">
+              uswds-site#2540
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2023-06-09</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        <span class="font-mono-3xs">
+          <a href="https://github.com/uswds/uswds/releases/tag/v3.5.0">
+            3.5.0
+          </a>
+        </span>
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+          
+          
+          
+          
+          
+            <li><span class="output-neutral">Styles</span></li>
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Stopped using font smoothing.
+
+          </strong>
+          
+            No longer use font smoothing for dark backgrounds and disabled buttons.
+
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds/pull/5250">
+              uswds#5250
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2023-03-09</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        <span class="font-mono-3xs">
+          <a href="https://github.com/uswds/uswds/releases/tag/v3.4.0">
+            3.4.0
+          </a>
+        </span>
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+          
+          
+            <li><span class="output-neutral">Guidance</span></li>
+          
+          
+          
+          
+          
+            <li><span class="output-neutral">Settings</span></li>
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          No
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+          <strong>
+            Use only <code class="language-plaintext highlighter-rouge">woff2</code> in our <code class="language-plaintext highlighter-rouge">@font-face</code> declarations.
+
+          </strong>
+          
+            Since modern browsers only need the <code class="language-plaintext highlighter-rouge">woff2</code> font format, we now only output <code class="language-plaintext highlighter-rouge">woff2</code> fonts in our <code class="language-plaintext highlighter-rouge">@font-face</code> rules. If you need <code class="language-plaintext highlighter-rouge">woff</code> and <code class="language-plaintext highlighter-rouge">ttf</code> for IE11 compatibility, set <code class="language-plaintext highlighter-rouge">$theme-font-browser-compatibility</code> to <code class="language-plaintext highlighter-rouge">true</code> in settings.
+
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds/pull/5108">
+              uswds#5108
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td data-title="Date" class="tablet:grid-col">
+        
+          <span class="font-mono-3xs">2022-04-28</span>
+        
+      </td>
+      <td data-title="USWDS version" class="tablet:grid-col tablet:padding-left-0">
+        
+        <span class="font-mono-3xs">
+          <a href="https://github.com/uswds/uswds/releases/tag/v3.0.0">
+            3.0.0
+          </a>
+        </span>
+        
+      </td>
+      <td data-title="Affects" class="tablet:grid-col">
+        <ul class="add-list-reset">
+          
+          
+            <li><span class="output-neutral">Assets</span></li>
+          
+          
+          
+          
+            <li><span class="output-neutral">JavaScript</span></li>
+          
+          
+          
+            <li><span class="output-neutral">Styles</span></li>
+          
+          
+        </ul>
+      </td>
+      <td data-title="Breaking" class="tablet:grid-col site-changelog--hide-tablet">
+        
+          <span class="output-false">Breaking</span>
+        
+      </td>
+      <td data-title="Description" class="tablet:grid-col-6">
+        
+        <p class="measure-6">
+          
+            <span class="site-changelog--show-tablet output-false">Breaking</span>
+          
+          <strong>
+            Updated to Sass module syntax and new package structure.
+
+          </strong>
+          
+          
+            More information:
+            <a href="https://github.com/uswds/uswds/pull/4656">
+              uswds#4656
+            </a>
+          
+        </p>
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+  
+
+      </div>
+    </main>
+  
+  </div>
+  
+</div>
+
+
+
+
+
+  
+  <script src="https://touchpoints.app.cloud.gov/touchpoints/5c2410e4.js" async></script>
+
+
+
+
+
+
+<section class="touchpoints__container" role="complementary" aria-label="Page feedback">
+  
+    <button type="button" class="usa-button site-button usa-button--outline" id="touchpoints-modal-button" aria-label="Provide feedback about this page" tabindex="0">Was this page helpful?</button>
+  
+</section>
+
+
+
+<footer class="usa-footer site-footer">
+  <div class="usa-footer__secondary-section">
+    <div class="grid-container footer-content">
+      <h2>Become part of the community</h2>
+      <p>
+        USWDS is an active open source community of government engineers, content specialists, and designers. Our contributors both in and out of government support dozens of agencies and nearly 200 sites.
+      </p>
+      <div class="grid-row footer-contact-links">
+        
+          <div class="tablet:grid-col">
+            <div class="usa-media-block">
+              <div class="usa-media-block__img circle-5 bg-accent-cool display-flex flex-row flex-align-center flex-justify-center text-white">
+                <svg class="usa-icon usa-icon--size-3" aria-hidden="true" role="img" focusable="false">
+                  <use href="/assets/img/sprite.svg#help"></use>
+                </svg>
+              </div>
+              <div class="usa-media-block__body">
+                <h3>Have an idea or an issue?</h3>
+                <a href="https://github.com/uswds/uswds/issues/new/choose">Reach out in GitHub</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="tablet:grid-col">
+            <div class="usa-media-block">
+              <div class="usa-media-block__img circle-5 bg-accent-cool display-flex flex-row flex-align-center flex-justify-center text-white">
+                <svg class="usa-icon usa-icon--size-3" aria-hidden="true" role="img" focusable="false">
+                  <use href="/assets/img/sprite.svg#people"></use>
+                </svg>
+              </div>
+              <div class="usa-media-block__body">
+                <h3>Engage with the community</h3>
+                <a href="https://designsystem.digital.gov/about/community/">Find a channel that works for you</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="tablet:grid-col">
+            <div class="usa-media-block">
+              <div class="usa-media-block__img circle-5 bg-accent-cool display-flex flex-row flex-align-center flex-justify-center text-white">
+                <svg class="usa-icon usa-icon--size-3" aria-hidden="true" role="img" focusable="false">
+                  <use href="/assets/img/sprite.svg#mail"></use>
+                </svg>
+              </div>
+              <div class="usa-media-block__body">
+                <h3>Subscribe to our newsletter</h3>
+                <a href="https://public.govdelivery.com/accounts/USGSATTS/subscriber/new?qsp=GSA_TTS">Sign up for USWDS updates</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="tablet:grid-col">
+            <div class="usa-media-block">
+              <div class="usa-media-block__img circle-5 bg-accent-cool display-flex flex-row flex-align-center flex-justify-center text-white">
+                <svg class="usa-icon usa-icon--size-3" aria-hidden="true" role="img" focusable="false">
+                  <use href="/assets/img/sprite.svg#support"></use>
+                </svg>
+              </div>
+              <div class="usa-media-block__body">
+                <h3>Get support</h3>
+                <a href="mailto:uswds@gsa.gov">Email the USWDS team</a>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+
+    <div class="bg-base-light padding-y-1 line-height-sans-3 font-lang-4">
+      <div class="grid-container">
+        Looking for USWDS v1 documentation?
+        <a
+          href="https://v1.designsystem.digital.gov"
+          class="text-ink text-bold hover:text-no-underline"
+          >Visit v1.designsystem.digital.gov</a
+        >
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<div class="usa-identifier site-identifier">
+  <section
+    class="usa-identifier__section usa-identifier__section--masthead"
+    aria-label="Agency identifier,,,,,,"
+  >
+    <div class="usa-identifier__container">
+      <div class="usa-identifier__logos"><a href="javascript:void(0);" class="usa-identifier__logo">
+          <img
+            class="usa-identifier__logo-img"
+            src="/img/gsa-logo.svg"
+            alt="GSA Logo"
+            role="img"
+            width="48"
+            height="48"
+          >
+        </a></div>
+      <section class="usa-identifier__identity" aria-label="Agency description">
+        <p class="usa-identifier__identity-domain">designsystem.digital.gov</p>
+        <p class="usa-identifier__identity-disclaimer"><span aria-hidden="true">An </span>official website of the <a href=https://gsa.gov>General Services Administration</a></p>
+      </section>
+    </div>
+  </section>
+  <nav class="usa-identifier__section usa-identifier__section--required-links" aria-label="Important links">
+      <div class="usa-identifier__container">
+        <ul class="usa-identifier__required-links-list"><li class="usa-identifier__required-links-item">
+            <a href="https://www.gsa.gov/about-us" class="usa-identifier__required-link">About GSA</a>
+          </li><li class="usa-identifier__required-links-item">
+            <a href="https://www.gsa.gov/website-information/accessibility-statement" class="usa-identifier__required-link">Accessibility statement</a>
+          </li><li class="usa-identifier__required-links-item">
+            <a href="https://www.gsa.gov/reference/freedom-of-information-act-foia" class="usa-identifier__required-link">FOIA requests</a>
+          </li><li class="usa-identifier__required-links-item">
+            <a href="https://www.gsa.gov/reference/civil-rights-programs/notification-and-federal-employee-antidiscrimination-and-retaliation-act-of-2002" class="usa-identifier__required-link">No FEAR Act data</a>
+          </li><li class="usa-identifier__required-links-item">
+            <a href="https://www.gsaig.gov/" class="usa-identifier__required-link">Office of the Inspector General</a>
+          </li><li class="usa-identifier__required-links-item">
+            <a href="https://www.gsa.gov/about-gsa/newsroom/budget-and-performance" class="usa-identifier__required-link">Performance reports</a>
+          </li><li class="usa-identifier__required-links-item">
+            <a href="https://www.gsa.gov/website-information/website-policies" class="usa-identifier__required-link">Privacy policy</a>
+          </li></ul>
+      </div>
+  </nav>
+  <section class="usa-identifier__section usa-identifier__section--usagov" aria-label="Government information and services">
+    <div class="usa-identifier__container">
+      <div class="usa-identifier__usagov-description">
+        Looking for U.S. government information and services?
+      </div>
+      <a href="https://www.usa.gov/" class="usa-link">Visit USA.gov</a>
+    </div>
+  </section>
+</div>
+
+
+
+    <script src="/assets/js/styleguide.js"></script>
+
+<script src="/assets/js/vendor/uswds.min.js"></script>
+<!--<script>
+//<![CDATA[
+      var usasearch_config = { siteHandle:"uswds" };
+
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "//search.usa.gov/javascripts/remote.loader.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+
+//]]>
+</script>
+-->
+
+  </body>
+</html>
