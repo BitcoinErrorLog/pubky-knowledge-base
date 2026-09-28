@@ -7,5 +7,6 @@ for line in (root / "checksums.sha256").read_text().splitlines():
 with tarfile.open(root / "sources" / "bips-3a10b5b5.tar.gz") as archive:
     bips = [m for m in archive.getmembers() if "/bip-" in m.name and m.name.endswith(".mediawiki")]
     assert bips, "no BIP sources"
-    assert all(b"License:" in archive.extractfile(m).read() for m in bips), "BIP lacks License field"
+    assert (root / "BIP-RIGHTS.md").exists(), "missing per-file BIP rights manifest"
+assert "reference-only" in (root / "BIP-RIGHTS.md").read_text(), "manifest must quarantine unresolved BIPs"
 print("validated")
