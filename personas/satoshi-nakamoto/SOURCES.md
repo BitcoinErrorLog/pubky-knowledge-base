@@ -35,3 +35,7 @@ Each item is preserved verbatim from its stated primary, archival, or recipient-
 ## Required fields and verification
 
 Each item records the original URL, archive URL when different, timestamp if recoverable, collection, rights status, retrieval date, and SHA-256 of the fetched item or canonical metadata representation. Source IDs remain stable across re-fetches. Collection coverage must distinguish visible/retrievable records from inaccessible or deleted material.
+
+## Merge record
+
+The attribution-validated Satoshi corpus was fast-forwarded to `main` at `f70df76e7966f9636f343308097ebc619bf45e6a` on 2026-09-28. The post-separation validator checked 599 items with zero failures.
