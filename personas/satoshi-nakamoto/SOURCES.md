@@ -16,6 +16,7 @@ Each item is preserved verbatim from its stated primary, archival, or recipient-
 | P2P Research list | 5 index entries | Verbatim | SNI archival text; original work rights remain item-specific | https://satoshi.nakamotoinstitute.org/emails/p2p-research/ |
 | Recipient-published correspondence | Recipient-specific | Verbatim where fetched | Recipient-controlled publication; provenance remains per item | https://mmalmi.github.io/satoshi/ |
 | Bitcoin source and release artefacts, 0.1–0.3.x | 3 hash-qualified snapshots | Verbatim | MIT/X11 only, preserving notices | https://github.com/bitcoin/bitcoin |
+| COPA v Wright judgment | 2 provenance passages | Verbatim judgment extract | Quoted in judgment; not represented as a full email | https://www.judiciary.uk/judgments/copa-v-wright/ |
 
 ## Hard exclusions
 
@@ -23,6 +24,11 @@ Each item is preserved verbatim from its stated primary, archival, or recipient-
 - Post-2011 account activity, including the disputed 2014 P2P Foundation post and known account compromise activity.
 - Leaked or hacked correspondence, credentials, addresses, keys, wallet claims, unpublished attachments, and court-exhibit scans without a recipient-controlled original publication.
 - Modern quote compilations, translations without separate clearance, commentary, and third-party text quoted within a Satoshi message.
+
+## Explicitly unavailable
+
+- Hal Finney and Gavin Andresen correspondence: no recipient-controlled publication or court-record extract containing the email text was located in this bounded source sweep.
+- Adam Back correspondence: SNI’s full email index contains only Cryptography, bitcoin-list, and P2P Research collections, not an Adam Back collection. The High Court judgment records Back’s August 2008 and January 2009 exchanges but does not reproduce the full email text. Two judgment passages are retained only as judicial provenance records.
 
 ## Required fields and verification
 
