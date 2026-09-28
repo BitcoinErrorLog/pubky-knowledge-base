@@ -54,3 +54,7 @@ reference-only: neither is copied into this corpus. Material Design guidance is
 also reference-only until a fetched, specific guideline page demonstrates its
 own CC BY 4.0 grant. Pubky App is MIT-licensed, but its component and design
 documentation requires a pinned-source fetch pass before it is added.
+
+`https://web.dev/learn/pwa/` is reference-only: the retrieved overview did not
+carry a directly verifiable CC BY 4.0 footer. The remaining stored web.dev PWA
+pages each carried that footer at retrieval.
