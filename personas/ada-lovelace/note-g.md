@@ -7,7 +7,7 @@ archive_url: "https://www.gutenberg.org/ebooks/75107"
 source_collection: "Project Gutenberg ebook 75107, transcribed from Scientific Memoirs volume 3 (1843)"
 rights_status: "Lovelace died in 1852; the 1843 Notes are public domain worldwide under ordinary life-plus-70 terms"
 retrieval_date: "2026-09-28"
-checksum: "sha256:91d16d33acaaa5096091d1d2ef0b2ac664646c0086bc3a25dd76878b979d5159"
+checksum: "sha256:c364e8589cc29798b7dc0475b862dfeb6646839bae0d43dd364b7369d73bac24"
 ---
 
 NOTE G.—Page 24.
@@ -77,7 +77,11 @@ passage of values through zero and infinity. The practicability of
 causing it arbitrarily to change its processes at any moment, on the
 occurrence of any specified contingency (of which its substitution of
 
-for () explained in Note E.,
+1/2 cos.Overline(n+1)theta+1/2 cos.overline(n-1)theta
+
+for (
+(cos.ntheta.cos.theta)
+) explained in Note E.,
 is in some degree an illustration), at once secures this point.
 
 The subject of integration and of differentiation demands some notice.
@@ -99,22 +103,66 @@ Consequently, if instead of requiring the value of the function, we
 require that of its integral, or of its differential coefficient, we
 have merely to order whatever particular combination of the ingredient
 quantities may constitute that integral or that coefficient. In
+
+ax^{n}
 , for instance, instead of the quantities
 
-being ordered to appear on  in the combination
+V_0
+
+V_1
+
+V_2
+
+V_3
+
+underbrace envolving a, n, x and a x^{n} enclosed in box
+
+a x^{n}
+
+being ordered to appear on
+V_3
+ in the combination
+
+a x^{n}
 , they would be ordered to appear in that of
+
+anx^{n-1}
 
 They would then stand thus:—
 
-Similarly, we might have , the integral of
+V_0
+
+V_1
+
+V_2
+
+V_3
+
+underbrace envolving a, n, x and anx^{n-1} enclosed in box
+
+{an x^{n-1} enclosed in a box
+
+Similarly, we might have
+a/nx^(n+1)
+, the integral of
+
+ax_{n}
 .
 
 An interesting example for following out the processes of the engine
 would be such a form as
 
+int {x^{n}dx}/sqrt{a^{2}-x^{2}}
+
 or any other cases of integration by successive reductions, where an
-integral which contains an operation repeated  times can be made
-to depend upon another which contains the same  or
+integral which contains an operation repeated
+n
+ times can be made
+to depend upon another which contains the same
+n-1
+ or
+n-1
+
 times, and so on until by continued reduction we arrive at a certain
 ultimate form, whose value has then to be determined.
 
@@ -130,13 +178,21 @@ through which the engine could compute the Numbers of Bernoulli, this
 being (in the form in which we shall deduce it) a rather complicated
 example of its powers. The simplest manner of computing those numbers
 would be from the direct expansion of
+
+x/e^x-1=1/1-x/2+x^2/2.3+x^3/2.34+&c
 [Pg 59]
 which is in fact a particular case of the development of
+
+{a+b x+c x^{2}+\& c.}}/{a′+b′x+c'x^{2}+\&c.}}
 
 mentioned in Note E. Or again, we might compute them from the
 well-known form
 
+B_{2 n-1}=2.{1.2.3... 2n}/{(2pi)^{2n}}.{1+{1}/{2^{2 n}}+{1/}{3^{2n}}+...}
+
 or from the form
+
+array of equations
 
 or from many others. As however our object is not simplicity or
 facility of computation, but the illustration of the powers of the
@@ -145,55 +201,142 @@ derived in the following manner:—
 
 If in the equation
 
-(in which ,  ..., &c. are the
+{x}/{epsilon^{x}-1}=1-{x}{2}+{B}_1{x^{2}}/{2}+{B}_3{x^{4}}/{2.3.4}+{B}_5{x^{6}/{2.3.4.5.6+...}
+
+(in which
+B_1
+,
+B_3
+ ..., &c. are the
 Numbers of Bernoulli), we expand the denominator of the first side in
-powers of , and then divide both numerator and denominator by
+powers of
+x
+, and then divide both numerator and denominator by
+
+x
 , we shall derive
+
+1=(1-x/2+B_1x^2/2+B_3x^4/2.34+...)(1+x/2+x^2/2.3+x^3/2.34+...
 
 If this latter multiplication be actually performed, we shall have a
 series of the general form
 
+1+D_1x+D_2x^2+D_3x^3+...
+
 in which we see, first, that all the coefficients of the powers of
+
+x
  are severally equal to zero; and secondly, that the general form
-for  the coefficient of the 2()th term
-(that is of  even any power of ), is the
+for
+D_{2n}
+ the coefficient of the 2(
+n+1
+)th term
+(that is of
+x^{2n}
+ even any power of
+x
+), is the
 following:—
 
+array of equations
+
 [Pg 60]
-Multiplying every term by () we have
+Multiplying every term by (
+2.3...2n
+) we have
+
+array of equations
 
 which it may be convenient to write under the general form:—
 
-, , &c. being those functions of  which respectively belong to
-, , &c.
+0=A_0A_1B_1+A_3B_3A_5+...+B^{2n-1}
+
+A_1
+,
+A_3
+, &c. being those functions of
+n
+ which respectively belong to
+
+B_1
+,
+B_3
+, &c.
 
 We might have derived a form nearly similar to (8.), from
+
+{D}_{2n-1}
  the coefficient of any odd power of
+
+x
  in (6.); but the general form is a little different for the
 coefficients of the odd powers, and not quite so convenient.
 
 On examining (7.) and (8.), we perceive that, when these formulæ
 are isolated from (6.) whence they are derived, and considered in
-themselves separately and independently,  may be any whole
+themselves separately and independently,
+n
+ may be any whole
 number whatever; although when (7.) occurs as one of the
-’s in (6.), it is obvious that  is then not
+
+D′s
+’s in (6.), it is obvious that
+n
+ is then not
 arbitrary, but is always a certain function of the distance of
-that  from the beginning. If that distance be
-= , then
+that
+D
+ from the beginning. If that distance be
+=
+d
+, then
+
+array of equations
 
 It is with the independent formula (8.) that we have to do.
 Therefore it must be remembered that the conditions for the value of
- are now modified, and that  is a perfectly arbitrary
+
+n
+ are now modified, and that
+n
+ is a perfectly arbitrary
 whole number. This circumstance, combined with the fact (which we may
-easily perceive) that whatever  is, every term of (8.) after the
-()th is = 0, and that the ()th term itself is always
+easily perceive) that whatever
+n
+ is, every term of (8.) after the
+(
+n+1
+)th is = 0, and that the (
+n+1
+)th term itself is always
+
+{B}_{2n-1}.1/{B}_{2n-1}
  enables us
-to find the value (either numerical or algebraical) of any th
-Number of Bernoulli , in terms of all the
-preceding ones, if we but know the values of ,
- ... . We append to this Note
+to find the value (either numerical or algebraical) of any
+n
+th
+Number of Bernoulli
+{B}_{2n-1}
+, in terms of all the
+preceding ones, if we but know the values of
+B_1
+,
+
+B_3
+ ...
+{B}_{2n-3}
+. We append to this Note
 a Diagram and Table, containing the details of the computation for
-, (, ,
+
+B_7
+, (
+B_1
+,
+B_3
+,
+B_5
+
 being supposed given).
 
 On attentively considering (8.), we shall likewise perceive that we
@@ -201,20 +344,48 @@ may derive from it the numerical value of every Number of Bernoulli
 in succession, from the very beginning, ad infinitum, by the
 following series of computations:—
 
-1st Series.—Let , and calculate (8.) for this value of .
-The result is .
+1st Series.—Let
+n=1
+, and calculate (8.) for this value of
+n
+.
+The result is
+B_1
+.
 
-2nd Series.—Let . Calculate (8.) for this value of
-substituting the value of , just obtained. The result
-is .
+2nd Series.—Let
+n=2
+. Calculate (8.) for this value of
+n
 
-3rd Series.—Let . Calculate (8.) for this value of ,
-substituting the values of ,  before
-obtained. The result is . And so on, to any extent.
+substituting the value of
+B_1
+, just obtained. The result
+is
+B_3
+.
+
+3rd Series.—Let
+n=3
+. Calculate (8.) for this value of
+n
+,
+substituting the values of
+B_1
+,
+B_3
+ before
+obtained. The result is
+B_5
+. And so on, to any extent.
 
 The diagram[30] represents the columns of the engine when just
 [Pg 61]
-prepared for computing , (in the case of );
+prepared for computing
+{B}_{2n-1}
+, (in the case of
+n=4
+);
 while the table beneath them presents a complete simultaneous
 view of all the successive changes which these columns then severally
 pass through in order to perform the computation. (The reader is
@@ -222,31 +393,75 @@ referred to Note D, for explanations respecting the nature and notation
 of such tables.)
 
 Six numerical data are in this case necessary for making
-the requisite combinations. These data are 1, 2,  (= 4),
-, , . Were  = 5,
-the additional datum , would be needed. Were  = 6,
-the datum , would be needed; and so on. Thus the
-actual number of data needed will always be , for ;
-and out of these  data, () of them
+the requisite combinations. These data are 1, 2,
+n
+ (= 4),
+
+B_1
+,
+B_3
+,
+B_5
+. Were
+n
+ = 5,
+the additional datum
+B_7
+, would be needed. Were
+n
+ = 6,
+the datum
+B_9
+, would be needed; and so on. Thus the
+actual number of data needed will always be
+n+2
+, for
+n=n
+;
+and out of these
+n+2
+ data, (
+overline{n + 2} — 3
+) of them
 are successive Numbers of Bernoulli. The reason why the Bernoulli
 Numbers used as data, are nevertheless placed on Result-columns
 in the diagram, is because they may properly be supposed to have
 been previously computed in succession by the engine itself;
-under which circumstances each  will appear as a
+under which circumstances each
+B
+ will appear as a
 result, previous to being used as a datum for computing
-the succeeding . Here then is an instance (of the kind
+the succeeding
+B
+. Here then is an instance (of the kind
 alluded to in Note D.) of the same Variables filling more than one
 office in turn. It is true that if we consider our computation of
+
+B
 , as a perfectly isolated calculation, we may
-conclude , , , to have
+conclude
+B_1
+,
+B_3
+,
+B_5
+, to have
 been arbitrarily placed on the columns; and it would then perhaps be
-more consistent to put them on , ,
+more consistent to put them on
+V_4
+,
+V_5
+,
+
+V_6
  as data and not results. But we are not taking
 this view. On the contrary, we suppose the engine to be in the
 course of computing the Numbers to an indefinite extent, from the
 very beginning; and that we merely single out, by way of example,
 one amongst the successive but distinct series of computations
-it is thus performing. Where the ’s are fractional, it
+it is thus performing. Where the
+B
+’s are fractional, it
 must be understood that they are computed and appear in the notation
 of decimal fractions. Indeed this is a circumstance that
 should be noticed with reference to all calculations. In any of the
@@ -257,7 +472,9 @@ are so made, that the nature of the processes would be the same as for
 whole numbers.
 
 In the above table and diagram we are not considering the signs of any
-of the ’s, merely their numerical magnitude. The engine
+of the
+B
+’s, merely their numerical magnitude. The engine
 would bring out the sign for each of them correctly of course, but we
 cannot enter on every additional detail of this kind, as we
 might wish to do. The circles for the signs are therefore intentionally
@@ -265,9 +482,21 @@ left blank in the diagram.
 
 Operation-cards 1, 2, 3, 4, 5, 6 prepare are
 
-Thus, Card 1 multiplies two into , and the three
+-{1}/{2}.{2n - 1}/{2n + 1}
+
+Thus, Card 1 multiplies two into
+n
+, and the three
 Receiving Variable-cards belonging respectively to
-, , , allow the result
+
+V_4
+,
+V_5
+,
+V_6
+, allow the result
+
+2n
  to be placed on each of these latter columns (this being a
 case in which a triple receipt of the result is needed for subsequent
 purposes); we see that the upper indices of the two Variables used,
@@ -281,20 +510,42 @@ By Operation 6, a positive quantity is turned into a
 negative quantity, by simply subtracting the quantity from
 a column which has only zero upon it. (The sign at the top of
 [Pg 62]
+
+V_8
  would become—during this process.)
 
 Operation 7 will be unintelligible, unless it be remembered that if
-we were calculating for  instead of , Operation 6
-would have completed the computation of  itself; in
+we were calculating for
+n=1
+ instead of
+n=4
+, Operation 6
+would have completed the computation of
+B_1
+ itself; in
 which case the engine, instead of continuing its processes, would
-have to put  on ; and then either
+have to put
+B_1
+ on
+V_21
+; and then either
 to stop altogether, or to begin Operations 1, 2 ... 7 all over again
-for value of  (= 2), in order to enter on the computation of
+for value of
+n
+ (= 2), in order to enter on the computation of
+
+B_3
 ; (having however taken care, previous to this
-recommencement, to make the number on , equal to
-two, by the addition of unity to the former  on that
+recommencement, to make the number on
+V_3
+, equal to
+two, by the addition of unity to the former
+n=1
+ on that
 column). Now Operation 7 must either bring out a result equal to
-zero (if ); or a result greater than zero, as
+zero (if
+n=1
+); or a result greater than zero, as
 in the present case; and the engine follows the one or the other of
 the two courses just explained, contingently on the one or the other
 result of Operation 7. In order fully to perceive the necessity of
@@ -304,46 +555,98 @@ and independent computation, but one out of a series of antecedent and
 prospective computations.
 
 Cards 8, 9, 10 produce
+
+1/2.{2n - 1}/{2n + 1}+B_1{2n}/{2}
 .
 In Operation 9 we see an example of an upper index which again
 becomes a value after having passed front preceding values to zero.
- has successively been ,
-, , ,
+
+V_11
+ has successively been
+^0V_11
+,
+
+^1V_11
+,
+^2V_11
+,
+^0V_11
+,
+
+^3V_11
 ; and, from the nature of the office which
+
+V_11
 , performs in the calculation, its index will
 continue to go through further changes of the same description, which,
 if examined, will be found to be regular and periodic.
 
 Card 12 has to perform the same office as Card 7 did in the preceding
-section; since, if  had been = 2, the 11th operation would have
-completed the computation of .
+section; since, if
+n
+ had been = 2, the 11th operation would have
+completed the computation of
+B_3
+.
 
-Cards 13 to 20 make . Since
-always consists of  factors,  has three
+Cards 13 to 20 make
+A_3
+. Since
+{A}_{2n-1}
+
+always consists of
+2n-1
+ factors,
+A_3
+ has three
 factors; and it will be seen that Cards 13, 14, 15, 16 make the second
 of these factors, and then multiply it with the first; and that 17, 18,
 19, 20 make the third factor, and then multiply this with the product
 of the two former factors.
 
 Card 23 has the office of Cards 11 and 7 to perform, since if
+n
+
 were = 3, the 21st and 22nd operations would complete the computation
-of . As our case is , the computation
+of
+B_5
+. As our case is
+B_7
+, the computation
 will continue one more stage; and we must now direct attention to the
-fact, that in order to compute  it is merely necessary
+fact, that in order to compute
+A_7
+ it is merely necessary
 precisely to repeat the group of Operations 13 to 20; and then, in
-order to complete the computation of , to repeat
+order to complete the computation of
+B_7
+, to repeat
 Operations 21, 22.
 
 [Pg 63]
 
-It will be perceived that every unit added to  in
+It will be perceived that every unit added to
+n
+ in
+
+{B}_{2n-1}
 , entails an additional repetition of operations
-(13 ... 23) for the computation of . Not only
+(13 ... 23) for the computation of
+{B}_{2n-1}
+. Not only
 are all the operations precisely the same however for every
 such repetition, but they require to be respectively supplied with
 numbers from the very same pairs of columns; with only the one
 exception of Operation 21, which will of course need
-(from ) instead of  (from
+B_5
+
+(from
+V_23
+) instead of
+B_3
+ (from
+
+V_22
 ). This identity in the columns which supply
 the requisite numbers, must not be confounded with identity in the
 values these columns have upon them and give out to the mill.
@@ -352,41 +655,93 @@ operations (13 ... 23), and consequently the columns present a new set
 of values for the next performance of (13 ... 23) to work on.
 
 At the termination of the repetition of operations (13 ... 23) in computing
+
+B_7
 , the alterations in the values on the Variables are, that
 
+array of equations
+
 In this state the only remaining processes are first: to transfer
-the value which is on , to ;
-and secondly to reduce , ,
+the value which is on
+V_13
+, to
+{V}_{24}
+;
+and secondly to reduce
+V_6
+,
+V_7
+,
+
+V_13
  to zero, and to add[30] one to
+
+V_3
 , in order that the engine may be ready to commence
-computing . Operations 24 and 25 accomplish these
+computing
+B_9
+. Operations 24 and 25 accomplish these
 purposes. It may be thought anomalous that Operation 25 is represented
-as leaving the upper index of  still = unity. But it
+as leaving the upper index of
+V_3
+ still = unity. But it
 must be remembered that these indices always begin anew for a separate
-calculation, and that Operation 25 places upon , the
+calculation, and that Operation 25 places upon
+ V_3
+, the
 first value for the new calculation.
 
 It should be remarked, that when the group (13 ... 23) is repeated,
 changes occur in some of the upper indices during the course
-of the repetition: for example, , would become
-, and .
+of the repetition: for example,
+^3V_6
+, would become
 
-We thus see that when , nine Operation-cards are used; that
-when , fourteen Operation-cards are used; and that when
+^4V_6
+, and
+^5V_6
+.
+
+We thus see that when
+n=1
+, nine Operation-cards are used; that
+when
+n=2
+, fourteen Operation-cards are used; and that when
+
+n>2
 , twenty-five Operation-cards are used; but that no more
-are needed, however great  may be; and not only this, but that
+are needed, however great
+n
+ may be; and not only this, but that
 these same twenty-five cards suffice for the successive computation
-of all the Numbers from , to ,
+of all the Numbers from
+B_1
+, to
+{B}_{2n - 1}
+,
 inclusive. With respect to the number of Variable-cards,
 it will be remembered, from the explanations in previous Notes,
 that an average of three such cards to each operation
 (not however to each Operation-card) is the estimate.
-According to this the computation of  will require
-twenty-seven Variable-cards;  forty-two such cards;
+According to this the computation of
+B_1
+ will require
+twenty-seven Variable-cards;
+B_3
+ forty-two such cards;
+
+B_5
  seventy-five; and for every succeeding
-after , there would be thirty-three additional
+B
+
+after
+B_5
+, there would be thirty-three additional
 Variable-cards (since each repetition of the group (13 ... 23) adds
 eleven to the number of operations required for computing the previous
+
+B
 ). But we must now explain, that whenever there is a
 cycle of operations, and if these merely require to be supplied
 with numbers from the same pairs of columns and likewise each
@@ -416,7 +771,11 @@ arrangements of the engine under certain contingencies, influence and
 modify this average to a greater or less extent. But it is a very safe
 and correct general rule to go upon. In the preceding case it
 will give us seventy-five Variable-cards as the total number which will
-be necessary for computing any  after .
+be necessary for computing any
+B
+ after
+B_3
+.
 This is very nearly the precise amount really used, but we cannot here
 enter into the minutiæ of the few particular circumstances which occur
 in this example (as indeed at some one stage or other of probably most
@@ -433,10 +792,18 @@ If we now apply the notation for cycles, as explained in Note E, we may
 express the operations for computing the Numbers of Bernoulli in the
 following manner:—
 
+array of equations
+
 Again,
 
+array of equation
+
 represents the total operations for computing every number in
-succession, from  to  inclusive.
+succession, from
+B_1
+ to
+{B}_{2n-1}
+ inclusive.
 
 In this formula we see a varying cycle of the first
 order, and an ordinary cycle of the second order. The latter
@@ -446,15 +813,39 @@ cycle in this case includes in it the varying cycle.
 
 On inspecting the ten Working-Variables of the diagram, it will be
 perceived, that although the value on any one of them (excepting
-, and ) goes through a series of
+
+V_4
+, and
+V_5
+) goes through a series of
 changes, the office which each performs is in this calculation
-fixed and invariable. Thus  always
-prepares the numerators of the factors of any ;
- the denominators.  always
-receives the ()th factor of , and
- the ()th.  always decides
+fixed and invariable. Thus
+V_6
+ always
+prepares the numerators of the factors of any
+A
+;
+
+V_7
+ the denominators.
+V_8
+ always
+receives the (
+2n-3
+)th factor of
+{A}_{2n-1}
+, and
+
+V_9
+ the (
+2n-1
+)th.
+V_10
+ always decides
 which of two courses the succeeding processes are to follow, by feeling
-for the value of  through means of a subtraction; and so on; but
+for the value of
+n
+ through means of a subtraction; and so on; but
 we shall not enumerate further. It is desirable in all calculations,
 so to arrange the processes, that the offices performed by the
 Variables may be as uniform and fixed as possible.
@@ -473,6 +864,58 @@ Statement of Results.
 Data.
 Working variables.
 
+^1V_1
+
+^1V_2
+
+^1V_3
+
+^0V_4
+
+^0V_5
+
+^0V_6
+
+^0V_7
+
+^0V_8
+
+^0V_9
+
+^0V_10
+
+^0V_11
+
+^0V_12
+
+^0V_13
+
+a big circle
+
+a big circle
+
+a big circle
+
+a big circle
+
+a big circle
+
+a big circle
+
+a big circle
+
+a big circle
+
+a big circle
+
+a big circle
+
+a big circle
+
+a big circle
+
+a big circle
+
 0
 0
 0
@@ -515,82 +958,810 @@ Working variables.
 0
 0
 
+1 enclosed in a box
+
+2 enclosed in a box
+
+n enclosed in a box
+
+a big box
+
+a big box
+
+a big box
+
+a big box
+
+a big box
+
+a big box
+
+a big box
+
+a big box
+
+a big box
+
+a big box
+
 1
+
+x
+
+^1{V}_2 . ^1{V}_3
+
+^1{V}_4,\, ^1{V}_5,\, ^1{V}_6
+
+array of equations
+
+2n
+
+...
 
 2
 
+n
+
+2n
+
+2n
+
+2n
+
+2
+
+-
+
+^1{V}_4 - ^1{V}_1
+
+^2V_4
+
+array of equations
+
+2n-1
+
 1
+
+...
+
+...
+
+2n'1
 
 3
 
++
+
+^1{V}_5 + ^1{V}_1
+
+^2{V}_5
+
+array of equations
+
+2n+1
+
 1
+
+...
+
+...
+
+...
+
+2n+1
 
 4
 
+/
+
+^2{V}_5/ ^2{V}_4
+
+^1{V}_{11}
+
+array of equations
+
+{2n-1}/{2n+1}
+
+...
+
+...
+
+...
+
 0
 0
+
+...
+
+...
+
+...
+
+...
+
+...
+
+{2n-1}/{2n+1}
 
 5
 
+/
+
+^1{V}_{11}/ ^1{V}_2
+
+^2{V}_{11}
+
+array of equations
+
+1/2.{2n-1}/{2n+1}
+
+...
+
 2
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+1/2.{2n-1}/{2n+1}
 
 6
 
+-
+
+^0{V}_{12}-^2{V}_{11}
+
+^1{V}_{12}
+
+array of equations
+
+1/2.{2n-1}/{2n+1}=A_0
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
 0
+
+...
+
+1/2.{2n-1}/{2n+1}=A_0
 
 7
 
+-
+
+^1{V}_3 - ^1{V}_1
+
+^1{V}_{10}
+
+array of equations
+
+n - 1(= 3)
+
 1
+
+...
+
+n
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+n-1
 
 8
 
++
+
+^1{V}_2 +\, ^0{V}_7
+
+^1{V}_7
+
+array of equations
+
+2 + 0 = 2
+
+...
+
+2
+
+...
+
+...
+
+...
+
+...
+
+2
+
 9
+
+/
+
+^1{V}_6 / ^1{V}_7
+
+^3{V}_{11}
+
+array of equations
+
+{2n}/{n} = {A}_1
+
+...
+
+...
+
+...
+
+...
+
+...
+
+2n
+
+2
+
+...
+
+...
+
+...
+
+{2n}/{n} = {A}_1
 
 10
 
+x
+
+^1{V}_{21} . ^3{V}_{11}
+
+^1{V}_{12}
+
+array of equations
+
+={B}_1.{2n}/{n} = {B}_1{A}_1
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+{2n}/{2} = {A}_1
+
+{B}_1.{2n}/{n} = {B}_1{A}_1
+
+...
+
 11
 
++
+
+^1{V}_{12} + ^1{V}_{13}
+
+^2{V}_{13}
+
+array of equations
+
+=-{1}/{2}.{2n-1}/{2n+1} + {B}_1.{2n}/{n}
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
 0
+
+-{1}/{2}.{2n-1}/{2n+1} + {B}_1.{2n}/{n}
 
 12
 
+-
+
+^1{V}_{10} - ^1{V}_1
+
+^2{V}_{10}
+
+array of equations
+
+= n-2(=2)
+
+1
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+n-2
+
 13
+
+long left brace ranging from lines 13 to 23
+
+long left brace ranging from lines 13 to 16
+
+-
+
+^1{V}_{6} - ^1{V}_{1}
+
+^2{V}_{6}
+
+array of equations
+
+2n-1
+
+1
+
+...
+
+...
+
+...
+
+...
+
+2n-1
 
 14
 
++
+
+^1{V}_{1} + ^1{V}_{7}
+
+^2{V}_{7}
+
+array of equations
+
+=2+1=3
+
+1
+
+...
+
+...
+
+...
+
+...
+
+...
+
+3
+
 15
+
+/
+
+^2{V}_{6}/^2{V}_{7}
+
+^1{V}_{8}
+
+array of equations
+
+={2n-1}/{3}
+
+...
+
+...
+
+...
+
+...
+
+...
+
+2n-1
+
+3
+
+{2n-1}/{3}
 
 16
 
+x
+
+^1{V}_{8}.^3{V}_{11}
+
+^4{V}_{11}
+
+array of equations
+
+={2n}/{2}.{2n-1}/{3}
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
 0
+
+...
+
+...
+
+{2n}/{2}.{2n-1}/{3
 
 17
 
+long left braces ranging from lines 17 to 20
+
+-
+
+^2{V}_{6} - ^1{V}_{1}
+
+^3{V}_{6}
+
+array of equations
+
+=2n-2
+
+1
+
+...
+
+...
+
+...
+
+...
+
+2n-2
+
 18
+
++
+
+^1{V}_{1} + ^2{V}_{7}
+
+^2{V}_{7}
+
+array of equations
+
+=3+1=4
+
+1
+
+...
+
+...
+
+...
+
+...
+
+...
+
+4
 
 19
 
+/
+
+^3{V}_{6}/^3{V}_{7}
+
+^1{V}_{9}
+
+array of equations
+
+={2n-2}/{4}
+
+...
+
+...
+
+...
+
+...
+
+...
+
+2n-2
+
+4
+
+...
+
+{2n-2}/{4}
+
+...
+
 20
 
+x
+
+^1{V}_{9}. ^4{V}_{11}
+
+^5{V}_{11}
+
+array of equations
+
+={2n}/{2}.{2n-1}/{3}.{2n-2}/{4}= {A}_3
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
 0
+
+...
+
+{2n}/{2}.{2n-1}/{3}.{2n-2}/{4}= {A}_3
 
 21
 
+x
+
+^1{V}_{22}.^5{V}_{11}
+
+^0{V}_{12}
+
+array of equations
+
+={B}_3.{2n}/{2}.{2n-1}/{3}.{2n-2}/{4}= {B}_3{A}_3
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
 0
+
+{B}_3{A}_3
+
+...
 
 22
 
++
+
+^2{V}_{12} + ^2{V}_{13}
+
+^0{V}_{12}
+
+array of equations
+
+={A}_0 + {B}_1{A}_1 + {B}_3{A}_3
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
 0
 
+{A}_0 + {B}_1{A}_1 + {B}_3{A}_3
+
 23
+
+-
+
+^2{V}_{10} - ^1{V}_{1}
+
+^3{V}_{10}
+
+array of equations
+
+=n-3(=1)
+
+1
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+n-3
 
 Here follows a repetition of Operations thirteen to twenty-three
 
 24
 
++
+
+^4{V}_{13} + ^0{V}_{24}
+
+^1{V}_{24}
+
+array of equations
+
+B_7
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
 25
 
++
+
+^1{V}_{1} + ^1{V}_{3}
+
+^1{V}_{3}
+
+array of equations
+
+array of equations
+
+=n+1=4+1=5
+
 by a Variable-card.
+
+1
+
+...
+
+n+1
+
+...
+
+...
 
 0
 0
@@ -598,11 +1769,47 @@ by a Variable-card.
 Number of operation.
 Result Variables.
 
-0
+^1{V}_{21}
+
+^1{V}_{22}
+
+^1{V}_{23}
+
+^0{V}_{24}
+
+a big circle
+
+a big circle
+
+a big circle
+
+a big circle
+
+B_1 in a decimal
+
+fraction
+
+B_3 in a decimal
+
+fraction
+
+B_5 in a decimal
+
+fraction
 
 0
 
 0
+
+0
+
+B_1 enclosed in a box
+
+B_3 enclosed in a box
+
+B_5 enclosed in a box
+
+B_7 enclosed in a box
 
 1
 
@@ -623,6 +1830,8 @@ Result Variables.
 9
 
 10
+
+B_1
 
 11
 
@@ -646,26 +1855,62 @@ Result Variables.
 
 21
 
+...
+
+B_3
+
 22
 
 23
 
 24
 
+...
+
+...
+
+...
+
+B_7
+
 25
 
 [Pg 67]
 
-Supposing that it was desired not only to tabulate ,
-, &c., but , ,
+Supposing that it was desired not only to tabulate
+B_1
+,
+
+B_1
+, &c., but
+A_0
+,
+A_1
+,
 &c.; we have only then to appoint another series of Variables,
-, , &c., for receiving
+
+V_41
+,
+V_42
+, &c., for receiving
 these latter results as they are successively produced upon
+
+V_11
 . Or again, we may, instead of this, or in addition
 to this second series of results, wish to tabulate the value of each
-successive total term of the series (8), viz: ,
-, , &c. We have
-then merely to multiply each  with each corresponding
+successive total term of the series (8), viz:
+A_0
+,
+
+{A}_1{B}_1
+,
+{A}_3{B}_3
+, &c. We have
+then merely to multiply each
+B
+ with each corresponding
+
+A
 , as produced; and to place these successive products on
 Result-columns appointed for the purpose.
 
@@ -673,9 +1918,19 @@ The formula (8.) is interesting in another point of view. It is one
 particular case of the general Integral of the following Equation of
 Mixed Differences:—
 
-for certain special suppositions respecting ,  and .
+{d^{2}}/{d x^{2}}(z_{n+1} x^{2 n+2})=(2n+1)(2n+2) z^{n} x^{2n}
+
+for certain special suppositions respecting
+z
+,
+x
+ and
+n
+.
 
 The general integral itself is of the form,
+
+z_n=f(n).x+f_1(n)+f_2(n).x^{-1}+f_3(n).x^{-3}+...
 
 and it is worthy of remark, that the engine might (in a manner more or
 less similar to the preceding) calculate the value of this formula upon
@@ -708,15 +1963,27 @@ pointed out in Note B.
 
 [18]
 The machine might have been constructed so as to tabulate
-for a higher value of  than seven. Since, however, every unit
-added to the value of  increases the extent of the mechanism
+for a higher value of
+n
+ than seven. Since, however, every unit
+added to the value of
+n
+ increases the extent of the mechanism
 requisite, there would on this account be a limit beyond which it
 could not be practically carried. Seven is sufficiently high for the
 calculation of all ordinary tables.
 
 The fact that, in the Analytical Engine, the same extent of mechanism
-suffices for the solution of , whether ,
-, or  = any number whatever, at once suggests how
+suffices for the solution of
+Delta^{n} u_z = 0
+, whether
+n=7
+,
+
+n = 100,000
+, or
+n
+ = any number whatever, at once suggests how
 entirely distinct must be the nnature of the principles through
 whose application matter has been enabled to become the working agent
 of abstract mental operations in each of these engines respectively;
@@ -760,9 +2027,15 @@ See the diagram of page 46.
 We recommend the reader to trace the successive
 substitutions backwards from (1.) to (4.), in Mons. Menabrea’s Table.
 This he will easily do by means of the upper and lower indices, and it
-is interesting to observe how each  successively ramifies
-(so to speak) into two other ’s in some other column of
-the Table; until at length the ’s of the original data
+is interesting to observe how each
+V_7
+ successively ramifies
+(so to speak) into two other
+V′s
+’s in some other column of
+the Table; until at length the
+V′s
+’s of the original data
 are arrived at.
 
 [25]
@@ -770,20 +2043,40 @@ This division would be managed by ordering the number
 two to appear on any separate new column which should be conveniently
 situated for the purpose, and then directing this column (which is
 in the strictest sense a Working-Variable) to divide itself
-successively with , , &c.
+successively with
+V_32
+,
+V_33
+, &c.
 
 [26]
 It should be observed, that were the rest of the factor
-() taken into account,
-instead of four terms only,  would have
-the additional term ; and
-, the two additional terms, ,
+(
+{A} + {A} cos theta + &c.
+) taken into account,
+instead of four terms only,
+C_3
+ would have
+the additional term
+{1}/{2}{B}_1{A}_4
+; and
+
+C_4
+, the two additional terms,
+{B}{A}_4
+,
+
+{1}/{2}{B}_1{A}_5
 . This would indeed have been
 the case had even six terms been multiplied.
 
 [27]
-A cycle that includes  other cycles, successively
-contained one within another, is called a cycle of the th
+A cycle that includes
+n
+ other cycles, successively
+contained one within another, is called a cycle of the
+n+1
+th
 order. A cycle may simply include many other cycles, and yet only
 be of the second order. If a series follows a certain law for a certain
 number of terms, and then another law for another number of terms,
@@ -823,12 +2116,3 @@ processes for the computation of millions of these Numbers, no
 other arbitrary modification would be requisite in the arrangements,
 excepting the above simple and uniform provision for causing one of the
 data periodically to receive the finite increment unity.
-
-Transcriber’s Notes
-
-“Article XXIX,” extracted from Scientific memoirs, Vol. 3, 1843.
-Translated, with notes, from the Italian original by Ada King, Countess
-of Lovelace, daughter of Byron. She is identified on page 35 as “A. A.
-L.” It was originally published by Luigi Federico Menabrea as ‘Notions
-sur la machine analytique de M. Charles Babbage,’ pp. 352-376 in:
-Bibliothèque Universelle de Génève. Nouvelle Série, Tome 41.

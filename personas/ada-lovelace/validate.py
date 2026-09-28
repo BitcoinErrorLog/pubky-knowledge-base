@@ -19,13 +19,16 @@ def validate(root):
   h=re.search(r'sha256:([0-9a-f]{64})',fm)
   if not h or h.group(1)!=hashlib.sha256(b.encode()).hexdigest(): errors.append(f'{p.name}: checksum mismatch')
   if not b.strip(): errors.append(f'{p.name}: empty body')
+  if 'Transcriber’' in b or 'Transcriber' in b: errors.append(f'{p.name}: Gutenberg transcriber notes leaked into source')
   if 'ARTICLE XXIX.' in b or 'BEFORE submitting to our readers' in b: errors.append(f'{p.name}: Menabrea/editor context leaked into voice source')
+  if p.name == 'note-g.md' and not all(cell in b for cell in ('B_1', 'B_3', 'B_5', 'B_7', 'V_21')):
+   errors.append('note-g.md: Bernoulli table/formula cells are incomplete')
  return errors
 def mutation_test():
  with tempfile.TemporaryDirectory() as tmp:
   target=Path(tmp)/'corpus'; shutil.copytree(ROOT,target,ignore=shutil.ignore_patterns('__pycache__'))
-  p=target/'note-g.md'; p.write_text(p.read_text()+'\nARTICLE XXIX.\n')
-  assert any('Menabrea/editor context' in e for e in validate(target))
+  p=target/'note-g.md'; p.write_text(p.read_text()+'\nTranscriber’s Notes\n')
+  assert any('transcriber notes' in e for e in validate(target))
 if __name__=='__main__':
  parser=argparse.ArgumentParser(); parser.add_argument('--mutation-test',action='store_true'); args=parser.parse_args()
  if args.mutation_test: mutation_test(); print('mutation test: PASS (context leak rejected)')

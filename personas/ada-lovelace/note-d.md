@@ -7,7 +7,7 @@ archive_url: "https://www.gutenberg.org/ebooks/75107"
 source_collection: "Project Gutenberg ebook 75107, transcribed from Scientific Memoirs volume 3 (1843)"
 rights_status: "Lovelace died in 1852; the 1843 Notes are public domain worldwide under ordinary life-plus-70 terms"
 retrieval_date: "2026-09-28"
-checksum: "sha256:a58c426a0b97e171a2433aa20a688d04fcd547ddc76b7e55fbed0ac77e70339e"
+checksum: "sha256:6bfc0cf0c78f875571711ec0c5d779424c0b7578c4b990a0530db347a1e17df6"
 ---
 
 NOTE D.—Page 15.
@@ -77,11 +77,27 @@ use for that value can recur, in which case zero is substituted. At
 [Pg 42]
 the end of a calculation, therefore, every column ought as a
 general rule to be zero, excepting those for results. Thus it will be
-seen by the diagram, that when , the value on ,
-is used for the second time by Operation 5,  becomes
-0, since  is not again needed; that similarly, when (),
-on , is used for the third time by Operation
-11,  becomes zero, since () is not again
+seen by the diagram, that when
+m
+, the value on
+V_0
+,
+is used for the second time by Operation 5,
+V_0
+ becomes
+0, since
+m
+ is not again needed; that similarly, when (
+mm′-m′n
+),
+on
+V_12
+, is used for the third time by Operation
+11,
+V_12
+ becomes zero, since (
+mm′-m′n
+) is not again
 needed. In order to provide for the one or the other of the courses
 above indicated, there are two varieties of the Supplying
 Variable-cards. One of these varieties has provisions which cause the
@@ -115,8 +131,12 @@ Combined, they form a complete and accurate method of registering every
 step and sequence in all calculations performed by the engine.
 
 No notice has yet been taken of the upper indices which are
-added to the left of each  in the diagram; an addition
-which we have also taken the liberty of making to the ’s
+added to the left of each
+V
+ in the diagram; an addition
+which we have also taken the liberty of making to the
+V
+’s
 in M, Menabrea’s tables of pages 16, 19, since it does not alter
 anything therein represented by him, but merely adds something to the
 previous indications of those tables. The lower indices are
@@ -127,15 +147,29 @@ upper indices, however, are of a different nature. Their office
 is to indicate any alteration in the value which a Variable
 represents; and they are of course liable to changes during the
 processes of a calculation. Whenever a Variable has only zeros upon
-it, it is called ; the moment a value appears on it
+it, it is called
+^0V
+; the moment a value appears on it
 (whether that value be placed there arbitrarily, or appears in the
-natural course of a calculation), it becomes . If this value gives
-place to another value, the Variable becomes , and
+natural course of a calculation), it becomes
+^1V
+. If this value gives
+place to another value, the Variable becomes
+^1V
+, and
 so forth. Whenever a value again gives place to zero,
-the Variable again becomes , even if it have been
+the Variable again becomes
+^0V
+, even if it have been
+
+^nV
  the moment before. If a value then again
-be substituted, the Variable becomes  (as it
+be substituted, the Variable becomes
+^{n+1}V
+ (as it
 would have done if it had not passed through the intermediate
+
+^0V
 ); &c. &c. Just before any calculation is commenced,
 and after the data have been given, and everything adjusted and
 prepared for setting the mechanism in action, the upper indices of
@@ -153,8 +187,12 @@ the tables is made more consistent by these indices, for they are
 able to mark a difference in certain cases, where there would
 otherwise be an apparent identity confusing in its tendency.
 In such a case as
+V_n = V_p + V_n
+
 there is more clearness and more consistency with the
 usual laws of algebraical notation, in being able to write
+
+^{m+1}V_{n} = ^qV_p + ^{m}V_{n}
 .
 It is also obvious that the indices furnish a powerful means of
 tracing back the derivation of any result; and of registering
@@ -166,14 +204,24 @@ analytical reasons, or for practically adapting the workings of the
 engine to their occurrence. The series of substitutions which lead to
 the equations of the diagram are as follow:—
 
+series of successive substitutions
+
 There are three successive substitutions for each of these
 equations. The formulæ (2.), (3.), and (4.) are implicitly
 contained in (1.), which latter we may consider as being in fact
 the condensed expression of any of the former. It will be
 observed that every succeeding substitution must contain twice
-as many ’s as its predecessor. So that if a problem
-require  substitutions, the successive series of numbers for the
-’s in the whole of them will be 2, 4, 8, 16 ... .
+as many
+V
+’s as its predecessor. So that if a problem
+require
+n
+ substitutions, the successive series of numbers for the
+
+V
+’s in the whole of them will be 2, 4, 8, 16 ...
+2^{n}
+.
 
 The substitutions in the preceding equations happen to be of little
 value towards illustrating the power and uses of the upper indices; for
@@ -182,7 +230,9 @@ unity throughout. We wish we had space to enter more fully into the
 relations which these indices would in many cases enable us to trace.
 
 M. Menabrea incloses the three centre columns of his table under the
-general title Variable-cards. The ’s however
+general title Variable-cards. The
+V
+’s however
 in reality all represent the actual Variable-columns of the
 engine, and not the cards that belong to them. Still the title is
 a very just one, since it is through the special action of certain
@@ -196,7 +246,9 @@ combination of quantities, is brought into use during a calculation.
 We easily ascertain this, from the inspection of any vertical column
 or columns of the diagram in which that quantity may appear. Thus, in
 the present case, we see that all the data, and all the intermediate
-results likewise, are used twice, excepting ), which is
+results likewise, are used twice, excepting
+mn′-m′n
+), which is
 used three times.
 
 The order in which it is possible to perform the operations for the
@@ -205,6 +257,8 @@ which it consists, with only three Operation-cards; because the
 problem is of such a nature that it admits of each class of operations
 being performed in a group together; all the multiplications one after
 another, all the subtractions one after another, &c. The operations are
+
+6x, 3-, 2/
 .
 
 Since the very definition of an operation implies that there must
@@ -264,6 +318,36 @@ Nature of operations.
 Variables for Data.
 Working Variables.
 
+^1V_0
+
+^1V_1
+
+^1V_2
+
+^1V_3
+
+^1V_4
+
+^1V_5
+
+^0V_6
+
+^0V_7
+
+^0V_8
+
+^0V_9
+
+^0V_10
+
+^0V_11
+
+^0V_12
+
+^0V_13
+
+^0V_14
+
 +
 +
 +
@@ -343,50 +427,332 @@ Working Variables.
 0
 0
 0
+
+m enclosed in a box
+
+n enclosed in a box
+
+d enclosed in a box
+
+m′ enclosed in a box
+
+n′ enclosed in a box
+
+d′ enclosed in a box
+
+a big box
+
+a big box
+
+a big box
+
+a big box
+
+a big box
+
+a big box
+
+a big box
+
+a big box
+
+a big box
 
 1
 
+x
+
+m
+
+...
+
+...
+
+...
+
+n′
+
+...
+
+mn′
+
 2
+
+x
+
+...
+
+n
+
+...
+
+m′
+
+...
+
+...
+
+...
+
+m′n
 
 3
 
+x
+
+...
+
+...
+
+d
+
+...
+
+...
+
+...
+
+...
+
+...
+
+dn′
+
 4
 
+x
+
+...
+
 0
+
+...
+
+...
+
+...
+
+d′
+
+...
+
+...
+
+...
+
+dn′
 
 5
 
-0
+x
 
 0
+
+...
+
+...
+
+...
+
+...
+
+0
+
+...
+
+...
+
+...
+
+...
+
+d′m
 
 6
 
+x
+
+...
+
+...
+
 0
 0
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+dm′
 
 7
 
+-
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
 0
 0
+
+...
+
+...
+
+...
+
+...
+
+mn′-m′m
 
 8
 
+-
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
 0
 0
+
+...
+
+...
+
+...
+
+d′m-dm′
 
 9
 
+-
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
 0
 0
+
+...
+
+...
+
+d′m-dm′
 
 10
 
+/
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+mn′-m′n
+
 0
+
+...
 
 11
 
+/
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
 0
+
+...
 
 0
 
@@ -394,6 +760,10 @@ Number of operations.
 Nature of operations.
 Variables for Results.
 
+^0V_15
+
+^0V_16
+
 +
 +
 
@@ -408,25 +778,57 @@ Variables for Results.
 
 0
 0
+
+ ratio of dn′-d′n/mn′-m′n enclosed in a box
+
+ratio of d′m-dm′/mn′-m′n enclosed in a box
 
 1
+
+x
 
 2
 
+x
+
 3
+
+x
 
 4
 
+x
+
 5
+
+x
 
 1
 
+x
+
 7
+
+-
 
 8
 
+-
+
 9
+
+-
 
 10
 
+/
+
+dn′-d′n/mn′-m′n = x
+
 11
+
+/
+
+...
+
+d′m-dm′/mn′-′n = y

@@ -7,7 +7,7 @@ archive_url: "https://www.gutenberg.org/ebooks/75107"
 source_collection: "Project Gutenberg ebook 75107, transcribed from Scientific Memoirs volume 3 (1843)"
 rights_status: "Lovelace died in 1852; the 1843 Notes are public domain worldwide under ordinary life-plus-70 terms"
 retrieval_date: "2026-09-28"
-checksum: "sha256:ad282d071bc8202935e5f2aa0bff0f48512f24803083d97b3f803e3480430140"
+checksum: "sha256:46779cb5b8ff99aa7dafce74d0e18c04def9df5501d0b25bd75e27f11bd4a7e9"
 ---
 
 NOTE B.—Page 11.
@@ -28,6 +28,8 @@ next above to the tens, the next above this to the hundreds, and so on.
 Thus, if we wished to inscribe 1345 n a column of the engine, it would
 stand thus;—
 
+1 3 4 5
+
 In the Difference Engine there are seven of these columns placed side
 by side in a row, and the working mechanism extends behind them; the
 general form of the whole mass of machinery is that of a quadrangular
@@ -43,10 +45,25 @@ determined.
 We may conveniently represent the columns of discs on paper in a
 diagram like the following:—
 
-0
-0
-0
-0
+V_1
+
+V_2
+
+V_3
+
+V_4
+
+&c.
+
+figure of a circle
+
+figure of a circle
+
+figure of a circle
+
+figure of a circle
+
+&c.
 
 0
 0
@@ -58,9 +75,30 @@ diagram like the following:—
 0
 0
 
-The ’s are for the purpose of convenient reference
+&c.
+
+0
+0
+0
+0
+
+figure of a box
+
+figure of a box
+
+figure of a box
+
+figure of a box
+
+&c.
+
+The
+V
+’s are for the purpose of convenient reference
 to any column, either in writing or speaking, and are consequently
-numbered. The reason why the letter  is chosen for this
+numbered. The reason why the letter
+V
+ is chosen for this
 purpose in preference to any other letter, is because these columns
 are designated (as the reader will find in proceeding with the Memoir)
 the Variables, and sometimes the Variable columns,
@@ -104,9 +142,31 @@ Each of the squares below the zeros is intended for the inscription of
 any general symbol or combination of symbols we please; it being
 understood that the number represented on the column immediately above,
 is the numerical value of that symbol, or combination of symbols. Let
-us, for instance, represent the three quantities , , ,
-and let us further suppose that , , . We
+us, for instance, represent the three quantities
+a
+,
+n
+,
+x
+,
+and let us further suppose that
+a = 5
+,
+n = 7
+,
+x = 98
+. We
 should have—
+
+V_1
+
+V_2
+
+V_3
+
+V_4
+
+&c.
 
 +[22]
 +
@@ -118,6 +178,8 @@ should have—
 0
 0
 
+&c.
+
 0
 0
 9
@@ -127,6 +189,16 @@ should have—
 7
 8
 0
+
+&c.
+
+a enclosed in a box
+
+n enclosed in a box
+
+n enclosed in a box
+
+a large empty box
 
 We may now combine these symbols in a variety of ways, so as to form
 any required function or functions of them, and we may then inscribe
@@ -138,8 +210,20 @@ to the right-hand for receiving the results, and must inscribe
 the function in the square below this column. In the above instance we
 might have any one of the following functions:—
 
+a x^{n}, x^{a n},a x n x x, {a}/{n} x, a+n+x,\& c. \& c.
+
 Let us select the first. It would stand as follows, previous to calculation;—
 
+V_1
+
+V_2
+
+V_3
+
+V_4
+
+&c.
+
 +
 +
 +
@@ -149,6 +233,8 @@ Let us select the first. It would stand as follows, previous to calculation;—
 0
 0
 0
+
+&c.
 
 0
 0
@@ -160,23 +246,39 @@ Let us select the first. It would stand as follows, previous to calculation;—
 9
 0
 
+&c.
+
 5
 7
 8
 0
 
+&c.
+
+underbrace with a, n and x_a x^{n} enclosed in a box
+
+a x^{n} enclosed in a box
+
+&c.
+
 The data being given, we must now put into the engine the cards proper
 for directing the operations in the case of the particular function
 chosen. These operations would in this instance be,—
 
-Firstly, six multiplications in order to get )
+Firstly, six multiplications in order to get
+x^n (= 98^{7})
+)
 for the above particular data).
 
 Secondly, one multiplication in order then to get
+
+a x x^n (= 98^{7})
 ).
 
 In all, seven multiplications to complete the whole process. We may
 thus represent them:—
+
+(+,+,+,+,+,+,+) or 7x
 
 The multiplications would, however, at successive stages in the
 solution of the problem, operate on pairs of numbers, derived from
@@ -185,7 +287,9 @@ would be performed on different subjects of operation. And
 [Pg 38]
 here again is an illustration of the remarks made in the preceding
 Note on the independent manner in which the engine directs its
-operations. In determining the value of , the
+operations. In determining the value of
+a x^{n}
+, the
 operations are homogeneous, but are distributed amongst
 different subjects of operation, at successive stages of the
 computation. It is by means of certain punched cards, belonging
@@ -223,7 +327,9 @@ respectively adapted for fulfilling two distinct subsidiary purposes:
 but as these modifications do not bear upon the present subject, we
 shall notice them in another place.
 
-In the above case of , the Operation-cards merely order
+In the above case of
+a x^{n}
+, the Operation-cards merely order
 seven multiplications, that is, they order the mill to be in the
 multiplying state seven successive times (without any reference
 to the particular columns whose numbers are to be acted upon).
@@ -231,28 +337,84 @@ The proper Distributive Variable-cards step in at each successive
 multiplication, and cause the distributions requisite for the
 particular case.
 
+array showing the distributive variables cards step
+
 The engine might be made to calculate all these in succession. Having
-completed , the function  might be written
-under the brackets instead of , and a new calculation
+completed
+a x^{n}
+, the function
+x^{an}
+ might be written
+under the brackets instead of
+a x^{n}
+, and a new calculation
 commenced (the appropriate Operation and Variable-cards for the new
 function of course coming into play). The results would then appear on
+
+V_5
 . So on for any number of different functions of the
-quantities , , . Each result might either permanently
+quantities
+a
+,
+x
+,
+n
+. Each result might either permanently
 [Pg 39]
 remain on its column during the succeeding calculations, so that when
 all the functions had been computed, their values would simultaneously
-exist on , , , &c.; or
+exist on
+V_4
+,
+V_5
+,
+V_6
+, &c.; or
 each result, might (after being jointed off, or used in any specified
 manner) be effaced to make way for its successor. The square under
+
+V_4
  ought, for the latter arrangement, to have the
-functions , ,   , &c. successively
+functions
+a x^{n}
+,
+x^{an}
+,
+a
+
+n
+
+x
+, &c. successively
 inscribed in it.
 
 Let us now suppose that we have two expressions whose values
 have been computed by the engine independently of each other (each
-having its own group of columns for data and results). Let them be , . They would then stand as follows on the
+having its own group of columns for data and results). Let them be
+a
+,
+b.p.y
+. They would then stand as follows on the
 columns:—
 
+V_1
+
+V_2
+
+V_3
+
+V_4
+
+V_5
+
+V_6
+
+V_7
+
+V_8
+
+V_9
+
 +
 +
 +
@@ -302,33 +464,81 @@ columns:—
 0
 0
 0
+
+underbrace with a, n and x enclosed in a box
+
+a~x^{n} enclosed in a box
+
+underbrace with b, p and y enclosed in a box
+
+bpy enclosed in a box
+
+a x^{n}/bpy enclosed in a box
 
 We may now desire to combine together these two results, in any
 manner we please; in which case it would only be necessary to have
 an additional card or cards, which should order the requisite
 operations to be performed with the numbers on the two result-columns,
- and , and the result of these
-further operations to appear on a new column, .
-Say that we wish to divide  by .
+
+V_4
+ and
+V_8
+, and the result of these
+further operations to appear on a new column,
+V_9
+.
+Say that we wish to divide
+a x^{n}
+ by
+b.p.y
+.
 The numerical value of this division would then appear on the
-column , beneath which we have inscribed
+column
+V_9
+, beneath which we have inscribed
+
+{a x^{n}}/{b~p~y}
 . The whole series of operations
-from the beginning would be as follow ( being = 7):—
+from the beginning would be as follow (
+n being =7
+ being = 7):—
+
+7x, 2x, / or 9x, /
 
 This example is introduced merely to show that we may, if we please,
 retain separately and permanently any intermediate results (like
+
+a x^{n}, b.p.y
 ), which occur in the course of processes
 having an ulterior and more complicated result as their chief and final
-object .
+object
+like {a x^{n}}/{bpy}
+.
 
 Any group of columns may be considered as representing a general
 function, until a special one has been implicitly impressed
 upon them through the introduction into the engine of the Operation
 and Variable-cards made out for a particular function. Thus,
-in the preceding example, , ,
-, , ,
-represent the general function  until
-the function  has been determined on, and
+in the preceding example,
+V_1
+,
+V_2
+,
+
+V_3
+,
+V_5
+,
+V_6
+,
+V_7
+
+represent the general function
+phi(a, n, b, p, x, y)
+ until
+the function
+{a x^{n}}/{b.p.y}
+ has been determined on, and
 implicitly expressed by the placing of the right cards in the
 engine. The actual working of the mechanism, as regulated by these
 cards, then explicitly developes the value of the function. The

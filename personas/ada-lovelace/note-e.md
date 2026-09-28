@@ -7,7 +7,7 @@ archive_url: "https://www.gutenberg.org/ebooks/75107"
 source_collection: "Project Gutenberg ebook 75107, transcribed from Scientific Memoirs volume 3 (1843)"
 rights_status: "Lovelace died in 1852; the 1843 Notes are public domain worldwide under ordinary life-plus-70 terms"
 retrieval_date: "2026-09-28"
-checksum: "sha256:19c54b88524fbe551f6086ba73ba098054a778bb430e3ac858e4cbeb7c87698e"
+checksum: "sha256:adbba79996e4b3684946ace24130fc535ab626d5a435a85193b03ff79e531a04"
 ---
 
 NOTE E.—Page 19.
@@ -28,16 +28,24 @@ illustration of M. Menabrea’s excellent tables.
 
 It may be remarked that a slight discrepancy exists between the formulæ
 
+discrepancies between two equations
+
 given in the Memoir as the data for calculation, and the
 results of the calculation as developed in the last division of
 the table which accompanies it. To agree perfectly with this latter,
 the data should have been given as
 
+array of equations
+
 The following is a more complicated example of the manner in which the
 engine would compute a trigonometrical function containing variables.
 To multiply
 
+array of equations
+
 Let the resulting products be represented under the general form
+
+array of equations
 
 This trigonometrical series is not only in itself very appropriate
 for illustrating the processes of the engine, but is likewise of much
@@ -55,7 +63,11 @@ nature in the most limited sense of the term, and retain no trace
 whatever of the processes through which they have been deduced. In
 fact, any one such numerical value may have been attained from an
 infinite variety of data, or of problems. The values for
-and  in the two equations (see Note D.), come under this class of
+x
+
+and
+y
+ in the two equations (see Note D.), come under this class of
 numerical results.
 
 Secondly. We may propose to compute the collective numerical value of
@@ -103,26 +115,132 @@ analysis, while it uses the processes and combinations of this latter.
 
 To return to the trigonometrical series. We shall only consider
 the four first terms of the factor
-(),
+(
+A+A_1 cos theta &c.
+),
 since this will be sufficient to show the method. We propose to
 obtain separately the numerical value of each coefficient
-, , &c. of (1.). The direct
+
+C_0
+,
+C_1
+, &c. of (1.). The direct
 multiplication of the two factors gives
+
+array of equations
 
 a result which would stand thus on the engine:—
 
+large overbrace containg the text Variables for data
+
+V_0
+
+V_1
+
+V_2
+
+V_3
+
+...
+
+V_10
+
+V_11
+
+A enclosed in a box
+
+A_1 enclosed in a box
+
+A_2 enclosed in a box
+
+A_3 enclosed in a box
+
+...
+
+B enclosed in a box
+
+B_1 enclosed in a box
+
+cos theta
+
+cos 2theta
+
+cos 3theta
+
+cos theta
+
 [Pg 48]
 
-()
-()
-()
+large overbrace envolving the text Variables for Results
+
+V_20
+
+V_21
+
+V_22
+
+V_23
+
+...
+
+V_31
+
+V_32
+
+V_33
+
+V_34
+
+BA
+
+BA_1 enclosed in a box
+
+BA_2 enclosed in a box
+
+BA_3 enclosed in a box
+
+...
+
+B_1A enclosed in a box
+
+B_1A_1 enclosed in a box
+
+B_1A_2 enclosed in a box
+
+B_1A_3 enclosed in a box
+
+cos theta
+
+cos 2theta
+
+cos 3theta
+
+cos theta
+
+(
+cos theta . cos theta
+)
+(
+cos 2theta . cos theta
+)
+(
+cos 3theta . cos theta
+)
 
 The variable belonging to each coefficient is written below it,
 as we have done in the diagram, by way of memorandum. The only
 further reduction which is at first apparently possible in the
-preceding result, would be the addition of  to
- (in which case  should
-be effaced from ). The whole operations from the
+preceding result, would be the addition of
+V_21
+ to
+
+V_31
+ (in which case
+B_1A
+ should
+be effaced from
+V_31
+). The whole operations from the
 beginning would then be—
 
 First Series of
@@ -135,6 +253,26 @@ Third Series, which contains
 
 only one (final) operation.
 
+^1V_10 . ^1V_0=^1V_20
+
+^1V_11 . ^1V_0=^1V_31
+
+^1V_21 . ^1V_31=^1V_21
+
+^1V_10 . ^1V_1=^1V_21
+
+^1V_11 . ^1V_1=^1V_32
+
+V_31 becomes =0
+
+^1V_10 . ^1V_2=^1V_22
+
+^1V_11 . ^1V_2=^1V_33
+
+^1V_10 . ^1V_3=^1V_23
+
+^1V_11 . ^1V_3=^1V_34
+
 We do not enter into the same detail of every step of the
 processes as in the examples of Notes D. and G., thinking it
 unnecessary and tedious to do so. The reader will remember the meaning
@@ -142,31 +280,95 @@ and use of the upper and lower indices, &c., as before explained.
 
 To proceed: we know that
 
+array of equations
+
 Consequently, a slight examination of the second line of (2.) will show
 that by making the proper substitutions, (2.) will become
 
+BA
+
++BA_1 . cos theta
+
++BA_2 . cos 2theta
+
++BA_3 . cos 3theta
+
++B_1A . cos theta
+
++ B_1/A_1
+
++1/2 B_1A_2 . cos 2theta
+
++1/2 B_1A_2 . cos theta
+
++1/2 B_1A_2 . cos 3theta
+
++1/2 B_1A_2 . cos 2theta
+
++1/2 B_1A_3 . cos 4theta
+
+C_0
+
+C_1
+
+C_2
+
+C_3
+
+C_4
+
 These coefficients should respectively appear on
+
+V_20 V_21 V_22 V_23 V_24
 
 We shall perceive, if we inspect the particular arrangement of the
 results in (2.) on the Result-columns as represented in the diagram,
 that, in order to effect this transformation, each successive
-coefficient upon , , &c.
-(beginning with ), must through means of proper
+coefficient upon
+V_32
+,
+V_33
+, &c.
+(beginning with
+V_32
+), must through means of proper
 cards be divided by two[25]; and that one of the halves thus[Pg 49] obtained
 must be added to the coefficient on the Variable which precedes
 it by ten columns, and the other half to the coefficient on the
-Variable which precedes it by twelve columns; ,
+Variable which precedes it by twelve columns;
+V_32
+,
+
+V_33
 , &c. themselves becoming zeros during the process.
 
 This series of operations may be thus expressed:—
 
 Fourth Series.[26]
 
-The calculation of the coefficients , ,
+array of equations
+
+array of equations
+
+array of equations
+
+The calculation of the coefficients
+C_0
+,
+C_1
+,
 &c. of (1.), would now be completed, and they would stand ranged in
-order on , , &c. It will be
+order on
+V_20
+,
+V_21
+, &c. It will be
 remarked, that from the moment the fourth series of operations is
-ordered, the Variables , ,
+ordered, the Variables
+V_31
+,
+V_32
+,
 &c. cease to be Result-Variables, and become mere
 Working-Variables.
 
@@ -179,33 +381,73 @@ number or process, on the occurrence of a specified contingency.
 We will now suppose that we desire to go a step further, and to obtain
 the numerical value of each complete term of the product (1.),
 that is of each coefficient and variable united, which for the
-()th term would be .
+(
+n+1
+)th term would be
+C_n . cos ntheta
+.
 
 We must for this purpose place the variables themselves on another
-set of columns, , , &c., and
-then order their successive multiplication by ,
+set of columns,
+V_41
+,
+V_42
+, &c., and
+then order their successive multiplication by
+V_21
+,
+
+V_22
 , &c., each for each. There would thus be a
 final series of operations as follows:—
 
 Fifth and Final Series of Operations.
 
-(N.B. that  being intended to receive the
-coefficient on  which has no variable, will
-only have  inscribed on it, preparatory to
+array of equations
+
+(N.B. that
+V_40
+ being intended to receive the
+coefficient on
+V_20
+ which has no variable, will
+only have
+cos theta (=1)
+ inscribed on it, preparatory to
 commencing the fifth series of operations.)
 
 From the moment that the fifth and final series of operations is
-ordered, the Variables , , &c.
+ordered, the Variables
+V_20
+,
+V_21
+, &c.
 then in their turn cease to be Result-Variables and become mere
 [Pg 50]
-Working-Variables; , , &c.
+Working-Variables;
+V_40
+,
+V_41
+, &c.
 being now the recipients of the ultimate results.
 
-We should observe, that if the variables , ,
+We should observe, that if the variables
+cos theta
+,
+cos 2theta
+,
+
+cos 3theta
 , &c. are furnished, they would be placed directly upon
-, , &c., like any other data.
+
+V_41
+,
+V_42
+, &c., like any other data.
 If not, a separate computation might be entered upon in a separate
 part of the engine, in order to calculate them, and place them on
+
+V_41
 , &c.
 
 We have now explained how the engine might compute (1.) in the most
@@ -216,19 +458,31 @@ for the general term.
 
 The two first terms of (1.) are
 
+array of equations
+
 and the general term for all after these is
 
-which is the coefficient of the ( term. The engine would
+array of equations
+
+which is the coefficient of the (
+(n+1)^th
+ term. The engine would
 calculate the two first terms by means of a separate set of suitable
 Operation-cards, and would then need another set for the third term;
 which last set of Operation-cards would calculate all the succeeding
 terms ad infinitum; merely requiring certain new Variable-cards
 for each term to direct the operations to act on the proper columns.
 The following would be the successive sets of operations for computing
-the coefficients of  terms—
+the coefficients of
+n+2
+ terms—
+
+(x, /, +) (x, x, x, /, +, +) n(x, +, x, /, +)
 
 Or we might represent them as follows, according to the numerical order
 of the operations:—
+
+(1, 2 ... 4), (5, 6, ... 15), n(11, 12 ... 15)
 
 The brackets, it should be understood, point out the relation in
 which the operations may be grouped, while the comma marks
@@ -237,9 +491,15 @@ but this would be liable to produce confusion, as + is also necessarily
 used to represent one class of the actual operations which are the
 subject of that succession. In accordance with this meaning attached to
 the comma, care must be taken when any one group of operations recurs
-more than once, as is represented above by  (11 ... 15), not to
+more than once, as is represented above by
+n
+ (11 ... 15), not to
 insert a comma after the number or letter prefixed to that group.
-,(11 ... 15) would stand for an operation  followed
+
+n
+,(11 ... 15) would stand for an operation
+n
+ followed
 by the group of operations (11 ... 15); instead of denoting the
 number of groups which are to follow each other.
 
@@ -257,12 +517,20 @@ cycles; that is, a cycle of a cycle, or a cycle of
 cycles. For instance: suppose we wish to divide a series by a
 series,
 
+(a+bx+cx^2+...)/(a′ +b′x+c′x^2+...)
+
 it being required that the result shall be developed, like the dividend
-and the divisor, in successive powers of . A little consideration
+and the divisor, in successive powers of
+x
+. A little consideration
 of (1.), and of the steps through which algebraical division is
 effected, will show that (if the denominator be supposed to consist
-of  terms) the first partial quotient will be completed by the
+of
+p
+ terms) the first partial quotient will be completed by the
 following operations:—
+
+/p(x,-) or 1/p(2,3)
 
 that the second partial quotient will be completed by an exactly
 similar set of operations, which acts on the remainder obtained by
@@ -270,48 +538,90 @@ the first set, instead of on the original dividend. The whole of the
 processes therefore that have been gone through, by the time the
 second partial quotient has been obtained, will be,—
 
+/p(x,-) or 2,1 p(2,3)
+
 which is a cycle that includes a cycle, or a cycle of the second order.
 The operations for the complete division, supposing we propose
-to obtain  terms of the series constituting the quotient, will
+to obtain
+n
+ terms of the series constituting the quotient, will
 be,—
+
+n(/, p(x,-) or n(1), p(2,3)
 
 It is of course to be remembered that the process of algebraical
 division in reality continues ad infinitum, except in the few
 exceptional cases which admit of an exact quotient being obtained. The
-number  in the formula (4.), is always that of the number of terms
-we propose to ourselves to obtain; and the th partial quotient is
-the coefficient of the ()th power of .
+number
+n
+ in the formula (4.), is always that of the number of terms
+we propose to ourselves to obtain; and the
+n
+th partial quotient is
+the coefficient of the (
+n-1
+)th power of
+x
+.
 
 There are some cases which entail cycles of cycles of cycles, to
 an indefinite extent. Such cases are usually very complicated, and they
 are of extreme interest when considered with reference to the engine.
-The algebraical development in a series, of the th function of any
+The algebraical development in a series, of the
+n
+th function of any
 given function, is of this nature. Let it be proposed to obtain the
+
+n
 th function of
 
+phi(a,b,c ... x) x being the variable
+
 We should premise that we suppose the reader to understand what is
-meant by an th function. We suppose him likewise to comprehend
-distinctly the difference between developing an th
-function algebraically, and merely calculating an th
+meant by an
+n
+th function. We suppose him likewise to comprehend
+distinctly the difference between developing an
+n
+th
+function algebraically, and merely calculating an
+n
+th
 function arithmetically. If he does not, the following will
 be by no means very intelligible; but we have not space to give any
 preliminary explanations. To proceed: the law, according to which the
 successive functions of (5.) are to be developed, must of course first
 be fixed on. This law may be of very various kinds. We may propose to
-obtain our results in successive powers of , in which case
+obtain our results in successive powers of
+x
+, in which case
 the general form would be
 
+C+C_1x+C_2x^2+&c
+
 [Pg 52]
-or in successive powers of  itself, the index of the function we
+or in successive powers of
+n
+ itself, the index of the function we
 are ultimately to obtain, in which case the general form would be
 
-and  would only enter in the coefficients. Again, other functions
-of  or of  instead of powers, might be selected. It
+C+C_1n+C_2n^2+&c
+
+and
+x
+ would only enter in the coefficients. Again, other functions
+of
+x
+ or of
+n
+ instead of powers, might be selected. It
 might be in addition proposed, that the coefficients themselves should
 be arranged according to given functions of a certain quantity. Another
 mode would be to make equations arbitrarily amongst the coefficients
 only, in which case the several functions, according to either of
-which it might be possible to develop the th function of (5.),
+which it might be possible to develop the
+n
+th function of (5.),
 would have to be determined from the combined consideration of these
 equations and of (5.) itself.
 
@@ -321,11 +631,15 @@ any of these various modes indifferently; just as we recently showed
 that it can distribute and separate the numerical results of any one
 prescribed series of processes, in a perfectly arbitrary manner. Were
 it otherwise, the engine could merely compute the arithmetical
+
+n
 th function, a result which, like any other purely
 arithmetical results, would be simply a collective number, bearing no
 traces of the data or the processes which had led to it.
 
-Secondly, the law of development for the th function being
+Secondly, the law of development for the
+n
+th function being
 selected, the next step would obviously be to develope (5.) itself,
 according to this law. This result would be the first function, and
 would be obtained by a determinate series of processes. These in
@@ -336,22 +650,36 @@ The third step (which would consist of the various processes necessary
 for effecting the actual substitution of the series constituting
 the first function, for the variable itself) might
 proceed in either of two ways. It might make the substitution either
-wherever  occurs in the original (5.), or it might similarly make
-it wherever  occurs in the first function itself which is the
+wherever
+x
+ occurs in the original (5.), or it might similarly make
+it wherever
+x
+ occurs in the first function itself which is the
 equivalent of (5.). In some cases the former mode might be best, and in
 others the latter.
 
 Whichever is adopted, it must be understood that the result is to
 appear arranged in a series following the law originally prescribed
-for the development of the th function. This result constitutes
+for the development of the
+n
+th function. This result constitutes
 the second function; with which we are to proceed exactly as we did
 with the first function, in order to obtain the third function; and
-so on,  times, to obtain the th function. We easily
+so on,
+n-1
+ times, to obtain the
+n
+th function. We easily
 perceive that since every successive function is arranged in a series
 following the same law, there would (after the first
 function is obtained) be a cycle, of a cycle, of a cycle,
-&c. of operations[27], one, two, three, up to  times, in order
-to get the th function. We say, after the first function is
+&c. of operations[27], one, two, three, up to
+n-1
+ times, in order
+to get the
+n
+th function. We say, after the first function is
 obtained, because (for reasons on which we cannot here enter) the
 first function might in many cases be developed through a set
 [Pg 53]
@@ -359,7 +687,9 @@ of processes peculiar to itself, and not recurring for the remaining
 functions.
 
 We have given but a very slight sketch, of the principal general
-steps which would be requisite for obtaining an th function of
+steps which would be requisite for obtaining an
+n
+th function of
 such a formula as (5.). The question is so exceedingly complicated,
 that perhaps few persons can be expected to follow, to their own
 satisfaction, so brief and general a statement as we are here
@@ -374,12 +704,34 @@ To return to the subject of cycles of operations: some of the
 notation of the integral calculus lends itself very aptly to express
 them: (2.) might be thus written:—
 
-where  stands for the variable; ( for the function of
-the variable, that is, for ; and the limits are from 1 to
-, or from 0 to , each increment being equal to unity.
+(/), sum(+1)^p(x,-) or (1),sum(+1)^p(2,3)
+
+where
+p
+ stands for the variable; (
++1^p
+ for the function of
+the variable, that is, for
+phi p
+; and the limits are from 1 to
+
+p
+, or from 0 to
+p-1
+, each increment being equal to unity.
 Similarly, (4.) would be,—
 
-the limits of  being from 1 to , or from 0 to ,
+sum(+1)^n~{(/), sum(+1)^p(x,-)}
+
+the limits of
+n
+ being from 1 to
+n
+, or from 0 to
+n-1
+,
+
+or sum(+1)^n{(1), sum(+1)^p(2,3)}
 
 Perhaps it may be thought that this notation is merely a circuitous way
 of expressing what was more simply and as effectually expressed before;
@@ -389,9 +741,13 @@ expressed, in a condensed form, by the preceding notation. We shall
 call them varying cycles. They are of frequent occurrence, and
 include successive cycles of operations of the following nature:—
 
+p(1,2,...m), overline over p-1 (1,2...m,) overline over p-2(1,2...m) overline over p-n(1,2...m)
+
 where each cycle contains the same group of operations, but in which
 the number of repetitions of the group varies according to a fixed
 rate, with every cycle. (9.) can be well expressed as follows:—
+
+sump(1,2...m), the limits of p being p-n to p
 
 Independent of the intrinsic advantages which we thus perceive to
 result in certain cases from this use of the notation of the integral
@@ -416,11 +772,17 @@ the prism.
 
 Now in the use made in the formulæ (7.). (8.) and (10.), of the
 notation of the integral calculus, we have glimpses of a similar new
-application of the language of the higher mathematics. ,
+application of the language of the higher mathematics.
+sum
+,
 in reality, here indicates that when a certain number of cards have
 acted in succession, the prism over which they revolve must rotate
 backwards, so as to bring those cards into their former position;
-and the limits 1 to , 1 to  &c., regulate how often this
+and the limits 1 to
+n
+, 1 to
+p
+ &c., regulate how often this
 backward rotation is to be repeated.
 
 A.A.L.
