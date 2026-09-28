@@ -12,3 +12,12 @@ No verbatim source payload is admitted yet.
 An actual corpus requires a commercial-use-compatible open source or written
 permission. This register deliberately contains no invented summaries or
 uncleared verbatim coaching text.
+
+## Public-domain corpus
+
+The fetcher retrieves six named public-domain editions: Epictetus (Long),
+Marcus Aurelius (Long), Franklin, William James, Arnold Bennett, and Samuel
+Smiles. NIH/NIDDK's requested page returned 404 from its supplied canonical
+path and is omitted rather than substituted with an unverified page. This
+persona remains non-clinical: it does not provide therapy, diagnosis, or
+medical advice.
