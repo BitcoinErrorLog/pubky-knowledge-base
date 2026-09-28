@@ -1,13 +1,13 @@
 ---
 title: "The Complete Works of William Shakespeare"
 author: "William Shakespeare"
-date: "Globe edition text, Project Gutenberg ebook 100"
+date: "Project Gutenberg ebook 100"
 original_url: "https://www.gutenberg.org/files/100/100-0.txt"
 archive_url: "https://www.gutenberg.org/ebooks/100"
-source_collection: "Project Gutenberg ebook 100; Globe edition public-domain text"
+source_collection: "Project Gutenberg ebook 100, modernized Complete Works text"
 rights_status: "Shakespeare died in 1616; the underlying works are public domain worldwide under ordinary life-plus-70 terms"
 retrieval_date: "2026-09-28"
-checksum: "sha256:a2a4d0d82a2d8e997f65c22633759f143818af7c0a223c7118de3232f3c0d9a5"
+checksum: "sha256:d1aec2f3ba41026cdd725a535ec2be79d093f156275007b2165c2fc6a7f64693"
 ---
 
 The Complete Works of William Shakespeare
@@ -59,7 +59,6 @@ by William Shakespeare
     THE TWO NOBLE KINSMEN
     THE WINTER’S TALE
     A LOVER’S COMPLAINT
-    [EXCLUDED APOCRYPHAL COLLECTION]
     THE PHOENIX AND THE TURTLE
     THE RAPE OF LUCRECE
     VENUS AND ADONIS
