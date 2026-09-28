@@ -4,288 +4,11 @@ author: "Albert Einstein"
 date: "Pre-1931 original German publication"
 original_url: "https://www.gutenberg.org/files/77850/77850-h/77850-h.htm"
 archive_url: "https://www.gutenberg.org/files/77850/77850-h/77850-h.htm"
-source_collection: "Project Gutenberg ebook 77850, German 1917 edition; boilerplate stripped"
+source_collection: "Project Gutenberg ebook 77850, German 1917 edition"
 rights_status: "Author died 1955; public domain in life-plus-70 countries from 2026; published before 1931, public domain in the US."
 retrieval_date: "2026-09-28"
-checksum: "sha256:769fc248adbe692142a983640d44f91b8b2658cfcc83af4af734093a398957eb"
+checksum: "sha256:8649e46c9e87a0124778d89eebb9c717960eb723883138258612c5136cc64a17"
 ---
-
-Über die spezielle und die allgemeine Relativitätstheorie | Project Gutenberg
-
-body {
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-div.eng {
-  width: 70%;
-  margin: auto 15%;}
-.x-ebookmaker div.eng {
-  width: 90%;
-  margin: auto 5%;}
-
-h1,h2,h3,h4,h5,h6 {
-  text-align: center; /* all headings centered */
-  clear: both;
-  font-weight: normal;}
-
-h1,.s1 {font-size: 275%;}
-.s1a   {font-size: 230%;}
-.s1b   {font-size: 250%;}
-.s1c   {font-size: 300%;}
-h2,.s2 {font-size: 175%;}
-h3,.s3 {font-size: 125%;}
-h4,.s4 {font-size: 110%;}
-h5,.s5 {font-size: 90%;}
-h6,.s6 {font-size: 70%;}
-
-p {
-    margin-top: .51em;
-    text-align: justify;
-    margin-bottom: .49em;
-}
-
-h1 {page-break-before: always;}
-
-h2 {
-  padding-top: 0;
-  page-break-before: avoid;}
-
-h2.nobreak {
-  padding-top: 3em;
-  margin-bottom: 1.5em;}
-
-h3 {font-weight: bold;}
-
-p {
-  margin-top: .51em;
-  text-align: justify;
-  margin-bottom: .49em;
-  text-indent: 1.5em;}
-
-p.p0,p.center {text-indent: 0;}
-
-.mtop1 {margin-top: 1em;}
-.mtop2 {margin-top: 2em;}
-.mbot1 {margin-bottom: 1em;}
-.mbot3 {margin-bottom: 3em;}
-.mleft1_5 {margin-left: 1.5em;}
-.mright2 {margin-right: 2em;}
-.mright4_1 {margin-right: 4.1em;}
-
-.padtop0_3 {padding-top: 0.35em;}
-.padtop0_2 {padding-top: 0.4em;}
-.padtop5 {padding-top: 5em;}
-
-hr {
-    width: 33%;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    margin-left: 33.5%;
-    margin-right: 33.5%;
-    clear: both;
-}
-
-hr.r10 {
-  width: 10%;
-  margin: 1.5em 45%;}
-
-div.chapter,div.section {page-break-before: always;}
-
-.break-before {page-break-before: always;}
-
-table {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.csstab {
-  display: table;
-  margin: 0.5em auto 0.5em 0;
-  padding-left: 1.5em;}
-.cssrow {display: table-row;}
-.csscell {display: table-cell;}
-
-.vam {vertical-align: middle;}
-
-.val_50  {vertical-align: 20%;}
-.val_54   {vertical-align: 10%;}
-.val_55  {vertical-align: 12%;}
-.val_60  {vertical-align: 15%;}
-.val_70  {vertical-align: 35%;}
-.val_75  {vertical-align: 45%;}
-.val_80  {vertical-align: 65%;}
-.val_90  {vertical-align: 80%;}
-.val_100 {vertical-align: 100%;}
-
-.val-5   {vertical-align: -5%;}
-.val-10  {vertical-align: -10%;}
-.val-20  {vertical-align: -20%;}
-.val-40  {vertical-align: -60%;}
-.x-ebookmaker-2 .val-80 {vertical-align: -80%;}
-
-.x-ebookmaker-2 .val_ep2 {vertical-align: -225%;}
-
-/*horizontal fractions */
-.hfrac    {
-  display: inline-block;
-  vertical-align: middle;
-  white-space: nowrap;}
-
-.numerator   {
-  border-bottom: thin solid;
-  display: block;
-  text-align: center;
-  text-indent: 0;}
-
-.denominator {
-  display: block;
-  text-align: center;
-  text-indent: 0;
-  padding-top: 0.15em;}
-
-.pagenum { /* uncomment the next line for invisible page numbers */
-    /*  visibility: hidden;  */
-    position: absolute;
-    left: 94%;
-    font-size: 70%;
-    color: #777777;
-    text-align: right;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-indent: 0;
-} /* page numbers */
-
-.bdt {
-  border-top: double;
-  height: 1em;}
-
-.bdb {
-  border-bottom: double;
-  height: 1em;}
-
-.bt {border-top: thin solid;}
-
-.btt {border-top: thin solid; padding-top: 0.75em;}
-
-.bttt {border-top: thin solid; padding-top: 1.05em;}
-
-.center   {text-align: center;}
-
-.right    {text-align: right;}
-
-.nowrap {white-space: nowrap;}
-
-.fright {float: right;}
-.x-ebookmaker .fright {float: right;}
-
-sub {
-  font-size: 65%;
-  vertical-align: -20%;}
-
-sup {
-  font-size: 65%;
-  vertical-align: 30%;}
-
-.gesperrt {
-    letter-spacing: 0.2em;
-    margin-right: -0.2em;}
-
-.x-ebookmaker .gesperrt {
-    letter-spacing: 0.15em;
-    margin-right: -0.25em;}
-
-em.gesperrt {
-    font-style: normal;}
-
-.x-ebookmaker em.gesperrt {
-  font-family: sans-serif, serif;
-  font-size: 90%;
-  margin-right: 0;}
-
-.caption  {
-  text-align: center;
-  font-size: 90%;
-  margin: 0.5em auto;}
-
-/* Images */
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-img.w100 {width: 100%;}
-
-.figcenter {
-    margin: 1em auto;
-    text-align: center;
-    page-break-inside: avoid;
-    max-width: 100%;
-}
-
-/* Footnotes */
-
-.footnotes {
-  border: thin black dotted;
-  background-color: #dadada;
-  color: black;
-  margin-top: 1.5em;}
-
-.footnote {
-  margin-left: 10%;
-  margin-right: 10%;
-  font-size: 0.9em;}
-
-.footnote p {text-indent: 0;}
-
-.footnote .label {
-  position: absolute;
-  right: 84%;
-  text-align: right;}
-
-.fnanchor {
-  vertical-align: top;
-  font-size: .7em;
-  text-decoration: none;
-}
-
-/* Transcriber's notes */
-.transnote {
-  background-color: #dadada;
-  color: black;
-  font-size: smaller;
-  padding: 0.5em;
-  margin-bottom: 5em;
-  page-break-before: always;}
-
-.hidehtml {display: none}
-.x-ebookmaker .hidehtml {display: block}
-
-/* Illustration classes */
-.illowe6 {width: 6em;}
-.illowe26 {width: 26em;}
-.illowe28 {width: 28em;}
-.illowe45 {width: 45em;}
-
-/* Illustration classes; e-books */
-.x-ebookmaker .illowe6 { width: 15%; margin: auto 42.5%;}
-.x-ebookmaker .illowe26 {width: 52%; margin: auto 24%;}
-.x-ebookmaker .illowe28 {width: 56%; margin: auto 22%;}
-.x-ebookmaker .illowe45 {width: 90%; margin: auto 5%;}
-
-*** START OF THE PROJECT GUTENBERG EBOOK 77850 ***
-
-Anmerkungen zur Transkription
-
-Der vorliegende Text wurde anhand der Buchausgabe von
-1917 so weit wie möglich originalgetreu wiedergegeben. Offensichtliche
-Druckfehler wurden stillschweigend korrigiert.
-
-Abhängig von der im jeweiligen Lesegerät installierten
-Schriftart können die im Original gesperrt
-gedruckten Passagen gesperrt, in serifenloser Schrift, oder aber sowohl
-serifenlos als auch gesperrt erscheinen.
 
 Über die spezielle und die allgemeine Relativitätstheorie
 
@@ -304,6 +27,7 @@ Druck und Verlag von Friedr. Vieweg & Sohn
 1917
 
   Herausgeber dieses Heftes ist
+
 Geh. Reg.-Rat Prof. Dr. Karl Scheel
 
 Alle Rechte vorbehalten
@@ -1789,6 +1513,7 @@ kann z. B. die Tatsache der hier stattfindenden Bewegung mit gleichem
 Rechte in den beiden Formen ausgesprochen werden:
 
 a) Der Wagen bewegt sich relativ zum Bahndamm,
+
 b) Der Bahndamm bewegt sich relativ zum Wagen.
 
 Im Falle a) dient bei dieser Aussage der Bahndamm, im Falle b) der
@@ -1807,6 +1532,7 @@ die allgemeinen Naturgesetze, wie sie sich aus der Erfahrung ergeben,
 indem man sich
 
 a) des Bahndammes als Bezugskörpers bedient,
+
 b) des Wagens als Bezugskörpers bedient,
 
 so lauten diese allgemeinen Naturgesetze (z. B. die Gesetze der
@@ -2447,6 +2173,7 @@ u = 3; v = 1. Zwei benachbarten Punkten P und P′ auf der Fläche
 entsprechen dann die Koordinaten
 
 P : u; v
+
 P′ : u + du, v + dv,
 
 wobei du und dv sehr kleine Zahlen bedeuten. Der mit
@@ -2810,16 +2537,19 @@ Gesetzes, welche jedoch ohne Willkür aufgefunden werden kann, unter
 Berücksichtigung der folgenden Forderungen:
 
     a)
+
     Die gesuchte Verallgemeinerung muß ebenfalls dem
     allgemeinen Relativitätspostulat genügen.
 
     b)
+
     Ist Materie in dem betrachteten Gebiete vorhanden, so
     ist für deren felderregende Wirkung allein deren träge Masse, also gemäß
     § 15 allein deren Energie maßgebend.
 
     [S. 69]
      c)
+
     Gravitationsfeld und Materie zusammen müssen dem
     Gesetz von der Erhaltung der Energie (und des Impulses) genügen.
 
@@ -2919,5 +2649,3 @@ Riemannschen Behandlung mehr-dimensionaler, Nicht-Euklidischer
 Kontinua. So kam es, daß die Mathematiker die formalen Probleme bereits
 seit langem gelöst haben, zu denen das allgemeine Relativitätspostulat
 führt.
-
-*** END OF THE PROJECT GUTENBERG EBOOK 77850 ***
