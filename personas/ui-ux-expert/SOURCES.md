@@ -13,6 +13,9 @@ only; it does not relicense the source payloads recorded here. WAI/WCAG
 payloads are governed by the W3C Document License, not the W3C Software and
 Document License used for W3C software repositories.
 
+Merge record: fast-forwarded to `main` at
+`95f9ac9f01c97aac829ec1eb99a44f5cd8a450b2` on 2026-09-28.
+
 | ID | Stored payload | Work and edition | Rights and use | Canonical URL | Retrieved | SHA-256 |
 | --- | --- | --- | --- | --- | --- | --- |
 | `govuk-design-principles` | `sources/govuk-design-principles.html` | *Government Design Principles*, published 2012-04-03, modified 2025-04-02 in the retrieved GOV.UK metadata | Open Government Licence v3.0; verbatim copy. Attribute © Crown copyright, Government Digital Service; do not imply endorsement. | <https://www.gov.uk/guidance/government-design-principles> | 2026-09-28 | `be26f4e018aff861a6e69844ca3f1ce7c557b80e728d5f346101a7e6e1d9a900` |
