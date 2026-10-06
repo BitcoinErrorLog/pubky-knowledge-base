@@ -21,4 +21,4 @@ This window shipped four Pubky App releases, two Homeserver releases, new Pkarr 
 - [App Specs releases](https://github.com/pubky/pubky-app-specs/releases)
 - [Paykit releases](https://github.com/pubky/paykit-rs/releases)
 - [Vibes board](https://vibes.pubky.app)
-- [Marketplace project map](https://github.com/BitcoinErrorLog/pubky-marketplace)
+- [Marketplace project map](https://github.com/pubky/pubky-marketplace)

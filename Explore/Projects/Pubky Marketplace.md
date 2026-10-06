@@ -10,4 +10,4 @@ The transaction service is server-authoritative for offers, auctions, orders, re
 
 The separate `@bitcoinerrorlog/pubky-shop` package reached 0.1.5 on 22 September. It provides inventory, JSON/CSV codecs, and import manifests used by Shop.
 
-Sources: [project map and status](https://github.com/BitcoinErrorLog/pubky-marketplace), [transaction service](https://github.com/BitcoinErrorLog/pubky-marketplace-service), [Shop SDK](https://github.com/BitcoinErrorLog/pubky-shop), [Shop releases](https://github.com/BitcoinErrorLog/pubky-shop/releases), [live staging client](https://shop.pubky.app/marketplace).
+Sources: [project map and status](https://github.com/pubky/pubky-marketplace), [transaction service](https://github.com/pubky/pubky-marketplace-service), [Shop SDK](https://github.com/pubky/pubky-shop-sdk), [Shop releases](https://github.com/pubky/pubky-shop-sdk/releases), [live staging client](https://shop.pubky.app/marketplace).
