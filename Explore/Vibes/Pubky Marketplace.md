@@ -6,4 +6,4 @@
 
 See [[Explore/Projects/Pubky Marketplace|Pubky Marketplace]] for broader project status.
 
-Sources: [Vibes board](https://vibes.pubky.app), [project map](https://github.com/BitcoinErrorLog/pubky-marketplace).
+Sources: [Vibes board](https://vibes.pubky.app), [project map](https://github.com/pubky/pubky-marketplace).

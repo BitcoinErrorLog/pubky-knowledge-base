@@ -4,4 +4,4 @@
 
 These are in-app Locks features and public release-candidate progress. They do not establish that the broader Marketplace stack is ready for real funds.
 
-Sources: [Locks repository](https://github.com/pubky/locks), [Pubky App repository](https://github.com/pubky/pubky-app), [Marketplace project status](https://github.com/BitcoinErrorLog/pubky-marketplace).
+Sources: [Locks repository](https://github.com/pubky/locks), [Pubky App repository](https://github.com/pubky/pubky-app), [Marketplace project status](https://github.com/pubky/pubky-marketplace).

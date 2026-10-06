@@ -6,4 +6,4 @@ Paykit lets apps discover where a Pubky identity can receive payment and exchang
 
 In the Marketplace staging system, Paykit supplies Bitcoin payment-request and wallet handoff plumbing. The real Bitkit wallet leg has been exercised in staging, but Bitcoin settlement there uses regtest and Marketplace remains pre-production.
 
-Sources: [Paykit repository](https://github.com/pubky/paykit-rs), [rc55 release](https://github.com/pubky/paykit-rs/releases/tag/v0.1.0-rc55), [Marketplace status](https://github.com/BitcoinErrorLog/pubky-marketplace).
+Sources: [Paykit repository](https://github.com/pubky/paykit-rs), [rc55 release](https://github.com/pubky/paykit-rs/releases/tag/v0.1.0-rc55), [Marketplace status](https://github.com/pubky/pubky-marketplace).
